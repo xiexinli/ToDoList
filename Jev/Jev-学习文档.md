@@ -1,389 +1,357 @@
-# Jev 学习文档（草稿）
+# Jev：用于快速结构化决策的“小脑”
 
-> 整理日期：2026-09-21
-> 整理范围：基于公开资料调研。**本文档中的版本号、价格、限额均以 2026-09-21 抓取时为准，官方明确说明"可随时变化"，请以官方文档为准。**
-> 项目上下文：本文件位于 `/Users/alion/DemoProjects/ToDoList/Jev/`，该目录原为空目录，项目内（含 `.idea/`、git 对象）未检索到任何 `jev` 相关内容，因此本文档是**外部调研结论**，不是对项目内既有代码的解释。
-
----
-
-## 0. 结论速览（TL;DR）
-
-在开发语境下，"jev" **最可能指 TypeSafe AI 的 System One 决策模型 "Jev"**，置信度较高（约 85%），理由见第 1 节。
-
-- **一句话定义**：Jev 不是聊天模型，而是一个"**类型化决策模型**"——输入一段 state（文本/JSON），输出**你预先定义好答案空间**的类型化答案（选项 / 分值 / 是-否概率）+ 校准过的置信度，供代码直接分支使用。
-- **官方口号式数据流**：`text or JSON state + typed questions → constrained answers + probabilities → your code`
-- **发布方 / 发布时间**：TypeSafe AI（创始人 Diogo Almeida，前 OpenAI），2026-09-15 发布，目前为 **early access**。
-- **核心卖点**：比 LLM 快 2 个数量级（端到端 70–500ms）、输出零类型错误、不产生幻觉文本、"输出 token 免费"。
-- **核心代价**：**它不会写文字**。不能生成回复、代码、解释。该它干的是"判断"，不是"表达"。
+> 基于视频《Jev爆火：为什么有些活，开发者开始不叫大模型了？》（InfoQ，2026-09-20）重新整理。  
+> 本文只保留视频所表达的核心概念与能直接指导使用的内容；不包含此前调研中的发布背景、价格、第三方生态、SDK 安装细节、候选词辨析等无关信息。
 
 ---
 
-## 1. 候选清单与判断依据（不臆测，先列候选）
+## 1. 一句话理解
 
-| # | 候选 | 类别 | 判断 | 依据 |
-|---|---|---|---|---|
-| 1 | **TypeSafe AI 的 Jev（System One 模型）** | AI 模型 / API | ✅ **最可能** | ① 开发者语境下 GitHub 搜索 `jev` 共 7,471 个仓库，Top 结果几乎全部与它相关；② 官方站点 `typesafe.ai`、文档 `docs.typesafe.ai`、SDK 仓库、npm 包 `@typesafe-ai/sdk`、PyPI 包 `jev` 均真实存在且可访问；③ 2026-09 是当前热点（发布仅 6 天）；④ 用户项目里已有 `ai_dlc/`（AI 开发概念学习笔记），与"学一个 AI 概念"的动因高度吻合 |
-| 2 | **JEV = Japanese Encephalitis Virus（乙型脑炎病毒）** | 医学 | ⚠️ 仅当用户在写医学/生物相关文档时成立 | 这是 "JEV" 在生物医学文献中最常见的全大写缩写。但用户项目是 ToDoList，且未大写成 JEV |
-| 3 | **npm 包 `jev`** | JS 包 | ❌ 排除 | 该包真实存在但只有 `0.0.0` 一个版本，描述为空，是占位/抢注包，无可学习内容 |
-| 4 | **jev.dev（Jev Forsberg，个人站点）** | 人名 | ❌ 排除 | `jev.dev` 实际是个人主页，非技术工具 |
-| 5 | **Jevko（一种极简语法）** | 语法规范 | ❌ 可能性低 | 拼写相近但一般写作 "Jevko"，且热度远不及候选 1 |
-| 6 | **项目内自定义缩写 / 打错的 `dev`、`js`、`json`** | 笔误 | ❌ 已排除 | 全工作空间正则检索 `(?i)jev` **零命中**；目录为空 |
+**Jev 不是用来“聊天、写文章”的大模型；它更像软件里的一个快速判断函数。**
 
-**判断结论**：按"常见开发语境 + 用户已有 AI 学习笔记目录"两条证据，候选 1 是压倒性最可能的含义。候选 2 是唯一需要用户一句话确认的备选。
+给它一段上下文，并预先规定几个可选答案；它会直接从中做选择，并返回各选项的概率。程序再根据结果继续执行。
 
-> ✅ **需用户确认的第 1 个关键点**：这里的 "jev" 是否指 TypeSafe AI 的 Jev 模型？（若其实指日语脑炎病毒或别的内部代号，本文档后续章节不适用。）
+```text
+上下文 / 当前状态 + 有限候选项
+            ↓
+        Jev 快速判断
+            ↓
+选项 + 概率 / 置信信息
+            ↓
+程序执行对应动作
+```
 
----
-
-## 2. Jev 是什么：定位与原理
-
-### 2.1 System One 是什么
-
-"System One" 一词借用 Daniel Kahneman《思考，快与慢》中的概念：System 1 = 快速直觉，System 2 = 缓慢审慎。TypeSafe 用它命名一类**专为软件的"快速判断"而生**的模型类别。Jev 是该类别的第一个模型，也是旗舰模型。
-
-### 2.2 与普通 LLM 的对比（官方对照表，这是理解 Jev 的关键）
-
-| 维度 | 传统 LLM | System One + Jev |
-|---|---|---|
-| 训练目标 | RLHF / RLVR，优化"人类喜欢的文字" | **RLCD**（Reinforcement Learning for Calibrated Decisions），优化"**校准过的判断**" |
-| 输入 | 非结构化文本，偏重**消息序列** | 非结构化文本，偏重**程序状态（state）** |
-| 输出 | 字符串（需解析+校验，可能幻觉/跑偏） | **类型化结构化值**，答案空间**预先定义**，**不会产生类型错误** |
-| 采样方式 | 自回归，逐 token 顺序生成 | **并行**，一次查询生成全部输出 |
-| 延迟 | 前沿模型 3–329 秒 | **70–500 ms** |
-| 价格 | 输入 $0.20–$10 / MTok，输出约为输入 5 倍 | **输入 $0.042 / MTok，输出免费** |
-| 置信度 | 即使要求也常过度自信、不一致 | **每个输出都带校准概率**，置信度越高准确率越高 |
-| 适用 | 人机协作（chatbot、copilot、coding agent） | **AI 驱动的工作流 / "智能 if 语句"**、大数据 map-reduce、实时应用、给 LLM 做校验/护栏 |
-
-### 2.3 一句话理解
-
-> **Jev = 一个"可以做模糊判断的函数调用"**：输入是状态，输出是你在代码里预先定义好的那几个答案之一，外加一个可信度。
-> 控制流、阈值、副作用**全部留在你自己的代码里**。
+视频把这种能力形容为一个**“便宜小脑”**：大脑负责复杂思考、表达和规划；小脑负责迅速、重复、明确的即时判断。
 
 ---
 
-## 3. 作用（它到底解决什么问题）
+## 2. 为什么有些活不该再叫大模型
 
-1. **替代脆弱的硬编码 if-else**：判断规则写不清楚、边界情况太多时，用 Jev 做"模糊判断"，但结果仍是有限枚举，可放心分支。
-2. **替代昂贵的生成式 LLM 调用**：大多数场景真正需要的不是"一段话"，而是"一个判断"，用 Jev 可把延迟和成本降两个数量级。
-3. **给 LLM 系统做护栏**：给 prompt、推理链、输出打分、判定越狱、做校验。
-4. **可自动化的前提是能表达"我不确定"**：Jev 的 confidence 让代码能在"自动执行 / 谨慎处理 / 转人工"之间分流。
-5. **大规模数据处理**：把 PB 级数据转成特征和洞察（价格低到可以批量跑）。
+### 2.1 大模型擅长什么
+
+大语言模型（LLM）适合开放式任务：
+
+- 对话与问答；
+- 写作、总结、解释；
+- 代码生成；
+- 复杂规划与推理。
+
+它的典型工作方式是**自回归生成**：一个 token 接一个 token 地生成文本。
+
+例如，问它“这份发票存在欺诈风险吗？”，它会生成一段类似：
+
+> 根据发票明细、供应商历史交易以及……，该发票可能存在……
+
+这对人阅读很有用，但对程序自动执行并不理想：
+
+- 输出是自然语言，程序还要解析；
+- 回答可能冗长、格式不稳定；
+- 推理和生成带来额外延迟与成本；
+- 自动化流程真正需要的往往只是一个明确判断。
+
+### 2.2 软件常见的真实需求
+
+很多业务并不需要一段解释，只需要一个可执行的决定：
+
+- 是否拦截这笔交易？
+- 工单应该转给哪个团队？
+- 这个网页是否符合审核规则？
+- 当前 Agent 是否应该继续调用某个工具？
+- 自动化流程是否应进入人工复核？
+
+这类任务的共性是：**答案空间有限，结果要进入程序分支。**
+
+因此，与其让大模型“写一段回答”，不如让 Jev **直接做选择**。
 
 ---
 
-## 4. 使用场景
+## 3. Jev 的工作方式
 
-官方给出的场景地图可归纳为六类动作：**classify（分类）、route（路由）、score（打分）、extract（抽取）、verify（校验）、gate（闸门/兜底）**。
+Jev 的基本模式可以概括为：
 
-| 场景 | 适合的提问类型 | 例子 |
-|---|---|---|
-| 工单分类 / 意向路由 | Choice | "这张工单属于 billing / technical / account 哪一类？" |
-| 优先级 / 紧急度判定 | Noul | "这条消息表达了紧急诉求吗？" |
-| 评分、风控、质量打分 | Score | "这位客户的愤怒程度 0=平静 1=不满 2=非常愤怒" |
-| 退款 / 合规 / 政策判定 | Noul（多条并行） | "是否请求退款？""证据是否显示重复扣款？""政策是否支持退款？" |
-| 实体抽取、字段校验 | Choice + Noul | "从候选人中选出正确的那一个" |
-| Agent 护栏、LLM 输出校验 | Noul / Score | "这段回复是否泄露了 PII？" |
-| 实时交互 UX | 全部 | 100ms 级别，可以放进实时界面 |
-| 复合评分 | Score 多条 + 代码加权 | 把复杂判断拆成原子分数，权重由代码控制 |
+> **给定上下文，再规定好几个答案；Jev 从答案中选择，并给出概率。**
 
----
+例如对一张发票做风险处置：
 
-## 5. 三个核心原语（Primitives）
+```text
+上下文：发票文本、供应商历史、金额、交易记录
+问题：应如何处理？
+候选项：放行 / 人工复核 / 拒绝
+```
 
-所有请求都是"**一个 state + 一张 question 映射表**"，三种问题可混在**同一次调用**里，全部并行求值。
-
-### 5.1 Noul — 是/否问题
-返回"答案为 yes 的概率"。**（注意：Noul 答案不附带 `confidence` 字段。）**
+Jev 返回的核心不是一段解释，而是类似：
 
 ```json
 {
-  "is_urgent": {
-    "type": "noul",
-    "instructions": "Does this convey urgency?",
-    "criteria": {
-      "true": "Explicitly time-sensitive",
-      "false": "No urgency expressed"
-    }
+  "choice": "人工复核",
+  "probabilities": {
+    "放行": 0.08,
+    "人工复核": 0.76,
+    "拒绝": 0.16
   }
 }
 ```
 
-> ⚠️ 不确定点：`noul` 这个命名不是常规英文词，官方文档也**未给出词源解释**。功能上它就是 boolean-with-probability。遇到这个名字不要困惑。
-
-### 5.2 Choice — 从你定义的集合中选一个
-答案包含：被选项、**每个选项的概率分布**、confidence。
-
-```json
-{
-  "department": {
-    "type": "choice",
-    "instructions": "Which team should handle this ticket?",
-    "criteria": {
-      "billing": "Payment, invoice, refund, or charge issues",
-      "technical": "Bugs, outages, integrations, and API problems",
-      "account": "Login, profile, permissions, or plan changes"
-    }
-  }
-}
-```
-
-### 5.3 Score — 在有序刻度上打分
-答案包含：分值（可能是小数，如 `1.43`）、**每个等级的概率**、confidence、以及 level 的 legend。
-
-```json
-{
-  "severity": {
-    "type": "score",
-    "instructions": "How severe is the reported issue?",
-    "criteria": {
-      "0": "Cosmetic; no impact to functionality",
-      "1": "Broken or degraded feature, but workaround exists",
-      "2": "Blocking issue; no workaround exists"
-    }
-  }
-}
-```
-
-### 5.4 Confidence 与 Probability 的区别（易错点）
-
-- `probabilities`：**概率分布**，告诉你模型在各选项间的倾向形状。
-- `confidence`：把分布形状**压缩成 0–1 的一个数**（集中=高，分散=低），方便直接设阈值。
-- confidence **由概率分布推导而来**，并且官方明确：**校准是在"一组预测"上度量的，不保证单个答案正确**。
-- 官方建议的三段式用法：**高 → 自动执行；中 → 谨慎执行；低 → 转人工或升级给推理模型**。
-
-### 5.5 结构化提问（进阶）
-
-`instructions`、Choice 的选项描述、Score 的等级描述、Noul 的 criteria **都接受 JSON 对象或数组**，而不只是字符串。用于：问题有多个部分时更清晰；或直接把 schema / taxonomy / 数据库行喂进去。
-
----
-
-## 6. 安装与配置
-
-### 6.1 前置：拿 API Key
-在控制台获取：`https://console.typesafe.ai/keys`（Playground：`https://console.typesafe.ai/playground`）
-
-环境变量统一为：
-
-```bash
-TYPESAFE_API_KEY=...
-```
-
-### 6.2 HTTP 接口（最底层，任何语言可用）
-
-```http
-POST https://api.typesafe.ai/v1/systemone
-Authorization: Bearer <API_KEY>
-Content-Type: application/json
-```
-
-### 6.3 Python SDK
-
-```bash
-uv add typesafe-sdk
-```
-
-### 6.4 JavaScript / TypeScript SDK
-
-```bash
-npm install @typesafe-ai/sdk
-```
-要求 **Node.js 20 或更高**。包内含 ESM、CommonJS 和 TypeScript 声明。
-
-### 6.5 社区包 `jev`（装饰器风格，非官方 SDK）
-
-PyPI 上的 `jev`（v0.3.0，`requires_python >= 3.14`）是一个把**函数签名直接编译成 Jev 请求**的封装：
-
-```bash
-uv sync        # 需要 Python 3.14
-```
-
-它把「函数名 = 决定什么、参数 = 依据什么、返回注解 = 答案形状、docstring = 判断标准」当成完整规格，不需要维护 prompt 字符串或 JSON schema。
-
-> ⚠️ **不确定性**：`jev` 这个 PyPI 包**不是官方 SDK**（官方 SDK 是 `typesafe-sdk` / `@typesafe-ai/sdk`）。Python 3.14 这个版本要求相当激进，使用前请确认可用性。
-
----
-
-## 7. 基本用法示例
-
-### 7.1 cURL
-
-```bash
-curl -X POST https://api.typesafe.ai/v1/systemone \
-  -H "Authorization: Bearer $TYPESAFE_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d @- <<'EOF'
-  {
-    "state": "Hi, I've been trying to connect my Stripe account for 3 days and the integration keeps failing. I'm losing sales. Please help ASAP.",
-    "model": "jev-latest",
-    "questions": {
-      "urgency": {
-        "type": "noul",
-        "instructions": "Does this message express urgency?"
-      }
-    }
-  }
-EOF
-```
-
-### 7.2 Python SDK
+程序可据此写出清晰的控制逻辑：
 
 ```python
-from typesafe_sdk import Choice, TypeSafeClient
-
-with TypeSafeClient() as client:
-    response = client.system_one(
-        state={"document": "I was charged twice. Please fix this ASAP."},
-        questions={
-            "category": Choice(
-                instructions="What is this ticket about?",
-                criteria={"billing": None, "technical": None, "other": None},
-            ),
-        },
-    )
-
-print(response.choices["category"].choice)
+if result.choice == "拒绝":
+    reject_invoice()
+elif result.choice == "人工复核":
+    create_review_task()
+else:
+    approve_invoice()
 ```
 
-### 7.3 JavaScript / TypeScript SDK
+> 关键点：**候选答案、阈值和后续动作由开发者控制；Jev 只负责语义判断。**
 
-```ts
-import { choice, TypeSafeClient } from "@typesafe-ai/sdk";
+---
 
-const client = new TypeSafeClient();
-const response = await client.systemOne({
-  state: { document: "I was charged twice. Please fix this ASAP." },
-  questions: {
-    category: choice("What is this ticket about?", {
-      billing: null,
-      technical: null,
-      other: null,
-    }),
-  },
-});
+## 4. 与 LLM 的核心差异
 
-console.log(response.answers.category.choice);
+| 维度 | 大语言模型（LLM） | Jev / System One |
+|---|---|---|
+| 主要任务 | 生成文本、对话、解释、创作 | 在有限候选项中快速判断 |
+| 输出 | 开放式自然语言 | 结构化选项、分数或概率 |
+| 生成方式 | Token 逐个生成 | 面向决策的直接输出 |
+| 程序接入 | 需要解析、校验输出 | 结果可直接进入 if/else 或工作流 |
+| 适合场景 | “告诉我为什么”“帮我写一份” | “该不该做”“该选哪个”“风险多高” |
+| 自动化风险 | 输出漂移、格式不稳定、解释冗余 | 答案空间受约束，更适合流程控制 |
+
+这并不表示 Jev 要替代 LLM。更合理的分工是：
+
+- **LLM 是大脑**：负责理解复杂需求、沟通、生成内容、制定计划；
+- **Jev 是小脑**：负责低延迟、可重复、可量化的局部决策。
+
+---
+
+## 5. 视频中的典型使用场景
+
+### 5.1 Agent 工具调用后的判断
+
+视频给出的核心例子是：**每次工具调用以后，让 Jev 先判断。**
+
+例如 Agent 调用了网页搜索、数据库查询或浏览器操作后，可以把“工具返回结果 + 当前目标”交给 Jev，询问：
+
+```text
+下一步应该：继续搜索 / 直接执行 / 结束任务 / 请求人工介入？
 ```
 
-> 类型会从 questions 自动推断。
+这样，昂贵的 LLM 不必为每一个小分支都重新长篇推理；它只在需要复杂理解或生成时介入。
 
-### 7.4 结构化 state（推荐的复杂场景写法）
+### 5.2 游戏中的实时决策
+
+视频展示了贪吃蛇示例：
+
+```text
+当前棋盘状态 + 候选移动方向（上 / 下 / 左 / 右）
+→ Jev 选择下一步移动，并给出各方向概率
+```
+
+这种场景强调：
+
+- 决策频率高；
+- 延迟敏感；
+- 可选动作明确；
+- 不需要模型写解释。
+
+### 5.3 交易或实时策略选择
+
+视频展示了行情界面中的 `SELL` 判断。其抽象模式是：
+
+```text
+市场状态 / 指标 / 仓位信息 + 候选动作（买入 / 卖出 / 持有）
+→ Jev 输出动作倾向及概率
+```
+
+**注意**：这只能说明 Jev 适合做“候选动作选择”的技术模式；不应把它当作可靠的投资建议或自动交易依据。真实金融场景必须加入风险控制、限额、人工审批和回测。
+
+### 5.4 审核、分流与流程决策
+
+最常见、也最稳妥的落地方式包括：
+
+- 内容审核：通过 / 复审 / 拒绝；
+- 客服分流：账单 / 技术 / 售后；
+- 工单优先级：低 / 中 / 高；
+- 表单校验：有效 / 信息不足 / 疑似异常；
+- 自动化工作流：继续 / 停止 / 转人工。
+
+---
+
+## 6. 如何正确设计一个 Jev 决策
+
+### 第一步：确认它是“选择题”而非“作文题”
+
+适合 Jev：
+
+- “是否应该升级为人工处理？”
+- “在 A、B、C 中选哪一个？”
+- “风险级别是低、中、高哪档？”
+
+不适合 Jev：
+
+- “写一封给客户的道歉邮件。”
+- “解释这段代码为什么报错。”
+- “设计完整的产品方案。”
+
+后一类需要生成内容，应优先交给 LLM。
+
+### 第二步：收集足够的上下文
+
+输入应包含能支撑判断的事实，而不是只给一句模糊指令。
 
 ```json
 {
-  "ticket": {
-    "subject": "Duplicate charge",
-    "messages": [
-      {"from": "customer", "text": "I was charged twice for order A-104. Please refund the duplicate."},
-      {"from": "support", "text": "We are checking the charges."}
-    ]
-  },
-  "order": {
-    "id": "A-104",
-    "charges": [
-      {"amount_usd": 49, "status": "captured"},
-      {"amount_usd": 49, "status": "captured"}
-    ]
-  },
-  "refund_policy": "Duplicate charges are ..."
+  "ticket": "支付已失败三天，影响销售，请尽快处理",
+  "customer_tier": "enterprise",
+  "failure_count": 12,
+  "previous_contacts": 3
 }
 ```
 
-### 7.5 社区装饰器风格（`jev` 包）
+### 第三步：把候选项定义清楚且互斥
 
-```python
-from typing import Literal
-from pydantic import BaseModel, Field
-import jev
+不清晰的候选项会导致判断边界模糊。
 
-class Triage(BaseModel):
-    department: Literal["billing", "technical", "sales"]
-    is_urgent: bool
-    frustration: int = Field(ge=0, le=2)
+不推荐：
 
-@jev.fn
-def triage(ticket: str) -> Triage:
-    """A customer support ticket:
-
-    {{ ticket }}
-    """
-    return triage.state()
-
-triage("I was charged twice. Fix this NOW.")
-# Triage(department='billing', is_urgent=True, frustration=2)
+```text
+低 / 一般 / 高 / 特别高 / 可能高
 ```
 
-机制：装饰时就校验返回注解必须是 `BaseModel` 子类（否则 import 时报 `TypeError`）；docstring 用 Jinja2 渲染成 `state`；答案由 pydantic 校验回填。
+推荐：
+
+```text
+低：不影响核心功能，可在正常队列处理
+中：影响部分用户，需在一个工作日内处理
+高：核心功能不可用或客户业务受阻，立即升级
+```
+
+### 第四步：由代码掌控行动
+
+不要让模型直接拥有高风险副作用。应将 Jev 的判断作为一个信号，再由确定性规则决定最终操作。
+
+```python
+if result.choice == "高" and result.confidence >= 0.85:
+    page_on_call_engineer()
+else:
+    create_standard_ticket()
+```
+
+### 第五步：给不确定性留出口
+
+当概率分散或置信度不足时，应避免强行自动化：
+
+```python
+if result.confidence < 0.70:
+    route_to_human_review()
+```
 
 ---
 
-## 8. 最佳实践
+## 7. 在 Agent 系统中的推荐分工
 
-### 8.1 架构原则（官方立场）
-**代码保持控制权，只把窄而具体的判断交给 Jev。** 即：Jev 负责"判断"，代码负责"控制流、阈值、副作用"。
+```text
+用户目标
+  ↓
+LLM：理解任务、拆解步骤、选择工具
+  ↓
+工具调用（搜索 / 查询 / 操作）
+  ↓
+Jev：基于当前状态做快速局部判断
+  ├─ 继续下一步
+  ├─ 换一种工具
+  ├─ 结束任务
+  └─ 转人工 / 交给 LLM 深度处理
+```
 
-### 8.2 四个官方推荐模式
+一句话原则：
 
-| 模式 | 做法 | 收益 |
-|---|---|---|
-| **Speculative Fan-Out（投机扇出）** | 一次调用里发很多问题，**包括当下不一定用得上的**，由代码决定哪些相关 | 成本、速度 |
-| **Confidence-Gated Routing（置信度门控路由）** | 把 confidence 当作**第二决策轴**：答案告诉你"是什么"，置信度告诉你"该不该动手" | 可靠性、安全 |
-| **Composite Scoring（复合评分）** | 把复杂判断拆成**原子化**的多个 Score，再用**你自己在代码里掌握的权重**合并 | 成本、可靠性、速度 |
-| **Intent Routing（意图路由）** | 先分类意图，再路由到最优处理器：确定性逻辑 / 专家 LLM / 人工 | 成本、速度 |
-
-### 8.3 实战建议
-1. **优先用 object 形式的 state**，让每块内容有名字、关系清晰；只有极简场景才用裸字符串。
-2. **把领域规则和边界情况写进 `instructions` / `criteria`**——Jev 不做微调，所有领域适配都靠请求本身。
-3. **拆细问题**：宽泛判断拆成原子问题，在代码里组合，比让模型一次做综合判断更可靠。
-4. **有阈值就不要用别名**：如果你按某个版本调过 confidence 阈值，**请固定版本 ID（如 `jev-1.13.0`）而不是用 `jev-latest`**，否则别名漂移会静默改变行为。
-5. **记录响应里的 `model` 字段**：它返回实际应答的版本化 ID，便于溯源（别名会移动）。
-6. **非英文场景先自测**：英文是主要训练语言，表现最好；**中文等 CJK 可用但准确率较低**，且要特别关注 confidence。
-
-### 8.4 明确不要做的事
-- ❌ 不要用它生成文字、写代码、要解释——它做不到。
-- ❌ 不要把它当通用 LLM 的替代品。
-- ❌ 不要因为"有概率"就假设单个答案一定正确（校准是群体性质）。
+> **需要“生成与推理”时用 LLM；需要“高频、有限答案、可执行判断”时用 Jev。**
 
 ---
 
-## 9. 常见问题 / 限制（踩坑清单）
+## 8. 最小决策示例：ToDoList 任务分流
 
-| 项 | 说明 |
-|---|---|
-| **只能输入文本** | state 必须是 string、JSON object 或 text array。**图片、音频、视频暂不支持**，需先转成文本/结构化字段。 |
-| **上下文长度** | 64k tokens/请求；其中 **`state` + 最长单个问题 合计 32k**。state 越长准确率会变化（官方有一篇 *Jev 1.13 jaggedness* 专门讲）。 |
-| **限流会动态调整** | 当前 250,000 tokens/秒、1,200 请求/分钟；**官方明说会不预先通知地变化**。超限返回 `429`。官方 SDK 默认带退避重试并遵守 `retry-after`；自己调 HTTP 要处理限流。 |
-| **定价** | 目前 $42 / Btok = $0.042 / Mtok（**按输入计费，输出免费**）。官方坦承"无法证明没有补贴"。 |
-| **模型别名会漂移** | `jev-latest` / `jev-preview` 目前都指向 `jev-1.13.0`；`jev-preview` 在有预览版时会先于 latest 前移。 |
-| **不做微调** | 所有账号共用同一份权重，**不会用客户数据做 LoRA / 微调**；领域适配只能靠 prompt 里的 state 和 criteria。 |
-| **数据使用** | 官方称**不用客户请求/响应训练**；企业版有 ZDR（零数据保留）。 |
-| **单个答案不保证正确** | 校准是跨预测组度量的，不是单条保证。 |
-| **`noul` 没有 confidence** | Noul 答案不带 confidence 字段，只有 yes 概率。 |
-| **状态会变** | 产品行为、价格、限额、别名都可能变——所以本文档所有数字都标了日期。 |
+对于当前 ToDoList 项目，可将 Jev 用于**任务优先级和处理路径判断**，而不是生成任务内容。
+
+### 输入状态
+
+```json
+{
+  "title": "线上支付页面无法打开",
+  "description": "从上午开始所有用户都无法完成付款，客服已经收到多个投诉。",
+  "source": "客服",
+  "affected_users": "all"
+}
+```
+
+### 候选答案
+
+```text
+P0：核心功能全量不可用，立即处理
+P1：重要功能受影响，今日处理
+P2：一般问题，进入常规队列
+```
+
+### 程序使用结果
+
+```python
+priority = decide_priority(task)
+
+if priority.choice == "P0":
+    notify_on_call()
+    create_incident()
+elif priority.choice == "P1":
+    add_to_today_queue()
+else:
+    add_to_backlog()
+```
+
+这里的价值不在于让模型替代项目负责人，而在于把难以穷举的自然语言描述，转换为一个稳定、可审计的工作流入口。
 
 ---
 
-## 10. ⚠️ 不确定性与风险标注（重要）
+## 9. 关键边界与注意事项
 
-1. **最高风险：是否真是这个 Jev**。虽然证据强，但用户只写了三个字母。**这是必须确认的第一件事。**
-2. **产品极新**：2026-09-15 才发布，处于 **early access**，本文档所有规格**随时可能过时**。
-3. **第三方生态资料不可信**：GitHub 上 7,471 个 `jev` 相关仓库绝大多数是发布后数天内涌现的。多个知名 awesome 列表**自己就在警告**"同日批量提交、共用脚手架、提交历史很薄"的项目属于**未被验证的线索，而非可用工具**。部分仓库的 star 增长速度（几天内上万 star）**明显异常**，有刷量嫌疑，请勿据此判断质量。
-4. **抓取时点为 2026-09-21**：`awesome-jev` 系列列表自述"快照审阅：2026-09-19"，非官方仓库。
-5. **上表中的数字均来自官方页面转述**，本文档未做独立复现验证。
+1. **Jev 不负责写内容**：需要文本、代码、解释或复杂方案时，用 LLM。
+2. **不要把候选项设计得过多、重叠或含义模糊**：它会降低结果可解释性和稳定性。
+3. **概率不是保证**：它表示模型的判断倾向，不等同于事实真相。
+4. **高风险动作必须加规则和人工兜底**：例如支付、交易、删除数据、对外发布。
+5. **先从低风险分流开始**：如标签、优先级、路由、人工复核判断；验证稳定后再扩大自动化范围。
+
+---
+
+## 10. 学习结论
+
+Jev 代表的不是“另一个会聊天的大模型”，而是一种更贴近软件自动化的 AI 用法：
+
+> 把 AI 放在程序的决策点上，让它回答有限、明确、可执行的问题。
+
+当任务本质是：
+
+```text
+给定当前状态，A / B / C 该选哪个？
+```
+
+Jev 这类 System One 模型比让 LLM 写一段长回复更合适。
+
+而当任务本质是：
+
+```text
+请理解、推理、解释、创作或规划。
+```
+
+仍然应使用大语言模型。
 
 ---
 
-## 11. 需要用户确认的关键点
+## 视频来源
 
-请确认以下几项，我据此把草稿转成正式文档或继续深挖：
-
-1. **"jev" 是否指 TypeSafe AI 的 Jev 模型？**（对比候选：乙型脑炎病毒 JEV / 内部代号 / 其他）
-2. **你的使用角色是**：只是想理解概念（学习笔记）？还是要真的接入 API 写代码？
-3. **主语言**：Python 还是 TypeScript？（决定我保留哪套示例、是否延伸 `jev` 装饰器包）
-4. **是否与 ToDoList 项目相关**：是要给 ToDoList 加"智能判断"能力（如任务优先级自动判定），还是纯知识学习？若是前者，我可以直接给一份接入方案。
-5. **中文场景**：官方明确中文准确率低于英文，若你的实际输入是中文，需要额外做置信度门控设计——要不要我补一节？
-6. **文档归属**：确认放在 `Jev/` 目录，文件名与是否拆分（单文件 vs 多篇）。
-
----
+- 视频标题：Jev爆火：为什么有些活，开发者开始不叫大模型了？
+- 发布者：InfoQ
+- 视频链接：https://www.toutiao.com/video/7687589421821984777/
+- 发布时间：2026-09-20
 
 ## 12. 参考来源
 
