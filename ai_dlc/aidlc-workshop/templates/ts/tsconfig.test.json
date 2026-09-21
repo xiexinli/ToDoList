@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.test.tsbuildinfo",
+    "types": ["node", "vite/client"],
+    "lib": ["ES2023", "DOM"],
+    "noEmit": true,
+    "composite": false
+  },
+  "include": ["src", "tests", "scripts", "vitest.config.ts"]
+}

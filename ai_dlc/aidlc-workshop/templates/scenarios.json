@@ -1,0 +1,37 @@
+{
+  "_comment": "Agent 类课题的对话样例，驱动 tests/test_scenarios.py。source=customer：逐字来自客户材料；source=synthetic：小组按 SOP 补写，必须在 DEMO.md 会后跟进中列出待客户替换。expect 只放确定性字段（outcome、工具调用序列），不放措辞。",
+  "context": {"known_user_id": "<客户样例里的真实 id>"},
+  "scenarios": [
+    {
+      "id": "c01",
+      "source": "customer",
+      "ac": "AC-08",
+      "label": "信息不全需追问",
+      "user_id": "<known_user_id>",
+      "turns": [
+        {"user": "I cant reset password", "expect": {"outcome": "clarify", "tools": []}}
+      ]
+    },
+    {
+      "id": "s01",
+      "source": "synthetic",
+      "ac": "AC-13",
+      "label": "需转人工",
+      "user_id": "<known_user_id>",
+      "turns": [
+        {"user": "I want to talk to a human agent.", "expect": {"outcome": "handoff", "tools": []}}
+      ]
+    },
+    {
+      "id": "s02",
+      "source": "synthetic",
+      "ac": "AC-07",
+      "label": "两轮：追问后补充症状 → 闭环",
+      "user_id": "<known_user_id>",
+      "turns": [
+        {"user": "I need reset password", "expect": {"outcome": "clarify", "tools": []}},
+        {"user": "I clicked Forgot Password but did not receive the email.", "expect": {"outcome": "in_mail_sent", "tools": ["get_system_id", "send_buyer_message"]}}
+      ]
+    }
+  ]
+}
