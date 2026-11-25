@@ -1,0 +1,78 @@
+{
+  "material": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-25-端云对账的查询预算持久化：重启不自动续查（续）.md",
+  "material_sha256": "55bfb79ec5dbd9a3e9c61fd3b3b8f205b3f43a512e798f6a4a5efdafa7cde570",
+  "bytes": 17356,
+  "lines": 214,
+  "template": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+  },
+  "recap_blank": true,
+  "ledger": {
+    "已完成主题": true,
+    "本周计划": true,
+    "动态链接去重表": true
+  },
+  "all_urls_registered": true,
+  "inline_code_matches": true,
+  "old_dependencies_unchanged": true,
+  "test_budget.py": {
+    "exit": 0,
+    "level": "EXECUTED_HOST 主agent落盘复跑，非独立子agent评审"
+  },
+  "budget_host.py": {
+    "exit": 0,
+    "level": "EXECUTED_HOST 主agent落盘复跑，非独立子agent评审"
+  },
+  "http_samples": [
+    {
+      "id": "S01",
+      "url": "https://www.sqlite.org/lang_transaction.html",
+      "curl_exit": 0,
+      "http": "200"
+    },
+    {
+      "id": "S02",
+      "url": "https://docs.python.org/3.9/library/sqlite3.html",
+      "curl_exit": 0,
+      "http": "200"
+    },
+    {
+      "id": "S03",
+      "url": "https://developers.googleblog.com/from-files-to-cited-answers-in-one-api-call-managed-ingestion-and-searchdocuments-in-agent-retrieval/",
+      "curl_exit": 0,
+      "http": "200"
+    },
+    {
+      "id": "S04",
+      "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2094685239933841408",
+      "curl_exit": 0,
+      "http": "200"
+    }
+  ],
+  "unique_material": true,
+  "observed_at": "2026-11-25T09:09:41.416033+08:00",
+  "status": "DONE",
+  "writer": "学习教练1800秒调用超时；实际无产物后由主agent接管，落盘后自行复跑验收",
+  "feishu": {
+    "submission": "ok",
+    "message_id": "om_x100b7f571a84f8a0cef0abcb5549d5f",
+    "bot": "organization",
+    "chat": "me",
+    "readback_exit": 0,
+    "message_found": true,
+    "not_a_read_receipt": true
+  },
+  "not_executed": [
+    "真实业务查询与副作用",
+    "真实接口/scope批准、签名认证、远端终结/释放",
+    "真实并发竞争与物理掉电",
+    "Android/SDK/设备",
+    "模型调用/usage",
+    "11-20/21历史缺口复核"
+  ]
+}

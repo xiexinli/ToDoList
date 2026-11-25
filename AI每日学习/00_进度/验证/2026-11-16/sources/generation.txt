@@ -1,0 +1,920 @@
+
+ Generation  |  ML Kit  |  Google for Developers
+ Skip to main content
+ ML Kit
+ Guides
+ Reference
+ Samples
+ Case studies
+ Community
+ /
+ English
+ Deutsch
+ Español
+ Français
+ Indonesia
+ Português – Brasil
+ Русский
+ 中文 – 简体
+ 日本語
+ 한국어
+ Sign in
+ Reference
+ Android
+ iOS Swift
+ iOS Objective-C
+ ML Kit
+ Guides
+ Reference
+ Android
+ iOS Swift
+ iOS Objective-C
+ Samples
+ Case studies
+ Community
+Overview
+ com.google.android.odml.image
+Overview
+BitmapExtractor
+BitmapMlImageBuilder
+ByteBufferExtractor
+ByteBufferMlImageBuilder
+ImageProperties
+MediaImageExtractor
+MediaMlImageBuilder
+ MlImage
+Overview
+ImageFormat
+Internal
+StorageType
+ com.google.mlkit.common
+Overview
+MlKit
+ MlKitException
+Overview
+ErrorCode
+ com.google.mlkit.common.model
+Overview
+ CustomRemoteModel
+Overview
+Builder
+ DownloadConditions
+Overview
+Builder
+ LocalModel
+Overview
+Builder
+RemoteModel
+RemoteModelManager
+RemoteModelSource
+ com.google.mlkit.genai.agent (Kotlin)
+Overview
+ Interfaces
+AgentEvent
+AgentSession
+ Classes
+Agent
+Agent.Builder
+AgentEvent.FunctionCall
+AgentEvent.FunctionResponse
+AgentEvent.TextMessage
+AgentRunner
+AgentTool
+ Objects
+AppFunctionAgentTools
+ com.google.mlkit.genai.agent (Java)
+Overview
+ Interfaces
+AgentEvent
+AgentSession
+ Classes
+Agent
+Agent.Builder
+AgentEvent.FunctionCall
+AgentEvent.FunctionResponse
+AgentEvent.TextMessage
+AgentEventKt
+AgentRunner
+AgentTool
+AppFunctionAgentTools
+ com.google.mlkit.genai.common (Kotlin)
+Overview
+ Interfaces
+DownloadCallback
+StreamingCallback
+ Classes
+DownloadStatus
+DownloadStatus.DownloadFailed
+DownloadStatus.DownloadProgress
+DownloadStatus.DownloadStarted
+ Exceptions
+GenAiException
+ Annotations
+FeatureStatus
+GenAiException.ErrorCode
+ Objects
+DownloadStatus.DownloadCompleted
+ com.google.mlkit.genai.common.audio (Kotlin)
+Overview
+ Classes
+AudioSource
+ com.google.mlkit.genai.common (Java)
+Overview
+DownloadCallback
+FeatureStatus
+ GenAiException
+Overview
+ErrorCode
+StreamingCallback
+ com.google.mlkit.genai.common.audio (Java)
+Overview
+ AudioSource
+Overview
+Mode
+ com.google.mlkit.genai.embedding (Kotlin)
+Overview
+ Interfaces
+EmbeddingModel
+ Classes
+Content
+EmbeddingMetadata
+EmbeddingOptions
+EmbeddingRequest
+EmbeddingResult
+EmbeddingVector
+ImagePart
+Part
+TaskConfig
+TaskConfig.Classification
+TaskConfig.Clustering
+TaskConfig.CodeRetrieval
+TaskConfig.FactVerification
+TaskConfig.QuestionAnswering
+TaskConfig.RetrievalDocument
+TaskConfig.RetrievalQuery
+TaskConfig.SemanticSimilarity
+TextPart
+ Annotations
+Modality
+ Objects
+EmbeddingGeneration
+ com.google.mlkit.genai.embedding (Java)
+Overview
+ Interfaces
+EmbeddingModel
+ Classes
+Content
+EmbeddingGeneration
+EmbeddingMetadata
+EmbeddingOptions
+EmbeddingRequest
+EmbeddingResult
+EmbeddingVector
+ImagePart
+Part
+TaskConfig
+TaskConfig.Classification
+TaskConfig.Clustering
+TaskConfig.CodeRetrieval
+TaskConfig.FactVerification
+TaskConfig.QuestionAnswering
+TaskConfig.RetrievalDocument
+TaskConfig.RetrievalQuery
+TaskConfig.SemanticSimilarity
+TextPart
+ Annotations
+Modality
+ com.google.mlkit.genai.imagedescription
+Overview
+ImageDescriber
+ ImageDescriberOptions
+Overview
+Builder
+ImageDescription
+ ImageDescriptionRequest
+Overview
+Builder
+ImageDescriptionResult
+ com.google.mlkit.genai.prompt (Kotlin)
+Overview
+ Interfaces
+Caches
+GenerativeModel
+ Classes
+CachedContext
+Candidate
+Content
+Content.Builder
+CountTokensResponse
+CreateCachedContextRequest
+CreateCachedContextRequest.Builder
+FunctionCallPart
+FunctionResponsePart
+GenerateContentRequest
+GenerateContentRequest.Builder
+GenerateContentResponse
+GenerateTypedContentRequest
+GenerateTypedContentRequest.Builder
+GenerateTypedContentResponse
+GenerationConfig
+GenerationConfig.Builder
+ImagePart
+ModelConfig
+ModelConfig.Builder
+Part
+PromptPrefix
+SystemInstruction
+TextPart
+TypedCandidate
+ Annotations
+Candidate.FinishReason
+Content.Role
+Feature
+ModelPreference
+ModelReleaseStage
+TypedCandidate.TypedFinishReason
+ Objects
+Generation
+ com.google.mlkit.genai.prompt.java (Kotlin)
+Overview
+ Classes
+CachesFutures
+GenerativeModelFutures
+ com.google.mlkit.genai.prompt (Java)
+Overview
+ Interfaces
+Caches
+GenerativeModel
+ Classes
+CachedContext
+Candidate
+Content
+Content.Builder
+Content.Companion
+ContentKt
+CountTokensResponse
+CreateCachedContextRequest
+CreateCachedContextRequest.Builder
+CreateCachedContextRequestKt
+FunctionCallPart
+FunctionCallPart.Companion
+FunctionResponsePart
+FunctionResponsePart.Companion
+GenerateContentRequest
+GenerateContentRequest.Builder
+GenerateContentRequest.Companion
+GenerateContentRequestKt
+GenerateContentResponse
+GenerateTypedContentRequest
+GenerateTypedContentRequest.Builder
+GenerateTypedContentRequest.Companion
+GenerateTypedContentRequestKt
+GenerateTypedContentResponse
+Generation
+GenerationConfig
+GenerationConfig.Builder
+GenerationConfig.Companion
+GenerationConfigKt
+ImagePart
+ModelConfig
+ModelConfig.Builder
+ModelConfig.Companion
+ModelConfigKt
+Part
+PromptPrefix
+SystemInstruction
+TextPart
+TypedCandidate
+ Annotations
+Candidate.FinishReason
+Content.Role
+Feature
+ModelPreference
+ModelReleaseStage
+TypedCandidate.TypedFinishReason
+ com.google.mlkit.genai.prompt.java (Java)
+Overview
+ Classes
+CachesFutures
+GenerativeModelFutures
+ com.google.mlkit.genai.schema.annotations (Kotlin)
+Overview
+ Annotations
+Generable
+Guide
+ com.google.mlkit.genai.schema.guided (Kotlin)
+Overview
+ Interfaces
+GenerableProvider
+ Classes
+GenerableDetail
+GenerableDetail.GuideDetail
+ com.google.mlkit.genai.schema.tools (Kotlin)
+Overview
+ Classes
+FunctionDeclaration
+FunctionSchema
+ Annotations
+FunctionType
+ com.google.mlkit.genai.schema.annotations (Java)
+Overview
+ Annotations
+Generable
+Guide
+ com.google.mlkit.genai.schema.guided (Java)
+Overview
+ Interfaces
+GenerableProvider
+ Classes
+GenerableDetail
+GenerableDetail.GuideDetail
+ com.google.mlkit.genai.schema.tools (Java)
+Overview
+ Classes
+FunctionDeclaration
+FunctionSchema
+ Annotations
+FunctionType
+ com.google.mlkit.genai.proofreading
+Overview
+Proofreader
+ ProofreaderOptions
+Overview
+Builder
+InputType
+Language
+Proofreading
+ ProofreadingRequest
+Overview
+Builder
+ProofreadingResult
+ProofreadingSuggestion
+ com.google.mlkit.genai.rewriting
+Overview
+Rewriter
+ RewriterOptions
+Overview
+Builder
+Language
+OutputType
+Rewriting
+ RewritingRequest
+Overview
+Builder
+RewritingResult
+RewritingSuggestion
+ com.google.mlkit.genai.speechrecognition (Kotlin)
+Overview
+ Classes
+RecognitionOptions
+RecognitionOptions.Builder
+SpeechRecognizer
+SpeechRecognizerOptions
+SpeechRecognizerOptions.Builder
+SpeechRecognizerRequest
+SpeechRecognizerRequest.Builder
+SpeechRecognizerResponse
+SpeechRecognizerResponse.AudioLevelResponse
+SpeechRecognizerResponse.ErrorResponse
+SpeechRecognizerResponse.FinalTextResponse
+SpeechRecognizerResponse.PartialTextResponse
+SpeechRecognizerResponse.WordTiming
+ Annotations
+SpeechRecognizerOptions.Mode
+ Objects
+SpeechRecognition
+SpeechRecognizerResponse.CompletedResponse
+ com.google.mlkit.genai.speechrecognition (Java)
+Overview
+ Classes
+RecognitionOptions
+RecognitionOptions.Builder
+RecognitionOptions.Companion
+RecognitionOptionsKt
+SpeechRecognition
+SpeechRecognizer
+SpeechRecognizerOptions
+SpeechRecognizerOptions.Builder
+SpeechRecognizerOptions.Companion
+SpeechRecognizerOptionsKt
+SpeechRecognizerRequest
+SpeechRecognizerRequest.Builder
+SpeechRecognizerRequest.Companion
+SpeechRecognizerRequestKt
+SpeechRecognizerResponse
+SpeechRecognizerResponse.AudioLevelResponse
+SpeechRecognizerResponse.CompletedResponse
+SpeechRecognizerResponse.ErrorResponse
+SpeechRecognizerResponse.FinalTextResponse
+SpeechRecognizerResponse.PartialTextResponse
+SpeechRecognizerResponse.WordTiming
+ Annotations
+SpeechRecognizerOptions.Mode
+ com.google.mlkit.genai.speechtranslation (Kotlin)
+Overview
+ Interfaces
+SpeechTranslatorResponse
+ Classes
+SpeechTranslator
+SpeechTranslatorOptions
+SpeechTranslatorOptions.Builder
+SpeechTranslatorRequest
+SpeechTranslatorRequest.Builder
+SpeechTranslatorResponse.Audio
+SpeechTranslatorResponse.ErrorResponse
+SpeechTranslatorResponse.Text
+TranslationAudio
+ Objects
+SpeechTranslation
+SpeechTranslatorResponse.CompletedResponse
+ com.google.mlkit.genai.speechtranslation (Java)
+Overview
+ Interfaces
+SpeechTranslatorResponse
+ Classes
+SpeechTranslation
+SpeechTranslator
+SpeechTranslatorOptions
+SpeechTranslatorOptions.Builder
+SpeechTranslatorOptionsKt
+SpeechTranslatorRequest
+SpeechTranslatorRequest.Builder
+SpeechTranslatorRequestKt
+SpeechTranslatorResponse.Audio
+SpeechTranslatorResponse.CompletedResponse
+SpeechTranslatorResponse.ErrorResponse
+SpeechTranslatorResponse.Text
+TranslationAudio
+ com.google.mlkit.genai.summarization
+Overview
+Summarization
+ SummarizationRequest
+Overview
+Builder
+SummarizationResult
+Summarizer
+ SummarizerOptions
+Overview
+Builder
+InputType
+Language
+OutputType
+ com.google.mlkit.genai.texttospeech (Kotlin)
+Overview
+ Classes
+SpeechSynthesizer
+SpeechSynthesizerOptions
+SpeechSynthesizerOptions.Builder
+SpeechSynthesizerRequest
+SpeechSynthesizerRequest.Input
+SpeechSynthesizerRequest.Input.Earcon
+SpeechSynthesizerRequest.Input.PreRecordedSpeech
+SpeechSynthesizerRequest.Input.Text
+SpeechSynthesizerResponse
+SpeechSynthesizerResponse.AudioAvailable
+SpeechSynthesizerResponse.Error
+SpeechSynthesizerResponse.StatusUpdate
+VoiceInfo
+ Enums
+SpeechSynthesizerResponse.Status
+VoiceInfo.Gender
+ Annotations
+SpeechSynthesizerRequest.QueueMode
+ Objects
+SpeechSynthesis
+ com.google.mlkit.genai.texttospeech (Java)
+Overview
+ Classes
+SpeechSynthesis
+SpeechSynthesizer
+SpeechSynthesizerOptions
+SpeechSynthesizerOptions.Builder
+SpeechSynthesizerOptionsKt
+SpeechSynthesizerRequest
+SpeechSynthesizerRequest.Input
+SpeechSynthesizerRequest.Input.Earcon
+SpeechSynthesizerRequest.Input.PreRecordedSpeech
+SpeechSynthesizerRequest.Input.Text
+SpeechSynthesizerResponse
+SpeechSynthesizerResponse.AudioAvailable
+SpeechSynthesizerResponse.Error
+SpeechSynthesizerResponse.StatusUpdate
+VoiceInfo
+ Enums
+SpeechSynthesizerResponse.Status
+VoiceInfo.Gender
+ Annotations
+SpeechSynthesizerRequest.QueueMode
+ com.google.mlkit.nl.entityextraction
+Overview
+ DateTimeEntity
+Overview
+DateTimeGranularity
+ Entity
+Overview
+Type
+EntityAnnotation
+EntityExtraction
+ EntityExtractionParams
+Overview
+Builder
+ EntityExtractionRemoteModel
+Overview
+Builder
+EntityExtractor
+ EntityExtractorOptions
+Overview
+Builder
+ModelIdentifier
+FlightNumberEntity
+IbanEntity
+IsbnEntity
+MoneyEntity
+ PaymentCardEntity
+Overview
+PaymentCardNetwork
+ TrackingNumberEntity
+Overview
+ParcelTrackingCarrier
+ com.google.mlkit.nl.languageid
+Overview
+IdentifiedLanguage
+LanguageIdentification
+ LanguageIdentificationOptions
+Overview
+Builder
+LanguageIdentifier
+ com.google.mlkit.linkfirebase
+Overview
+ FirebaseModelSource
+Overview
+Builder
+ com.google.mlkit.nl.smartreply
+Overview
+SmartReply
+SmartReplyGenerator
+ SmartReplyGeneratorOptions
+Overview
+Builder
+SmartReplySuggestion
+ SmartReplySuggestionResult
+Overview
+Status
+TextMessage
+ com.google.mlkit.nl.translate
+Overview
+ TranslateLanguage
+Overview
+Language
+ TranslateRemoteModel
+Overview
+Builder
+Translation
+Translator
+ TranslatorOptions
+Overview
+Builder
+ com.google.mlkit.vision.barcode
+Overview
+BarcodeScanner
+ BarcodeScannerOptions
+Overview
+Builder
+BarcodeScanning
+ ZoomSuggestionOptions
+Overview
+Builder
+ZoomCallback
+ com.google.mlkit.vision.barcode.common
+Overview
+ Barcode
+Overview
+ Barcode.Address
+Overview
+AddressType
+BarcodeFormat
+BarcodeValueType
+CalendarDateTime
+CalendarEvent
+ContactInfo
+DriverLicense
+ Barcode.Email
+Overview
+FormatType
+GeoPoint
+PersonName
+ Barcode.Phone
+Overview
+FormatType
+Sms
+UrlBookmark
+ Barcode.WiFi
+Overview
+EncryptionType
+ com.google.mlkit.vision.camera
+Overview
+ CameraSourceConfig
+Overview
+Builder
+CameraFacing
+CameraXSource
+DetectionTaskCallback
+ com.google.mlkit.vision.codescanner
+Overview
+GmsBarcodeScanner
+ GmsBarcodeScannerOptions
+Overview
+Builder
+GmsBarcodeScanning
+ com.google.mlkit.vision.common
+Overview
+ InputImage
+Overview
+ImageFormat
+PointF3D
+Triangle
+ com.google.mlkit.vision.digitalink.common
+Overview
+Point
+RecognitionCandidate
+RecognitionResult
+ Stroke
+Overview
+Properties
+ com.google.mlkit.vision.digitalink.recognition
+Overview
+DigitalInkRecognition
+ DigitalInkRecognitionModel
+Overview
+Builder
+DigitalInkRecognitionModelIdentifier
+DigitalInkRecognizer
+ DigitalInkRecognizerOptions
+Overview
+Builder
+ Ink
+Overview
+Builder
+Point
+ Ink.Stroke
+Overview
+Builder
+ RecognitionContext
+Overview
+Builder
+WritingArea
+ com.google.mlkit.vision.digitalink.common
+Overview
+Point
+RecognitionCandidate
+RecognitionResult
+ Stroke
+Overview
+Properties
+ com.google.mlkit.vision.documentscanner
+Overview
+GmsDocumentScanner
+ GmsDocumentScannerOptions
+Overview
+Builder
+CaptureMode
+ResultFormat
+ScannerMode
+GmsDocumentScanning
+ GmsDocumentScanningResult
+Overview
+Page
+Pdf
+ com.google.mlkit.vision.face
+Overview
+Face
+ FaceContour
+Overview
+ContourType
+FaceDetection
+FaceDetector
+ FaceDetectorOptions
+Overview
+Builder
+ClassificationMode
+ContourMode
+LandmarkMode
+PerformanceMode
+ FaceLandmark
+Overview
+LandmarkType
+ com.google.mlkit.vision.facemesh
+Overview
+ FaceMesh
+Overview
+ContourType
+FaceMeshDetection
+FaceMeshDetector
+ FaceMeshDetectorOptions
+Overview
+Builder
+UseCase
+FaceMeshPoint
+ com.google.mlkit.vision.interfaces
+Overview
+Detector
+ com.google.mlkit.vision.label
+Overview
+ImageLabel
+ImageLabeler
+ImageLabelerOptionsBase
+ImageLabeling
+ com.google.mlkit.vision.label.custom
+Overview
+ CustomImageLabelerOptions
+Overview
+Builder
+ com.google.mlkit.vision.label.defaults
+Overview
+ ImageLabelerOptions
+Overview
+Builder
+ com.google.mlkit.vision.objects
+Overview
+ DetectedObject
+Overview
+Label
+ObjectDetection
+ObjectDetector
+ ObjectDetectorOptionsBase
+Overview
+DetectorMode
+ com.google.mlkit.vision.objects.custom
+Overview
+ CustomObjectDetectorOptions
+Overview
+Builder
+ com.google.mlkit.vision.objects.defaults
+Overview
+ ObjectDetectorOptions
+Overview
+Builder
+PredefinedCategory
+ com.google.mlkit.vision.pose
+Overview
+Pose
+PoseDetection
+PoseDetector
+ PoseDetectorOptionsBase
+Overview
+DetectorMode
+HardwareConfig
+ PoseLandmark
+Overview
+LandmarkType
+ com.google.mlkit.vision.pose.defaults
+Overview
+ PoseDetectorOptions
+Overview
+Builder
+ com.google.mlkit.vision.pose.accurate
+Overview
+ AccuratePoseDetectorOptions
+Overview
+Builder
+ com.google.mlkit.vision.segmentation
+Overview
+Segmentation
+SegmentationMask
+Segmenter
+ com.google.mlkit.vision.segmentation.selfie
+Overview
+ SelfieSegmenterOptions
+Overview
+Builder
+DetectorMode
+ com.google.mlkit.vision.segmentation.subject
+Overview
+Subject
+SubjectSegmentation
+SubjectSegmentationResult
+SubjectSegmenter
+ SubjectSegmenterOptions
+Overview
+Builder
+ SubjectSegmenterOptions.SubjectResultOptions
+Overview
+Builder
+ com.google.mlkit.vision.text
+Overview
+ Text
+Overview
+Element
+Line
+Symbol
+TextBlock
+TextRecognition
+TextRecognizer
+ TextRecognizerOptionsInterface
+Overview
+LanguageOption
+ com.google.mlkit.vision.text.chinese
+Overview
+ ChineseTextRecognizerOptions
+Overview
+Builder
+ com.google.mlkit.vision.text.devanagari
+Overview
+ DevanagariTextRecognizerOptions
+Overview
+Builder
+ com.google.mlkit.vision.text.japanese
+Overview
+ JapaneseTextRecognizerOptions
+Overview
+Builder
+ com.google.mlkit.vision.text.korean
+Overview
+ KoreanTextRecognizerOptions
+Overview
+Builder
+ com.google.mlkit.vision.text.latin
+Overview
+ TextRecognizerOptions
+Overview
+Builder
+ Home
+ Products
+ ML Kit
+ Reference
+ Send feedback
+ Stay organized with collections
+ Save and categorize content based on your preferences.
+Generation
+Kotlin
+|Java
+object Generation
+Entry class to get a GenerativeModel client.
+Summary
+Public functions
+ GenerativeModel
+getClient()
+Creates a new instance of GenerativeModel with default GenerationConfig.
+ GenerativeModel
+getClient(options: GenerationConfig)
+Creates a new instance of GenerativeModel.
+Public functions
+getClient
+fun getClient(): GenerativeModel
+Creates a new instance of GenerativeModel with default GenerationConfig.
+ Returns
+ GenerativeModel
+The GenerativeModel client.
+getClient
+fun getClient(options: GenerationConfig): GenerativeModel
+Creates a new instance of GenerativeModel.
+ Parameters
+ options: GenerationConfig
+the configuration for generation.
+ Send feedback
+Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License. For details, see the Google Developers Site Policies. Java is a registered trademark of Oracle and/or its affiliates.
+Last updated 2026-01-28 UTC.
+ Need to tell us more?
+ [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-01-28 UTC."],[],[]]
+Engage
+ Google AI Forum
+ Google Developer Program
+ Google Developer Groups
+ Google Developer Experts
+ Accelerators
+ Google Cloud & NVIDIA
+Connect
+ Blog
+ Bluesky
+ Instagram
+ LinkedIn
+ X (Twitter)
+ YouTube
+Build
+ Android
+ Chrome
+ Firebase
+ Google AI Studio
+ Google Antigravity
+ Google Cloud
+ Google Play
+ View all
+ Android
+ Chrome
+ Firebase
+ Google Cloud Platform
+ Google AI
+ All products
+ Terms
+ Privacy
+ Manage cookies
+ English
+ Deutsch
+ Español
+ Français
+ Indonesia
+ Português – Brasil
+ Русский
+ 中文 – 简体
+ 日本語
+ 한국어

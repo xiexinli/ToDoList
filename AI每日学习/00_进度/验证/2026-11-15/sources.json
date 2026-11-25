@@ -1,0 +1,46 @@
+{
+  "observed_at": "2026-11-15T08:04:17.486645",
+  "items": [
+    {
+      "title": "Google AI Edge Gallery 新增端侧语音识别与语音合成",
+      "url": "https://developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/",
+      "date": "2026-11-10",
+      "http": 200,
+      "read": "正文 title/datePublished/正文实读",
+      "evidence": [
+        "voice-article.txt",
+        "google-feed.txt"
+      ],
+      "canonical": "developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery",
+      "dedup": "NEW"
+    },
+    {
+      "title": "腾讯 微信WeLM-大模型研发基础设施工程师-研发效能方向",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2084637516971032576",
+      "date": "2026-11-02（官方LastUpdateTime，非发布日期）",
+      "http": 200,
+      "read": "官方ByPostId职责/要求实读；岗位页标题200",
+      "evidence": [
+        "welm-jd.txt",
+        "welm-page.txt",
+        "jobs-query.txt"
+      ],
+      "caution": "标题城市深圳/上海/广州与LocationName北京不一致，不据此断定城市",
+      "canonical": "careers.tencent.com/jobdesc.html?postId=2084637516971032576",
+      "dedup": "NEW"
+    },
+    {
+      "title": "GitHub langchain-ai/langgraph：有状态工作流与持久执行",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "date": "创建2023-08-09；pushed_at 2026-11-14T01:43:55Z（非发布日期）",
+      "http": 200,
+      "read": "GitHub API仓库元数据及README实读；未声称项目页HTML验证",
+      "evidence": [
+        "langgraph-api.txt",
+        "langgraph-readme.txt"
+      ],
+      "canonical": "github.com/langchain-ai/langgraph",
+      "dedup": "NEW"
+    }
+  ]
+}

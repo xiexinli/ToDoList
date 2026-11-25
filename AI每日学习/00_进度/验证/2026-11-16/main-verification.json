@@ -1,0 +1,32 @@
+{
+  "observed_at": "2026-11-16T08:11:27.648588+08:00",
+  "status": "DONE",
+  "checks": {
+    "document_and_ledger": "PASS",
+    "source_http_4_of_4": "PASS",
+    "independent_host_16_cases_2304_combinations_3_tests": "PASS",
+    "android_compile": "NOT_EXECUTED",
+    "real_device_inference": "NOT_EXECUTED"
+  },
+  "message": {
+    "message_id": "om_x100b6090ef31e8a0c1b47c904dba5c2",
+    "bot": "organization",
+    "chat": "me",
+    "submitted": true,
+    "found_in_chat": true,
+    "read_receipt": false,
+    "create_time": "2026-11-16 08:11"
+  },
+  "artifacts": [
+    {
+      "path": "02_AndroidAI/2026-11-16-端侧推理的设备能力检查与可用性边界.md",
+      "bytes": 27836,
+      "sha256": "4463fa2fbf0158a2a236e61e9fc9f7081943fad13bea5f5974c30a3d6e2f3534"
+    },
+    {
+      "path": "00_进度/进度.md",
+      "bytes": 18495,
+      "sha256": "e7890698e764f160a236bb9535ed15596f569753cdf9a1cb4c05dd41a63ab62e"
+    }
+  ]
+}

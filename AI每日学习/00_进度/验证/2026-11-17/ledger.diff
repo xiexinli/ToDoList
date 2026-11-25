@@ -1,0 +1,46 @@
+--- 进度.写前备份.md
++++ 进度.md
+@@ -24,6 +24,8 @@
+ | 2026-11-14 | 01_地基 · W4 | Agent 工程化（可观测与护栏）（W4 收官） | 01_地基/2026-11-14-Agent工程化（可观测与护栏）.md | 待填 |
+ | 2026-11-15 | 01_地基 · 工程化补充 | 可恢复工作流：检查点（Checkpoint）与断点续跑 | 01_地基/2026-11-15-可恢复工作流（Checkpoint与断点续跑）.md | 待填 |
+ | 2026-11-16 | 02_AndroidAI · 第 1 讲 | 端侧推理的设备能力检查与可用性边界 | 02_AndroidAI/2026-11-16-端侧推理的设备能力检查与可用性边界.md | 待填 |
++| 2026-11-17 | 02_AndroidAI · 第 2 讲 | Prompt API 最小调用：能力门禁后的一次短文本生成 | 02_AndroidAI/2026-11-17-Prompt API最小调用：能力门禁后的一次短文本生成.md | 待填 |
++
+ 
+ > 欠产与补写记录：2026-10-31 ~ 2026-11-04 因「本机终端审批超时」连续 6 天未落盘；2026-11-05 17:32 用户在 DHwork 权限设置中放行无人值守终端审批后，上述 5 天材料与 2026-W44 周总结已统一补全。
+ > 欠产与补写记录（二）：2026-11-07 ~ 2026-11-09 因「本机终端审批超时」连续 3 天未落盘；2026-11-09 下午用户在场、终端恢复后统一补全（含 2026-W45 周总结）。
+@@ -54,7 +56,8 @@
+ - [x] 地基工程化补充：可恢复工作流（Checkpoint 与断点续跑）（2026-11-15 完成；日材料与 W46 周总结同时产出）
+ - [x] **当前阶段：轨道 2 · Android × AI（端侧推理 / ML Kit / 端云协同）· 按计划 2026-11-16 开始；2026-W46 周总结已于 2026-11-15 产出**
+ - [x] Android × AI · 第 1 讲：端侧推理的设备能力检查与可用性边界（2026-11-16 材料已产出；学习复述待填）
+-- [ ] Android × AI · 第 2 讲：Prompt API 最小调用（计划 2026-11-17；续用首讲能力门禁，SDK/设备验证条件需复核）
++- [x] Android × AI · 第 2 讲：Prompt API 最小调用：能力门禁后的一次短文本生成（2026-11-17 材料已产出；Host 契约通过，Android 编译/真机 NOT_EXECUTED；复述待填）
++- [ ] Android × AI · 第 3 讲：端侧流式生成的 Compose 增量呈现（计划 2026-11-18；续地基 Streaming，聚焦 Android 接入，届时复核契约）
+ 
+ ## 动态链接去重表
+ | 首次出现日期 | 标题 | 链接 |
+@@ -140,6 +143,24 @@
+ | 2026-11-16 | 动态｜Google：用 Gemini 与约束求解器发现 Go 模糊测试遗漏的缺陷（11-12 发布） | https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/ |
+ | 2026-11-16 | 岗位｜腾讯混元-大模型应用开发工程师（北京/深圳；11-09 更新） | https://careers.tencent.com/jobdesc.html?postId=2053738190963126272 |
+ | 2026-11-16 | 工具｜GitHub google-ai-edge/gallery：模型管理与 Benchmark 示例 | https://github.com/google-ai-edge/gallery |
++| 2026-11-17 | GenerateContentRequest | https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerateContentRequest |
++| 2026-11-17 | GenerateContentRequest.Builder | https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerateContentRequest.Builder |
++| 2026-11-17 | TextPart | https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/TextPart |
++| 2026-11-17 | GenerateContentResponse | https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerateContentResponse |
++| 2026-11-17 | Candidate文本与结束原因 | https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate |
++| 2026-11-17 | Candidate.FinishReason | https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate.FinishReason |
++| 2026-11-17 | GenAiException | https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/GenAiException |
++| 2026-11-17 | kotlinx.coroutines 1.7.3 Timeout.kt | https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Timeout.kt |
++| 2026-11-17 | kotlinx.coroutines 1.7.3 CoroutineScope.kt | https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/CoroutineScope.kt |
++| 2026-11-17 | kotlinx.coroutines 1.7.3 Job.kt | https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Job.kt |
++| 2026-11-17 | 动态｜A2UI 1.0：原生交互界面的开放协议 | https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences/ |
++| 2026-11-17 | 岗位证据｜腾讯混元架构专家正式详情API | https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2110191895966826496 |
++| 2026-11-17 | 岗位｜腾讯混元大模型工程架构专家/Tech Lead | https://careers.tencent.com/jobdesc.html?postId=2110191895966826496 |
++| 2026-11-17 | 工具证据｜ML Kit GenAI Quickstart README | https://raw.githubusercontent.com/googlesamples/mlkit/master/android/genai/README.md |
++| 2026-11-17 | 工具证据｜ML Kit GenAI目录API | https://api.github.com/repos/googlesamples/mlkit/contents/android/genai |
++| 2026-11-17 | 工具｜ML Kit GenAI Quickstart | https://github.com/googlesamples/mlkit/tree/master/android/genai |
++
++> 2026-11-17 教学参考继续使用（首次 2026-11-16，非新动态）：[Direct model access接入指南](https://developers.google.com/ml-kit/genai/prompt/android/get-started)；[ML Kit GenAI概览](https://developers.google.com/ml-kit/genai)；[Generation.getClient](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Generation)；[GenerativeModel生成与释放](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel)；[Google Maven genai-prompt beta4 POM](https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom)。当天全部引用、原来源日期与读取状态见 `验证/2026-11-17/sources.json`。
+ 
+ ## 周总结
+ | 周次 | 覆盖日期 | 文件 |

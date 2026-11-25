@@ -1,0 +1,44 @@
+{
+  "status": "DONE",
+  "owner": "本轮单写入者",
+  "date": "2026-11-23",
+  "topic": "端云请求的持久操作账本：重启后怎样处理未确认请求",
+  "material": "02_AndroidAI/2026-11-23-端云请求的持久操作账本：重启后怎样处理未确认请求.md",
+  "ledger": "00_进度/进度.md",
+  "ledger_before_sha256": "d9486826908082e1e4341a91f589d4bc18e87bee93389ad446739cd852ec980c",
+  "ledger_after_sha256": "5fc890269fbb48d088559a7760dd7f84f965ddbec192545fe290dc351a0f4243",
+  "checks": {
+    "host": "EXECUTED_HOST: 12 tests OK",
+    "code_lines": 101,
+    "test_lines": 109,
+    "http": "5/5 curl_exit=0 HTTP200; 4份实读正文，1份岗位壳",
+    "ledger_completed_row": "PASS 1行",
+    "ledger_plan": "PASS 第8讲打勾",
+    "ledger_links": "PASS 5个全部引用",
+    "usage": "NOT_EXECUTED（没有模型调用）",
+    "feishu": "NOT_SENT；主agent唯一发送"
+  },
+  "not_executed": [
+    "真实SDK/Android编译与设备",
+    "远端接受/终结/释放/回执认证",
+    "真实云调用/模型下载",
+    "真实磁盘掉电与并发进程竞争",
+    "历史11-20/21缺口未修改未验证"
+  ],
+  "fixes": [
+    "首轮test_11/test_12的set_authorizer(None)在Python3.9.6上不能清除测试钩子，替换SQLITE_OK回调，最终重跑12项OK",
+    "CHECK显式要求UNKNOWN的slot非NULL，防止SQLite CHECK的NULL语义误用"
+  ],
+  "artifacts": {
+    "ledger_host.py": "8a9091e1afc393045d18e54d04d2f4979a95eb495424e72c38366a6dbbd56a8c",
+    "test_ledger.py": "af8037cca31c21a8d4b237f1317168b50388d147e3c793850ce16c1514dc63ab",
+    "demo.py": "86a0a205145e4268789082e26e2926ae69e86eb5a86059898302079a814b628b",
+    "test-output.txt": "1184edb6acc942a0ee3317ecb36618b460a9a6b2eea6d1a50ff1d44ae329e522",
+    "demo-output.txt": "c4261c1b42cd4fed60d9f6c9bceda26b7681aa0872d7ddee0652a48572bae7bb",
+    "sources.json": "1a32c2bb2970ab9f0aed5db2a19dac3f9ec7f684bf81bae029f62e3783187a02",
+    "feishu-draft.txt": "b350e9bd81b49f207052f1dda2db2f926b9b11395e1d079141427ede817189a0",
+    "final-checks.txt": "e7a556276edb5bcf8ee51e9dbc7ebd24784ec95ac9bc755c61482f2089d796e5"
+  },
+  "material_sha256": "a985c4094cf7170abf867fcc5457ff0d25d1438802117d42d2ad05a6cda1d483",
+  "post_write_checks": "PASS：final-checks.txt，落盘路径12项再次实跑OK；代码与材料及台账hash一致"
+}

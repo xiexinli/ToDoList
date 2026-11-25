@@ -1,0 +1,13 @@
+{
+  "before": "8bed6d17fc5ed1eb777180512f96c721909449df841066bdfe8b6236dedf1126",
+  "after": "c16c58ae7dffe1b3c959f8d8dd18afebd9357f152a5a8d3f63fe0739b9cc5d83",
+  "backup": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-19/ledger.before.md",
+  "completed_rows_added": 1,
+  "plan_checked_added": 1,
+  "new_canonical_rows": 5,
+  "continued_references": 7,
+  "all_old_lines_preserved": true,
+  "write_guard": "nonblocking advisory flock + before/just-before-replace SHA256",
+  "feishu": "not_sent",
+  "format_amendment": "今日新行与原表紧邻；旧内容/复述不变"
+}

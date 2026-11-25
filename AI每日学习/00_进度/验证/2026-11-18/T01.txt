@@ -1,0 +1,215 @@
+
+android
+compose-samples
+Repository navigation
+Code
+Issues1 (1)
+Pull requests9 (9)
+Actions
+Projects
+Security and quality
+Insights
+More items
+compose-samplesPublic
+NotificationsYou must be signed in to change notification settings
+Fork5.5k (5.5k)
+Star23.6k (23.6k)You must be signed in to star a repository
+About
+Official Jetpack Compose samples.
+developer.android.com/jetpack/compose
+Topics
+androidjetpack-composesample
+Resources
+Readme
+Apache-2.0 license
+Code of conduct
+Code of conduct
+Contributing
+Contributing
+Activity
+Custom properties
+Stars
+23.6k stars
+Watchers
+429 watching
+Forks
+5.5k forks
+Report repository
+main
+BranchesTags
+Go to fileCode
+Open more actions menu
+Latest commit
+History3,540 Commits
+3,540 Commits
+Folders and files
+NameName
+Last commit message
+Last commit date
+.github
+.github
+JetLagged
+JetLagged
+JetNews
+JetNews
+Jetcaster
+Jetcaster
+Jetchat
+Jetchat
+Jetsnack
+Jetsnack
+Reply
+Reply
+readme
+readme
+scripts
+scripts
+.gitignore
+.gitignore
+CODEOWNERS
+CODEOWNERS
+CODE_OF_CONDUCT.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+CONTRIBUTING.md
+LICENSE
+LICENSE
+README.md
+README.md
+renovate.json
+renovate.json
+View all files
+Repository files navigation
+README
+Code of conduct
+Contributing
+Apache-2.0 license
+More items
+Jetpack Compose Samples
+This repository contains a set of individual Android Studio projects to help you learn about
+Compose in Android. Each sample demonstrates different use cases, complexity levels and APIs.
+For more information, please read the documentation.
+💻 Requirements
+To try out these sample apps, you need to use Android Studio.
+You can clone this repository or import the
+project from Android Studio following the steps
+here.
+🧬 Samples
+Project
+ A sample blog post viewer that demonstrates the use of Compose with a typical Material app and real-world architecture. 
+ • Medium complexity
+• Varied UI
+• Light & dark themes
+• Resource loading
+• UI Testing 
+ > Browse
+A sample chat app that focuses on UI state patterns and text input.
+• Low complexity
+• Material Design 3 theme and Material You dynamic color
+• Resource loading
+• Back button handling
+• Integration with Architecture Components: Navigation, Fragments, LiveData, ViewModel
+• Animation
+• UI Testing
+> Browse 
+Jetsnack is a sample snack ordering app built with Compose.
+• Medium complexity
+• Custom design system
+• Custom layouts
+• Animation
+> Browse 
+A sample podcast app that features a full-featured, Redux-style architecture and showcases dynamic themes.
+• Advanced sample
+• Dynamic theming using podcast artwork
+• Image fetching
+• WindowInsets support
+• Coroutines
+• Local storage with Room
+> Browse 
+A compose implementation of the Reply material study, an email client app that focuses on adaptive design for mobile, tablets and foldables. It also showcases brand new Material design 3 theming, dynamic colors and navigation components.
+• Medium complexity
+• Adaptive UI for phones, tablet and desktops
+• Foldable support
+• Material 3 theming & Components
+• Dynamic colors and Light/Dark theme support
+> Browse 
+A sample sleep tracker app, showcasing how to create custom layouts and graphics in Compose
+• Custom Layouts
+• Graphs with Paths
+> Browse 
+🧬 Additional samples
+Project
+An app for keeping up to date with the latest news and developments in Android.
+• Jetpack Compose first app.
+• Implements the recommended Android Architecture Guidelines 
+• Integrates Jetpack Libraries holistically in the context of a real world app
+> Browse 
+A catalog of Material Design components and features available in Jetpack Compose. See how to implement them and how they look and behave on real devices.
+• Lives in AOSP—always up to date
+• Uses the same samples as API reference docs
+• Theme picker to change Material Theming values at runtime
+• Links to guidelines, docs, source code, and issue tracker
+> Browse on AOSP 
+High level features
+Looking for a sample that has the following features?
+Custom Layouts
+Jetnews: Interests Screen
+Jetchat: AnimatedFabContent
+Jetsnack: Grid
+Jetsnack: CollapsingImageLayout
+Theming
+Jetchat: Material3
+Jetcaster: Custom theme based on cover art
+Jetsnack: Custom Design System
+Animations
+Jetsurvey: AnimatedContent
+Jetcaster: Animated theme colors
+Jetsnack: Animating Bottom Barl
+Text
+Jetchat: Downloadable Fonts
+Large Screens
+Jetcaster - Supporting Pane
+Jetnews - Window Size Classes
+TV
+Jetcaster - TV
+Wear
+Jetcaster - Wear
+Formatting
+To automatically format all samples: Run ./scripts/format.sh
+To check one sample for errors: Navigate to the sample folder and run ./gradlew spotlessCheck
+To format one sample: Navigate to the sample folder and run ./gradlew spotlessApply
+Updates
+To update dependencies to their new stable versions, run:
+./scripts/updateDeps.sh
+Any other version updates need to be made individually.
+Obsolete Sample Projects
+Over time some of our samples become a little stale and are removed to keep the
+repository easy to navigate. If you are curious you can still find them in the
+history, however if you are new you might be better served sticking to
+the most up to date resources.
+Project
+Removed
+Commit
+Crane
+2024-08-02
+ee8e272
+Owl
+2024-08-02
+ee8e272
+Jetsurvey
+2024-08-02
+ee8e272
+Rally
+2024-08-02
+ee8e272
+License
+Copyright 2024 The Android Open Source Project
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+    https://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

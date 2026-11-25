@@ -1,0 +1,37 @@
+{
+  "python": "3.9.6 (default, Oct 19 2026, 19:18:13) \n[Clang 21.0.0 (clang-2100.4.1.1)]",
+  "commands": [
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "latency_meter.py"
+      ],
+      "cwd": "/tmp/ai-study-20261119-0z0rrm2y",
+      "exit": 0,
+      "log": "host.log",
+      "mode": "EXECUTED_HOST_SYNTHETIC_FIXTURE"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_latency_meter.py"
+      ],
+      "cwd": "/tmp/ai-study-20261119-0z0rrm2y",
+      "exit": 0,
+      "log": "tests.log",
+      "mode": "EXECUTED_HOST_SYNTHETIC_FIXTURE"
+    }
+  ],
+  "tmp_cleaned": true,
+  "android": "SPEC_CHECK_NOT_EXECUTED",
+  "nano": "NOT_EXECUTED",
+  "model_calls": 0,
+  "usage": "NOT_MEASURED",
+  "feishu": "not_sent",
+  "refinement": "生成前异常/取消/超时仅记录请求观察跨度；增加既有测试方法的循环断言，仍26方法"
+}

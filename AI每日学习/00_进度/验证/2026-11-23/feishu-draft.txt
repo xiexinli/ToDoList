@@ -1,0 +1,9 @@
+今日：Android × AI 第8讲｜持久操作账本与重启后的未确认请求
+1. SQLite占位提交成功后才dispatch；SQL/提交失败不发送。
+2. 重启保留UNKNOWN，同ID、新ID、换后端都不能绕过。
+3. 同完整身份的可信终结＋释放确认提交后才解锁，旧ID不重放。
+实测：Python标准库Host 12项通过；不是Android/云端验证。
+最值得看：Google自定义UI三层认证（11-20发布）
+https://developers.googleblog.com/how-to-handle-user-connector-and-agent-auth-in-gemini-enterprise-with-a-custom-ui/
+动手：加“后端代际不匹配”断言，确认新ID仍BLOCKED。
+材料已落盘，复述待填；飞书由主agent验收后唯一发送。

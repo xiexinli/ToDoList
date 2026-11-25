@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "check_type": "SPEC_CHECK",
+  "sdk": "com.google.mlkit:genai-prompt:1.0.0-beta4",
+  "min_android_api": 26,
+  "version_evidence": "sources/prompt-get-started.txt + sources/sdk-pom.raw（HTTP 200）",
+  "feature_status": "@IntDef 四项常量；UNKNOWN/QUERY_FAILED 为应用状态",
+  "official_dates": {
+    "genai-overview": "2026-11-10 UTC",
+    "prompt-android": "2026-10-27 UTC",
+    "prompt-get-started": "2026-10-27 UTC",
+    "feature-status": "2026-01-28 UTC",
+    "generation": "2026-01-28 UTC",
+    "generative-model": "2026-10-27 UTC"
+  },
+  "checks": [
+    "getClient()/suspend checkStatus()/close()官方签名",
+    "设备支持与RAM/OS/AICore更新边界",
+    "bootloader限制",
+    "前台限制",
+    "官方指南与Google Maven beta4版本一致"
+  ],
+  "not_executed": [
+    "Android SDK依赖解析/编译",
+    "Android/Kotlin运行",
+    "真实设备checkStatus",
+    "模型下载",
+    "端侧推理",
+    "云端请求",
+    "性能/功耗测量"
+  ]
+}

@@ -1,0 +1,38 @@
+--- /Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/备份/2026-11-16-080811-进度.before.md
++++ /Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md
+@@ -23,6 +23,7 @@
+ | 2026-11-13 | 01_地基 · W4 | 规划与任务分解（Planning） | 01_地基/2026-11-13-规划与任务分解（Planning）.md | 待填 |
+ | 2026-11-14 | 01_地基 · W4 | Agent 工程化（可观测与护栏）（W4 收官） | 01_地基/2026-11-14-Agent工程化（可观测与护栏）.md | 待填 |
+ | 2026-11-15 | 01_地基 · 工程化补充 | 可恢复工作流：检查点（Checkpoint）与断点续跑 | 01_地基/2026-11-15-可恢复工作流（Checkpoint与断点续跑）.md | 待填 |
++| 2026-11-16 | 02_AndroidAI · 第 1 讲 | 端侧推理的设备能力检查与可用性边界 | 02_AndroidAI/2026-11-16-端侧推理的设备能力检查与可用性边界.md | 待填 |
+ 
+ > 欠产与补写记录：2026-10-31 ~ 2026-11-04 因「本机终端审批超时」连续 6 天未落盘；2026-11-05 17:32 用户在 DHwork 权限设置中放行无人值守终端审批后，上述 5 天材料与 2026-W44 周总结已统一补全。
+ > 欠产与补写记录（二）：2026-11-07 ~ 2026-11-09 因「本机终端审批超时」连续 3 天未落盘；2026-11-09 下午用户在场、终端恢复后统一补全（含 2026-W45 周总结）。
+@@ -51,7 +52,9 @@
+ - [x] W4 · 第 4 讲：Agent 工程化（可观测与护栏）（2026-11-14 完成）
+ - [x] **W4「Agent 与工程化」全部完成（2026-11-14 收官）**
+ - [x] 地基工程化补充：可恢复工作流（Checkpoint 与断点续跑）（2026-11-15 完成；日材料与 W46 周总结同时产出）
+-- [ ] **下一阶段：轨道 2 · Android × AI（端侧推理 / ML Kit / 端云协同）· 计划 2026-11-16 起；2026-11-15（周日）先产出 2026-W46 周总结**
++- [x] **当前阶段：轨道 2 · Android × AI（端侧推理 / ML Kit / 端云协同）· 按计划 2026-11-16 开始；2026-W46 周总结已于 2026-11-15 产出**
++- [x] Android × AI · 第 1 讲：端侧推理的设备能力检查与可用性边界（2026-11-16 材料已产出；学习复述待填）
++- [ ] Android × AI · 第 2 讲：Prompt API 最小调用（计划 2026-11-17；续用首讲能力门禁，SDK/设备验证条件需复核）
+ 
+ ## 动态链接去重表
+ | 首次出现日期 | 标题 | 链接 |
+@@ -127,6 +130,16 @@
+ | 2026-11-15 | Google AI Edge Gallery 新增端侧语音识别与语音合成 | https://developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/ |
+ | 2026-11-15 | 腾讯 微信WeLM-大模型研发基础设施工程师-研发效能方向 | https://careers.tencent.com/jobdesc.html?postId=2084637516971032576 |
+ | 2026-11-15 | GitHub langchain-ai/langgraph：有状态工作流与持久执行 | https://github.com/langchain-ai/langgraph |
++| 2026-11-16 | 教学参考｜ML Kit GenAI 概览与设备支持 | https://developers.google.com/ml-kit/genai |
++| 2026-11-16 | 教学参考｜Direct model access 概览 | https://developers.google.com/ml-kit/genai/prompt/android |
++| 2026-11-16 | 教学参考｜Direct model access 接入指南（beta4） | https://developers.google.com/ml-kit/genai/prompt/android/get-started |
++| 2026-11-16 | 教学参考｜FeatureStatus 四项状态常量 | https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/FeatureStatus |
++| 2026-11-16 | 教学参考｜Generation.getClient | https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Generation |
++| 2026-11-16 | 教学参考｜GenerativeModel.checkStatus 与 close | https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel |
++| 2026-11-16 | 教学参考｜Google Maven genai-prompt 1.0.0-beta4 POM | https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom |
++| 2026-11-16 | 动态｜Google：用 Gemini 与约束求解器发现 Go 模糊测试遗漏的缺陷（11-12 发布） | https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/ |
++| 2026-11-16 | 岗位｜腾讯混元-大模型应用开发工程师（北京/深圳；11-09 更新） | https://careers.tencent.com/jobdesc.html?postId=2053738190963126272 |
++| 2026-11-16 | 工具｜GitHub google-ai-edge/gallery：模型管理与 Benchmark 示例 | https://github.com/google-ai-edge/gallery |
+ 
+ ## 周总结
+ | 周次 | 覆盖日期 | 文件 |

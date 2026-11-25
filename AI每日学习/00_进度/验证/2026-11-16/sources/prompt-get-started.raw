@@ -1,0 +1,2861 @@
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html 
+      lang="en"
+      dir="ltr">
+  <head>
+    <meta name="google-signin-client-id" content="721724668570-nbkv1cfusk7kk4eni4pjvepaus73b13t.apps.googleusercontent.com"><meta name="google-signin-scope"
+          content="profile email https://www.googleapis.com/auth/developerprofiles https://www.googleapis.com/auth/developerprofiles.award https://www.googleapis.com/auth/devprofiles.full_control.firstparty"><meta property="og:site_name" content="Google for Developers">
+    <meta property="og:type" content="website"><meta name="theme-color" content="#1a73e8"><meta charset="utf-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <link rel="manifest" href="/_pwa/developers/manifest.json"
+          crossorigin="use-credentials">
+    <link rel="preconnect" href="//www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="//fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="//www.google-analytics.com" crossorigin><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap">
+      <link rel="stylesheet"
+            href="//fonts.googleapis.com/css2?family=Material+Icons&family=Material+Symbols+Outlined&display=block"><link rel="stylesheet" href="https://www.gstatic.com/devrel-devsite/prod/v579d635a54d6e1f40caad46ce407560c5106c8915e5ff7e6341f5b13eb245c5a/developers/css/app.css">
+      <link rel="shortcut icon" href="https://www.gstatic.com/devrel-devsite/prod/v579d635a54d6e1f40caad46ce407560c5106c8915e5ff7e6341f5b13eb245c5a/developers/images/favicon-new.png">
+    <link rel="apple-touch-icon" href="https://www.gstatic.com/devrel-devsite/prod/v579d635a54d6e1f40caad46ce407560c5106c8915e5ff7e6341f5b13eb245c5a/developers/images/touchicon-180-new.png"><link rel="canonical" href="https://developers.google.com/ml-kit/genai/prompt/android/get-started"><link rel="search" type="application/opensearchdescription+xml"
+            title="Google for Developers" href="https://developers.google.com/s/opensearch.xml">
+      <link rel="alternate" hreflang="en"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started" /><link rel="alternate" hreflang="x-default" href="https://developers.google.com/ml-kit/genai/prompt/android/get-started" /><link rel="alternate" hreflang="ar"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=ar" /><link rel="alternate" hreflang="bn"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=bn" /><link rel="alternate" hreflang="zh-Hans"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=zh-cn" /><link rel="alternate" hreflang="zh-Hant"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=zh-tw" /><link rel="alternate" hreflang="fa"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=fa" /><link rel="alternate" hreflang="fr"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=fr" /><link rel="alternate" hreflang="de"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=de" /><link rel="alternate" hreflang="he"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=he" /><link rel="alternate" hreflang="hi"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=hi" /><link rel="alternate" hreflang="id"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=id" /><link rel="alternate" hreflang="it"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=it" /><link rel="alternate" hreflang="ja"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=ja" /><link rel="alternate" hreflang="ko"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=ko" /><link rel="alternate" hreflang="pl"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=pl" /><link rel="alternate" hreflang="pt-BR"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=pt-br" /><link rel="alternate" hreflang="ru"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=ru" /><link rel="alternate" hreflang="es-419"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=es-419" /><link rel="alternate" hreflang="th"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=th" /><link rel="alternate" hreflang="tr"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=tr" /><link rel="alternate" hreflang="vi"
+          href="https://developers.google.com/ml-kit/genai/prompt/android/get-started?hl=vi" /><link rel="alternate" type="text/markdown" href="https://developers.google.com/ml-kit/genai/prompt/android/get-started.md.txt"><title>Get started with direct model access &nbsp;|&nbsp; ML Kit &nbsp;|&nbsp; Google for Developers</title>
+
+<meta property="og:title" content="Get started with direct model access &nbsp;|&nbsp; ML Kit &nbsp;|&nbsp; Google for Developers"><meta property="og:url" content="https://developers.google.com/ml-kit/genai/prompt/android/get-started"><meta property="og:image" content="https://www.gstatic.com/devrel-devsite/prod/v579d635a54d6e1f40caad46ce407560c5106c8915e5ff7e6341f5b13eb245c5a/developers/images/opengraph/google-blue.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675"><meta property="og:locale" content="en"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    
+    "headline": "Get started with direct model access"
+  }
+</script><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ML Kit",
+      "item": "https://developers.google.com/ml-kit"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Get started with direct model access",
+      "item": "https://developers.google.com/ml-kit/genai/prompt/android/get-started"
+    }]
+  }
+  </script>
+  
+
+  
+
+  
+
+
+    </head>
+  <body class="color-scheme--light"
+        template="page"
+        theme="google-blue"
+        type="article"
+        
+        
+        
+        layout="docs"
+        
+        
+        
+        
+        
+        display-toc
+        pending>
+  
+    <devsite-progress type="indeterminate" id="app-progress"></devsite-progress>
+  
+  
+    <a href="#main-content" class="skip-link button">
+      
+      Skip to main content
+    </a>
+    <section class="devsite-wrapper">
+      <devsite-cookie-notification-bar></devsite-cookie-notification-bar>
+        <devsite-header role="banner">
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-header--inner" data-nosnippet>
+  <div class="devsite-top-logo-row-wrapper-wrapper">
+    <div class="devsite-top-logo-row-wrapper">
+      <div class="devsite-top-logo-row">
+        <button type="button" id="devsite-hamburger-menu"
+          class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+          data-category="Site-Wide Custom Events"
+          data-label="Navigation menu button"
+          visually-hidden
+          aria-label="Open menu">
+        </button>
+        
+<div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/ml-kit">
+    
+  <div class="devsite-product-logo-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-product-logo"
+           alt="ML Kit"
+           src="https://developers.google.com/static/ml-kit/images/MLKit_Icon.png"
+           srcset="https://developers.google.com/static/ml-kit/images/MLKit_Icon_36.png 36w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_48.png 48w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_72.png 72w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_96.png 96w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_480.png 480w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_720.png 720w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_856.png 856w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_960.png 960w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_1440.png 1440w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_1920.png 1920w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+
+  
+  
+  <span class="devsite-product-name">
+    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/ml-kit"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="ML Kit"
+      
+    >
+    
+          ML Kit
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+  </span>
+
+</div>
+        <div class="devsite-top-logo-row-middle">
+          <div class="devsite-header-upper-tabs">
+            
+              
+              
+  <devsite-tabs class="upper-tabs">
+
+    <nav class="devsite-tabs-wrapper" aria-label="Upper tabs">
+      
+        
+          <tab  class="devsite-active">
+            
+    <a href="https://developers.google.com/ml-kit/guides"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/ml-kit/guides"
+    
+       track-type="nav"
+       track-metadata-position="nav - guides"
+       track-metadata-module="primary nav"
+       aria-label="Guides, selected" 
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Guides"
+         
+           track-name="guides"
+         
+       >
+    Guides
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/ml-kit/reference/android"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/ml-kit/reference/android"
+    
+       track-type="nav"
+       track-metadata-position="nav - reference"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Reference"
+         
+           track-name="reference"
+         
+       >
+    Reference
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/ml-kit/samples"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/ml-kit/samples"
+    
+       track-type="nav"
+       track-metadata-position="nav - samples"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Samples"
+         
+           track-name="samples"
+         
+       >
+    Samples
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/ml-kit/case-studies"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/ml-kit/case-studies"
+    
+       track-type="nav"
+       track-metadata-position="nav - case studies"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Case studies"
+         
+           track-name="case studies"
+         
+       >
+    Case studies
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+        
+          <tab  >
+            
+    <a href="https://developers.google.com/ml-kit/community"
+    class="devsite-tabs-content gc-analytics-event "
+      track-metadata-eventdetail="https://developers.google.com/ml-kit/community"
+    
+       track-type="nav"
+       track-metadata-position="nav - community"
+       track-metadata-module="primary nav"
+       
+       
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Community"
+         
+           track-name="community"
+         
+       >
+    Community
+  
+    </a>
+    
+  
+          </tab>
+        
+      
+    </nav>
+
+  </devsite-tabs>
+
+            
+           </div>
+          
+<devsite-search
+    enable-signin
+    enable-search
+    enable-suggestions
+      enable-query-completion
+    
+    enable-search-summaries
+    project-name="ML Kit"
+    tenant-name="Google for Developers"
+    project-scope="/ml-kit"
+    url-scoped="https://developers.google.com/s/results/ml-kit"
+    
+    
+    
+    >
+  <form class="devsite-search-form" action="https://developers.google.com/s/results" method="GET">
+    <div class="devsite-search-container">
+      <button type="button"
+              search-open
+              class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+              
+              aria-label="Open search"></button>
+      <div class="devsite-searchbox">
+        <input
+          aria-activedescendant=""
+          aria-autocomplete="list"
+          
+          aria-label="Search"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          autocomplete="off"
+          class="devsite-search-field devsite-search-query"
+          name="q"
+          
+          placeholder="Search"
+          role="combobox"
+          type="text"
+          value=""
+          >
+          <div class="devsite-search-image material-icons" aria-hidden="true">
+            
+              <svg class="devsite-search-ai-image" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_6641_386)">
+                    <path d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14167 15.375 4.875 14.125C3.625 12.8583 3 11.3167 3 9.5C3 7.68333 3.625 6.15 4.875 4.9C6.14167 3.63333 7.68333 3 9.5 3C10.0167 3 10.5167 3.05833 11 3.175C11.4833 3.275 11.9417 3.43333 12.375 3.65L10.825 5.2C10.6083 5.13333 10.3917 5.08333 10.175 5.05C9.95833 5.01667 9.73333 5 9.5 5C8.25 5 7.18333 5.44167 6.3 6.325C5.43333 7.19167 5 8.25 5 9.5C5 10.75 5.43333 11.8167 6.3 12.7C7.18333 13.5667 8.25 14 9.5 14C10.6667 14 11.6667 13.625 12.5 12.875C13.35 12.1083 13.8417 11.15 13.975 10H15.975C15.925 10.6333 15.7833 11.2333 15.55 11.8C15.3333 12.3667 15.05 12.8667 14.7 13.3L21 19.6L19.6 21ZM17.5 12C17.5 10.4667 16.9667 9.16667 15.9 8.1C14.8333 7.03333 13.5333 6.5 12 6.5C13.5333 6.5 14.8333 5.96667 15.9 4.9C16.9667 3.83333 17.5 2.53333 17.5 0.999999C17.5 2.53333 18.0333 3.83333 19.1 4.9C20.1667 5.96667 21.4667 6.5 23 6.5C21.4667 6.5 20.1667 7.03333 19.1 8.1C18.0333 9.16667 17.5 10.4667 17.5 12Z" fill="#5F6368"/>
+                  </g>
+                <defs>
+                <clipPath id="clip0_6641_386">
+                <rect width="24" height="24" fill="white"/>
+                </clipPath>
+                </defs>
+              </svg>
+            
+          </div>
+          <div class="devsite-search-shortcut-icon-container" aria-hidden="true">
+            <kbd class="devsite-search-shortcut-icon">/</kbd>
+          </div>
+      </div>
+    </div>
+  </form>
+  <button type="button"
+          search-close
+          class="devsite-search-button devsite-header-icon-button button-flat material-icons"
+          
+          aria-label="Close search"></button>
+</devsite-search>
+
+        </div>
+
+        
+
+          
+
+          
+
+          
+
+          
+
+          
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+
+          
+
+        
+
+        
+          <devsite-user 
+                        
+                        
+                          enable-profiles
+                        
+                        
+                          fp-auth
+                        
+                        id="devsite-user">
+            
+              
+              <span class="button devsite-top-button" aria-hidden="true" visually-hidden>Sign in</span>
+            
+          </devsite-user>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="devsite-collapsible-section
+    
+      devsite-header-no-lower-tabs
+    ">
+    <div class="devsite-header-background">
+      
+        
+          <div class="devsite-product-id-row"
+           >
+            <div class="devsite-product-description-row">
+              
+                
+                <div class="devsite-product-id">
+                  
+                  
+                  
+                    <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/ml-kit/guides"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Lower Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Guides
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+                </div>
+                
+              
+              
+            </div>
+            
+          </div>
+          
+        
+      
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+  
+
+  
+</devsite-header>
+        <devsite-book-nav scrollbars >
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="devsite-book-nav-filter"
+     >
+  <span class="filter-list-icon material-icons" aria-hidden="true"></span>
+  <input type="text"
+         placeholder="Filter"
+         
+         aria-label="Type to filter"
+         role="searchbox">
+  
+  <span class="filter-clear-button hidden"
+        data-title="Clear filter"
+        aria-label="Clear filter"
+        role="button"
+        tabindex="0"></span>
+</div>
+
+<nav class="devsite-book-nav devsite-nav nocontent" data-nosnippet
+     aria-label="Side menu">
+  <div class="devsite-mobile-header">
+    <button type="button"
+            id="devsite-close-nav"
+            class="devsite-header-icon-button button-flat material-icons gc-analytics-event"
+            data-category="Site-Wide Custom Events"
+            data-label="Close navigation"
+            aria-label="Close navigation">
+    </button>
+    <div class="devsite-product-name-wrapper">
+
+  
+    
+  
+  <a href="https://developers.google.com/ml-kit">
+    
+  <div class="devsite-product-logo-container"
+       
+       
+       
+    size="medium"
+  >
+  
+    <picture>
+      
+      <img class="devsite-product-logo"
+           alt="ML Kit"
+           src="https://developers.google.com/static/ml-kit/images/MLKit_Icon.png"
+           srcset="https://developers.google.com/static/ml-kit/images/MLKit_Icon_36.png 36w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_48.png 48w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_72.png 72w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_96.png 96w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_480.png 480w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_720.png 720w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_856.png 856w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_960.png 960w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_1440.png 1440w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_1920.png 1920w, https://developers.google.com/static/ml-kit/images/MLKit_Icon_2880.png 2880w"
+           sizes="64px"
+           loading="lazy"
+           >
+    </picture>
+  
+  </div>
+  
+  </a>
+  
+
+  
+
+
+  
+      <span class="devsite-product-name">
+        
+        
+        <ul class="devsite-breadcrumb-list"
+  >
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+      
+        
+  <a href="https://developers.google.com/ml-kit"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Upper Header"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail="ML Kit"
+      
+    >
+    
+          ML Kit
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+      </span>
+    
+
+</div>
+  </div>
+
+  <div class="devsite-book-nav-wrapper">
+    <div class="devsite-mobile-nav-top">
+      
+        <ul class="devsite-nav-list">
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/ml-kit/guides"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              devsite-nav-active"
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Guides"
+      
+        track-name="guides"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Guides"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Guides
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/ml-kit/reference/android"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Reference"
+      
+        track-name="reference"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Reference"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Reference
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/ml-kit/samples"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Samples"
+      
+        track-name="samples"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Samples"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Samples
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/ml-kit/case-studies"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Case studies"
+      
+        track-name="case studies"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Case studies"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Case studies
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+            <li class="devsite-nav-item">
+              
+  
+  <a href="/ml-kit/community"
+    
+       class="devsite-nav-title gc-analytics-event
+              
+              "
+    
+
+    
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Tab: Community"
+      
+        track-name="community"
+      
+    
+     data-category="Site-Wide Custom Events"
+     data-label="Responsive Tab: Community"
+     track-type="globalNav"
+     track-metadata-eventDetail="globalMenu"
+     track-metadata-position="nav">
+  
+    <span class="devsite-nav-text" tooltip >
+      Community
+   </span>
+    
+  
+  </a>
+  
+
+  
+              
+            </li>
+          
+          
+          
+        </ul>
+      
+    </div>
+    
+      <div class="devsite-mobile-nav-bottom">
+        
+          
+          <ul class="devsite-nav-list" menu="_book">
+            <li class="devsite-nav-item"><a href="/ml-kit/guides"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/release-notes"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Release notes</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/known-issues"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Known issues</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/early-access"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Early access program</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Migrating from ML Kit for Firebase</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/migration"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/migration/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/migration/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Migrating from Mobile Vision</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/mobile-vision-migration"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/mobile-vision-migration/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/mobile-vision-migration/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>GenAI</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/genai"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Direct model access (Beta)</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/genai/prompt/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/prompt/android/get-started"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Get started</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/prompt/android/prompt-design"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Prompt design</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/prompt/android/evaluate-prompt"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Evaluate prompt quality</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/prompt/android/system-instructions"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Set system instructions (Beta)</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/prompt/android/prefix-caching"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Prefix caching (Experimental)</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/prompt/android/structured-output"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Generate structured output (Alpha)</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/prompt/android/thinking-mode"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Use thinking mode (Beta)</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/prompt/android/function-calling"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Use function calling (Preview)</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/prompt/android/select-model"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Select a model</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Agentic workflows (Preview)</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/genai/agent/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/agent/android/get-started"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Get started</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/agent/android/define-tools"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Define tools</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/agent/android/manage-sessions"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Manage sessions and lifecycle</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai/agent/android/streaming-events"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Stream events and UI</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/genai/speech-recognition/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Speech recognition (Alpha)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/genai/speech-translation/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Speech translation (Alpha)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/genai/text-to-speech/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Text to speech (Alpha)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/genai/image-description/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Image description (Beta)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/genai/summarization/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Summarization (Beta)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/genai/proofreading/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Proofreading (Beta)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/genai/rewriting/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Rewriting (Beta)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/genai/embedding/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Embeddings (Preview)</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/genai/aicore-dev-preview"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>AICore Developer Preview program</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Vision</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Text recognition v2</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/text-recognition/v2"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/text-recognition/v2/languages"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Supported languages</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/text-recognition/v2/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/text-recognition/v2/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Face detection</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/face-detection"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/face-detection/face-detection-concepts"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Face detection concepts</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/face-detection/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/face-detection/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Face mesh detection (Beta)</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/face-mesh-detection"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/face-mesh-detection/concepts"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Face mesh detection concepts</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/face-mesh-detection/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Pose detection (Beta)</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/pose-detection"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/pose-detection/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/pose-detection/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/pose-detection/classifying-poses"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Pose Classification Options</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Selfie segmentation (Beta)</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/selfie-segmentation"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/selfie-segmentation/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/selfie-segmentation/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Subject segmentation (Beta)</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/subject-segmentation"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/subject-segmentation/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Document scanner</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/doc-scanner"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/doc-scanner/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Barcode scanning</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/barcode-scanning"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/barcode-scanning/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/barcode-scanning/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/barcode-scanning/code-scanner"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Google code scanner (Android only)</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Image labeling</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/image-labeling"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Base model</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/image-labeling/label-map"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Label map</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/image-labeling/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/image-labeling/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Custom models</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/image-labeling/custom-models/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/image-labeling/custom-models/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable
+           devsite-nav-deprecated"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>AutoML Vision Edge</span><span class="devsite-nav-icon material-icons"
+        data-icon="deprecated"
+        data-title="Deprecated"
+        aria-hidden="true"></span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/image-labeling/automl/migrate-automl"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Migrate to custom models</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/image-labeling/automl/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/image-labeling/automl/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Object detection and tracking</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/object-detection"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Base models</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/object-detection/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/object-detection/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li><li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Custom models</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/object-detection/custom-models/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/object-detection/custom-models/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Digital ink recognition</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/vision/digital-ink-recognition"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/digital-ink-recognition/base-models"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Base models</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/digital-ink-recognition/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/vision/digital-ink-recognition/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/custom-models"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Custom models</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Natural language</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Language identification</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/language/identification"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/language/identification/langid-support"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Supported languages</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/language/identification/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/language/identification/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Translation</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/language/translation"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/language/translation/translation-terms"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Guidelines</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/language/translation/translation-language-support"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Supported languages</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/language/translation/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/language/translation/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Smart reply</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/language/smart-reply"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/language/smart-reply/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/language/smart-reply/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Entity extraction (Beta)</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/language/entity-extraction"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/language/entity-extraction/android"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/language/entity-extraction/ios"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Tips</span>
+      </div></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/tips/installation-paths"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Model installation paths on Android</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/tips/reduce-app-size"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Reduce Android app package size</span></a></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-heading"><div class="devsite-nav-title devsite-nav-title-no-path">
+        <span class="devsite-nav-text" tooltip>Colophon</span>
+      </div></li>
+
+  <li class="devsite-nav-item
+           devsite-nav-expandable"><div class="devsite-expandable-nav">
+      <a class="devsite-nav-toggle" aria-hidden="true"></a><div class="devsite-nav-title devsite-nav-title-no-path" tabindex="0" role="button">
+        <span class="devsite-nav-text" tooltip>Terms &amp; Privacy</span>
+      </div><ul class="devsite-nav-section"><li class="devsite-nav-item"><a href="/ml-kit/terms"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Overview</span></a></li><li class="devsite-nav-item"><a href="/ml-kit/genai-terms"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>GenAI API Terms</span></a></li></ul></div></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/android-data-disclosure"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>Android Data Disclosure</span></a></li>
+
+  <li class="devsite-nav-item"><a href="/ml-kit/ios-data-disclosure"
+        class="devsite-nav-title"
+      ><span class="devsite-nav-text" tooltip>iOS Data Disclosure</span></a></li>
+          </ul>
+        
+        
+          
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+        
+        
+          
+    
+  
+        
+      </div>
+    
+  </div>
+</nav>
+          
+        </devsite-book-nav>
+      
+      <section id="gc-wrapper">
+        <main role="main" id="main-content" class="devsite-main-content"
+            
+              has-book-nav
+              has-sidebar
+            >
+          <div class="devsite-sidebar">
+            <div class="devsite-sidebar-content">
+                
+                <devsite-toc class="devsite-nav"
+                            role="navigation"
+                            aria-label="On this page"
+                            depth="2"
+                            scrollbars
+                            data-nosnippet
+                  ></devsite-toc>
+                <devsite-recommendations-sidebar class="nocontent devsite-nav" data-nosnippet>
+                </devsite-recommendations-sidebar>
+            </div>
+          </div>
+          <devsite-content>
+            
+              
+
+
+
+
+
+
+
+
+
+
+<article class="devsite-article">
+  
+  
+  
+  
+  
+
+  <div class="devsite-article-meta nocontent" role="navigation" data-nosnippet>
+    
+    
+    <ul class="devsite-breadcrumb-list"
+  
+    aria-label="Breadcrumb">
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="1"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="1"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Home
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/products"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="2"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="2"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Products
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/ml-kit"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="3"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="3"
+      
+        track-metadata-eventdetail="ML Kit"
+      
+    >
+    
+          ML Kit
+        
+  </a>
+  
+      
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item
+             ">
+    
+      
+      <div class="devsite-breadcrumb-guillemet material-icons" aria-hidden="true"></div>
+    
+    
+    
+      
+        
+  <a href="https://developers.google.com/ml-kit/guides"
+      
+        class="devsite-breadcrumb-link gc-analytics-event"
+      
+        data-category="Site-Wide Custom Events"
+      
+        data-label="Breadcrumbs"
+      
+        data-value="4"
+      
+        track-type="globalNav"
+      
+        track-name="breadcrumb"
+      
+        track-metadata-position="4"
+      
+        track-metadata-eventdetail=""
+      
+    >
+    
+          Guides
+        
+  </a>
+  
+      
+    
+  </li>
+  
+</ul>
+    
+      
+    <devsite-thumb-rating position="header">
+    </devsite-thumb-rating>
+  
+    
+  </div>
+  
+    <devsite-feedback
+  position="header"
+  project-name="ML Kit"
+  product-id="5207477"
+  bucket=""
+  context=""
+  version="t-devsite-webserver-20261110-r00-rc00.481703539384513966"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="header"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/ml-kit/images/MLKit_Icon.png"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+  
+    <h1 class="devsite-page-title" tabindex="-1">
+      Get started with direct model access<devsite-actions hidden data-nosnippet><devsite-feature-tooltip
+      ack-key="AckCollectionsBookmarkTooltipDismiss"
+      analytics-category="Site-Wide Custom Events"
+      analytics-action-show="Callout Profile displayed"
+      analytics-action-close="Callout Profile dismissed"
+      analytics-label="Create Collection Callout"
+      class="devsite-page-bookmark-tooltip nocontent"
+      data-nosnippet
+      dismiss-button="true"
+      id="devsite-collections-dropdown"
+      
+      dismiss-button-text="Dismiss"
+
+      
+      close-button-text="Got it">
+
+    
+    
+      <devsite-bookmark></devsite-bookmark>
+    
+
+    <span slot="popout-heading">
+      
+      Stay organized with collections
+    </span>
+    <span slot="popout-contents">
+      
+      Save and categorize content based on your preferences.
+    </span>
+  </devsite-feature-tooltip>
+    <devsite-llm-tools></devsite-llm-tools></devsite-actions>
+  
+      
+    </h1>
+  <div class="devsite-page-title-meta"><devsite-view-release-notes></devsite-view-release-notes></div>
+  
+
+  <devsite-toc class="devsite-nav"
+    depth="2"
+    devsite-toc-embedded
+    >
+  </devsite-toc>
+  
+    
+    <devsite-recommendations-dropdown class="nocontent" data-nosnippet>
+    </devsite-recommendations-dropdown>
+    
+  <div class="devsite-article-body clearfix
+  ">
+
+  
+    
+    
+
+
+<p>This page describes how to do the following:</p>
+
+<ul>
+<li>Configure your project for direct model access to Gemini Nano</li>
+<li>Provide text-only input and receive a response</li>
+<li>Provide image inputs with related text input and receive a response</li>
+</ul>
+
+<p>For more details about the API, see the
+reference documentation for Kotlin (<a href="/android/reference/kotlin/com/google/mlkit/genai/prompt/package-summary">com.google.mlkit.genai.prompt</a>) and
+Java (<a href="/android/reference/com/google/mlkit/genai/prompt/java/package-summary">com.google.mlkit.genai.prompt.java</a>,
+<a href="/android/reference/com/google/mlkit/genai/prompt/package-summary">com.google.mlkit.genai.prompt</a>).</p>
+
+<h2 id="configure-project" data-text="Configure project" tabindex="-1">Configure project</h2>
+<aside class="note"><strong>Note:</strong><span> This API requires Android API level 26 or higher.</span></aside>
+<p>Add the <code translate="no" dir="ltr">genai-prompt</code> dependency in your <code translate="no" dir="ltr">build.gradle</code> configuration:</p>
+<div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Carbon" syntax-guessed><code translate="no" dir="ltr"><span class="devsite-syntax-nx">implementation</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"com.google.mlkit:genai-prompt:1.0.0-beta4"</span><span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code>
+<p>If you need your responses in a certain format using the Structured Output API,
+you need to configure KSP and add additional dependencies. For details, see
+<a href="/ml-kit/genai/prompt/android/structured-output">Generate structured output</a>.</p>
+
+<h2 id="implement-generative" data-text="Implement generative model" tabindex="-1">Implement generative model</h2>
+
+<p>To implement the code in your project, follow these steps:</p>
+<ul>
+<li><p>Create a <code translate="no" dir="ltr">generativeModel</code> object:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="kotlin" data-text="Kotlin" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// Get a GenerativeModel instance</span>
+<span class="devsite-syntax-kd">val</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">generativeModel</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">Generation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">getClient</span><span class="devsite-syntax-p">()</span>
+</code></pre></devsite-code></section>
+<section><h3 id="java" data-text="Java" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// Get a GenerativeModel instance</span>
+<span class="devsite-syntax-n">GenerativeModelFutures</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">generativeModelFutures</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">GenerativeModelFutures</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">from</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Generation</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">INSTANCE</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">getClient</span><span class="devsite-syntax-p">());</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div></li>
+<li><p>Check if Gemini Nano is <code translate="no" dir="ltr">AVAILABLE,</code> <code translate="no" dir="ltr">DOWNLOADABLE</code>, or <code translate="no" dir="ltr">UNAVAILABLE</code>. Then,
+download the feature if it is downloadable:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="kotlin_1" data-text="Kotlin" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">val</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">status</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">generativeModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">checkStatus</span><span class="devsite-syntax-p">()</span>
+<span class="devsite-syntax-k">when</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">status</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">FeatureStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">UNAVAILABLE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-c1">// Gemini Nano not supported on this device or device hasn't fetched the latest configuration to support it</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">FeatureStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">DOWNLOADABLE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-c1">// Gemini Nano can be downloaded on this device, but is not currently downloaded</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">generativeModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">download</span><span class="devsite-syntax-p">().</span><span class="devsite-syntax-na">collect</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">status</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-k">when</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">status</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-k">is</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">DownloadStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">DownloadStarted</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-n">Log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">d</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">TAG</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"starting download for Gemini Nano"</span><span class="devsite-syntax-p">)</span>
+
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-k">is</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">DownloadStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">DownloadProgress</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-n">Log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">d</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">TAG</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"Nano </span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-n">status</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">totalBytesDownloaded</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-s"> bytes downloaded"</span><span class="devsite-syntax-p">)</span>
+
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-n">DownloadStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">DownloadCompleted</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-n">Log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">d</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">TAG</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"Gemini Nano download complete"</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-n">modelDownloaded</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kc">true</span>
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-k">is</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">DownloadStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">DownloadFailed</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-n">Log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">e</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">TAG</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"Nano download failed </span><span class="devsite-syntax-si">${</span><span class="devsite-syntax-n">status</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">e</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">message</span><span class="devsite-syntax-si">}</span><span class="devsite-syntax-s">"</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">FeatureStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">DOWNLOADING</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-c1">// Gemini Nano currently being downloaded</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
+
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">FeatureStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">AVAILABLE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-c1">// Gemini Nano currently downloaded and available to use on this device</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code></section>
+<section><h3 id="java_1" data-text="Java" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-n">ListenableFuture&lt;Integer&gt;</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">status</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">generativeModelFutures</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">checkStatus</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-n">Futures</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">addCallback</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">generativeModelFutures</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">checkStatus</span><span class="devsite-syntax-p">(),</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">FutureCallback</span>&lt;&gt;<span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nd">@Override</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">public</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kt">void</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nf">onSuccess</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">Integer</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">featureStatus</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">switch</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">featureStatus</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-k">case</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">FeatureStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">AVAILABLE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span><span class="devsite-syntax-w"> &gt; </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-c1">// Gemini Nano currently downloaded and available to use on this device</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-k">case</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">FeatureStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">UNAVAILABLE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span><span class="devsite-syntax-w"> &gt; </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-c1">// Gemini Nano not supported on this device or device hasn't fetched the latest configuration to support it</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-k">case</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">FeatureStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">DOWNLOADING</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span><span class="devsite-syntax-w"> &gt; </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-c1">// Gemini Nano currently being downloaded</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-k">case</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">FeatureStatus</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">DOWNLOADABLE</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span><span class="devsite-syntax-w"> &gt; </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-n">generativeModelFutures</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">download</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">DownloadCallback</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-nd">@Override</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-kd">public</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kt">void</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nf">onDownloadStarted</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kt">long</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">l</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">                        </span><span class="devsite-syntax-n">Log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">d</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">TAG</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"starting download for Gemini Nano"</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-nd">@Override</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-kd">public</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kt">void</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nf">onDownloadProgress</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-kt">long</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">l</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">                        </span><span class="devsite-syntax-n">Log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">d</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">TAG</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"Nano "</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">l</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">" bytes downloaded"</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-nd">@Override</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-kd">public</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kt">void</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nf">onDownloadCompleted</span><span class="devsite-syntax-p">()</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">                        </span><span class="devsite-syntax-n">Log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">d</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">TAG</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"Gemini Nano download complete"</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-nd">@Override</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-kd">public</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kt">void</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nf">onDownloadFailed</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nd">@NonNull</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">GenAiException</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">e</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">                        </span><span class="devsite-syntax-n">Log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">e</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">TAG</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">"Nano download failed: "</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">e</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">getMessage</span><span class="devsite-syntax-p">());</span>
+<span class="devsite-syntax-w">                    </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-p">});</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-nd">@Override</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">public</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-kt">void</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nf">onFailure</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-nd">@NonNull</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">Throwable</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">t</span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-c1">// Failed to check status</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">}</span>
+<span class="devsite-syntax-p">},</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ContextCompat</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">getMainExecutor</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">context</span><span class="devsite-syntax-p">));</span>
+
+</code></pre></devsite-code></section>
+</devsite-selector></div></li>
+</ul>
+<h2 id="provide-text-only" data-text="Provide text-only input" tabindex="-1">Provide text-only input</h2>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="kotlin_2" data-text="Kotlin" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">val</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">generativeModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">generateContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Write a 3 sentence story about a magical dog."</span><span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code></section>
+<section><h3 id="java_2" data-text="Java" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-n">GenerateContentResponse</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">generativeModelFutures</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">generateContent</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">GenerateContentRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">TextPart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Write a 3 sentence story about a magical dog."</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">())</span>
+<span class="devsite-syntax-w">  </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">get</span><span class="devsite-syntax-p">();</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+<p>Alternatively, add optional parameters:</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="kotlin_3" data-text="Kotlin" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">val</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">generativeModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">generateContent</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">generateContentRequest</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">TextPart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Write a 3 sentence story about a magical dog."</span><span class="devsite-syntax-p">),</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">)</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-c1">// Optional parameters</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">temperature</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-m">0.2f</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">topK</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-m">10</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">candidateCount</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-m">3</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code></section>
+<section><h3 id="java_3" data-text="Java" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-n">GenerateContentRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">requestBuilder</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">GenerateContentRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">TextPart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Write a 3 sentence story about a magical dog."</span><span class="devsite-syntax-p">));</span>
+<span class="devsite-syntax-n">requestBuilder</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">setTemperature</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mf">.2f</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-n">requestBuilder</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">setTopK</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mi">10</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-n">requestBuilder</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">setCandidateCount</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-mi">3</span><span class="devsite-syntax-p">);</span>
+
+<span class="devsite-syntax-n">GenerateContentResponse</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">generativeModelFutures</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">generateContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">requestBuilder</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">()).</span><span class="devsite-syntax-na">get</span><span class="devsite-syntax-p">();</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+<p>For more information about the optional parameters, see <a href="#optional-configurations">Optional
+configurations</a>.</p>
+
+<h2 id="provide-multimodal" data-text="Provide multimodal (image and text) input" tabindex="-1">Provide multimodal (image and text) input</h2>
+
+<p>Bundle multiple images and a text input together in the
+<code translate="no" dir="ltr">generateContentRequest()</code> function, with the text prompt being a question or
+command related to the image. You can bundle up to 10 images in the same
+request.</p>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="kotlin_4" data-text="Kotlin" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-kd">val</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">generativeModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">generateContent</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">generateContentRequest</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">ImagePart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">bitmap1</span><span class="devsite-syntax-p">),</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ImagePart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">bitmap2</span><span class="devsite-syntax-p">),</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">TextPart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">textPrompt</span><span class="devsite-syntax-p">))</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-c1">// optional parameters</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">...</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">},</span>
+<span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code></section>
+<section><h3 id="java_4" data-text="Java" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-n">GenerateContentResponse</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">generativeModelFutures</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">generateContent</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">GenerateContentRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">Content</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">()</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">addPart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ImagePart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">bitmap1</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">addPart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">ImagePart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">bitmap2</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">addPart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">TextPart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"textPrompt"</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">())</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-c1">// optional parameters</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">())</span>
+<span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">get</span><span class="devsite-syntax-p">();</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+<h2 id="process_inference_result" data-text="Process inference result" tabindex="-1">Process inference result</h2>
+<ul>
+<li><p>Run the inference and retrieve the result. You can choose to either wait for
+the full result or stream the response as it&#39;s generated for both text-only
+and multimodal prompts.</p>
+<ul>
+<li><p>This uses non-streaming inference, which retrieves the entire result from
+the AI model before returning the result:</p></li>
+</ul>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="kotlin_5" data-text="Kotlin" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// Call the AI model to generate content and store the complete</span>
+<span class="devsite-syntax-c1">// in a new variable named 'response' once it's finished</span>
+<span class="devsite-syntax-kd">val</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">generativeModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">generateContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Write a 3 sentence story about a magical dog"</span><span class="devsite-syntax-p">)</span>
+</code></pre></devsite-code></section>
+<section><h3 id="java_5" data-text="Java" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-n">GenerateContentResponse</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">response</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">generativeModelFutures</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">generateContent</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">GenerateContentRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">TextPart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Write a 3 sentence story about a magical dog."</span><span class="devsite-syntax-p">))</span>
+<span class="devsite-syntax-w">                </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">())</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">get</span><span class="devsite-syntax-p">();</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div>
+<ul>
+<li><p>The following snippets are examples of using streaming inference, which
+retrieves the result in chunks as it&#39;s being generated:</p></li>
+</ul>
+<div><devsite-selector data-ds-scope="code-sample">
+<section><h3 id="kotlin_6" data-text="Kotlin" tabindex="-1">Kotlin</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Kotlin"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// Streaming inference</span>
+<span class="devsite-syntax-kd">var</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">fullResponse</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-s">""</span>
+<span class="devsite-syntax-n">generativeModel</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">generateContentStream</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Write a 3 sentence story about a magical dog"</span><span class="devsite-syntax-p">).</span><span class="devsite-syntax-na">collect</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">chunk</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-kd">val</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-nv">newChunkReceived</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">chunk</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">candidates</span><span class="devsite-syntax-o">[</span><span class="devsite-syntax-m">0</span><span class="devsite-syntax-o">]</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">text</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">print</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">newChunkReceived</span><span class="devsite-syntax-p">)</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-n">fullResponse</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">+=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">newChunkReceived</span>
+<span class="devsite-syntax-p">}</span>
+</code></pre></devsite-code></section>
+<section><h3 id="java_6" data-text="Java" tabindex="-1">Java</h3><div></div><devsite-code><pre class="devsite-click-to-copy" translate="no" dir="ltr" is-upgraded syntax="Java"><code translate="no" dir="ltr"><span class="devsite-syntax-c1">// Streaming inference</span>
+<span class="devsite-syntax-n">StringBuilder</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">fullResponse</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">=</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">StringBuilder</span><span class="devsite-syntax-p">();</span>
+<span class="devsite-syntax-n">generativeModelFutures</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">generateContent</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">GenerateContentRequest</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">Builder</span><span class="devsite-syntax-p">(</span>
+<span class="devsite-syntax-w">    </span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-k">new</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">TextPart</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-s">"Write a 3 sentence story about a magical dog"</span><span class="devsite-syntax-p">))).</span><span class="devsite-syntax-na">build</span><span class="devsite-syntax-p">(),</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-n">chunk</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-o">-</span>&gt;<span class="devsite-syntax-w"> </span><span class="devsite-syntax-p">{</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-n">Log</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">d</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">TAG</span><span class="devsite-syntax-p">,</span><span class="devsite-syntax-w"> </span><span class="devsite-syntax-n">chunk</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">            </span><span class="devsite-syntax-n">fullResponse</span><span class="devsite-syntax-p">.</span><span class="devsite-syntax-na">append</span><span class="devsite-syntax-p">(</span><span class="devsite-syntax-n">chunk</span><span class="devsite-syntax-p">);</span>
+<span class="devsite-syntax-w">        </span><span class="devsite-syntax-p">});</span>
+</code></pre></devsite-code></section>
+</devsite-selector></div></li>
+</ul>
+<p>For more information about streaming and non-streaming inference, see <a href="/ml-kit/genai#streaming-vs-non">Streaming
+versus non-streaming</a>.</p>
+
+<h2 id="latency-optimization" data-text="Latency optimization" tabindex="-1">Latency optimization</h2>
+
+<p>To optimize for the first inference call, your application may optionally call
+<code translate="no" dir="ltr">warmup()</code>. This loads Gemini Nano into memory and initializes runtime
+components.</p>
+
+<h2 id="optional-configurations" data-text="Optional configurations" tabindex="-1">Optional configurations</h2>
+
+<p>As part of each <code translate="no" dir="ltr">GenerateContentRequest</code>, you can set the following optional
+parameters:</p>
+
+<ul>
+<li><code translate="no" dir="ltr">temperature</code> : Controls the degree of randomness in token selection.</li>
+<li><code translate="no" dir="ltr">seed</code> : Enables generating stable and deterministic results.</li>
+<li><code translate="no" dir="ltr">topK</code> : Controls randomness and diversity in results.</li>
+<li><code translate="no" dir="ltr">candidateCount</code> : Requests the number of unique responses returned. Note that
+the exact number of responses may not be the same as <code translate="no" dir="ltr">candidateCount</code> because
+duplicate responses are automatically removed.</li>
+<li><code translate="no" dir="ltr">maxOutputTokens</code> : Defines the maximum number of tokens that can be generated
+in the response.</li>
+</ul>
+
+<p>For more guidance on setting optional configurations, see
+<a href="/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerateContentRequest"><code translate="no" dir="ltr">GenerateContentRequest</code></a>.</p>
+
+<h2 id="supported-features" data-text="Supported features and limitations" tabindex="-1">Supported features and limitations</h2>
+
+<ul>
+<li>Input must fit within the model&#39;s context window (under 4000 tokens, or
+approximately 3000 English words). For more information, see the
+<a href="/android/reference/com/google/mlkit/genai/prompt/GenerativeModel#countTokens(com.google.mlkit.genai.prompt.GenerateContentRequest)"><code translate="no" dir="ltr">countTokens</code></a> reference.</li>
+<li>Use cases that require long output (more than 4K tokens) should be avoided.</li>
+<li>AICore enforces an inference quota per app. For more information, see <a href="/ml-kit/genai#quota-per">Quota
+per application</a>.</li>
+</ul>
+
+<h2 id="common-setup-issues" data-text="Common setup issues" tabindex="-1">Common setup issues</h2>
+<aside class="note"><strong>Note:</strong><span> This API is not supported on devices with an <a href="https://source.android.com/docs/core/architecture/bootloader/locking_unlocking">unlocked bootloader</a>.</span></aside>
+<p>ML Kit GenAI APIs rely on the Android AICore app to access Gemini Nano. When a device is just setup (including reset), or the AICore app is just reset (e.g. clear data, uninstalled then reinstalled), the AICore app may not have enough time to finish initialization (including downloading latest configurations from server). As a result, the ML Kit GenAI APIs may not function as expected. Here are the common setup error messages you may see and how to handle them:</p>
+
+<table>
+  <tr>
+    <td><strong>Example error message</strong></td>
+    <td><strong>How to handle</strong></td>
+  </tr>
+  <tr>
+    <td>AICore failed with error type 4-CONNECTION_ERROR and error code 601-BINDING_FAILURE: AICore service failed to bind.</td>
+    <td>This could happen when you install the app using ML Kit GenAI APIs immediately after device setup or when AICore is uninstalled after your app is installed. Updating AICore app then reinstalling your app should fix it.</td>
+  </tr>
+  <tr>
+    <td>AICore failed with error type 3-PREPARATION_ERROR and error code 606-FEATURE_NOT_FOUND: Feature ... is not available.</td>
+    <td>
+    This could happen when AICore hasn't finished downloading the latest configurations. When the device is connected to the internet, it usually takes a few minutes to a few hours to update. Restarting the device can speed up the update.
+    <br/><br/>
+    Note that if the device's bootloader is unlocked, you'll also see this error—this API does not support devices with unlocked bootloaders.
+    </td>
+  </tr>
+  <tr>
+    <td>AICore failed with error type 1-DOWNLOAD_ERROR and error code 0-UNKNOWN: Feature ... failed with failure status 0 and error esz: UNAVAILABLE: Unable to resolve host ...</td>
+    <td>Keep network connection, wait for a few minutes and retry.</td>
+  </tr>
+</table>
+<aside class="note"><strong>Note:</strong><span> While various resetting is common to developers, it is much less frequent to users. Also, all these setup failure cases can be caught by the <code translate="no" dir="ltr">checkFeatureStatus()</code> or <code translate="no" dir="ltr">checkStatus()</code> APIs. Make sure to call <code translate="no" dir="ltr">checkFeatureStatus()</code> or <code translate="no" dir="ltr">checkStatus()</code> first before showing any related UI, so your app users won&#39;t see these errors in any cases.</span></aside>
+
+  
+
+  
+</div>
+
+  
+    
+      <devsite-recommendations display="in-page" hidden yield>
+      </devsite-recommendations>
+    
+    
+      
+    <devsite-thumb-rating position="footer">
+    </devsite-thumb-rating>
+  
+       
+         <devsite-feedback
+  position="footer"
+  project-name="ML Kit"
+  product-id="5207477"
+  bucket=""
+  context=""
+  version="t-devsite-webserver-20261110-r00-rc00.481703539384513966"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="footer"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/ml-kit/images/MLKit_Icon.png"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    
+    Send feedback
+  
+  </button>
+</devsite-feedback>
+       
+    
+    
+      <devsite-recommendations id="recommendations-link" yield></devsite-recommendations>
+    
+  
+
+  <div class="devsite-floating-action-buttons"></div></article>
+
+
+<devsite-content-footer class="nocontent" data-nosnippet>
+  <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  <p>Last updated 2026-10-27 UTC.</p>
+</devsite-content-footer>
+
+
+<devsite-notification
+>
+</devsite-notification>
+
+
+  
+<div class="devsite-content-data">
+  
+    
+    
+    <template class="devsite-thumb-rating-feedback">
+      <devsite-feedback
+  position="thumb-rating"
+  project-name="ML Kit"
+  product-id="5207477"
+  bucket=""
+  context=""
+  version="t-devsite-webserver-20261110-r00-rc00.481703539384513966"
+  data-label="Send Feedback Button"
+  track-type="feedback"
+  track-name="sendFeedbackLink"
+  track-metadata-position="thumb-rating"
+  class="nocontent"
+  data-nosnippet
+  
+  
+  
+    
+      project-icon="https://developers.google.com/static/ml-kit/images/MLKit_Icon.png"
+    
+  
+  
+  
+  >
+
+  <button>
+  
+    Need to tell us more?
+  
+  </button>
+</devsite-feedback>
+    </template>
+  
+  
+    <template class="devsite-content-data-template">
+      [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-27 UTC."],[],[]]
+    </template>
+  
+</div>
+            
+          </devsite-content>
+        </main>
+        <devsite-footer-promos class="devsite-footer">
+          
+            
+          
+        </devsite-footer-promos>
+        <devsite-footer-linkboxes class="devsite-footer">
+          
+            
+<nav class="devsite-footer-linkboxes nocontent"
+     aria-label="Footer links"
+     data-nosnippet>
+  
+  <ul class="devsite-footer-linkboxes-list">
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Engage</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://discuss.ai.google.dev/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Google AI Forum
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/program"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Google Developer Program
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Google Developer Groups
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/experts"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Google Developer Experts
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/accelerators"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            Accelerators
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/community/nvidia"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+              
+              
+            
+          
+            Google Cloud & NVIDIA
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Connect</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//googledevelopers.blogspot.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Blog
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://bsky.app/profile/developers.google.com"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Bluesky
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.instagram.com/googlefordevs/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Instagram
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://www.linkedin.com/showcase/googledevelopers/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            LinkedIn
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//twitter.com/googledevs"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            X (Twitter)
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="//www.youtube.com/user/GoogleDevelopers"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+              
+              
+            
+          
+            YouTube
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+    <li class="devsite-footer-linkbox ">
+    <h3 class="devsite-footer-linkbox-heading no-link">Build</h3>
+      <ul class="devsite-footer-linkbox-list">
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.android.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 1)"
+            >
+            
+          
+            Android
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://developer.chrome.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 2)"
+            >
+            
+          
+            Chrome
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://firebase.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 3)"
+            >
+            
+          
+            Firebase
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://aistudio.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 4)"
+            >
+            
+          
+            Google AI Studio
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://antigravity.google/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 5)"
+            >
+            
+          
+            Google Antigravity
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://cloud.google.com/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 6)"
+            >
+            
+          
+            Google Cloud
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="https://play.google.com/console/about/"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 7)"
+            >
+            
+          
+            Google Play
+          
+          </a>
+          
+          
+        </li>
+        
+        <li class="devsite-footer-linkbox-item">
+          
+          <a href="/products"
+             class="devsite-footer-linkbox-link gc-analytics-event"
+             data-category="Site-Wide Custom Events"
+            
+             data-label="Footer Link (index 8)"
+            >
+            
+              
+              
+            
+          
+            View all
+          
+          </a>
+          
+          
+        </li>
+        
+      </ul>
+    </li>
+    
+  </ul>
+  
+</nav>
+          
+        </devsite-footer-linkboxes>
+        <devsite-footer-utility class="devsite-footer">
+          
+            
+
+<div class="devsite-footer-utility nocontent" data-nosnippet>
+  
+  
+  <nav class="devsite-footer-sites" aria-label="Other Google Developers websites">
+    <a href="https://developers.google.com/"
+       class="devsite-footer-sites-logo-link gc-analytics-event"
+       data-category="Site-Wide Custom Events"
+       data-label="Footer Google Developers Link">
+      <picture>
+        
+        <img class="devsite-footer-sites-logo"
+             src="https://www.gstatic.com/devrel-devsite/prod/v579d635a54d6e1f40caad46ce407560c5106c8915e5ff7e6341f5b13eb245c5a/developers/images/lockup-google-for-developers.svg"
+             loading="lazy"
+             alt="Google Developers">
+      </picture>
+    </a>
+    <ul class="devsite-footer-sites-list">
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.android.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Android Link"
+         
+         >
+          Android
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//developer.chrome.com/home"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Chrome Link"
+         
+         >
+          Chrome
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//firebase.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Firebase Link"
+         
+         >
+          Firebase
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//cloud.google.com"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google Cloud Platform Link"
+         
+         >
+          Google Cloud Platform
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="//ai.google.dev/"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer Google AI Link"
+         
+         >
+          Google AI
+        </a>
+      </li>
+      
+      <li class="devsite-footer-sites-item">
+        <a href="/products"
+           class="devsite-footer-sites-link
+                  gc-analytics-event"
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Footer All products Link"
+         
+         >
+          All products
+        </a>
+      </li>
+      
+    </ul>
+  </nav>
+  
+
+  
+  <nav class="devsite-footer-utility-links" aria-label="Utility links">
+    
+    <ul class="devsite-footer-utility-list">
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Terms link"
+         >
+          Terms
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 ">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Privacy link"
+         >
+          Privacy
+        </a>
+        
+      </li>
+      
+      <li class="devsite-footer-utility-item
+                 glue-cookie-notification-bar-control">
+        
+        
+        <a class="devsite-footer-utility-link gc-analytics-event"
+           href="#"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer Manage cookies link"
+         
+           aria-hidden="true"
+         >
+          Manage cookies
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+    
+<devsite-language-selector>
+  <ul role="presentation">
+    
+    
+    <li role="presentation">
+      <a role="menuitem" lang="en"
+        >English</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="de"
+        >Deutsch</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es"
+        >Español</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="es_419"
+        >Español – América Latina</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fr"
+        >Français</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="id"
+        >Indonesia</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="it"
+        >Italiano</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pl"
+        >Polski</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="pt_br"
+        >Português – Brasil</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="vi"
+        >Tiếng Việt</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="tr"
+        >Türkçe</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ru"
+        >Русский</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="he"
+        >עברית</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ar"
+        >العربيّة</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="fa"
+        >فارسی</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="hi"
+        >हिंदी</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="bn"
+        >বাংলা</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="th"
+        >ภาษาไทย</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_cn"
+        >中文 – 简体</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="zh_tw"
+        >中文 – 繁體</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ja"
+        >日本語</a>
+    </li>
+    
+    <li role="presentation">
+      <a role="menuitem" lang="ko"
+        >한국어</a>
+    </li>
+    
+  </ul>
+</devsite-language-selector>
+
+  </nav>
+</div>
+          
+        </devsite-footer-utility>
+        <devsite-panel>
+          
+        </devsite-panel>
+        
+      </section>
+      </section>
+    <devsite-sitemask></devsite-sitemask>
+    <devsite-snackbar></devsite-snackbar>
+    <devsite-tooltip ></devsite-tooltip>
+    <devsite-heading-link></devsite-heading-link>
+    <devsite-analytics>
+      
+        <script type="application/json" analytics>[{&#34;dimensions&#34;: {&#34;dimension4&#34;: &#34;ML Kit&#34;, &#34;dimension11&#34;: false, &#34;dimension6&#34;: &#34;en&#34;, &#34;dimension1&#34;: &#34;Signed out&#34;, &#34;dimension3&#34;: false, &#34;dimension5&#34;: &#34;en&#34;}, &#34;gaid&#34;: &#34;UA-24532603-1&#34;, &#34;metrics&#34;: {&#34;ratings_value&#34;: &#34;metric1&#34;, &#34;ratings_count&#34;: &#34;metric2&#34;}, &#34;purpose&#34;: 1}]</script>
+<script type="application/json" tag-management>{&#34;at&#34;: &#34;True&#34;, &#34;ga4&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;ga4p&#34;: [{&#34;id&#34;: &#34;G-272J68FCRF&#34;, &#34;purpose&#34;: 1}], &#34;gtm&#34;: [{&#34;id&#34;: &#34;GTM-T98GCPGN&#34;, &#34;purpose&#34;: 1}], &#34;parameters&#34;: {&#34;internalUser&#34;: &#34;False&#34;, &#34;language&#34;: {&#34;machineTranslated&#34;: &#34;False&#34;, &#34;requested&#34;: &#34;en&#34;, &#34;served&#34;: &#34;en&#34;}, &#34;pageType&#34;: &#34;article&#34;, &#34;projectName&#34;: &#34;ML Kit&#34;, &#34;signedIn&#34;: &#34;False&#34;, &#34;tenant&#34;: &#34;developers&#34;, &#34;recommendations&#34;: {&#34;sourcePage&#34;: &#34;&#34;, &#34;sourceType&#34;: 0, &#34;sourceRank&#34;: 0, &#34;sourceIdenticalDescriptions&#34;: 0, &#34;sourceTitleWords&#34;: 0, &#34;sourceDescriptionWords&#34;: 0, &#34;experiment&#34;: &#34;&#34;}, &#34;experiment&#34;: {&#34;ids&#34;: &#34;&#34;}}}</script>
+      
+    </devsite-analytics>
+    
+      <devsite-badger></devsite-badger>
+    
+    
+    
+    
+    
+<script nonce="xwU5pe/WLeOjhQTnmX4mP/R4qPpJVq">
+  
+  (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
+    t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
+    E.parentNode.insertBefore(t,E);})(window, document, 'script',
+    'https://www.gstatic.com/devrel-devsite/prod/v579d635a54d6e1f40caad46ce407560c5106c8915e5ff7e6341f5b13eb245c5a/developers/js/app_loader.js', '[1,"en",null,"/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v579d635a54d6e1f40caad46ce407560c5106c8915e5ff7e6341f5b13eb245c5a","https://www.gstatic.com/devrel-devsite/prod/v579d635a54d6e1f40caad46ce407560c5106c8915e5ff7e6341f5b13eb245c5a/developers","https://developers-dot-devsite-v2-prod.appspot.com",null,null,["/_pwa/developers/manifest.json","https://www.gstatic.com/devrel-devsite/prod/v579d635a54d6e1f40caad46ce407560c5106c8915e5ff7e6341f5b13eb245c5a/images/video-placeholder.svg","https://www.gstatic.com/devrel-devsite/prod/v579d635a54d6e1f40caad46ce407560c5106c8915e5ff7e6341f5b13eb245c5a/developers/images/favicon-new.png","https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700&display=swap"],1,null,[1,6,8,12,14,17,21,25,50,52,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,112,113,116,117,118,120,122,124,125,126,127,129,130,131,132,133,134,135,136,138,140,141,147,148,149,151,152,156,157,158,159,161,163,164,168,169,170,179,180,182,183,186,191,193,196],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY",null,null,null,["Concierge__enable_key_takeaways_new_ui","MiscFeatureFlags__enable_variable_operator_index_yaml","TpcFeatures__enable_unmirrored_page_left_nav","Cloud__fast_free_trial","MiscFeatureFlags__enable_variable_operator","Profiles__enable_page_saving","Search__enable_dynamic_content_confidential_banner","Profiles__enable_developer_profiles_callout","EngEduTelemetry__enable_engedu_telemetry","BookNav__enable_tenant_cache_key","MiscFeatureFlags__enable_markdown_accept_header","MiscFeatureFlags__enable_view_transitions","Cloud__enable_cloud_shell_fte_user_flow","MiscFeatureFlags__enable_markdown_noindex_and_link_tags","DevPro__enable_devsite_captcha","DevPro__enable_credits_banner","Analytics__enable_devpro_interaction_logging","Analytics__enable_clearcut_logging","DevPro__enable_embed_profile_creation","Cloud__enable_cloud_shell","DevPro__enable_cloud_innovators_plus","Profiles__enable_targeted_hero","MiscFeatureFlags__enable_project_variables","DevPro__enable_free_benefits","Cloud__enable_free_trial_server_call","Profiles__enable_developer_profile_pages_as_content","Home__enable_chatbot","Profiles__enable_stripe_subscription_management","MiscFeatureFlags__enable_appearance_cookies","DevPro__enable_devpro_offers","Profiles__enable_public_developer_profiles","Profiles__enable_user_type","DevPro__enable_vertex_credit_card","Search__enable_ai_eligibility_checks","Concierge__enable_actions_menu","Experiments__reqs_query_experiments","Profiles__enable_dashboard_curated_recommendations","DevPro__enable_enterprise","CloudShell__cloud_code_overflow_menu","MiscFeatureFlags__gdp_dashboard_reskin_enabled","MiscFeatureFlags__enable_framebox_badge_methods","Profiles__require_profile_eligibility_for_signin","Profiles__enable_join_program_group_endpoint","Profiles__enable_developer_profile_benefits_ui_redesign","Profiles__enable_completequiz_endpoint","Profiles__enable_completecodelab_endpoint","DevPro__enable_code_assist","MiscFeatureFlags__developers_footer_image","Search__enable_suggestions_from_borg","AIStudioInteractionsToggle__interactions_are_default","SignIn__enable_l1_signup_flow","TpcFeatures__proxy_prod_host","DevPro__enable_google_one_card","Profiles__enable_callout_notifications","DevPro__enable_g1_ineligible_redirect","Profiles__enable_release_notes_notifications","Profiles__enable_awarding_url","Profiles__enable_auto_apply_credits","Cloud__cache_serialized_dynamic_content","Cloud__enable_cloudx_experiment_ids","MiscFeatureFlags__fix_lower_breadcrumbs","Search__enable_ai_search_summaries_for_all","Profiles__enable_profile_collections","CloudShell__cloud_shell_button","DevPro__remove_eu_tax_intake_form","MiscFeatureFlags__enable_explicit_template_dependencies","MiscFeatureFlags__developers_footer_dark_image","DevPro__enable_firebase_workspaces_card","Concierge__enable_remove_info_panel_tags","DevPro__enable_g1_integration","DevPro__enable_google_payments_buyflow","Profiles__enable_recognition_badges","DevPro__enable_nvidia_credits_card","Cloud__enable_legacy_calculator_redirect","Profiles__enable_purchase_prompts","MiscFeatureFlags__enable_firebase_utm","Profiles__enable_complete_playlist_endpoint","Search__enable_page_map","Significatio__enable_by_tenant","Cloud__enable_cloud_dlp_service","Concierge__enable_devsite_llm_tools","Profiles__enable_playlist_community_acl","ProgramGroups__enable_auto_enroll","Concierge__enable_pushui","Concierge__enable_key_takeaways","MiscFeatureFlags__remove_cross_domain_tracking_params","DevPro__enable_developer_subscriptions"],null,null,"AIzaSyBLEMok-5suZ67qRPzx0qUtbnLmyT_kCVE","https://developerscontentserving-pa.clients6.google.com","AIzaSyCM4QpTRSqP5qI4Dvjt4OAScIN8sOUlO-k","https://developerscontentsearch-pa.clients6.google.com",1,4,null,"https://developerprofiles-pa.clients6.google.com",[1,"developers","Google for Developers","developers.google.com",null,"developers-dot-devsite-v2-prod.appspot.com",null,null,[1,1,[1],null,null,null,null,null,null,null,null,[1],null,null,null,null,null,null,[1],[1,null,null,[1,20],"/recommendations/information"],null,null,null,[1,1,1],[1,1,null,1,1,null,null,["/meridian"]],[1,null,null,null,null,null,null,["/admob","/ad-manager/mobile-ads-sdk","/ml-kit"]],null,[null,["/meridian","/youtube/devices/"]],1,null,[1]],null,[null,null,null,null,null,null,"/images/lockup-new.svg","/images/touchicon-180-new.png",null,null,null,null,1,null,null,null,null,null,null,null,null,1,null,null,null,"/images/lockup-dark-theme-new.svg",[]],[],null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,[6,1,14,15,20,22,23,29,32,36],null,[[null,null,null,[3,7,10,2,39,17,4,32,24,11,12,13,34,15,25],null,null,[1,[["docType","Choose a content type",[["Tutorial",null,null,null,null,null,null,null,null,"Tutorial"],["Guide",null,null,null,null,null,null,null,null,"Guide"],["Sample",null,null,null,null,null,null,null,null,"Sample"]]],["product","Choose a product",[["Android",null,null,null,null,null,null,null,null,"Android"],["ARCore",null,null,null,null,null,null,null,null,"ARCore"],["ChromeOS",null,null,null,null,null,null,null,null,"ChromeOS"],["Firebase",null,null,null,null,null,null,null,null,"Firebase"],["Flutter",null,null,null,null,null,null,null,null,"Flutter"],["Assistant",null,null,null,null,null,null,null,null,"Google Assistant"],["GoogleCloud",null,null,null,null,null,null,null,null,"Google Cloud"],["GoogleMapsPlatform",null,null,null,null,null,null,null,null,"Google Maps Platform"],["GooglePay",null,null,null,null,null,null,null,null,"Google Pay & Google Wallet"],["GooglePlay",null,null,null,null,null,null,null,null,"Google Play"],["Tensorflow",null,null,null,null,null,null,null,null,"TensorFlow"]]],["category","Choose a topic",[["AiAndMachineLearning",null,null,null,null,null,null,null,null,"AI and Machine Learning"],["Data",null,null,null,null,null,null,null,null,"Data"],["Enterprise",null,null,null,null,null,null,null,null,"Enterprise"],["Gaming",null,null,null,null,null,null,null,null,"Gaming"],["Mobile",null,null,null,null,null,null,null,null,"Mobile"],["Web",null,null,null,null,null,null,null,null,"Web"]]]]]],[1,1],null,1],[[["UA-24532603-1"],["UA-22084204-5"],null,null,["UA-24532603-5"],["GTM-T98GCPGN"],null,[["G-272J68FCRF"],null,null,[["G-272J68FCRF",2]]],[["UA-24532603-1",2]],null,[["UA-24532603-5",2]],[["GTM-T98GCPGN",2]],1],[[1,1],[3,2],[4,3],[16,13],[6,5],[11,8],[13,10],[12,9],[15,12],[5,4],[14,11]],[[1,1],[2,2]]],null,4,null,null,null,null,null,null,null,null,null,null,null,null,null,"developers.devsite.google",null,null,null,null,null,[]],null,"pk_live_5170syrHvgGVmSx9sBrnWtA5luvk9BwnVcvIi7HizpwauFG96WedXsuXh790rtij9AmGllqPtMLfhe2RSwD6Pn38V00uBCydV4m",1,null,"https://developerscontentinsights-pa.clients6.google.com","AIzaSyCg-ZUslalsEbXMfIo9ZP8qufZgo3LSBDU","AIzaSyDxT0vkxnY_KeINtA4LSePJO-4MAZPMRsE","https://developers.clients6.google.com",["https://codeassist.google.com","https://code-assist-free-tier.corp.google.com","https://pay.google.com","https://pay-merchant-console-autopush-qual.corp.google.com","https://pay-merchant-console-dev.corp.google.com","https://pay-merchant-console-preprod-qual.corp.google.com"],null,"AIzaSyBQom12tzI-rybN7Sf-KfeL4nwm-Rf7PmI\n",null,null,"https://developers.googleapis.com"]')
+  
+</script>
+
+    <devsite-a11y-announce></devsite-a11y-announce>
+  </body>
+</html>

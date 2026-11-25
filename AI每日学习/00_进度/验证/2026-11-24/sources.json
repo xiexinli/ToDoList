@@ -1,0 +1,94 @@
+{
+  "inputs": [
+    {
+      "id": "USER-TODAY",
+      "type": "USER",
+      "locator": "2026-11-24任务：第9讲/只读对账/12项Host/主唯一发送"
+    },
+    {
+      "id": "ARTIFACT-YESTERDAY",
+      "type": "ARTIFACT",
+      "locator": "02_AndroidAI/2026-11-23-端云请求的持久操作账本：重启后怎样处理未确认请求.md；00_进度/验证/2026-11-23/ledger_host.py",
+      "version": "SHA256见yesterday-hashes.json"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "type": "TOOL",
+      "url": "https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/",
+      "http": "200",
+      "curl_exit": 0,
+      "observed_at": "2026-11-24T08:05:07.555969+08:00",
+      "date": "2026-11-23",
+      "reading": "正文目标段落实读",
+      "previously_cited": false,
+      "version_sha256": "b086408dff0026e525f012bd050e645535eea30bd165371f84755d480106ddbd",
+      "title": "Google：语义治理策略对用户意图劫持的防护评测",
+      "locator": "How Semantic governance policies stop intent hijacking / Limitations",
+      "excerpt": "Tool results, files and messages are untrusted context, treated as data, never as instructions.\nIf not, the call is replaced with a denial message and never runs.\nThat separation is enforced by how the judge is instructed, not by a hard technical boundary."
+    },
+    {
+      "id": "S02",
+      "type": "TOOL",
+      "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2118617283625664512",
+      "http": "200",
+      "curl_exit": 0,
+      "observed_at": "2026-11-24T08:05:07.555969+08:00",
+      "date": "2026-11-13",
+      "reading": "正文目标段落实读",
+      "previously_cited": false,
+      "version_sha256": "19da62b2764679e9d41fb29cd3a80375d2e656b9e8b0bcc76221f65f5491a90e",
+      "title": "WorkBuddy-企业智能体高级全栈研发工程师",
+      "locator": "Data.Responsibility / Data.Requirement / LastUpdateTime",
+      "excerpt": "1.Managed Agents 产品研发：负责 WorkBuddy Managed Agents 产品的全链路研发工作，覆盖 Agent 使用、编排、运行、治理、评测等核心能力，联动 WorkBuddy / CodeBuddy 构建企业托管智能体能力与产品；\r\n2.企业架构设计与演进：参与企业专属部署架构的设计与演进，负责产品标准化、多产品融合、多租户隔离、模型服务接口与数据交互等方向的技术方案规划与评审，输出高质量设计文档，协调各团队推动落地，保证企业环境下的合规与隔离能力；\r\n3.质量与性能治理：构建代码质量与线上质量监控体系，主导性能优化、稳定性治理与体验提升，持续优化推理效率与资源消耗，提高企业级产品的内建质量与可运维性；\r\n4.业务赋能与工程 Harness 建设：支持公司内外部业务基于 Managed Agents 平台快速构建自己的 Agent 应用与工作流，沉淀 AI 编程范式（spec-driven / context engineering / harness）方法论与工具链；构建代码生成、测试、评测、发布的自动化 harness，把研发效能做成可复用的内部底座，让业务用 AI 高效驾驭大规模研发；\r\n5.产品交付与流程标准化：推动企业版研发流程标准化，制定迭代计划并把控交付节奏，保证功能在多客户、多环境下按时高质量交付。\n1.计算机相关专业本科及以上学历，3 年以上后端开发经验，主导过复杂系统的全生命周期研发；\r\n2.精通 Node.js 与 Go 两种服务端技术栈，熟悉 Python 者优先；\r\n3.具备出色的工程方案规划能力，能够践行 Clean Architecture / Domain-Driven Design 原则的设计文档；\r\n4.有 Agent 应用开发经验，熟悉 Agent 架构设计、Prompt 工程、Context 工程、RAG 应用、大模型推理服务化等 AI 工程化流程，能独立完成一个 Agent 从设计到上线；\r\n5.熟悉 Managed Agent 平台侧研发，掌握 Agent Runtime 与沙箱隔离执行环境（Firecracker / gVisor / E2B 等）、Runtime 生命周期管理、MCP / A2A / ACP 等 Agent 开放协议、主 Agent + Sub-agents 多智能体编排框架、OpenTelemetry Trace / Agent Eval / Guardrail 等可观测与评测体系者优先；\r\n6.善用 AI 提升生产力，能高效驾驭 AI Coding 编程范式（把 AI 当作可委派的执行单元，而非补全工具），在 spec / context / harness 层面有方法论；\r\n7.有 To B 产品、企业级 SaaS / PaaS /私有化部署交付相关经验者优先；\r\n8.熟悉分布式系统设计，掌握微服务、容器化、CI/CD、高并发与高可用等工程实践，具备大规模在线服务的性能优化与稳定性治理经验者优先；\r\n9.强烈的 owner 意识，具备优秀的跨团队协同能力，主导过 5 人以上研发团队协作经验优先；\r\n10.加分项。",
+      "job_title": "WorkBuddy-企业智能体高级全栈研发工程师"
+    },
+    {
+      "id": "S03",
+      "type": "TOOL",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2118617283625664512",
+      "http": "200",
+      "curl_exit": 0,
+      "observed_at": "2026-11-24T08:05:07.555969+08:00",
+      "date": "页面未提供；岗位API更新2026-11-13",
+      "reading": "仅实读页面壳，不能证明岗位内容",
+      "previously_cited": false,
+      "version_sha256": "b4567851b9ee8f1a2b94131eb80f7af3a888454cffadb65554bb8215dfbb0de0",
+      "title": "腾讯WorkBuddy企业智能体高级全栈研发岗位页面",
+      "excerpt": "岗位详情 | 腾讯招聘",
+      "locator": "HTML标题；动态内容不在页面壳内"
+    },
+    {
+      "id": "S04",
+      "type": "TOOL",
+      "url": "https://raw.githubusercontent.com/googleapis/googleapis/master/google/longrunning/operations.proto",
+      "http": "200",
+      "curl_exit": 0,
+      "observed_at": "2026-11-24T08:05:07.555969+08:00",
+      "date": "原发布日期未提供，待核实；Copyright 2025非发布日期",
+      "reading": "正文目标段落实读",
+      "previously_cited": false,
+      "version_sha256": "5d2e7f9eeb55b8417b50e0a536a092babd32d26e4fbeb7099c6cdcda6e16db9c",
+      "title": "Google long-running operations官方协议源码",
+      "locator": "GetOperation / Operation.name / Operation.done",
+      "excerpt": "Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.\nThe server-assigned name, which is only unique within the same service that originally returns it.\nIf true, the operation is completed, and either error or response is available."
+    },
+    {
+      "id": "S05",
+      "type": "TOOL",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "http": "200",
+      "curl_exit": 0,
+      "observed_at": "2026-11-24T08:05:07.555969+08:00",
+      "date": "2022-06",
+      "reading": "正文目标段落实读",
+      "previously_cited": false,
+      "version_sha256": "d431760660ea44e130f6e919dab216df2d0b3a490567a98089267523368fe1e5",
+      "title": "RFC 9110 HTTP安全方法语义",
+      "locator": "§9.2.1 Safe Methods",
+      "excerpt": "This definition of safe methods does not prevent an implementation from including behavior that is potentially harmful, that is not entirely read-only, or that causes side effects while invoking a safe method."
+    }
+  ],
+  "boundary": "公开博客/招聘/协议文档抓取不是业务状态查询；无操作查询、凭据或模型请求"
+}

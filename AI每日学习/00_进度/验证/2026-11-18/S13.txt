@@ -1,0 +1,41 @@
+
+          Home
+          Products
+          ML Kit
+          Reference
+    Send feedback
+      Stay organized with collections
+      Save and categorize content based on your preferences.
+Candidate.FinishReason
+Kotlin
+|Java
+@IntDef(value = [0, 1, -100])
+annotation Candidate.FinishReason
+The reason why this Candidate is returned.
+Summary
+Constants
+            const Int
+MAX_TOKENS
+The maximum number of output tokens as specified in the request was reached.
+            const Int
+OTHER
+All other reasons that stopped the generation.
+            const Int
+STOP
+Natural stop point of the model.
+Public constructors
+FinishReason()
+Constants
+MAX_TOKENS
+const val MAX_TOKENS: Int
+The maximum number of output tokens as specified in the request was reached.
+OTHER
+const val OTHER: Int
+All other reasons that stopped the generation.
+STOP
+const val STOP: Int
+Natural stop point of the model.
+Public constructors
+FinishReason
+FinishReason()
+    Send feedback

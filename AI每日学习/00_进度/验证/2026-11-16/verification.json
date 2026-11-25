@@ -1,0 +1,117 @@
+{
+  "status": "DONE",
+  "scope": "委派的今日材料/台账/证据/摘要草稿，不包含主智能体飞书发送",
+  "observed_at": "2026-11-16T08:09:13.876299+08:00",
+  "artifacts": [
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-16-端侧推理的设备能力检查与可用性边界.md",
+      "bytes": 27836,
+      "sha256": "4463fa2fbf0158a2a236e61e9fc9f7081943fad13bea5f5974c30a3d6e2f3534"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md",
+      "bytes": 18495,
+      "sha256": "e7890698e764f160a236bb9535ed15596f569753cdf9a1cb4c05dd41a63ab62e"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/备份/2026-11-16-080811-进度.before.md",
+      "bytes": 16435,
+      "sha256": "b3da1d4ef3867fa7e079f4226e32be97ef435db330cd0e8a8cb4c6d66d293613"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/capability_gate.py",
+      "bytes": 5731,
+      "sha256": "f4936477c242559290799270978ca428c9f10b028587743308ed0f1dff73bcdf"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/test_capability_gate.py",
+      "bytes": 2192,
+      "sha256": "705107a456ac345118cb99668135e394ed6a903dd846e8a36b410579947a1e26"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/NanoStatusProbe.kt",
+      "bytes": 2142,
+      "sha256": "4276697e1449d94abdab21a135e775ea1ee8c8e5b28f4a99b3a9bacf2287a6f9"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/摘要草稿.txt",
+      "bytes": 868,
+      "sha256": "7dd241de8fb758f08abca617418c757199455004df62a3411ca2fbf5e7fc4b6c"
+    }
+  ],
+  "checks": [
+    {
+      "item": "实际落盘与UTF-8完整回读",
+      "status": "PASS",
+      "check_type": "EXECUTED"
+    },
+    {
+      "item": "今日唯一主文件、未覆盖旧材料/规则/W46",
+      "status": "PASS",
+      "check_type": "EXECUTED"
+    },
+    {
+      "item": "章节0~5、120min、复述留空",
+      "status": "PASS",
+      "check_type": "SPEC_CHECK"
+    },
+    {
+      "item": "文档主代码与源码逐字相同，文档提取实跑退出0",
+      "status": "PASS",
+      "check_type": "EXECUTED"
+    },
+    {
+      "item": "16场景、2304组合、未知新值，3项unittest通过",
+      "status": "PASS",
+      "check_type": "EXECUTED"
+    },
+    {
+      "item": "Kotlin片段与文件一致，官方类/方法/状态/依赖核对",
+      "status": "PASS",
+      "check_type": "SPEC_CHECK"
+    },
+    {
+      "item": "动态1+1+1、10个引用链接精确对齐台账、canonical去重",
+      "status": "PASS",
+      "check_type": "SPEC_CHECK"
+    },
+    {
+      "item": "台账已完成主题18->19、阶段按11-16开始、明日未勾选",
+      "status": "PASS",
+      "check_type": "EXECUTED"
+    },
+    {
+      "item": "23个旧材料/规则哈希不变、旧台账历史保留",
+      "status": "PASS",
+      "check_type": "EXECUTED"
+    },
+    {
+      "item": "10行摘要草稿，无飞书发送",
+      "status": "PASS",
+      "check_type": "SPEC_CHECK"
+    },
+    {
+      "item": "Android SDK编译与设备能力查询",
+      "status": "NOT_EXECUTED",
+      "check_type": "EXECUTED"
+    },
+    {
+      "item": "真机下载/端侧推理/云调用/性能测量",
+      "status": "NOT_EXECUTED",
+      "check_type": "EXECUTED"
+    }
+  ],
+  "evidence": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16",
+  "review_rounds": 1,
+  "assumptions": [],
+  "not_executed": [
+    "Android依赖解析/编译",
+    "Android/Kotlin片段执行及超时/生命周期行为",
+    "真机checkStatus",
+    "模型下载",
+    "端侧推理",
+    "云端调用",
+    "性能/内存/功耗测量",
+    "飞书发送（交由主智能体）"
+  ]
+}

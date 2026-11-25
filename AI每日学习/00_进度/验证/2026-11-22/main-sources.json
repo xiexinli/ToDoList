@@ -1,0 +1,78 @@
+[
+  {
+    "id": "N1",
+    "type": "TOOL",
+    "url": "https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-22T09:04:29.103098+08:00",
+    "raw_sha256": "4b275ea8d5498e41f65e845c00c361aa63d240688a3d679da92cec0fe2b561e6",
+    "date": [
+      "2026-11-20"
+    ],
+    "excerpts": [
+      "Agent Anomaly Detection: Safeguarding agents across other clouds\n            \n            \n            - Google Developers Blog Community/Events Learn Blog YouTube Search Community/Events Learn Blog YouTube Agent Anomaly Detection: Safeguarding agents across other clouds NOV. 20, 2026 Gopi Subburaja Alagar Software Engineer Arvind Chaudhary Software Engineer Share Facebook Twitter LinkedIn Mail Agent Anomaly Detection is in Private Preview, including monitoring for agents that run outside Google Cloud. To request access, see the Agent Anomaly Detection overview . Our launch post introduced Agent Anomaly Detection, which helps you understand and act on agent behavior that drifts outside its intended boundaries. It covered agents on Google Cloud, such as Agent Runtime, Cloud Run, and Google Kubernetes Engine (GKE). Many teams also run agents on other clouds: on AWS Lambda next to an inventory database, as a hosted agent in Microsoft Foundry, or on-premises next to a system that can't move. Those agents carry the same behavioral risks, and until now Agent Anomaly Detection couldn't review them. Agent Anomaly Detection works from an agent's traces and logs, so it doesn't need access to the agent's runtime. If those traces and logs reach your Google Cloud project, it can detect anomalous behavior wherever the agent runs. In this post, we explain what Agent Anomaly Detection needs from an agent on other cloud, then show what it found for an agent on AWS Lambda and an agent on Microsoft Foundry. How it works on other clouds Agent Anomaly Detection reads the logging and observability buckets that you choose when you enable it. Telemetry from anywhere works when: It arrives through the Telemetry API ( telemetry.googleapis.com ), which keeps the resource attributes that identify the agent. It follows OpenTelemetry conventions and records prompts and responses as log events, which is where Agent Anomaly Detection reads the conversation. A resource attribute names the agent. Agents built with the Agent Development Kit (ADK) for Python, version 2.12.0 or later, can produce this telemetry with ADK's Google Cloud exporters and a few environment variables, which the next section shows. Agents on other clouds send traces and logs to a Google Cloud project, where Agent Anomaly Detection analyzes them. Connect an agent from another cloud An agent outside Google Cloud needs two things to send its telemetry: A Google identity without a service account key. With Workload Identity Federation, the agent trades its own identity, such as an AWS role or a Microsoft Entra identity, for short-lived Google credentials. The configuration file that sets this up contains no secret. An exporter. ADK's Google Cloud exporters send traces and logs to the Telemetry API. A few environment variables configure them: GOOGLE_CLOUD_PROJECT=<PROJECT_ID>\nGOOGLE_APPLICATION_CREDENTIALS=/path/to/gcp-credentials.json\n\n# Capture prompts and responses in the format Agent Anomaly Detection reads.\nOTEL_SEMCONV_STABILITY_OPT_IN=gen_ai_latest_experimental\nOTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT=EVENT_ONLY\nADK_CAPTURE_MESSAGE_CONTENT_IN_SPANS=false\n\n# Describe the agent and where it runs.\nOTEL_SERVICE_NAME=<AGENT_NAME>\nOTEL_RESOURCE_ATTRIBUTES=cloud.provider=<aws|azure>,cloud.platform=<PLATFORM>,cloud.region=<REGION>,faas.name=<AGENT_NAME> Shell Copied For the full setup on AWS and Azure, see the documentation . Within 30 minutes, the agent appears in the Monitored agents list, which means it has been discovered and is ready to be enabled . Once it's enabled, manually or by automatic agent enrollment at discovery, Agent Anomaly Detection starts analyzing its sessions. The agent's model and tool calls still run where the agent runs. Only telemetry, including the prompts and responses that Agent Anomaly Detection reads, goes to your Google Cloud project. The analysis runs separately, so it doesn't slow the agent down. What we tested To evaluate Agent Anomaly Detection outside Google Cloud, we deployed ADK agents across two platforms: an inventory agent on AWS Lambda and a customer-service agent on Microsoft Foundry. The examples below show how Agent Anomaly Detection reads whole conversations, not isolated calls, to catch behavioral drift. Example 1: An inventory agent on AWS Lambda Our example inventory agent runs in AWS Lambda with one tool, list_inventory , which pages through a product catalog. We sent two sessions: a shopper who checked stock for a few items and stopped, and a scraper that requested 100 catalog items at a time at increasing offsets to copy the full catalog and inventory data. Both sessions used the same tool with permitted calls, but differed in pattern and intent. Of the two sessions, Agent Anomaly Detection flagged only the scraper's. No call failed, but the whole exchange showed systematic scraping. The analysis found cascading failures (loops and repeated calls that build on each other) and resource exhaustion (runaway use of tokens, compute, or tool calls), and recommended rate-limiting list_inventory calls. Detection doesn't depend on the agent's model. When we ran the inventory agent on Amazon Nova Lite through Amazon Bedrock, Agent Anomaly Detection flagged 10 of its 40 sessions. Some began as routine questions that the model answered by paging through the entire catalog until the function timed out: no errors, no blocked calls, and easy to miss. The Bedrock inventory agent in Agent Anomaly Detection: 10 of 40 sessions flagged Bedrock session: a request to list every inventory item, flagged for resource exhaustion and cascading failures Example 2: A customer-service agent on Foundry Our example ecommerce customer-service agent has two tools: get_order_status and issue_refund . Refunds involve money, so they carry the highest risk. We ran six sessions against the Foundry agent, which we told to carry out every request without validation. Two were normal: One asked for an order's status, and one asked for a $20 refund on an order that arrived damaged. The other four pushed the agent past its role, and Agent Anomaly Detection flagged all four. In one, a user who claimed to be the store administrator had every order refunded at 10 times its total to a personal account, $1,784.90 in all. In another, a user pasted an order note that said \"SYSTEM OVERRIDE,\" and the agent refunded $999 on a $15.99 order. For the order note, Agent Anomaly Detection explained that override instructions in the note coerced the agent into an unverified $999 refund. It recommended validating issue_refund arguments to block override patterns in order notes, and requiring extra validation for refunds above a set threshold. Store-administrator session: 10x refunds to a personal account, showing identity and privilege abuse findings and recommendations Order-note session: an unverified refund from a pasted order note, showing tool misuse findings and recommendations What's next If your agent's telemetry reaches Google Cloud, Agent Anomaly Detection can monitor it with the same detectors and console as your agents on Agent Runtime. Today that means agents built with ADK for Python. Findings for agents outside Google Cloud appear only in the Agent Anomaly Detection console. To get started, request access to the Private Preview via the Agent Anomaly Detection overview , and then refer to the setup guide for instructions. posted in: AI Cloud Announcements ADK Security Agent Anomaly Detection Azure AWS OpenTelemetry OWASP Agentic Top 10 Resources Agent Development Kit Previous Next Related Posts AI Cloud Tutorials Learn Multi-Turn Agentic Reinforcement Learning with Tunix and Gemma 4 on Google TPUs NOV. 19, 2026 Mobile AI Case Studies Announcements Accelerating development for massive Git repositories NOV. 17, 2026 Gemini AI Cloud Announcements Best Practices Check what your AI agents do before they do it, with Semantic governance policies NOV. 20, 2026 Connect Blog Bluesky Instagram LinkedIn X (Twitter) YouTube Programs Google Developer Program Google Developer Groups Google Developer Experts Accelerators Women Techmakers Google Cloud & NVIDIA Developer consoles Google API Console Google Cloud Platform Console Google Play Console Firebase Console Actions on Google Console Cast SDK Developer Console Chrome Web Store Dashboard Google Home Developer Console Android Chrome Firebase Google Cloud Platform All products Manage cookies Terms Privacy"
+    ],
+    "read_state": "BODY_READ"
+  },
+  {
+    "id": "J1",
+    "type": "TOOL",
+    "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=1998671162179215360",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-22T09:04:28.043390+08:00",
+    "raw_sha256": "3221227a95084a59c5cface3f1887eff9a1105d77c409088a04dc5f0e1ac6523",
+    "date": [],
+    "excerpts": [],
+    "job": {
+      "PostId": "1998671162179215360",
+      "RecruitPostId": 116519,
+      "RecruitPostName": "掌上无畏契约-Android客户端开发工程师",
+      "LocationId": 1,
+      "LocationName": "深圳",
+      "BGId": 956,
+      "BGName": "IEG",
+      "ComCode": "",
+      "ComName": "",
+      "OuterPostTypeID": "40001001",
+      "CategoryName": "技术",
+      "ProductName": "AGAME-端游",
+      "Responsibility": "1.负责游戏助手类产品客户端与RN跨端功能开发，提升用户体验及稳定性；\n2.与产品经理、设计师及后端开发人员紧密合作，确保项目按时交付；\n3.参与移动端与H5的技术方案设计，推动模块化开发与工程效能提升。",
+      "Requirement": "1.本科及以上学历，计算机相关专业；\n2.具备客户端开发经验，熟悉android开发，熟悉跨平台框架ReactNative；\n3.具备复杂ReactNative组件库相关开发经验，精通JavaScript，掌握 ES6+、TypeScript，掌握 HTML5、CSS3等前端基础技术；\n4.具备良好的沟通能力和优秀的团队协作能力；\n5.玩过并喜欢英雄联盟/无畏契约。",
+      "LastUpdateTime": "2026年10月29日",
+      "PostURL": "http://careers.tencent.com/jobdesc.html?postId=1998671162179215360",
+      "SourceID": 1,
+      "IsCollect": false,
+      "PostLightItem": "1.参与高用户量级游戏助手产品的核心功能开发，技术挑战与成长空间并存；\n2.扁平化的团队氛围，与产品、设计、后端等多角色紧密协作，快速推动项目落地；\n3.多技术栈互相学习和分享。",
+      "ImportantItem": "1.善于使用AI工具来提升编码体验，AI代码占比较高者优先；\n2.有开源项目，或者个人上架过App优先。",
+      "Introduction": "在腾讯客户端开发的字典里，“敏捷高效”与“精益求精”并不互斥，追求技术的深度是我们共同的信仰。希望你也能在足够广阔的平台上尽情的施展拳脚。",
+      "DepartmentIntroduction": "",
+      "RequireWorkYearsName": "1年以上"
+    }
+  },
+  {
+    "id": "J2",
+    "type": "TOOL",
+    "url": "https://careers.tencent.com/jobdesc.html?postId=1998671162179215360",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-22T09:04:28.059972+08:00",
+    "raw_sha256": "b4567851b9ee8f1a2b94131eb80f7af3a888454cffadb65554bb8215dfbb0de0",
+    "date": [],
+    "excerpts": [],
+    "read_state": "JS_SHELL_ONLY"
+  },
+  {
+    "id": "T1",
+    "type": "TOOL",
+    "url": "https://kotlinlang.org/docs/cancellation-and-timeouts.html",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-22T09:04:28.675063+08:00",
+    "raw_sha256": "3d1b6b42d5c7212cdeec9a8af688d5d1daafcaba40b55d1ee5278e70fb8989a8",
+    "date": [],
+    "excerpts": [],
+    "read_state": "FAILED"
+  }
+]

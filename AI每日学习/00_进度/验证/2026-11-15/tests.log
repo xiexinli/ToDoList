@@ -1,0 +1,16 @@
+{"case": "normal", "args": [], "exit": 0, "stdout": "启动进程 pid=50914\n执行步骤 normalize\n执行步骤 stats\n执行步骤 publish\n流程完成；词数=2\n", "stderr": ""}
+{"case": "resume", "args": ["--crash-after", "normalize"], "exit": 75, "stdout": "启动进程 pid=50915\n执行步骤 normalize\n受控中断：已提交 normalize\n", "stderr": ""}
+{"case": "resume", "args": [], "exit": 0, "stdout": "启动进程 pid=50916\n跳过已提交步骤 normalize\n执行步骤 stats\n执行步骤 publish\n流程完成；词数=2\n", "stderr": ""}
+{"case": "resume", "args": [], "exit": 0, "stdout": "启动进程 pid=50919\n跳过已提交步骤 normalize\n跳过已提交步骤 stats\n跳过已提交步骤 publish\n流程完成；词数=2\n", "stderr": ""}
+{"case": "resume", "args": ["--text", "Changed input"], "exit": 2, "stdout": "拒绝恢复：检查点格式/流程版本/输入不匹配，拒绝恢复\n", "stderr": ""}
+{"case": "resume", "args": ["--workflow-version", "2"], "exit": 2, "stdout": "拒绝恢复：检查点格式/流程版本/输入不匹配，拒绝恢复\n", "stderr": ""}
+{"case": "gap", "args": ["--crash-gap"], "exit": 76, "stdout": "启动进程 pid=50922\n执行步骤 normalize\n执行步骤 stats\n执行步骤 publish\n受控中断：副作用已写，完成检查点尚未提交\n", "stderr": ""}
+{"case": "gap", "args": [], "exit": 3, "stdout": "启动进程 pid=50923\n跳过已提交步骤 normalize\n跳过已提交步骤 stats\n停止：publish 结果不确定，先人工核对副作用\n", "stderr": ""}
+{"case": "gap", "args": [], "exit": 3, "stdout": "启动进程 pid=50924\n停止：publish 结果不确定，先人工核对副作用；保留现场，禁止自动重申审批\n", "stderr": ""}
+{"case": "denied", "args": ["--approval", "denied"], "exit": 3, "stdout": "启动进程 pid=50925\n执行步骤 normalize\n执行步骤 stats\n停止：审批 fixture=denied，交还控制权\n", "stderr": ""}
+{"case": "denied", "args": ["--approval", "approved"], "exit": 3, "stdout": "启动进程 pid=50926\n停止：审批 fixture=denied，交还控制权；保留现场，禁止自动重申审批\n", "stderr": ""}
+{"case": "timeout", "args": ["--approval", "timeout"], "exit": 3, "stdout": "启动进程 pid=50927\n执行步骤 normalize\n执行步骤 stats\n停止：审批 fixture=timeout，交还控制权\n", "stderr": ""}
+{"case": "timeout", "args": ["--approval", "approved"], "exit": 3, "stdout": "启动进程 pid=50928\n停止：审批 fixture=timeout，交还控制权；保留现场，禁止自动重申审批\n", "stderr": ""}
+{"case": "schema", "args": [], "exit": 0, "stdout": "启动进程 pid=50929\n执行步骤 normalize\n执行步骤 stats\n执行步骤 publish\n流程完成；词数=2\n", "stderr": ""}
+{"case": "schema", "args": [], "exit": 2, "stdout": "拒绝恢复：检查点格式/流程版本/输入不匹配，拒绝恢复\n", "stderr": ""}
+PASS：7 组断言；子进程=15；证据=/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-15/fixture-1794701022622624000

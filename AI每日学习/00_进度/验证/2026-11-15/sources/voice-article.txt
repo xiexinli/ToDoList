@@ -1,0 +1,840 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+        <meta charset="utf-8" />
+        
+        <title>
+            
+            On-Device Speech Recognition and Text-to-Speech in Google AI Edge Gallery
+            
+            
+            - Google Developers Blog
+            
+        </title>
+        <meta property="og:title" content="On-Device Speech Recognition and Text-to-Speech in Google AI Edge Gallery- Google Developers Blog" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+	<meta name="description" content="Discover how to add offline, on-device speech recognition and text-to-speech to your mobile and cross-platform apps using ML Kit, MediaPipe Tasks, and LiteRT." />
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Google for Developers Blog - News about Web, Mobile, AI and Cloud" property="twitter:title"/>
+  <meta property="og:title" content="On-Device Speech Recognition and Text-to-Speech in Google AI Edge Gallery" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Google for Developers Blog",
+      "item": "https://developers.googleblog.com/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "On-Device Speech Recognition and Text-to-Speech in Google AI Edge Gallery",
+      "item": "https://developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/"
+    }]
+  }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "On-Device Speech Recognition and Text-to-Speech in Google AI Edge Gallery",
+      "description": "Google AI Edge Gallery now supports on-device, offline Automatic Speech Recognition (ASR) and Text-to-Speech (TTS) capabilities for building developer-friendly voice applications. Developers can leverage ML Kit for optimized Android performance, or use MediaPipe Tasks and LiteRT for cross-platform open-weight model integration. This local pipeline seamlessly pairs lightweight speech models with on-device small language models like Gemini Nano and Gemma 4 to enable real-time streaming transcription and low-latency synthesis.",
+      "image": "https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Gemini_Generated_Image_yd9gceyd9gc.2e16d0ba.fill-800x400.jpg",
+      "datePublished": "2026-11-10",
+      "author": [
+        
+        
+          { "@type": "Person", "name": "Google AI Edge Team", "url": "/search/?author=Google+AI+Edge+Team" },
+        
+          { "@type": "Person", "name": "Android ML Team", "url": "/search/?author=Android+ML+Team" }
+        
+        
+      ]
+    }
+  </script>
+  
+  <meta content="https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Gemini_Generated_Image_yd9gceyd9g.2e16d0ba.fill-1200x600.jpg" property="og:image"/>
+  
+
+
+        
+        
+
+        <!-- Google Tag Manager -->
+        <script type="text/javascript" nonce="6SVjtMCeBpzIR0P4cX+QRg==" src="https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/js/analytics.js"></script>
+        <!-- End Google Tag Manager -->
+
+        
+        <link href="//www.gstatic.com/glue/v27_1/glue.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/css/dgc_blog.css">
+        <link rel="icon" href="https://storage.googleapis.com/gweb-developer-goog-blog-assets/meta/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="https://storage.googleapis.com/gweb-developer-goog-blog-assets/meta/apple-touch-icon.png">
+
+        
+				<link rel="preconnect" href="https://fonts.googleapis.com">
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+				<link rel="preload" href="https://fonts.googleapis.com/css2?family=Product+Sans&family=Google+Sans+Display:ital@0;1&family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Google+Sans+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" as="style">
+				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Product+Sans&family=Google+Sans+Display:ital@0;1&family=Google+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Google+Sans+Text:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&amp;family=Google+Sans+Flex:opsz,wght@6..144,1..1000&amp;display=swap" rel="stylesheet" data-page-link="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap">
+
+        
+        <link href="https://www.gstatic.com/glue/cookienotificationbar/cookienotificationbar.min.css" rel="stylesheet">
+
+        
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/css/blog_detail.css"
+  />
+  <link type="text/css" href="https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/css/prism.css" rel="stylesheet" />
+
+    </head>
+
+    <body id="main-content" class="glue-body ">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVTLDSL "
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+        
+
+				
+        
+
+<!-- HTML -->
+<header class="dgc-header">
+  <div class="dgc-header-inner">
+    <button class="hamburger" aria-haspopup="true" aria-expanded="false" aria-label="Open Menu">
+      <svg role="presentation" aria-hidden="true" class="glue-icon">
+        <use href="/glue-icon/#menu"></use>
+      </svg>
+    </button>
+    <div class="product-name-wrapper">
+      <a href="https://developers.google.com/" class="site-logo-link" data-label="Site logo">
+        <img src="https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/images/g-dev.svg" class="site-logo" alt="Google for Developers">
+      </a>
+    </div>
+    <div class="desktop-nav-wrapper">
+      <div class="upper-tabs-wrapper">
+        <div class="upper-tabs">
+          <nav class="tabs" aria-label="Upper Tabs">
+            <div class="tab">
+              <a
+                href="//developers.google.com/community"
+                class="top-nav-title">
+                Community/Events
+              </a>
+            </div>
+            <div class="tab">
+              <a
+                href="//developers.google.com/solutions/catalog"
+                class="top-nav-title">
+                Learn
+              </a>
+            </div>
+            <div class="tab">
+              <a
+                href="//developers.googleblog.com"
+                class="top-nav-title">
+                Blog
+              </a>
+            </div>
+            <div class="tab">
+              <a
+                href="https://www.youtube.com/user/GoogleDevelopers"
+                class="top-nav-title">
+                YouTube
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dgc-header-search">
+    <div class="search-wrapper glue-page">
+      <div class="glue-grid">
+        <form id="search-form"  action="/search/" method="get" class="search-content glue-grid__col glue-grid__col--span-4-sm glue-grid__col--span-9-md glue-grid__col--span-7-lg">
+          <div class="search-input-wrapper">
+            <svg role="presentation" aria-hidden="true" class="glue-icon search-icon">
+              <use href="/glue-icon/#search"></use>
+            </svg>
+            <input
+              type="text"
+              name="query"
+              
+              placeholder="Search all articles..."
+              aria-label="Search"
+              class="search-input-field"
+            />
+          </div>
+          <button class="glue-button glue-button--high-emphasis">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-drawer" top-level-nav>
+  <nav class="nav-content" aria-label="Side menu">
+    <div class="mobile-header">
+      <button class="nav-close-btn nav-btn" aria-label="Close navigation">
+        <svg role="presentation" aria-hidden="true" class="glue-icon">
+          <use href="/glue-icon/#close"></use>
+        </svg>
+      </button>
+      <button class="nav-back-btn nav-btn hidden" aria-label="Back to Menu">
+        <svg role="presentation" aria-hidden="true" class="glue-icon">
+          <use href="/glue-icon/#arrow-back"></use>
+        </svg>
+      </button>
+      <div class="product-name-wrapper">
+        <a href="https://developers.google.com/" class="site-logo-link" data-label="Site logo">
+          <img src="https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/images/g-dev.svg" class="site-logo" alt="Google for Developers">
+        </a>
+      </div>
+    </div>
+    <div class="nav-wrapper">
+      <div class="mobile-nav-top">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="//developers.google.com/community" class="nav-title" data-label="Tab: Community/Events">
+              <span class="nav-text" tooltip="">
+                Community/Events
+             </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="//developers.google.com/solutions/catalog" class="nav-title" data-label="Tab: Learn">
+              <span class="nav-text" tooltip="">
+                Learn
+             </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="//developers.googleblog.com" class="nav-title" data-label="Tab: Blog">
+              <span class="nav-text" tooltip="">
+                Blog
+             </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.youtube.com/user/GoogleDevelopers" class="nav-title" data-label="Tab: YouTube">
+              <span class="nav-text" tooltip="">
+                YouTube
+             </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="backdrop"></div>
+
+        
+  <div class="blog-detail-container">
+
+    
+      <section class="tags-container glue-page glue-spacer-5-top">
+        <div class="glue-eyebrow"></div>
+      </section>
+    
+
+    <section class="heading-container glue-page  glue-spacer-1-top">
+      <h1 class="glue-headline glue-headline--headline-1">On-Device Speech Recognition and Text-to-Speech in Google AI Edge Gallery</h1>
+    </section>
+
+    <section class="summary-container glue-page glue-spacer-4-top">
+      <div class="date-time">
+        <div class="published-date glue-font-weight-medium">NOV. 10, 2026</div>
+      </div>
+    </section>
+
+    <section class="glue-page glue-grid glue-spacer-1-top">
+
+      <section class="author-container glue-grid__col glue-grid__col--span-4-sm glue-grid__col--span-10-md">
+      
+        
+          <div class="author-obj">
+            <a class="glue-font-weight-medium" href="/search/?author=Google+AI+Edge+Team">Google AI Edge Team</a>
+            
+            
+          </div>
+        
+          <div class="author-obj">
+            <a class="glue-font-weight-medium" href="/search/?author=Android+ML+Team">Android ML Team</a>
+            
+            
+          </div>
+        
+
+      
+      </section>
+      <section class="social-container glue-grid__col glue-grid__col--span-4-sm glue-grid__col--span-2-md">
+        <button id="social-button" class="glue-button glue-button--low-emphasis glue-button--icon" aria-haspopup="true" aria-expanded="false">
+          <svg role="presentation" aria-hidden="true" class="glue-icon">
+            <use href="/glue-icon/#share"></use>
+          </svg>
+          <span>Share</span>
+        </button>
+        <ul id="social-menu" class="glue-elevation-level-1" role="menu" aria-labelledby="social-button">
+          <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={url}"
+                title="Share on Facebook" target="_blank" rel="noopener">
+              <svg role="presentation" aria-hidden="true"
+                  class="glue-icon glue-icon--social glue-icon--32px">
+                <use href="/glue-icon/#post-facebook"></use>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/intent/tweet?text={url}"
+                title="Share on Twitter" target="_blank" rel="noopener">
+              <svg role="presentation" aria-hidden="true"
+                  class="glue-icon glue-icon--social glue-icon--32px">
+                <use href="/glue-icon/#twitter-x"></use>
+              </svg>
+              <span>Twitter</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/shareArticle?url={url}&amp;mini=true" title="Share on LinkedIn" target="_blank" rel="noopener">
+              <svg role="presentation" aria-hidden="true"
+                  class="glue-icon glue-icon--social glue-icon--32px">
+                <use href="/glue-icon/#post-linkedin"></use>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:name@example.com?subject=Check%20out%20this%20site&body=Check%20out%20{url}" title="Send via Email">
+              <svg role="presentation" aria-hidden="true"
+                  class="glue-icon glue-icon--social glue-icon--32px">
+                <use href="/glue-icon/#email"></use>
+              </svg>
+              <span>Mail</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Get shareable link" data-link="" data-copy-text="Copy Link" data-copied-text="Copied!">
+              <svg role="presentation" aria-hidden="true"
+                  class="glue-icon glue-icon--social glue-icon--32px">
+                <use href="/glue-icon/#link"></use>
+              </svg>
+              <span></span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    
+    <section class="blocks-container glue-page glue-spacer-3-top">
+      <div class="block">
+          
+
+<img
+    class="banner-image"
+    src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/oct2026_blogBanner_v1.original.png"
+    alt="oct2026_blogBanner_v1"
+/>  <div class="inner-block-content rich-content">
+    <p data-block-key="w80sg">Today, we are introducing <b>on-device Automatic Speech Recognition (ASR)</b> and <b>Text-to-Speech (TTS)</b> capabilities in <a href="https://developers.google.com/edge/gallery">Google AI Edge Gallery</a>. Voice is often the most natural way to interact with AI on phones and wearables. Recent advances in compact speech architectures now make it possible to run accurate, <a href="https://huggingface.co/spaces/hf-audio/open_asr_leaderboard">multilingual ASR</a> and <a href="https://huggingface.co/spaces/hf-audio/open_tts_leaderboard">expressive TTS</a> models entirely on device, all within a small memory footprint, with low latency, and completely offline. By pairing these lightweight speech models with on-device small language models (SLMs) like Gemini Nano and Gemma 4, developers can build apps that stream live transcriptions as the user speaks and synthesize natural spoken replies locally.</p><p data-block-key="3f93k">This release brings together major advancements across both Google’s system speech models and the open-weight ecosystem:</p><p data-block-key="2iggq"></p><ul><li data-block-key="2tg0q"><b>Android: faster, more accurate system speech models with ML Kit:</b> Powered by Google’s latest on-device speech models, ML Kit delivers incredibly accurate multilingual transcription across 100+ languages at 10x real-time speed. It is paired with a few-step diffusion TTS model that begins speaking in just ~100 ms and synthesizes 24 kHz audio at up to 50x real-time speed. Both models are integrated into the OS, adding 0 MB to your APK.</li><li data-block-key="3mi2v"><b>Web, Desktop and Beyond: cross-platform, open-weight speech with MediaPipe Tasks and LiteRT:</b> For cross-platform apps, we optimized new .litertlm model speech bundles, including Parakeet-TDT 0.6B, PocketTTS 100M, Kokoro-82M, and Phonon 31M. They deliver real-time streaming transcription and low-latency speech synthesis in a compact memory footprint, and run smoothly alongside on-device SLMs without compute contention.</li></ul><p data-block-key="6idnm"></p><p data-block-key="3vudq">Below, we’ll explore how this local voice pipeline powers the new <b>XR (Extended Reality) Language Teacher</b> showcase, upgrades <b>AI Chat</b> in Google AI Edge Gallery, and how you can build with these APIs and models today.</p><h2 data-block-key="fistr" id="multimodal-voice-tutoring-with-xr-language-teacher">Multimodal voice tutoring with XR Language Teacher</h2><p data-block-key="5cd1b">Learning a language while traveling happens in the real world, often in underground stations, busy markets, or abroad where Wi-Fi and roaming data may not be available. To show how vision, language, and speech models can work together <b>100% locally on your phone</b> with no network connection needed, we built the <b>XR Language Teacher</b> showcase in Google AI Edge Gallery. Simply point your camera at an unfamiliar object or menu, ask <i>&quot;What is that, and how do I ask for one?&quot;</i>, and immediately hear an explanation in your language alongside authentic pronunciation in the local language.</p>
+</div>  <div class="inner-block-content yt-video">
+    <div class="glue-video">
+        <div
+            class="glue-video__container glue-video__container--inline"
+            data-glue-yt-video-vid="Li3fV7uA8Ww"
+            >
+        </div>
+        <div class="glue-video__nojs">
+          <p><a href="https://www.youtube.com/watch?v=Li3fV7uA8Ww">Link to Youtube Video</a>
+          (visible only when JS is disabled)</p>
+        </div>
+    </div>
+    
+</div>  <div class="inner-block-content rich-content">
+    <h3 data-block-key="6ea2k" id=""><b>Seeing, speaking, and learning entirely on device</b></h3><ul><li data-block-key="4buvk"><b>Live visual grounding and streaming voice input:</b> Point your camera at a street sign, menu, or object and ask a question aloud. On-device ASR streams your spoken question in real time alongside the camera frame to <b>Gemini Nano</b> on Android devices —or <b>Gemma 4</b> across other platforms—in a single pass.</li><li data-block-key="3mq9s"><b>Structured outputs for bilingual TTS code-switching:</b> Using a structured output schema, the model explains the scene in your own language while tagging foreign-language phrases separately, allowing the TTS pipeline to seamlessly switch voices and accents mid-sentence from your mother tongue to the target language alongside an on-screen vocabulary card.</li></ul><h3 data-block-key="91ycm" id=""><b>Adapt for intelligent eyewear</b></h3><p data-block-key="38ehb">With inference running locally on a paired phone, the same experience works standalone on a phone and extends naturally to hands-free smart glasses. To see how we adapted Language Teacher for intelligent glasses check out our recent talk at <b>Android Dev Summit:</b> <a href="https://youtu.be/tW3mg0iyi_w?si=Qg5lsPUiYCRNg4_y"><i>Building Audio-First Experiences for Intelligent Eyewear with Gemini Nano</i></a><i>.</i></p><h2 data-block-key="34jeh" id="streaming-voice-dictation-and-read-aloud-playback-in-ai-chat">Streaming voice dictation and read-aloud playback in AI Chat</h2><p data-block-key="chok4">Beyond the XR Language Teacher showcase, we also built ASR and TTS directly into Google AI Edge Gallery’s main <b>AI Chat</b> feature, giving on-device SLMs like Gemini Nano and Gemma 4 a natural, offline voice interface while on the go.</p>
+</div>  <div class="inner-block-content yt-video">
+    <div class="glue-video">
+        <div
+            class="glue-video__container glue-video__container--inline"
+            data-glue-yt-video-vid="6mW1EOV84CI"
+            >
+        </div>
+        <div class="glue-video__nojs">
+          <p><a href="https://www.youtube.com/watch?v=6mW1EOV84CI">Link to Youtube Video</a>
+          (visible only when JS is disabled)</p>
+        </div>
+    </div>
+    
+        
+            <div class="video-description">Video of AI Chat Voice input + output</div>
+        
+    
+</div>  <div class="inner-block-content rich-content">
+    <h3 data-block-key="7icm7" id="sentence-synchronized-playback-and-configurable-speech-settings"><b>Sentence-synchronized playback and configurable speech settings</b></h3><ul><li data-block-key="cm4os"><b>ASR and TTS settings in Model Management:</b> Choose between available ASR and TTS pipelines, preset voices, and downloaded language packs in one central place.</li><li data-block-key="des45"><b>Read-aloud playback with live sentence highlighting:</b> Turn on “Auto-play TTS” or tap the speaker button on any response to launch a floating TTS bar that highlights each spoken sentence in real time, with the ability to jump to any sentence by tapping it.</li><li data-block-key="esceg"><b>Reference implementation for chat voice outputs:</b> Our open-source codebase demonstrates how to strip Markdown syntax, skip non-spoken blocks like code snippets and tables, and schedule synthesis at the sentence level to avoid compute and memory contention during LLM token generation.</li></ul><h2 data-block-key="x5cj8" id="under-the-hood:-building-with-ml-kit-mediapipe-tasks-and-litert">Under the Hood: Building with ML Kit, MediaPipe Tasks, and LiteRT</h2><p data-block-key="ekit2">While multimodal models like Gemma 4 can process audio inputs directly, we provide a modular solution for cascading language models with separate, lightweight voice models for latency optimization and flexibility. Depending on your target devices and model requirements, our <a href="https://github.com/google-ai-edge/gallery">open-source code on GitHub</a> shows you the optimized and recommended solution for Android using <b>ML Kit</b>, as well as <b>MediaPipe Tasks</b> and <b>LiteRT</b> for cross-platform coverage and open model support.</p><h3 data-block-key="gq55b" id="building-for-flagship-android-with-ml-kit"><b>Building for flagship Android with ML Kit</b></h3><p data-block-key="1iakf">For developers building for Android devices, <b>ML Kit’s GenAI Speech Recognition and Text-to-Speech APIs</b> provide a standardized, platform-integrated path out of the box. With the underlying speech models managed through <b>AICore</b> and Google’s on-device speech services, developers get production-grade quality without having to manage model downloads or worry about APK size bloat. Your app also benefits automatically from hardware acceleration across NPU and TPU backends (when available) and seamless background model updates.</p><p data-block-key="ca6rs"></p><ul><li data-block-key="8ilee"><a href="https://developers.google.com/ml-kit/genai/speech-recognition/android"><b>ML Kit GenAI Speech Recognition API</b></a><b>:</b> Streams live partial and final transcriptions as the user speaks, accepting audio from either the built-in device microphone or external audio streams such as smart glasses. Our latest on-device ASR advancements deliver incredibly accurate multilingual recognition across 100+ languages (reaching 8.0% to 9.0% Word Error Rate on FLEURS) while transcribing speech 10x faster than the real time audio being transcribed (~300 ms per 3 seconds of speech) and cutting end-to-end speech translation wait times by 35% to 44%.</li><li data-block-key="ecc4i"><a href="https://developers.google.com/ml-kit/genai/text-to-speech/android"><b>ML Kit GenAI Text-to-Speech API</b></a><b>:</b> Powered by a compact, few-step diffusion model accelerated on NPU, the on-device TTS begins speaking in ~100 ms and generates natural 24 kHz speech across 8 expressive voices and 21 locales at up to 50x real-time speed. It synthesizes a 27-second paragraph in just ~500 ms while cutting active device power by over 50% compared to traditional autoregressive TTS models, and includes built-in earcon support.</li></ul><p data-block-key="8ucub"></p><h3 data-block-key="hd8ab" id="building-across-platforms-with-mediapipe-tasks"><b>Building across platforms with MediaPipe Tasks</b></h3><p data-block-key="bbi3e">Integrating ASR and TTS into cross-platform applications usually requires handling low-level audio framing, Voice Activity Detection (VAD), and complex decoding pipelines. <a href="https://developers.google.com/edge/mediapipe/solutions/tasks"><b>MediaPipe Task</b></a> simplifies this by providing unified, turnkey ASR and TTS APIs across iOS, macOS, Windows, Linux, and Web that abstract away manual pre-processing, audio stream routing, and platform-specific audio management into simple, high-level interfaces:</p><p data-block-key="7b9nr"></p><ul><li data-block-key="3qe9q"><a href="https://developers.google.com/edge/mediapipe/solutions/audio/audio_transcriber?_gl=1*1hit3fh*_up*MQ..*_ga*NzI2NTUwMTI5LjE3OTMzMzIwNDQ.*_ga_SM8HXJ53K2*czE3OTMzMzIwNDMkbzEkZzAkdDE3OTMzMzIwNDMkajYwJGwwJGgw"><b>MediaPipe Speech Recognition (ASR) Task</b></a><b>:</b> Automatically handles audio framing, configurable Voice Activity Detection (VAD), and decoding. It supports real-time streaming, full-sentence batch, and hybrid transcription modes (streaming live words as the user speaks and refining the full sentence once speech ends), and showcases open-weight models like <b>Parakeet-TDT 0.6B</b> out of the box. <a href="https://google-ai-edge.github.io/mediapipe-samples-web/#/audio/audio_transcriber">Try it now</a> directly in the browser!</li><li data-block-key="6ufif"><a href="https://developers.google.com/edge/mediapipe/solutions/audio/text_to_speech?_gl=1*1hit3fh*_up*MQ..*_ga*NzI2NTUwMTI5LjE3OTMzMzIwNDQ.*_ga_SM8HXJ53K2*czE3OTMzMzIwNDMkbzEkZzAkdDE3OTMzMzIwNDMkajYwJGwwJGgw"><b>MediaPipe Text-to-Speech (TTS) Task</b></a><b>:</b> Provides a turnkey synthesis interface with voice selection and low-latency streaming audio output, showcasing open-weight models out of the box, including multilingual models like <b>PocketTTS 100M</b> and <b>Kokoro-82M</b>, as well as ultra-lightweight English models like <b>Phonon 31M</b> with sub-100ms Time-to-First-Audio (TTFA) on most devices and platforms. <a href="https://google-ai-edge.github.io/mediapipe-samples-web/#/audio/text_to_speech">Try it now</a> directly in the browser!</li></ul><p data-block-key="3tuhm"></p><h3 data-block-key="j2qoo" id="powering-cross-platform-speech-and-flexible-model-support-with-litert"><b>Powering cross-platform speech and flexible model support with LiteRT</b></h3><p data-block-key="bgnbt">Under the hood, ML Kit and MediaPipe Tasks are powered by <a href="https://developers.google.com/edge/litert"><b>LiteRT</b></a>, Google’s high-performance on-device AI inference infrastructure. Cross-platform applications requiring even more fine-grained control over speech processing or custom model architectures can also build on it directly.</p><p data-block-key="e2ich">Speech models often rely on multiple subgraphs and auxiliary assets, such as encoder/decoder subgraphs and tokenizers for ASR, or phonemizer dictionaries, voice embeddings, and vocoders for TTS. All required components for each model are packaged into a single .litertlm file for easy deployment. The app ships with ready-to-use .litertlm models, including <a href="https://huggingface.co/litert-community/parakeet-tdt-0.6b-v3">Parakeet-TDT-0.6B-v3</a> (multilingual ASR), <a href="https://huggingface.co/litert-community/pocket-tts">PocketTTS 100M</a> (multilingual TTS), <a href="https://huggingface.co/litert-community/phonon-31m-en">Phonon 31M</a> (ultra-lightweight English TTS), and <a href="https://huggingface.co/litert-community/Kokoro-82M">Kokoro-82M</a> (multilingual TTS). Beyond these, the vibrant <a href="https://huggingface.co/litert-community"><b>Hugging Face LiteRT Community</b></a> with over 10K+ followers offers a growing catalog of open-weight models, like Whisper, Qwen3-ASR and Moonshine for ASR, or Qwen3-TTS and Matcha for TTS. For developers seeking custom implementations or support for additional open-weight voice models, LiteRT provides a rich set of <a href="https://github.com/google-ai-edge/LiteRT-LM/tree/main/omni#readme">multimodal model examples</a> to help you get started, with more on the way.</p><h2 data-block-key="s8hqx" id="get-started-today">Get started today</h2><p data-block-key="ble1f">Adding a local voice pipeline takes on-device SLMs beyond typing-based chat interfaces, enabling natural, voice-first interactions that work anywhere, completely offline. All the building blocks to try these experiences or integrate them into your own apps are available today:</p><p data-block-key="f04kl"></p><ul><li data-block-key="9oahj"><b>Experience the new voice features:</b> Download the latest <a href="https://developers.google.com/edge/gallery">Google AI Edge Gallery app</a> on <a href="https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery">Android</a> and <a href="https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337?itscg=30200&amp;itsct=apps_box_badge&amp;mttnsubad=6749645337">iOS</a> to try <i>XR Language Teacher</i> and voice-enabled <i>AI Chat</i> on your own device.</li><li data-block-key="c678t"><b>Explore and adapt the open-source code:</b> Check out the reference implementation in the <a href="https://github.com/google-ai-edge/gallery">Google AI Edge Gallery GitHub repository</a>, or point your favorite coding agent, such as <a href="https://antigravity.google/">Google Antigravity</a>, at our GitHub repo to quickly adapt the streaming ASR, bilingual TTS code-switching, and sentence-synchronized playback pipeline for your own app.</li><li data-block-key="2qva8"><b>Start building with ML Kit, MediaPipe Tasks, and LiteRT:</b> Explore the <a href="https://developers.google.com/ml-kit/genai/speech-recognition/android">ML Kit GenAI Speech Recognition documentation</a> for Android integrations, <a href="https://developers.google.com/edge/mediapipe/solutions">MediaPipe Tasks</a> for turnkey cross-platform APIs, or follow the <a href="https://developers.google.com/edge/litert">LiteRT developer guide</a> and download ready-to-run .litertlm bundles from the <a href="https://huggingface.co/litert-community">Hugging Face LiteRT Community</a>. Test and benchmark your on-device voice pipelines across 200+ real physical devices in Google Cloud’s <a href="https://cloud.google.com/products/developer-device-platform">Developer Device Platform</a>.</li><li data-block-key="1bds0"><b>Watch the Android Dev Summit session:</b> Check out our <a href="https://www.youtube.com/@AndroidDevelopers">Android Dev Summit session recording</a> to see how Language Teacher is adapted for intelligent eyewear and learn more engineering tips from building the pipeline.</li></ul><p data-block-key="f6cvt"></p><h3 data-block-key="3ipdm" id="acknowledgements-(alphabetical-order)"><b>Acknowledgements</b> <i>(alphabetical order)</i></h3><p data-block-key="f2rl4"><i>We&#x27;d like to extend a special thanks to our</i> <b><i>significant contributors</i></b> <i>for their work on this project:</i></p><p data-block-key="jvf1"><i><sup>Alice Zheng, Ajay Dudani, Alex Kanaukou, Amy Zeppenfeld, Byungchul Kim, Cheng Yang, Chintan Parikh, Chris Parsons, Cormac Brick, David Chou, Dong Chen, Geonsun Lee, Glenn Cameron, Hriday Chhabria, Ian Ballantyne, Ireneu Pla, James O’Donnell, Jamieson Pryor, Jason Poon, Jenn Lee, Jianing Wei, Jing Jin, Jingxiao Zheng, Jingyu Shi, Karthik Thirumalai, Kristen Wright, Lu Wang, Marius Kintel, Matthias Grundmann, Miao Wang, Mogan Shieh, Na Li, Paul Hsia, Qiumin Xu, Ravi Shankar, Rishika Sinha, Ronald Wotzlaw, Sachin Kotwani, Sandeep Patil, Sebastian Schmidt, Shao-Fu Shih, Shuangfeng Li, Suril Shah, Tiger Souvannakoumane, Tzu-Ping Chen, Weiyi Wang, Wentao Tu, Yang Yang, Yi-Chun Kuo, Yishuang Pang, Yu-che Liu, Yu-hui Chen, Yuling Liang, Zhihao Yang, Zichuan Wei.</sup></i></p>
+</div> 
+      </div>
+    </section>
+    
+
+    <section class="navigation-container glue-page glue-spacer-6-top">
+      <div class="posted-in-section">
+        <div class="posted-in-section__heading">
+          <span class="glue-caption">
+            posted in:
+          </span>
+        </div>
+        <div class="posted-in-section__tags">
+          <ul>
+              
+                  <li>
+                      <a href="/search/?technology_categories=Mobile" class="glue-caption">Mobile</a>
+                  </li>
+              
+                  <li>
+                      <a href="/search/?technology_categories=Web" class="glue-caption">Web</a>
+                  </li>
+              
+                  <li>
+                      <a href="/search/?technology_categories=AI" class="glue-caption">AI</a>
+                  </li>
+              
+                  <li>
+                      <a href="/search/?content_type_categories=Announcements" class="glue-caption">Announcements</a>
+                  </li>
+              
+                  <li>
+                      <a href="/search/?content_type_categories=Learn" class="glue-caption">Learn</a>
+                  </li>
+              
+                  <li>
+                      <a href="/search/?content_type_categories=Explore" class="glue-caption">Explore</a>
+                  </li>
+              
+              
+          </ul>
+      </div>
+      </div>
+      <div class="buttons-section">
+        <div class="buttons-section__left">
+          <a href="/hill-climbing-agent-quality-with-agents-cli-evaluation/" class="glue-button--icon glue-elevation-level-1 " aria-label="Previous">
+            <svg role="presentation" aria-hidden="true" class="glue-icon">
+              <use href="/glue-icon/#chevron-left"></use>
+            </svg>
+          </a>
+          <span class="caption ">Previous</span>
+        </div>
+        <div class="buttons-section__right">
+          <span class="caption ">Next</span>
+          <a href="/build-generative-ui-apps-with-a2ui-copilotkit-agents/" class="glue-button--icon glue-elevation-level-1 "  aria-label="Next">
+            <svg role="presentation" aria-hidden="true" class="glue-icon">
+              <use href="/glue-icon/#chevron-right"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="related-posts-container glue-page glue-spacer-6-top glue-spacer-3-bottom">
+      <span class="glue-headline glue-headline--headline-3">Related Posts</span>
+      <div class="related-posts-container__carousel glue-page glue-spacer-5-top">
+        <div class="glue-carousel glue-carousel--cards glue-carousel-related-posts" aria-label="Related Posts">
+          <!-- Previous -->
+          <button class="glue-carousel__button glue-carousel__button--prev"
+              aria-label="Go to the previous slide">
+            <svg role="presentation" aria-hidden="true" class="glue-icon glue-icon--32px">
+              <use href="/glue-icon/#chevron-left"></use>
+            </svg>
+          </button>
+          <!-- Next -->
+          <button class="glue-carousel__button glue-carousel__button--next"
+              aria-label="Go to the next slide">
+            <svg role="presentation" aria-hidden="true" class="glue-icon glue-icon--32px">
+              <use href="/glue-icon/#chevron-right"></use>
+            </svg>
+          </button>
+          <!-- List -->
+          <div class="glue-carousel__viewport">
+            <div class="glue-carousel__list">
+              
+                <a class="glue-card glue-carousel__item" href="/a2ui-10-build-delightful-fast-reliable-agentic-experiences/">
+                  <div aria-label="A2UI 1.0: Build delightful, fast, reliable, agentic experiences" class="glue-card__inner">
+                    <picture class="glue-card__asset">
+                      <img alt="A2UI 1.0: Build delightful, fast, reliable, agentic experiences" src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Gemini_Generated_Image_iu9r44iu9r4.2e16d0ba.fill-800x400.jpg">
+                    </picture>
+                    <div class="glue-card__content">
+                      <div class="glue-card__tags glue-spacer-2-top">
+                        
+                            
+                            
+                            <span class="glue-label">Mobile</span>
+                            
+                            <span class="glue-label">Web</span>
+                            
+                            
+                            <span class="glue-label">Tutorials</span>
+                            
+                            <span class="glue-label">How-To Guides</span>
+                            
+                        
+                      </div>
+                      <p class="glue-headline glue-headline--headline-5">A2UI 1.0: Build delightful, fast, reliable, agentic experiences</p>
+                      <div class="glue-card__cta-custom glue-spacer-3-top">
+                        <span class="glue-cta">NOV. 11, 2026</span>
+                        <svg aria-hidden="true" class="glue-icon glue-icon--24px" role="presentation">
+                          <use href="/glue-icon/#arrow-forward"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              
+                <a class="glue-card glue-carousel__item" href="/announcing-long-context-training-on-tpus-with-maxtext-context-parallelism/">
+                  <div aria-label="Announcing Long-Context Training on TPUs with MaxText Context Parallelism" class="glue-card__inner">
+                    <picture class="glue-card__asset">
+                      <img alt="Announcing Long-Context Training on TPUs with MaxText Context Parallelism" src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Gemini_Generated_Image_1v7191v7191.2e16d0ba.fill-800x400.jpg">
+                    </picture>
+                    <div class="glue-card__content">
+                      <div class="glue-card__tags glue-spacer-2-top">
+                        
+                            
+                            
+                            <span class="glue-label">AI</span>
+                            
+                            <span class="glue-label">Cloud</span>
+                            
+                            
+                            <span class="glue-label">Announcements</span>
+                            
+                            <span class="glue-label">Learn</span>
+                            
+                        
+                      </div>
+                      <p class="glue-headline glue-headline--headline-5">Announcing Long-Context Training on TPUs with MaxText Context Parallelism</p>
+                      <div class="glue-card__cta-custom glue-spacer-3-top">
+                        <span class="glue-cta">NOV. 9, 2026</span>
+                        <svg aria-hidden="true" class="glue-icon glue-icon--24px" role="presentation">
+                          <use href="/glue-icon/#arrow-forward"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              
+                <a class="glue-card glue-carousel__item" href="/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/">
+                  <div aria-label="Catch Go bugs that fuzzing misses with Gemini and a constraint solver" class="glue-card__inner">
+                    <picture class="glue-card__asset">
+                      <img alt="Catch Go bugs that fuzzing misses with Gemini and a constraint solver" src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/title-image.2e16d0ba.fill-800x400.png">
+                    </picture>
+                    <div class="glue-card__content">
+                      <div class="glue-card__tags glue-spacer-2-top">
+                        
+                            
+                            
+                            <span class="glue-label">AI</span>
+                            
+                            <span class="glue-label">Cloud</span>
+                            
+                            
+                            <span class="glue-label">How-To Guides</span>
+                            
+                            <span class="glue-label">Best Practices</span>
+                            
+                        
+                      </div>
+                      <p class="glue-headline glue-headline--headline-5">Catch Go bugs that fuzzing misses with Gemini and a constraint solver</p>
+                      <div class="glue-card__cta-custom glue-spacer-3-top">
+                        <span class="glue-cta">NOV. 12, 2026</span>
+                        <svg aria-hidden="true" class="glue-icon glue-icon--24px" role="presentation">
+                          <use href="/glue-icon/#arrow-forward"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              
+                <a class="glue-card glue-carousel__item" href="/how-agent-anomaly-detection-scores-on-benchmarks-we-didnt-write/">
+                  <div aria-label="How Agent Anomaly Detection scores on benchmarks we didn&#x27;t write" class="glue-card__inner">
+                    <picture class="glue-card__asset">
+                      <img alt="How Agent Anomaly Detection scores on benchmarks we didn&#x27;t write" src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/Banner_-_1600x900.2e16d0ba.fill-800x400.png">
+                    </picture>
+                    <div class="glue-card__content">
+                      <div class="glue-card__tags glue-spacer-2-top">
+                        
+                            
+                            
+                            <span class="glue-label">AI</span>
+                            
+                            <span class="glue-label">Cloud</span>
+                            
+                            
+                            <span class="glue-label">Case Studies</span>
+                            
+                            <span class="glue-label">Influence</span>
+                            
+                        
+                      </div>
+                      <p class="glue-headline glue-headline--headline-5">How Agent Anomaly Detection scores on benchmarks we didn&#x27;t write</p>
+                      <div class="glue-card__cta-custom glue-spacer-3-top">
+                        <span class="glue-cta">NOV. 12, 2026</span>
+                        <svg aria-hidden="true" class="glue-icon glue-icon--24px" role="presentation">
+                          <use href="/glue-icon/#arrow-forward"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+          <!-- Navigation dots -->
+          <div class="glue-carousel__navigation" aria-label="Choose a page"
+               data-glue-carousel-navigation-label="Selected tab $glue_carousel_page_number$ of $glue_carousel_page_total$">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </div>
+
+
+				
+				
+
+<div class="footer-linkboxes__wrapper">
+  <nav class="footer-linkboxes" aria-label="Footer links">
+    <ul class="footer-linkboxes__list">
+      <li class="footer-linkbox">
+        <span class="footer-linkbox-heading">
+          Connect
+        </span>
+        <ul class="footer-linkbox-list">
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//googledevelopers.blogspot.com" class="footer-linkbox-list__link">
+                Blog
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="https://goo.gle/3FReQXN" class="footer-linkbox-list__link">
+                Bluesky
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="https://goo.gle/googlefordevs" class="footer-linkbox-list__link">
+                Instagram
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="https://goo.gle/gdevs-li" class="footer-linkbox-list__link">
+                LinkedIn
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="https://goo.gle/gdevs-tw" class="footer-linkbox-list__link">
+                X (Twitter)
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="https://goo.gle/developers" class="footer-linkbox-list__link">
+                YouTube
+              </a>
+            </li>
+          
+        </ul>
+      </li>
+      <li class="footer-linkbox">
+        <span class="footer-linkbox-heading">
+          Programs
+        </span>
+        <ul class="footer-linkbox-list">
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//developers.google.com/program" class="footer-linkbox-list__link">
+                Google Developer Program
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//developers.google.com/community/gdg" class="footer-linkbox-list__link">
+                Google Developer Groups
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//developers.google.com/community/experts" class="footer-linkbox-list__link">
+                Google Developer Experts
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//developers.google.com/community/accelerators" class="footer-linkbox-list__link">
+                Accelerators
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//www.womentechmakers.com" class="footer-linkbox-list__link">
+                Women Techmakers
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//developers.google.com/community/nvidia" class="footer-linkbox-list__link">
+                Google Cloud &amp; NVIDIA
+              </a>
+            </li>
+          
+        </ul>
+      </li>
+      <li class="footer-linkbox">
+        <span class="footer-linkbox-heading">
+          Developer consoles
+        </span>
+        <ul class="footer-linkbox-list">
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//console.developers.google.com" class="footer-linkbox-list__link">
+                Google API Console
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//console.cloud.google.com" class="footer-linkbox-list__link">
+                Google Cloud Platform Console
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//play.google.com/apps/publish" class="footer-linkbox-list__link">
+                Google Play Console
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//console.firebase.google.com" class="footer-linkbox-list__link">
+                Firebase Console
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//console.actions.google.com" class="footer-linkbox-list__link">
+                Actions on Google Console
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//cast.google.com/publish" class="footer-linkbox-list__link">
+                Cast SDK Developer Console
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//chrome.google.com/webstore/developer/dashboard" class="footer-linkbox-list__link">
+                Chrome Web Store Dashboard
+              </a>
+            </li>
+          
+            <li class="footer-linkbox-list__item">
+              <a href="//console.home.google.com/" class="footer-linkbox-list__link">
+                Google Home Developer Console
+              </a>
+            </li>
+          
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="footer-utility__wrapper">
+  <div>
+    <nav class="footer-sites" aria-label="Other Google Developers websites">
+      <a href="https://developers.google.com/" class="site-logo-link" data-label="Site logo">
+        <img src="https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/images/g-dev.svg" class="site-logo" alt="Google for Developers">
+      </a>
+      <ul class="footer-sites-list">
+        <li class="footer-sites-item">
+          <a href="//developer.android.com" class="footer-sites-link">
+            Android
+          </a>
+        </li>
+        <li class="footer-sites-item">
+          <a href="//developer.chrome.com/home" class="footer-sites-link">
+            Chrome
+          </a>
+        </li>
+        <li class="footer-sites-item">
+          <a href="//firebase.google.com" class="footer-sites-link">
+            Firebase
+          </a>
+        </li>
+        <li class="footer-sites-item">
+          <a href="//cloud.google.com" class="footer-sites-link">
+            Google Cloud Platform
+          </a>
+        </li>
+        <li class="footer-sites-item">
+          <a href="//developers.google.com/products" class="footer-sites-link">
+            All products
+          </a>
+        </li>
+        <li class="footer-sites-item">
+          <button aria-hidden="true" class="glue-cookie-notification-bar-control footer-sites-link">
+            Manage cookies
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <nav class="footer-utility-links">
+      <ul class="footer-utility-list">
+        <li class="footer-utility-item">
+          <a href="//developers.google.com/terms/site-terms" class="footer-utility-link">
+            Terms
+          </a>
+        </li>
+        <li class="footer-utility-item">
+          <a href="//policies.google.com/privacy" class="footer-utility-link">
+            Privacy
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+        
+				
+
+        
+        <script nonce="6SVjtMCeBpzIR0P4cX+QRg==" src="https://www.youtube.com/player_api"></script>
+        <script nonce="6SVjtMCeBpzIR0P4cX+QRg==" src="//www.gstatic.com/glue/v27_1/glue.min.js"></script>
+        <script nonce="6SVjtMCeBpzIR0P4cX+QRg==" type="text/javascript" src="https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/js/dgc_blog.js"></script>
+
+        <script nonce="6SVjtMCeBpzIR0P4cX+QRg==" src="https://www.gstatic.com/glue/cookienotificationbar/cookienotificationbar.min.js"
+            data-glue-cookie-notification-bar-category="2A"
+            data-glue-cookie-notification-bar-site-id="developers.googleblog.com"></script>
+
+        
+  <script src="https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/js/blog_detail.js" nonce="6SVjtMCeBpzIR0P4cX+QRg=="></script>
+  <script src="https://storage.googleapis.com/gweb-developer-goog-blog-cms-assets/site/20260817-205152/js/prism.js" nonce="6SVjtMCeBpzIR0P4cX+QRg=="></script>
+
+    </body>
+</html>

@@ -1,0 +1,7 @@
+fixture dispatch（没有网络）
+首次: DISPATCHED
+重启换ID: BLOCKED
+确认: True
+旧ID: BLOCKED
+fixture new dispatch
+显式新任务: DISPATCHED

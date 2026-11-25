@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "workflow_version": "1",
+  "input_hash": "1a710a10c2ae84d75e1ba09aeeafb38fe786dcfc8886cb869bdc27a7a0c792c3",
+  "status": "needs_control",
+  "steps": [
+    {
+      "name": "normalize",
+      "status": "done",
+      "result": "android ai"
+    },
+    {
+      "name": "stats",
+      "status": "done",
+      "result": {
+        "words": [
+          "android",
+          "ai"
+        ],
+        "count": 2
+      }
+    },
+    {
+      "name": "publish",
+      "status": "running"
+    }
+  ],
+  "reason": "publish 结果不确定，先人工核对副作用"
+}

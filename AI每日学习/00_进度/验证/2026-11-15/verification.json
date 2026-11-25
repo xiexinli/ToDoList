@@ -1,0 +1,197 @@
+{
+  "status": "DONE",
+  "observed_at": "2026-11-15T08:07:56.529093",
+  "scope": "本次文件产出/台账更新/离线实跑；飞书由主智能体发送",
+  "checks": [
+    {
+      "check": "主产物实际存在可读",
+      "status": "PASS",
+      "kind": "EXECUTED",
+      "evidence": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-15-可恢复工作流（Checkpoint与断点续跑）.md；/Users/alion/DemoProjects/ToDoList/AI每日学习/04_周总结/2026-W46.md"
+    },
+    {
+      "check": "今天只有一份日材料",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "段落0至5按序完整",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "120分钟分配",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "用户复述保持空白",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "内嵌代码与实际实跑源码逐字一致",
+      "status": "PASS",
+      "kind": "EXECUTED",
+      "evidence": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-15/checkpoint_demo.py"
+    },
+    {
+      "check": "内嵌Python语法可解析",
+      "status": "PASS",
+      "kind": "EXECUTED",
+      "evidence": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-15/checkpoint_demo.py"
+    },
+    {
+      "check": "7组断言15子进程实际实跑",
+      "status": "PASS",
+      "kind": "EXECUTED",
+      "evidence": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-15/fixture-1794701022622624000/report.json"
+    },
+    {
+      "check": "代码无令牌或临时外部依赖",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "今日动态限量1+1+1且引用全部登记",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "来源实读与canonical无重复",
+      "status": "PASS",
+      "kind": "EXECUTED",
+      "evidence": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-15/sources.json"
+    },
+    {
+      "check": "已完成主题18讲且今天恰好1行",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "本周7份日材料均被总结追溯",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "周总结7个本地文件链接有效",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "周总结不添加外部新动态",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "周总结区分用户未确认与旧实测",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "原Android计划与台账人工旧行完整保留",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "台账新增6行且没有删除",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "W46台账恰好一行",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "全部旧材料规则与旧周总结不变",
+      "status": "PASS",
+      "kind": "EXECUTED",
+      "evidence": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-15/inputs.json"
+    },
+    {
+      "check": "再次运行不覆盖门禁",
+      "status": "PASS",
+      "kind": "SPEC_CHECK",
+      "evidence": ""
+    },
+    {
+      "check": "真实Android设备/SDK接入",
+      "status": "NOT_EXECUTED",
+      "kind": "EXECUTED",
+      "evidence": "本次范围外"
+    },
+    {
+      "check": "远程业务写入与exactly-once",
+      "status": "NOT_EXECUTED",
+      "kind": "EXECUTED",
+      "evidence": "本次范围外"
+    },
+    {
+      "check": "硬断电/网络文件系统",
+      "status": "NOT_EXECUTED",
+      "kind": "EXECUTED",
+      "evidence": "本次范围外"
+    },
+    {
+      "check": "LangGraph安装/性能",
+      "status": "NOT_EXECUTED",
+      "kind": "EXECUTED",
+      "evidence": "本次范围外"
+    },
+    {
+      "check": "飞书发送（委派主智能体负责）",
+      "status": "NOT_EXECUTED",
+      "kind": "EXECUTED",
+      "evidence": "本次范围外"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-15-可恢复工作流（Checkpoint与断点续跑）.md",
+      "bytes": 20669,
+      "sha256": "d681462a2ca7e78f9781ca5226ab3eeb1e26e367161a17db72d7a209058b442e"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/04_周总结/2026-W46.md",
+      "bytes": 10423,
+      "sha256": "848791041fa8d4f4b793dcd2b3bd64cb73d82a5e92d6f96ba15b9f8d60d5d5e6"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md",
+      "bytes": 16435,
+      "sha256": "b3da1d4ef3867fa7e079f4226e32be97ef435db330cd0e8a8cb4c6d66d293613"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-15/checkpoint_demo.py",
+      "bytes": 6186,
+      "sha256": "f4257443d8cac74db9c03e13535b34468930ffb48e65392805b51dc882548278"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-15/test_checkpoint.py",
+      "bytes": 3967,
+      "sha256": "6b47a124a0287b76e47ddb66c3d1903003ae59c902cd0efc29ad4f24e6185e5d"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-15/tests.log",
+      "bytes": 3082,
+      "sha256": "c4f3625104816babcf3c1c8f06047fef024685c34e4e4d623964fab2f696605c"
+    }
+  ],
+  "backup": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/备份/2026-11-15-080708-进度.before.md",
+  "fixture": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-15/fixture-1794701022622624000"
+}

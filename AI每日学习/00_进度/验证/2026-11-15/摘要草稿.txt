@@ -1,0 +1,10 @@
+今日主题：可恢复工作流——Checkpoint 与断点续跑（地基补充）。
+① 保存输入指纹、版本、步骤状态与结果，不只记步骤编号。
+② 新进程复用已提交结果；重复启动跳过完成步骤。
+③ 副作用与检查点非原子：结果未知、人工拒绝或审批超时必须停止。
+离线示例已实跑：7组断言、15个子进程全部通过；不是你的练习完成记录。
+值得看：Google AI Edge Gallery 端侧 ASR/TTS（11-10发布，非今日新发布）。
+https://developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/
+今日动手：增加唯一词数，验证旧版本拒绝、新版本中断续跑。
+日材料、W46周总结、进度台账已落Mac指定目录；复述仍待你填写。
+Android阶段仍从11-16开始。

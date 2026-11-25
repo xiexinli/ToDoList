@@ -1,0 +1,35 @@
+
+          Home
+          Products
+          ML Kit
+          Reference
+    Send feedback
+      Stay organized with collections
+      Save and categorize content based on your preferences.
+StreamingCallback
+Kotlin
+|Java
+interface StreamingCallback
+Callback function to receive a streaming result.
+Summary
+Public functions
+            Unit
+onNewText(additionalText: String)
+Called when a new text is available.
+            Unit
+onNewThought(additionalThought: String)
+Called when a new thought is available.
+Public functions
+onNewText
+fun onNewText(additionalText: String): Unit
+Called when a new text is available.
+                Parameters
+                additionalText: String
+the new text.
+onNewThought
+fun onNewThought(additionalThought: String): Unit
+Called when a new thought is available.
+                Parameters
+                additionalThought: String
+the new thought text.
+    Send feedback

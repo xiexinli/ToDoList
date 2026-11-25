@@ -1,0 +1,35 @@
+--- ledger-before-2026-11-23
++++ ledger-after-2026-11-23
+@@ -30,6 +30,7 @@
+ | 2026-11-20 | 02_AndroidAI · 第 5 讲 | 端侧生成失败后的重试预算：什么时候不该再试 | 02_AndroidAI/2026-11-20-端侧生成失败后的重试预算：什么时候不该再试.md | 待填 |
+ | 2026-11-21 | 02_AndroidAI · 第 6 讲 | 端云降级的显式路由与隐私授权（续） | 02_AndroidAI/2026-11-21-端云降级的显式路由与隐私授权（续）.md | 待填 |
+ | 2026-11-22 | 02_AndroidAI · 第 7 讲 | 端云请求的取消与结束确认：怎样处理UNKNOWN（续） | 02_AndroidAI/2026-11-22-端云请求的取消与结束确认：怎样处理UNKNOWN（续）.md | 待填 |
++| 2026-11-23 | 02_AndroidAI · 第 8 讲 | 端云请求的持久操作账本：重启后怎样处理未确认请求 | 02_AndroidAI/2026-11-23-端云请求的持久操作账本：重启后怎样处理未确认请求.md | 待填 |
+ 
+ 
+ > 欠产与补写记录：2026-10-31 ~ 2026-11-04 因「本机终端审批超时」连续 6 天未落盘；2026-11-05 17:32 用户在 DHwork 权限设置中放行无人值守终端审批后，上述 5 天材料与 2026-W44 周总结已统一补全。
+@@ -70,7 +71,8 @@
+ 
+ - [x] Android × AI · 第 6 讲：端云降级的显式路由与隐私授权（续）（2026-11-21 材料已产出；EXECUTED_HOST纯策略fixture通过，SDK/设备/云模型NOT_EXECUTED；复述待填）
+ - [x] Android × AI · 第 7 讲：端云请求的取消与结束确认（2026-11-22 材料已产出；Host12项单测通过，真实取消/释放未测；复述待填）
+-- [ ] Android × AI · 下一讲（建议2026-11-23）：持久操作账本与重启后的未确认请求
++- [x] Android × AI · 第 8 讲：端云请求的持久操作账本：重启后怎样处理未确认请求（2026-11-23 材料已产出；EXECUTED_HOST 12项通过；真实SDK/Android/远端结束验证NOT_EXECUTED；复述待填）
++- [ ] Android × AI · 下一讲（建议2026-11-24）：端云请求的只读对账：查询状态而不是重发（续）
+ 
+ ## 动态链接去重表
+ | 首次出现日期 | 标题 | 链接 |
+@@ -221,6 +223,14 @@
+ 
+ > 2026-11-22 教学参考继续使用（非新增动态）：[教学参考｜Job.kt 1.7.3取消中与完成态](https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Job.kt)；[教学参考｜GenerativeModel取消与close](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel)。
+ 
++| 2026-11-23 | S01 SQLite原子提交 | https://www.sqlite.org/atomiccommit.html |
++| 2026-11-23 | S02 Python 3.9 sqlite3标准库 | https://docs.python.org/3.9/library/sqlite3.html |
++| 2026-11-23 | S03 Google：自定义UI的三层认证 | https://developers.googleblog.com/how-to-handle-user-connector-and-agent-auth-in-gemini-enterprise-with-a-custom-ui/ |
++| 2026-11-23 | S04 腾讯微信视频号短视频客户端开发工程师详情API | https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=1940343174115491840 |
++| 2026-11-23 | S05 腾讯微信视频号岗位页面 | https://careers.tencent.com/jobdesc.html?postId=1940343174115491840 |
++
++> 2026-11-23 当天5个引用的源日期/正文读取状态/HTTP200与小摘录：`验证/2026-11-23/sources.json`；Host代码与12项实跑日志同目录。首轮2项授权钩子夹具错误经局部修复后重跑OK；无模型调用，usage=NOT_EXECUTED；真实SDK/Android/远端结束验证NOT_EXECUTED。旧11-20/21缺口未改、未验；本执行者飞书not_sent，摘要由主智能体验收后唯一发送。
++
+ ## 周总结
+ | 周次 | 覆盖日期 | 文件 |
+ |---|---|---|

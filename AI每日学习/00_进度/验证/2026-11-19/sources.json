@@ -1,0 +1,409 @@
+[
+  {
+    "id": "S01",
+    "kind": "TOOL",
+    "title": "Android单调时钟",
+    "url": "https://developer.android.com/reference/android/os/SystemClock",
+    "canonical": "https://developer.android.com/reference/android/os/SystemClock",
+    "observed_at": "2026-11-19T08:03:36.870562+08:00",
+    "curl_exit": 0,
+    "http": "200",
+    "sha256": "121146839aec5c716283cba43a315834314f2a1b0e7436b4334d6d93febdcd18",
+    "source_dates": [
+      "2026-08-03"
+    ],
+    "read_state": "READ_BODY",
+    "reuse": false,
+    "excerpts": [
+      {
+        "locator": "return the time since",
+        "excerpt": "stamp value currently expect the\nuptimeMillis()\nclock.\nelapsedRealtime()\nand\nelapsedRealtimeNanos()\nreturn the time since the system was booted, and include deep sleep.\n    This clock is guaranteed to be monotonic, and continues to tick even\n    when the CPU is in power saving modes, so is the recommend basis\n    for general purpose interval timing.\nThere are several mechanisms for controlling the timing of events:\nStandard functions like\nThread.sleep(millis)\nand\nObject.wait(millis)\nare always available.  These functions use the\nuptimeMillis()\nclock; if the device enters sleep, the remainder of the time will be\n    postponed until the device wakes up.  These synchronous functions may\n    be interrupted with\nThre"
+      },
+      {
+        "locator": "clock is guaranteed",
+        "excerpt": "erval timing\n    such as\nThread.sleep(millis)\n,\nObject.wait(millis)\n, and\nSystem.nanoTime()\n.  This clock is guaranteed\n    to be monotonic, and is suitable for interval timing when the\n    interval does not span device sleep.  Most methods that accept a\n    timestamp value currently expect the\nuptimeMillis()\nclock.\nelapsedRealtime()\nand\nelapsedRealtimeNanos()\nreturn the time since the system was booted, and include deep sleep.\n    This clock is guaranteed to be monotonic, and continues to tick even\n    when the CPU is in power saving modes, so is the recommend basis\n    for general purpose interval timing.\nThere are several mechanisms for controlling the timing of events:\nStandard functions like\nThread.sleep("
+      },
+      {
+        "locator": "clock is guaranteed",
+        "excerpt": "lapsedRealtimeNanos()\nreturn the time since the system was booted, and include deep sleep.\n    This clock is guaranteed to be monotonic, and continues to tick even\n    when the CPU is in power saving modes, so is the recommend basis\n    for general purpose interval timing.\nThere are several mechanisms for controlling the timing of events:\nStandard functions like\nThread.sleep(millis)\nand\nObject.wait(millis)\nare always available.  These functions use the\nuptimeMillis()\nclock; if the device enters sleep, the remainder of the time will be\n    postponed until the device wakes up.  These synchronous functions may\n    be interrupted with\nThread.interrupt()\n, and\n    you must handle\nInterruptedException\n.\nSystemClock."
+      },
+      {
+        "locator": "elapsedRealtimeNanos\nAdded",
+        "excerpt": "lliseconds since boot, including time spent in sleep.\nReturns\nlong\nelapsed milliseconds since boot.\nelapsedRealtimeNanos\nAdded in\nAPI level 17\npublic static long elapsedRealtimeNanos ()\nReturns nanoseconds since boot, including time spent in sleep.\nReturns\nlong\nelapsed nanoseconds since boot.\nsetCurrentTimeMillis\nAdded in\nAPI level 1\npublic static boolean setCurrentTimeMillis (long millis)\nSets the current wall time, in milliseconds.  Requires the calling\nprocess to have appropriate permissions.\nParameters\nmillis\nlong\nReturns\nboolean\nif the clock was successfully set to the specified time.\nsleep\nAdded in\nAPI level 1\npublic static void sleep (long ms)\nWaits a given number of milliseconds (of uptimeMillis) before retur"
+      }
+    ],
+    "first_seen": "2026-11-19",
+    "date_kind": "updated"
+  },
+  {
+    "id": "S02",
+    "kind": "TOOL",
+    "title": "GenerativeModel流式契约",
+    "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+    "canonical": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+    "observed_at": "2026-11-19T08:03:37.989903+08:00",
+    "curl_exit": 0,
+    "http": "200",
+    "sha256": "f08e3e4d680abbdcb9a7c64a9467ccd3377ce1650905e41bf0fbbddbb70cefe9",
+    "source_dates": [
+      "2026-10-27"
+    ],
+    "read_state": "READ_BODY",
+    "reuse": true,
+    "excerpts": [
+      {
+        "locator": "incremental",
+        "excerpt": "streaming content generation inference on the provided input request.\nPartial results are delivered incrementally through the provided\nStreamingCallback\n. The function suspends until all results are received and returns the complete, final\nGenerateContentResponse\n. If streaming is interrupted by a GenAiException, consider removing any already streamed partial output from the UI.\nThe coroutine that runs\ngenerateContent\nis cancellable. If the inference is no longer needed (e.g., the user navigates away or input changes), the coroutine can be cancelled.\nNote that inference requests may fail under certain conditions such as:\nInvalid or malformed input in the\nGenerateContentRequest\n.\nExceeded usage quota or"
+      },
+      {
+        "locator": "incremental",
+        "excerpt": "streaming content generation inference on the provided input request.\nPartial results are delivered incrementally through the returned\nFlow\n. Each\nGenerateContentResponse\ncontains a single\nCandidate\n. The last emitted value contains a\nCandidate\nwith a FinishReason that is a non-null FinishReason (e.g., FinishReason.STOP or FinishReason.MAX_TOKENS)\nThis streaming mode is useful to build a more responsive UI. Streaming can be interrupted by a GenAiException. In that case, consider removing any already streamed partial output from the UI.\nThe coroutine collecting the\nFlow\nis cancellable. If the inference is no longer needed (e.g., the user navigates away or input changes), the coroutine can be cancelled\nN"
+      },
+      {
+        "locator": "collect",
+        "excerpt": "Home\nProducts\nML Kit\nReference\nSend feedback\nStay organized with collections\nSave and categorize content based on your preferences.\nGenerativeModel\nKotlin\n|\nJava\ninterface\nGenerativeModel\nProvides an interface for performing content generation.\nIt supports both standard and streaming inferences, as well as methods for preparing and cleaning up model resources.\nTypical usage:\nval\nrequest\n=\ngenerateContentRequest\n{\ntext\n(\n\"Your input text here.\"\n)\n}\ntry\n{\nval\nresult\n=\ngenerativeModel\n.\ngenerateContent\n(\nrequest\n)\nprintln\n(\nresult\n.\ntext\n)\n}\ncatch\n(\ne\n:\nGenAiException\n)\n{\n// Handle exception\n}\nSummary\nPublic functions\nsuspend @\nFeatureStatus\nInt\ncheckStatus\n()\nChecks"
+      },
+      {
+        "locator": "collect",
+        "excerpt": "ion. In that case, consider removing any already streamed partial output from the UI.\nThe coroutine collecting the\nFlow\nis cancellable. If the inference is no longer needed (e.g., the user navigates away or input changes), the coroutine can be cancelled\nNote that inference requests may fail under certain conditions such as:\nInvalid or malformed input in the\nGenerateContentRequest\n.\nExceeded usage quota or failed safety checks.\nImportant:\nThis function currently only supports a\ncandidateCount\nof 1 in the\nGenerateContentRequest\n. Providing a\ncandidateCount\ngreater than 1 will result in an\nIllegalArgumentException\n. If you need to receive multiple candidates in the final result, please use the generat"
+      },
+      {
+        "locator": "only input request tokens",
+        "excerpt": "untTokensResponse\nCounts the number of tokens in the request.\nThe number of tokens counted includes only input request tokens. The result can be compared with\ngetTokenLimit\nto check if the request is within the token limit.\nParameters\nrequest:\nGenerateContentRequest\na non-null\nGenerateContentRequest\ncontaining input content.\nReturns\nCountTokensResponse\na\nCountTokensResponse\ncontaining the number of tokens in the request.\ncountTokens\nsuspend fun <T :\nAny\n>\ncountTokens\n(request:\nGenerateTypedContentRequest\n<T>):\nCountTokensResponse\nCounts the number of tokens in the request for generating a typed response.\nThis is an experimental feature.\nThe number of tokens counted includes only input request tokens. The result can "
+      },
+      {
+        "locator": "only input request tokens",
+        "excerpt": "generating a typed response.\nThis is an experimental feature.\nThe number of tokens counted includes only input request tokens. The result can be compared with\ngetTokenLimit\nto check if the request is within the token limit.\nIf\nGenerateTypedContentRequest.includeSchemaInPrompt\nis\ntrue\n, the token count will also include tokens related to the response schema definition.\nParameters\nrequest:\nGenerateTypedContentRequest\n<T>\nA non-null\nGenerateTypedContentRequest\ncontaining input content and output type information.\nReturns\nCountTokensResponse\nA\nCountTokensResponse\ncontaining the number of tokens in the request.\ndownload\nfun\ndownload\n():\nFlow\n<\nDownloadStatus\n>\nDownloads the required model assets for the content generatio"
+      }
+    ],
+    "first_seen": "2026-11-16",
+    "date_kind": "updated"
+  },
+  {
+    "id": "S03",
+    "kind": "TOOL",
+    "title": "Candidate正文与终帧",
+    "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate",
+    "canonical": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate",
+    "observed_at": "2026-11-19T08:03:38.935259+08:00",
+    "curl_exit": 0,
+    "http": "200",
+    "sha256": "60d8ac79c6df7df8cd6766cb12bb04aacd95e89160fd656b6cd365ee43c39986",
+    "source_dates": [
+      "2026-10-27"
+    ],
+    "read_state": "READ_BODY",
+    "reuse": true,
+    "excerpts": [
+      {
+        "locator": "finishReason\n:",
+        "excerpt": "ted by the model.\nString\ntext\nThe text string of the\nCandidate\n.\nPublic properties\nfinishReason\nval\nfinishReason\n:\nInt\n?\nThe reason why this\nCandidate\nis finished generating. This will be null for intermediate responses during streaming, and non-null for the final response in streaming or non-streaming mode.\nfunctionCalls\nval\nfunctionCalls\n:\nList\n<\nFunctionCall\n>\nThe list of function calls predicted by the model.\ntext\nval\ntext\n:\nString\nThe text string of the\nCandidate\n. May be null if the model only returned function calls.\nSend feedback"
+      },
+      {
+        "locator": "text\n:",
+        "excerpt": "l\nfunctionCalls\n:\nList\n<\nFunctionCall\n>\nThe list of function calls predicted by the model.\ntext\nval\ntext\n:\nString\nThe text string of the\nCandidate\n. May be null if the model only returned function calls.\nSend feedback"
+      }
+    ],
+    "first_seen": "2026-11-17",
+    "date_kind": "updated"
+  },
+  {
+    "id": "S04",
+    "kind": "TOOL",
+    "title": "Prompt接入指南",
+    "url": "https://developers.google.com/ml-kit/genai/prompt/android/get-started",
+    "canonical": "https://developers.google.com/ml-kit/genai/prompt/android/get-started",
+    "observed_at": "2026-11-19T08:03:39.598100+08:00",
+    "curl_exit": 0,
+    "http": "200",
+    "sha256": "1f1afecad354dc0426e82a87376f06a448221ccdc5256bc86bd04355781fb99b",
+    "source_dates": [
+      "2026-10-27"
+    ],
+    "read_state": "READ_BODY",
+    "reuse": true,
+    "excerpts": [
+      {
+        "locator": "fullResponse",
+        "excerpt": "t\n(\nnewChunkReceived\n)\nfullResponse\n+=\nnewChunkReceived\n}\nJava\n// Streaming inference\nStringBuilder\nfullResponse\n=\nnew\nStringBuilder\n();\ngenerativeModelFutures\n.\ngenerateContent\n(\nnew\nGenerateContentRequest\n.\nBuilder\n(\n(\nnew\nTextPart\n(\n\"Write a 3 sentence story about a magical dog\"\n))).\nbuild\n(),\nchunk\n-\n>\n{\nLog\n.\nd\n(\nTAG\n,\nchunk\n);\nfullResponse\n.\nappend\n(\nchunk\n);\n});\nFor more information about streaming and non-streaming inference, see\nStreaming\nversus non-streaming\n.\nLatency optimization\nTo optimize for the first inference call, your application may optionally call\nwarmup()\n. This loads Gemini Nano into memory and initializes runtime\ncomponents.\nOptional configurations\nAs part of each\nGenerateContent"
+      },
+      {
+        "locator": "fullResponse",
+        "excerpt": "\n\"Write a 3 sentence story about a magical dog\"\n))).\nbuild\n(),\nchunk\n-\n>\n{\nLog\n.\nd\n(\nTAG\n,\nchunk\n);\nfullResponse\n.\nappend\n(\nchunk\n);\n});\nFor more information about streaming and non-streaming inference, see\nStreaming\nversus non-streaming\n.\nLatency optimization\nTo optimize for the first inference call, your application may optionally call\nwarmup()\n. This loads Gemini Nano into memory and initializes runtime\ncomponents.\nOptional configurations\nAs part of each\nGenerateContentRequest\n, you can set the following optional\nparameters:\ntemperature\n: Controls the degree of randomness in token selection.\nseed\n: Enables generating stable and deterministic results.\ntopK\n: Controls randomness and diversity in result"
+      },
+      {
+        "locator": "newChunkReceived",
+        "excerpt": " magical dog\"\n).\ncollect\n{\nchunk\n-\n>\nval\nnewChunkReceived\n=\nchunk\n.\ncandidates\n[\n0\n]\n.\ntext\nprint\n(\nnewChunkReceived\n)\nfullResponse\n+=\nnewChunkReceived\n}\nJava\n// Streaming inference\nStringBuilder\nfullResponse\n=\nnew\nStringBuilder\n();\ngenerativeModelFutures\n.\ngenerateContent\n(\nnew\nGenerateContentRequest\n.\nBuilder\n(\n(\nnew\nTextPart\n(\n\"Write a 3 sentence story about a magical dog\"\n))).\nbuild\n(),\nchunk\n-\n>\n{\nLog\n.\nd\n(\nTAG\n,\nchunk\n);\nfullResponse\n.\nappend\n(\nchunk\n);\n});\nFor more information about streaming and non-streaming inference, see\nStreaming\nversus non-streaming\n.\nLatency optimization\nTo optimize for the first inference call, your application may optionally call\nwarmup()\n. This loads Gemini Nano into memory"
+      },
+      {
+        "locator": "newChunkReceived",
+        "excerpt": ">\nval\nnewChunkReceived\n=\nchunk\n.\ncandidates\n[\n0\n]\n.\ntext\nprint\n(\nnewChunkReceived\n)\nfullResponse\n+=\nnewChunkReceived\n}\nJava\n// Streaming inference\nStringBuilder\nfullResponse\n=\nnew\nStringBuilder\n();\ngenerativeModelFutures\n.\ngenerateContent\n(\nnew\nGenerateContentRequest\n.\nBuilder\n(\n(\nnew\nTextPart\n(\n\"Write a 3 sentence story about a magical dog\"\n))).\nbuild\n(),\nchunk\n-\n>\n{\nLog\n.\nd\n(\nTAG\n,\nchunk\n);\nfullResponse\n.\nappend\n(\nchunk\n);\n});\nFor more information about streaming and non-streaming inference, see\nStreaming\nversus non-streaming\n.\nLatency optimization\nTo optimize for the first inference call, your application may optionally call\nwarmup()\n. This loads Gemini Nano into memory and initializes runtime\ncomponents"
+      },
+      {
+        "locator": "1.0.0-beta4",
+        "excerpt": "ompt\ndependency in your\nbuild.gradle\nconfiguration:\nimplementation\n(\n\"com.google.mlkit:genai-prompt:1.0.0-beta4\"\n)\nIf you need your responses in a certain format using the Structured Output API,\nyou need to configure KSP and add additional dependencies. For details, see\nGenerate structured output\n.\nImplement generative model\nTo implement the code in your project, follow these steps:\nCreate a\ngenerativeModel\nobject:\nKotlin\n// Get a GenerativeModel instance\nval\ngenerativeModel\n=\nGeneration\n.\ngetClient\n()\nJava\n// Get a GenerativeModel instance\nGenerativeModelFutures\ngenerativeModelFutures\n=\nGenerativeModelFutures\n.\nfrom\n(\nGeneration\n.\nINSTANCE\n.\ngetClient\n());\nCheck if Gemini Nano is\nAVAILABLE,\nDOWNLOADAB"
+      }
+    ],
+    "first_seen": "2026-11-16",
+    "date_kind": "updated"
+  },
+  {
+    "id": "S05",
+    "kind": "TOOL",
+    "title": "GenAI前台与资源限制",
+    "url": "https://developers.google.com/ml-kit/genai",
+    "canonical": "https://developers.google.com/ml-kit/genai",
+    "observed_at": "2026-11-19T08:03:40.553245+08:00",
+    "curl_exit": 0,
+    "http": "200",
+    "sha256": "61d8d6973cfa2097400c01929399b7ba8fc80783f2ef52cc8655a2e191a58dcc",
+    "source_dates": [
+      "2026-11-10"
+    ],
+    "read_state": "READ_BODY",
+    "reuse": true,
+    "excerpts": [
+      {
+        "locator": "foreground",
+        "excerpt": "itted only when the app is the top foreground\napplication. Using the API when the app is not in the foreground, including\nusing a foreground service, will result in an\nErrorCode.BACKGROUND_USE_BLOCKED\nresponse.\nSample code\nTo get this code, check out the following samples:\nML Kit GenAI Samples\nAndroid AI Catalog Sample\nSend feedback"
+      },
+      {
+        "locator": "foreground",
+        "excerpt": " top foreground\napplication. Using the API when the app is not in the foreground, including\nusing a foreground service, will result in an\nErrorCode.BACKGROUND_USE_BLOCKED\nresponse.\nSample code\nTo get this code, check out the following samples:\nML Kit GenAI Samples\nAndroid AI Catalog Sample\nSend feedback"
+      },
+      {
+        "locator": "quota",
+        "excerpt": "lso,\nErrorCode.PER_APP_BATTERY_USE_QUOTA_EXCEEDED\ncan be\nreturned if an app exceeds a long-duration quota (for example, a daily quota).\nBackground usage\nGenAI API inference is permitted only when the app is the top foreground\napplication. Using the API when the app is not in the foreground, including\nusing a foreground service, will result in an\nErrorCode.BACKGROUND_USE_BLOCKED\nresponse.\nSample code\nTo get this code, check out the following samples:\nML Kit GenAI Samples\nAndroid AI Catalog Sample\nSend feedback"
+      },
+      {
+        "locator": "quota",
+        "excerpt": "RY_USE_QUOTA_EXCEEDED\ncan be\nreturned if an app exceeds a long-duration quota (for example, a daily quota).\nBackground usage\nGenAI API inference is permitted only when the app is the top foreground\napplication. Using the API when the app is not in the foreground, including\nusing a foreground service, will result in an\nErrorCode.BACKGROUND_USE_BLOCKED\nresponse.\nSample code\nTo get this code, check out the following samples:\nML Kit GenAI Samples\nAndroid AI Catalog Sample\nSend feedback"
+      },
+      {
+        "locator": "battery",
+        "excerpt": "ing such an error, consider using exponential backoff to\nretry the request. Also,\nErrorCode.PER_APP_BATTERY_USE_QUOTA_EXCEEDED\ncan be\nreturned if an app exceeds a long-duration quota (for example, a daily quota).\nBackground usage\nGenAI API inference is permitted only when the app is the top foreground\napplication. Using the API when the app is not in the foreground, including\nusing a foreground service, will result in an\nErrorCode.BACKGROUND_USE_BLOCKED\nresponse.\nSample code\nTo get this code, check out the following samples:\nML Kit GenAI Samples\nAndroid AI Catalog Sample\nSend feedback"
+      }
+    ],
+    "first_seen": "2026-11-16",
+    "date_kind": "updated"
+  },
+  {
+    "id": "S06",
+    "kind": "TOOL",
+    "title": "结束原因常量",
+    "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate.FinishReason",
+    "canonical": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate.FinishReason",
+    "observed_at": "2026-11-19T08:03:41.293984+08:00",
+    "curl_exit": 0,
+    "http": "200",
+    "sha256": "6b52ea7d18c18a40cf70b6f2199e370a019930eca9c8a50329b66f0a50fea5dc",
+    "source_dates": [
+      "2026-01-28"
+    ],
+    "read_state": "READ_BODY",
+    "reuse": true,
+    "excerpts": [
+      {
+        "locator": "MAX_TOKENS",
+        "excerpt": "el.\nPublic constructors\nFinishReason\n()\nConstants\nMAX_TOKENS\nconst val\nMAX_TOKENS\n:\nInt\nThe maximum number of output tokens as specified in the request was reached.\nOTHER\nconst val\nOTHER\n:\nInt\nAll other reasons that stopped the generation.\nSTOP\nconst val\nSTOP\n:\nInt\nNatural stop point of the model.\nPublic constructors\nFinishReason\nFinishReason\n()\nSend feedback"
+      },
+      {
+        "locator": "MAX_TOKENS",
+        "excerpt": "rs\nFinishReason\n()\nConstants\nMAX_TOKENS\nconst val\nMAX_TOKENS\n:\nInt\nThe maximum number of output tokens as specified in the request was reached.\nOTHER\nconst val\nOTHER\n:\nInt\nAll other reasons that stopped the generation.\nSTOP\nconst val\nSTOP\n:\nInt\nNatural stop point of the model.\nPublic constructors\nFinishReason\nFinishReason\n()\nSend feedback"
+      },
+      {
+        "locator": "STOP",
+        "excerpt": "nt\nAll other reasons that stopped the generation.\nSTOP\nconst val\nSTOP\n:\nInt\nNatural stop point of the model.\nPublic constructors\nFinishReason\nFinishReason\n()\nSend feedback"
+      },
+      {
+        "locator": "STOP",
+        "excerpt": "asons that stopped the generation.\nSTOP\nconst val\nSTOP\n:\nInt\nNatural stop point of the model.\nPublic constructors\nFinishReason\nFinishReason\n()\nSend feedback"
+      }
+    ],
+    "first_seen": "2026-11-17",
+    "date_kind": "updated"
+  },
+  {
+    "id": "S07",
+    "kind": "TOOL",
+    "title": "genai-prompt版本POM",
+    "url": "https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom",
+    "canonical": "https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom",
+    "observed_at": "2026-11-19T08:03:41.578947+08:00",
+    "curl_exit": 0,
+    "http": "200",
+    "sha256": "f3a7f09902d1cb1c8164fe5c99a2fe3a774598e5b19f3ff34a81d3684d902da9",
+    "source_dates": [],
+    "read_state": "READ_BODY",
+    "reuse": true,
+    "excerpts": [
+      {
+        "locator": "<version>",
+        "excerpt": "oupId>org.jetbrains.kotlinx</groupId>\n      <artifactId>kotlinx-coroutines-guava</artifactId>\n      <version>1.5.0</version>\n      <scope>compile</scope>\n      <type>jar</type>\n    </dependency>\n    <dependency>\n      <groupId>org.jetbrains.kotlinx</groupId>\n      <artifactId>kotlinx-coroutines-reactive</artifactId>\n      <version>1.7.3</version>\n      <scope>compile</scope>\n      <type>jar</type>\n    </dependency>\n  </dependencies>\n  <name>genai-prompt</name>\n  <licenses>\n    <license>\n      <name>ML Kit Terms of Service</name>\n      <url>https://developers.google.com/ml-kit/terms</url>\n      <distribution>repo</distribution>\n    </license>\n  </licenses>\n</project>\n"
+      },
+      {
+        "locator": "<version>",
+        "excerpt": "Id>org.jetbrains.kotlinx</groupId>\n      <artifactId>kotlinx-coroutines-reactive</artifactId>\n      <version>1.7.3</version>\n      <scope>compile</scope>\n      <type>jar</type>\n    </dependency>\n  </dependencies>\n  <name>genai-prompt</name>\n  <licenses>\n    <license>\n      <name>ML Kit Terms of Service</name>\n      <url>https://developers.google.com/ml-kit/terms</url>\n      <distribution>repo</distribution>\n    </license>\n  </licenses>\n</project>\n"
+      },
+      {
+        "locator": "POM artifact与依赖版本",
+        "excerpt": "<?xml version='1.0' encoding='UTF-8'?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>com.google.mlkit</groupId>\n  <artifactId>genai-prompt</artifactId>\n  <version>1.0.0-beta4</version>\n  <packaging>aar</packaging>\n  <dependencies>\n    <dependency>\n      <groupId>com.google.android.datatransport</groupId>\n      <artifactId>transport-api</artifactId>\n      <version>2.2.1</version>\n      <scope>compile</scope>\n      <type>aar</type>\n    </dependency>\n    <dependency>\n      <groupId>com.google.android.datatransport</groupId>\n      <artifactId>transport-backend-cct</artifactId>\n      <version>2.3.3</version>\n      <scope>compile</scope>\n      <type>aar</type>\n    </dependency>\n    <dependency>\n      <groupId>com.google.android.datatransport</groupId>\n      <artifactId>transport-runtime</artifactId>\n      <version>2.2.6</version>\n      <scope>compile</scope>\n      <type>aar</type>\n    </dependency>\n    <dependency>\n      <groupId>com.google.android.gms</groupId>\n      <artifactId>play-services-basement</artifactId>\n      <version>18.9.0</version>\n      <scope>compile</scope>\n      <type>aar</type>\n    </dependency>\n    <dependency>\n      <groupId>com.google.android.gms</groupId>\n      <artifactId>play-services-tasks</artifactId>\n      <version>18.2.0</version>\n      <scope>compile</scope>\n      <type>aar</type>\n    </dependency>\n    <dependency>\n      <groupId>com.google.firebase</groupId>\n      <artifactId>firebase-encoders</artifactId>\n      <version>16.1.0</version>\n      <scope>compile</scope>\n      <type>jar</type>\n    </dependency>\n    <dependency>\n      <groupId>com.google.firebase</groupId>\n      <artifactId>firebase-encoders-json</artifactId>\n      <version>17.1.0</version>\n      <scope>compile</scope>\n      <type>aar</type>\n    </dependency>\n    <dependency>\n      <groupId>com.google.guava</groupId>\n      <artifactId>listenablefuture</artifactId>\n      <version>1.0</version>\n      <scope>compile</scope>\n      <type>jar</type>\n    </dependency>\n    <dependency>\n      <groupId>com.google.mlkit</groupId>\n      <artifactId>common</artifactId>\n      <version>18.11.0</version>\n      <scope>compile</scope>\n      <type>aar</type>\n    </dependency>\n    <dependency>\n      <groupId>com.google.mlkit</groupId>\n      <artifactId>genai-common</artifactId>\n      <version>1.0.0-beta4</version>\n      <scope>compile</scope>\n      <type>aar</type>\n    </dependency>\n    <dependency>\n      <groupId>com.google.mlkit</groupId>\n      <artifactId>genai-schema</artifactId>\n      <version>1.0.0-alpha1</version>\n      <scope>compile</scope>\n      <type>jar</type>\n    </dependency>\n    <dependency>\n      <groupId>org.jetbrains.kotlin</groupId>\n      <artifactId>kotlin-stdlib</artifactId>\n      <version>2.3.21</version>\n      <scope>compile</scope>\n      <type>jar</type>\n    </dependency>\n    <dependency>\n      <groupId>org.jetbrains.kotlinx</groupId>\n      <artifactId>kotlinx-coroutines-core</artifactId>\n      <version>1.7.3</version>\n      <scope>compile</scope>\n      <type>jar</type>\n    </dependency>\n    <dependency>\n      <groupId>org.jetbrains.kotlinx</groupId>\n      <artifactId>kotlinx-coroutines-guava</artifactId>\n      <version>1.5.0</version>\n      <scope>compile</scope>\n      <type>jar</type>\n    </dependency>\n    <dependency>\n      <groupId>org.jetbrains.kotlinx</groupId>\n      <artifactId>kotlinx-coroutines-reactive</artifactId>\n      <version>1.7.3</version>\n      <scope>compile</scope>\n      <type>jar</type>\n    </dependency>\n  </dependencies>\n  <name>genai-prompt</name>\n  <licenses>\n    <license>\n      <name>ML Kit Terms of Service</name>\n      <url>https://developers.google.com/ml-kit/terms</url>\n      <distribution>repo</distribution>\n    </license>\n  </licenses>\n</project>\n"
+      }
+    ],
+    "first_seen": "2026-11-16",
+    "date_kind": "version_only_or_not_provided"
+  },
+  {
+    "id": "S08",
+    "kind": "TOOL",
+    "title": "协程1.7.3超时源码",
+    "url": "https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Timeout.kt",
+    "canonical": "https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Timeout.kt",
+    "observed_at": "2026-11-19T08:03:41.748104+08:00",
+    "curl_exit": 0,
+    "http": "200",
+    "sha256": "f15aa3639b8745a1fff0fd2210b65b82e59e36d64f92564ec075aaa877484fc9",
+    "source_dates": [],
+    "read_state": "READ_BODY",
+    "reuse": true,
+    "excerpts": [
+      {
+        "locator": "public suspend fun <T> withTimeoutOrNull",
+        "excerpt": "l of the context's [CoroutineDispatcher].\n *\n * @param timeMillis timeout time in milliseconds.\n */\npublic suspend fun <T> withTimeoutOrNull(timeMillis: Long, block: suspend CoroutineScope.() -> T): T? {\n    if (timeMillis <= 0L) return null\n\n    var coroutine: TimeoutCoroutine<T?, T?>? = null\n    try {\n        return suspendCoroutineUninterceptedOrReturn { uCont ->\n            val timeoutCoroutine = TimeoutCoroutine(timeMillis, uCont)\n            coroutine = timeoutCoroutine\n            setupTimeout<T?, T?>(timeoutCoroutine, block)\n        }\n    } catch (e: TimeoutCancellationException) {\n        // Return null if it's our exception, otherwise propagate it upstream (e.g. in case of nested withTimeouts)\n        if (e.coroutine ==="
+      },
+      {
+        "locator": "public suspend fun <T> withTimeoutOrNull",
+        "excerpt": "the time is tracked exactly is an implementation detail of the context's [CoroutineDispatcher].\n */\npublic suspend fun <T> withTimeoutOrNull(timeout: Duration, block: suspend CoroutineScope.() -> T): T? =\n    withTimeoutOrNull(timeout.toDelayMillis(), block)\n\nprivate fun <U, T : U> setupTimeout(\n    coroutine: TimeoutCoroutine<U, T>,\n    block: suspend CoroutineScope.() -> T\n): Any? {\n    // schedule cancellation of this coroutine on time\n    val cont = coroutine.uCont\n    val context = cont.context\n    coroutine.disposeOnCompletion(context.delay.invokeOnTimeout(coroutine.time, coroutine, coroutine.context))\n    // restart the block using a new coroutine with a new job,\n    // however, start it undispatched, because we already are"
+      },
+      {
+        "locator": "asynchronous",
+        "excerpt": "some\n * resource inside the [block] that needs closing or release outside the block.\n * See the\n * [Asynchronous timeout and resources][https://kotlinlang.org/docs/reference/coroutines/cancellation-and-timeouts.html#asynchronous-timeout-and-resources]\n * section of the coroutines guide for details.\n *\n * > Implementation note: how the time is tracked exactly is an implementation detail of the context's [CoroutineDispatcher].\n */\npublic suspend fun <T> withTimeoutOrNull(timeout: Duration, block: suspend CoroutineScope.() -> T): T? =\n    withTimeoutOrNull(timeout.toDelayMillis(), block)\n\nprivate fun <U, T : U> setupTimeout(\n    coroutine: TimeoutCoroutine<U, T>,\n    block: suspend CoroutineScope.() -> T\n)"
+      },
+      {
+        "locator": "asynchronous",
+        "excerpt": "eout and resources][https://kotlinlang.org/docs/reference/coroutines/cancellation-and-timeouts.html#asynchronous-timeout-and-resources]\n * section of the coroutines guide for details.\n *\n * > Implementation note: how the time is tracked exactly is an implementation detail of the context's [CoroutineDispatcher].\n */\npublic suspend fun <T> withTimeoutOrNull(timeout: Duration, block: suspend CoroutineScope.() -> T): T? =\n    withTimeoutOrNull(timeout.toDelayMillis(), block)\n\nprivate fun <U, T : U> setupTimeout(\n    coroutine: TimeoutCoroutine<U, T>,\n    block: suspend CoroutineScope.() -> T\n): Any? {\n    // schedule cancellation of this coroutine on time\n    val cont = coroutine.uCont\n    val context = con"
+      },
+      {
+        "locator": "Implementation note",
+        "excerpt": "ts.html#asynchronous-timeout-and-resources]\n * section of the coroutines guide for details.\n *\n * > Implementation note: how the time is tracked exactly is an implementation detail of the context's [CoroutineDispatcher].\n *\n * @param timeMillis timeout time in milliseconds.\n */\npublic suspend fun <T> withTimeoutOrNull(timeMillis: Long, block: suspend CoroutineScope.() -> T): T? {\n    if (timeMillis <= 0L) return null\n\n    var coroutine: TimeoutCoroutine<T?, T?>? = null\n    try {\n        return suspendCoroutineUninterceptedOrReturn { uCont ->\n            val timeoutCoroutine = TimeoutCoroutine(timeMillis, uCont)\n            coroutine = timeoutCoroutine\n            setupTimeout<T?, T?>(timeoutCoroutine, block)\n "
+      },
+      {
+        "locator": "Implementation note",
+        "excerpt": "ts.html#asynchronous-timeout-and-resources]\n * section of the coroutines guide for details.\n *\n * > Implementation note: how the time is tracked exactly is an implementation detail of the context's [CoroutineDispatcher].\n */\npublic suspend fun <T> withTimeoutOrNull(timeout: Duration, block: suspend CoroutineScope.() -> T): T? =\n    withTimeoutOrNull(timeout.toDelayMillis(), block)\n\nprivate fun <U, T : U> setupTimeout(\n    coroutine: TimeoutCoroutine<U, T>,\n    block: suspend CoroutineScope.() -> T\n): Any? {\n    // schedule cancellation of this coroutine on time\n    val cont = coroutine.uCont\n    val context = cont.context\n    coroutine.disposeOnCompletion(context.delay.invokeOnTimeout(coroutine.time, coroutine"
+      }
+    ],
+    "first_seen": "2026-11-17",
+    "date_kind": "version_only_or_not_provided"
+  },
+  {
+    "id": "N01",
+    "kind": "TOOL",
+    "title": "GKE智能体会话容量",
+    "url": "https://developers.googleblog.com/agents-are-sessions-not-requests-size-gke-node-pools-for-ai-agent-sessions/",
+    "canonical": "https://developers.googleblog.com/agents-are-sessions-not-requests-size-gke-node-pools-for-ai-agent-sessions",
+    "observed_at": "2026-11-19T08:03:44.444965+08:00",
+    "curl_exit": 0,
+    "http": "200",
+    "sha256": "712b5e2b8ad0c3bc494e1013ccd9301cc60f63efea7149c5fa06d7be8751d348",
+    "source_dates": [
+      "2026-11-16"
+    ],
+    "read_state": "READ_BODY",
+    "reuse": false,
+    "excerpts": [
+      {
+        "locator": "标题/日期/会话与请求边界",
+        "excerpt": "Agents are sessions, not requests: size GKE node pools for AI agent sessions\n            \n            \n            - Google Developers Blog\nCommunity/Events\nLearn\nBlog\nYouTube\nSearch\nCommunity/Events\nLearn\nBlog\nYouTube\nAgents are sessions, not requests: size GKE node pools for AI agent sessions\nNOV. 16, 2026\nDrake Williams\nSenior Product Manager\nGoogle Cloud\nIvan Nardini\nAI Developer Relations\nShare\nFacebook\nTwitter\nLinkedIn\nMail\nSorry, your browser doesn't support playback for this video\nYour company wants to move its coding agents from developer laptops to a shared GKE cluster, for persistence, scale, and governance. Each of those agent sessions stays open all day but works only part of it, and how you run them decides how much of your node bill pays for waiting.\nBy the end of this article, you will know why an agent session needs a different runtime than a web request, how Agent Substrate and AX run sessions on GKE, and how to identify cost optimization opportunities in your GKE node pools. This article assumes you know Kubernetes Pods and node pools. If not, check out the\nGKE overview\n.\nAgent sessions wait between prompts\nA web request lasts milliseconds. The server answers it, keeps nothing, and serves the next one, so Kubernetes scales a web app by its traffic: more requests, more Pods.\nAn agent session works another way. A coding agent's workspace can stay open for the developer's whole workday: it keeps its memory and its files between prompts, and it works only after a prompt arrives.\nFigure 1. A request ends in milliseconds and keeps nothing. An agent session stay"
+      },
+      {
+        "locator": "同CPU保证下比较",
+        "excerpt": "When one Pod per session costs less\nOvercommit changes the comparison. If your Pods request less CPU than their limit, Kubernetes places them by their requests. A Pod that requests 0.25 vCPU with a 1 vCPU limit packs 12 to a node (its 1 GiB of memory caps it there), so the same 100 coding agents fit on 9 nodes, fewer than our parked pool. Agent Substrate can overcommit too, through the capacity you declare on the worker pool, and our cost model does not price that case.\nFigure 5. The monthly node bill for 100 coding agents by Pod CPU request, from the cost model. Parked sessions keep their full CPU limit in both groups.\nOvercommit has the same cost on both sides: agents share CPU and slow down when their neighbors are busy, during builds and tests. Compare like with like before you decide to park: Pods and actors with the same CPU guarantee.\nGet started today\nBack to the shared cluster. Agents are sessions, not requests: size the warm pool for the sessions that hold a worker, not the sessions that are open.\nWe would park long lived sessions that wait most of the hour, and keep one Pod per session when developers prompt more than about 4 times an hour. Size the warm pool for working time plus a short idle timeout at your busiest hour, and compare with your current Pods at the same CPU guarantee before you park.\nTake a week of prompts an hour from your gateway logs, and compare y"
+      }
+    ],
+    "first_seen": "2026-11-19",
+    "date_kind": "published"
+  },
+  {
+    "id": "J01",
+    "kind": "TOOL",
+    "title": "腾讯CPU性能架构师详情API",
+    "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2013848487359307776",
+    "canonical": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2013848487359307776",
+    "observed_at": "2026-11-19T08:03:44.734707+08:00",
+    "curl_exit": 0,
+    "http": "200",
+    "sha256": "67c42354375b630e8fa9bab71f046cb533ec7e13b65abd4a71e721cbf13bf3a0",
+    "source_dates": [
+      "2026-10-26"
+    ],
+    "read_state": "READ_BODY",
+    "reuse": false,
+    "excerpts": [
+      {
+        "locator": "Data职责/要求/更新时间",
+        "excerpt": "{\"Code\": 200, \"Data\": {\"PostId\": \"2013848487359307776\", \"RecruitPostId\": 117421, \"RecruitPostName\": \"CPU架构与性能优化架构师\", \"LocationId\": 1, \"LocationName\": \"深圳\", \"BGId\": 29294, \"BGName\": \"CSIG\", \"ComCode\": \"\", \"ComName\": \"\", \"OuterPostTypeID\": \"40001001\", \"CategoryName\": \"技术\", \"ProductName\": \"腾讯云\", \"Responsibility\": \"1.工作负载分析与性能建模；深入分析Agent编排、工具调用、代码执行、沙箱、RL环境及推理主机等场景的关键路径与资源需求；建立CPU、缓存、内存、网络和存储的资源画像，识别计算、访存、调度、虚拟化及I/O瓶颈；将业务SLO、任务吞吐和并发需求转化为可量化的硬件与系统设计要求；\\n2.CPU及服务器平台架构设计；评估不同CPU架构、代际和平台的适用性，制定场景化选型及配置方案；分析单线程性能、多核扩展性、SMT、缓存、NUMA、内存容量与带宽、PCIe及网络拓扑对业务的影响；参与CPU执行资源池与加速器主机的配置规划，支持平台演进及容量建设决策；\\n3.跨层性能定位与优化：利用性能计数器、系统跟踪和实验对照，定位CPU微架构、内核、虚拟化及应用运行时相关问题；推进绑核、内存放置、线程模型、调度、缺页处理、数据搬运及相关配置优化；与BIOS、内核、虚拟化和业务团队协作，将优化成果落地到实际环境并完成回归验证；\\n4.Benchmark与自动化评测体系建设：建立覆盖微基准、组件测试及端到端任务的评测体系，形成可复现、可比较的性能基线；建设跨平台、跨版本的自动化测试及回归能力，分析性能波动与退化原因；同时评估吞吐、P95/P99延迟、任务成功率、资源占用和能效，避免以单一跑分替代业务效果；\\n5.容量、能效与成本优化：建立满足质量、隔离和延迟要求的单机容量模型，评估并发密度与资源池配比；分析单位有效任务成本、CPU资源消耗、内存占用和功耗，支持扩容、采购及配置优化；通过试点或生产数据验证收益，明确适用边界、上线风险及回退方案；\\n6.技术路线与跨团队协同；跟踪CPU、内存、互连及硬件加速技术，将实际瓶颈转化为下一代平台需求；与芯片厂商、服务器厂商及内部研发团队开展联合分析和方案验证；沉淀架构规范、性能方法和最佳实践，提升团队的问题定位与工程交付能力。\", \"Requirement\": \"1.具备扎实的计算机体系结构基础，熟悉至少一种主流服务器CPU架构，理解流水线、分支预测、缓存层次、缓存一致性、内存访问及NUMA等机制，能够分析其对实际负载的影响；\\n2.具备Linux系统性能分析能力，理解进程与线程调度、虚拟内存、缺页、同步机制及I/O路径；能够使用perf、eBPF、ftrace、Intel VTune、PCM或同类工具中的一种或多种开展分析；\\n3.具备复杂性能问题的定位与落地经验，能够完成“指标异常—提出假设—设计实验—定位根因—优化验证—回归交付”的完整过程，而不止于采集指标或调整参数；\\n4.具备基准测试与实验设计能力，能控制软件版本、数据集、并发、预热、频率及系统配置等变量，理解尾延迟、测试噪声、重复性和对照实验的重要性；\\n5.具备必要的软件工程能力，熟练使用C/C++、Python、Go等至少一种语言，能够开发测试工具、分析脚本或系统组件，并阅读相关实现代码；\\n6.具备系统架构判断与协作能力，能在性能、成本、可靠性、兼容性及工程复杂度之间进行权衡，并推动跨硬件、固件、系统软件和业务团队的方案落地。\", \"LastUpdateTime\": \"2026年10月26日\", \"PostURL\": \"http://careers.tencent.com/jobdesc.html?postId=2013848487359307776\", \"SourceID\": 1, \"IsCollect\": false, \"PostLightItem\": \"\", \"ImportantItem\": \"1.有云计算、服务器平台、数据中心基础设施或大规模资源池的架构与性能优化经验；\\n2.有Agent沙箱、KVM/MicroVM、容器、快照恢复、资源隔离或高密度多租户系统经验；\\n3.有大模型推理主机优化、数据预处理、CPU–GPU协同或强化学习环境执行经验；\\n4.有x86/Arm跨平台评估、编译器优化、SIMD向量化或性能库优化经验；\\n5.有BIOS/UEFI、平台初始化、功耗管理或内存配置调优经验；\\n6.有硬件选型、容量预测、TCO建模、供应商联合验证或开源项目贡献经验。\", \"Introduction\": \"在腾讯，优秀的技术运营工程师始终赋能业务，关注技术运营的质量、成本、效率和安全。他们不仅是经验丰富的问题解决者，更是具有全局视角的架构师，通过自动化工具的建设，强力提升平台效能，助力业务发展。\", \"DepartmentIntroduction\": \"\", \"RequireWorkYearsName\": \"3年以上\"}}"
+      }
+    ],
+    "first_seen": "2026-11-19",
+    "date_kind": "job_updated; published_not_provided"
+  },
+  {
+    "id": "J02",
+    "kind": "TOOL",
+    "title": "腾讯CPU性能架构师网页",
+    "url": "https://careers.tencent.com/jobdesc.html?postId=2013848487359307776",
+    "canonical": "https://careers.tencent.com/jobdesc.html?postId=2013848487359307776",
+    "observed_at": "2026-11-19T08:03:44.957423+08:00",
+    "curl_exit": 0,
+    "http": "200",
+    "sha256": "b4567851b9ee8f1a2b94131eb80f7af3a888454cffadb65554bb8215dfbb0de0",
+    "source_dates": [
+      "2026-10-26"
+    ],
+    "read_state": "JS_SHELL_ONLY",
+    "reuse": false,
+    "excerpts": [],
+    "first_seen": "2026-11-19",
+    "date_kind": "job_updated; published_not_provided"
+  },
+  {
+    "id": "T01",
+    "kind": "TOOL",
+    "title": "Android Microbenchmark概览",
+    "url": "https://developer.android.com/topic/performance/benchmarking/microbenchmark-overview",
+    "canonical": "https://developer.android.com/topic/performance/benchmarking/microbenchmark-overview",
+    "observed_at": "2026-11-19T08:03:47.035473+08:00",
+    "curl_exit": 0,
+    "http": "200",
+    "sha256": "ee5ad122024dd5c7f284e9cfa7c24bdf1226e5aa3bb8b51fe860787c7f798e84",
+    "source_dates": [
+      "2026-05-19"
+    ],
+    "read_state": "READ_BODY",
+    "reuse": false,
+    "excerpts": [
+      {
+        "locator": "hot code paths",
+        "excerpt": "ing.\nMicrobenchmarks are most useful for CPU work that is run many times in your app,\nalso known as\nhot code paths\n. Good examples are\nRecyclerView\nscrolling with\none item shown at a time, data conversions or processing, and other pieces of\ncode that get used repeatedly.\nOther types of code are more difficult to measure with the Microbenchmark\nlibrary. Because benchmarks run in a loop, any code that isn't run frequently or\nperforms differently when called multiple times might not be a good fit for\nbenchmarking.\nTo learn how to use the library in a Continuous Integration (CI) environment,\nsee\nRun benchmarks in Continuous Integration\n.\nAvoid measuring cache\nTry to avoid measuring just the cache. For example"
+      },
+      {
+        "locator": "cache",
+        "excerpt": "che. For example, a custom view's layout\nbenchmark might measure only the performance of the layout cache. To avoid this,\nyou can pass different layout parameters in each loop. In other cases, such as\nwhen measuring file system performance, this might be difficult because the OS\ncaches the file system while in a loop.\nObtain consistent benchmarks\nClocks on mobile devices dynamically change from high state, for performance, to\nlow state, to save power or when the device gets hot. These varying clocks can\nmake your benchmark numbers vary widely, so the library provides ways to deal\nwith this issue.\nLock clocks (requires rooted device)\nLocking clocks is the best way to get stable performance. It hel"
+      },
+      {
+        "locator": "cache",
+        "excerpt": "other cases, such as\nwhen measuring file system performance, this might be difficult because the OS\ncaches the file system while in a loop.\nObtain consistent benchmarks\nClocks on mobile devices dynamically change from high state, for performance, to\nlow state, to save power or when the device gets hot. These varying clocks can\nmake your benchmark numbers vary widely, so the library provides ways to deal\nwith this issue.\nLock clocks (requires rooted device)\nLocking clocks is the best way to get stable performance. It helps ensure that\nclocks never get high enough to heat up the device, or low if a benchmark isn't\nfully utilizing the CPU. It can be applied with a Gradle task\n(\ngradlew lockClocks\n),"
+      },
+      {
+        "locator": "Clocks on mobile devices",
+        "excerpt": "ht be difficult because the OS\ncaches the file system while in a loop.\nObtain consistent benchmarks\nClocks on mobile devices dynamically change from high state, for performance, to\nlow state, to save power or when the device gets hot. These varying clocks can\nmake your benchmark numbers vary widely, so the library provides ways to deal\nwith this issue.\nLock clocks (requires rooted device)\nLocking clocks is the best way to get stable performance. It helps ensure that\nclocks never get high enough to heat up the device, or low if a benchmark isn't\nfully utilizing the CPU. It can be applied with a Gradle task\n(\ngradlew lockClocks\n), or\nmanually in CI\n. While this is the best way to\nhelp ensure stable performance, it is"
+      },
+      {
+        "locator": "warmup",
+        "excerpt": "u benchmark your Android native\ncode—Kotlin or Java—from within Android Studio. The library handles warmup,\nmeasures your code performance and allocation counts, and outputs benchmarking\nresults to both the\nAndroid Studio console\nand a\nJSON file\nwith more\ndetail.\nWe recommend you\nprofile your code\nbefore writing a benchmark. This helps\nyou find expensive operations that are worth optimizing. It can also show why\nthe operations are slow by showing what is happening while they run, such as\nrunning on a low-priority thread, sleeping due to disk access, or unexpectedly\ncalling into an expensive function, like bitmap decoding.\nMicrobenchmarks are most useful for CPU work that is run many times in your "
+      }
+    ],
+    "first_seen": "2026-11-19",
+    "date_kind": "updated"
+  }
+]

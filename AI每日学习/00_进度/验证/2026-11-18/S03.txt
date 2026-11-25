@@ -1,0 +1,27 @@
+
+          Home
+          Products
+          ML Kit
+          Reference
+    Send feedback
+      Stay organized with collections
+      Save and categorize content based on your preferences.
+GenerateContentResponse
+Kotlin
+|Java
+class GenerateContentResponse
+Represents a response from the model.
+Summary
+Public properties
+            List<Candidate>
+candidates
+a non-empty list of possible responses generated from the model
+            List<Candidate>
+thoughtProcess
+Public properties
+candidates
+val candidates: List<Candidate>
+a non-empty list of possible responses generated from the model
+thoughtProcess
+val thoughtProcess: List<Candidate>
+    Send feedback

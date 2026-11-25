@@ -1,0 +1,80 @@
+[
+  {
+    "id": "genai-overview",
+    "type": "TOOL",
+    "url": "https://developers.google.com/ml-kit/genai",
+    "http": "200",
+    "effective_url": "https://developers.google.com/ml-kit/genai",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:02:11.325226+08:00",
+    "bytes": 105750,
+    "sha256": "d7f16f91eef08ef100424107a0cf61dcb111afe7be67915c043277f21939406b",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/genai-overview.raw"
+  },
+  {
+    "id": "prompt-android",
+    "type": "TOOL",
+    "url": "https://developers.google.com/ml-kit/genai/prompt/android",
+    "http": "200",
+    "effective_url": "https://developers.google.com/ml-kit/genai/prompt/android",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:02:11.421041+08:00",
+    "bytes": 98885,
+    "sha256": "f53b23e027fd9a45e985ef3584bd4f12a573440d3dd63b61b74984da64417127",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/prompt-android.raw"
+  },
+  {
+    "id": "google-feed",
+    "type": "TOOL",
+    "url": "https://developers.googleblog.com/feeds/posts/default",
+    "http": "200",
+    "effective_url": "https://developers.googleblog.com/feeds/posts/default/",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:02:11.750888+08:00",
+    "bytes": 16327,
+    "sha256": "c0b527dad69fa982f41eec7ab9446af7c795928ca26e0a0dcce3ffa678308348",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/google-feed.raw"
+  },
+  {
+    "id": "jobs-query",
+    "type": "TOOL",
+    "url": "https://careers.tencent.com/tencentcareer/api/post/Query?keyword=Android&pageIndex=1&pageSize=10",
+    "http": "200",
+    "effective_url": "https://careers.tencent.com/tencentcareer/api/post/Query?keyword=Android&pageIndex=1&pageSize=10",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:02:10.819368+08:00",
+    "bytes": 9991,
+    "sha256": "6fcae6bc196b53fd704e43935c737ea66d44c984cf5612b1ebfab9ee9d857131",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/jobs-query.raw"
+  },
+  {
+    "id": "gallery-api",
+    "type": "TOOL",
+    "url": "https://api.github.com/repos/google-ai-edge/gallery",
+    "http": "200",
+    "effective_url": "https://api.github.com/repos/google-ai-edge/gallery",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:02:11.225514+08:00",
+    "bytes": 6797,
+    "sha256": "507ce443097b2c988247d052076aff1495ded33833dcb6d21b3f88373498274a",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/gallery-api.raw"
+  },
+  {
+    "id": "gallery-readme",
+    "type": "TOOL",
+    "url": "https://raw.githubusercontent.com/google-ai-edge/gallery/main/README.md",
+    "http": "200",
+    "effective_url": "https://raw.githubusercontent.com/google-ai-edge/gallery/main/README.md",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:02:10.921930+08:00",
+    "bytes": 7816,
+    "sha256": "ce1eb6e5bc61b3bf3574e6526163deddab32b55e04509b4a60b55b229030673e",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/gallery-readme.raw"
+  }
+]

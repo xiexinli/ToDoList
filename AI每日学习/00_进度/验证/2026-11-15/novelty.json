@@ -1,0 +1,80 @@
+{
+  "observed_at": "2026-11-15T08:04:17.485545",
+  "old_lessons": 17,
+  "keyword_scan": [
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-10-29-Token与上下文窗口.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-10-30-消息结构与多轮历史管理.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-10-31-采样参数与可控生成.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-01-流式输出.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-02-少样本提示.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-03-思维链与推理预算.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-04-结构化输出.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-05-FunctionCalling与工具调用.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-06-文本切片（Chunking）.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-07-向量化与向量检索（Embedding & 相似度）.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-08-重排（Rerank）.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-09-引用与防幻觉（Citations与Grounding）.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-10-RAG评估（Evaluation）.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-11-Agent循环（ReAct）.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-12-多轮记忆（Memory）.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-13-规划与任务分解（Planning）.md",
+      "hits": []
+    },
+    {
+      "file": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-14-Agent工程化（可观测与护栏）.md",
+      "hits": []
+    }
+  ],
+  "nearby_read": {
+    "11-12": "第1节三层上下文记忆；第2节内存facts与摘要，无流程步骤持久化/重启恢复",
+    "11-13": "第1节Planner/Executor；第2节内存plan/messages/trace，无检查点；for...else只追加兜底指令",
+    "11-14": "第1节trace/retry/HITL；第2节内存TRACE及审批计数器，无新进程续跑"
+  },
+  "decision": "01_地基地基工程化补充：可恢复工作流（Checkpoint），11-16 Android计划保持不变"
+}

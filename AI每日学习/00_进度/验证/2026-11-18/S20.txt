@@ -1,0 +1,196 @@
+
+          Android Developers
+          Develop
+          API reference
+      Stay organized with collections
+      Save and categorize content based on your preferences.
+collectAsStateWithLifecycle
+    Common/All
+Functions summary
+              State<T>
+@Composable
+<T : Any?> Flow<T>.collectAsStateWithLifecycle(
+    initialValue: T,
+    lifecycle: Lifecycle,
+    minActiveState: Lifecycle.State,
+    context: CoroutineContext
+)
+Collects values from this Flow and represents its latest value via State in a lifecycle-aware manner.
+Cmn
+              State<T>
+@Composable
+<T : Any?> Flow<T>.collectAsStateWithLifecycle(
+    initialValue: T,
+    lifecycleOwner: LifecycleOwner,
+    minActiveState: Lifecycle.State,
+    context: CoroutineContext
+)
+Collects values from this Flow and represents its latest value via State in a lifecycle-aware manner.
+Cmn
+              State<T>
+@Composable
+<T : Any?> StateFlow<T>.collectAsStateWithLifecycle(
+    lifecycle: Lifecycle,
+    minActiveState: Lifecycle.State,
+    context: CoroutineContext
+)
+Collects values from this StateFlow and represents its latest value via State in a lifecycle-aware manner.
+Cmn
+              State<T>
+@Composable
+<T : Any?> StateFlow<T>.collectAsStateWithLifecycle(
+    lifecycleOwner: LifecycleOwner,
+    minActiveState: Lifecycle.State,
+    context: CoroutineContext
+)
+Collects values from this StateFlow and represents its latest value via State in a lifecycle-aware manner.
+Cmn
+Functions
+Flow.collectAsStateWithLifecycle
+Cmn
+Artifact: androidx.lifecycle:lifecycle-runtime-compose
+View Source
+Added in 2.10.0
+@Composable
+fun <T : Any?> Flow<T>.collectAsStateWithLifecycle(
+    initialValue: T,
+    lifecycle: Lifecycle,
+    minActiveState: Lifecycle.State = Lifecycle.State.STARTED,
+    context: CoroutineContext = EmptyCoroutineContext
+): State<T>
+Collects values from this Flow and represents its latest value via State in a lifecycle-aware manner.
+Every time there would be new value posted into the Flow the returned State will be updated causing recomposition of every State.value usage whenever the lifecycle is at least minActiveState.
+This Flow is collected every time lifecycle reaches the minActiveState Lifecycle state. The collection stops when lifecycle falls below minActiveState.
+import androidx.compose.material.Text
+import androidx.compose.runtime.remember
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+class ExampleState {
+    val counter = flow {
+        var count = 0
+        while (true) {
+            emit(count++)
+            delay(1000)
+        }
+    }
+}
+val state = remember { ExampleState() }
+val count by state.counter.collectAsStateWithLifecycle(initialValue = 0)
+Text(text = "$count")
+Warning: Lifecycle.State.INITIALIZED is not allowed in this API. Passing it as a parameter will throw an IllegalArgumentException.
+              Parameters
+              initialValue: T
+The initial value given to the returned State.value.
+              lifecycle: Lifecycle
+Lifecycle used to restart collecting this flow.
+              minActiveState: Lifecycle.State = Lifecycle.State.STARTED
+Lifecycle.State in which the upstream flow gets collected. The collection will stop if the lifecycle falls below that state, and will restart if it's in that state again.
+              context: CoroutineContext = EmptyCoroutineContext
+CoroutineContext to use for collecting.
+Flow.collectAsStateWithLifecycle
+Cmn
+Artifact: androidx.lifecycle:lifecycle-runtime-compose
+View Source
+Added in 2.10.0
+@Composable
+fun <T : Any?> Flow<T>.collectAsStateWithLifecycle(
+    initialValue: T,
+    lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current,
+    minActiveState: Lifecycle.State = Lifecycle.State.STARTED,
+    context: CoroutineContext = EmptyCoroutineContext
+): State<T>
+Collects values from this Flow and represents its latest value via State in a lifecycle-aware manner.
+Every time there would be new value posted into the Flow the returned State will be updated causing recomposition of every State.value usage whenever the lifecycleOwner's lifecycle is at least minActiveState.
+This Flow is collected every time the lifecycleOwner's lifecycle reaches the minActiveState Lifecycle state. The collection stops when the lifecycleOwner's lifecycle falls below minActiveState.
+import androidx.compose.material.Text
+import androidx.compose.runtime.remember
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+class ExampleState {
+    val counter = flow {
+        var count = 0
+        while (true) {
+            emit(count++)
+            delay(1000)
+        }
+    }
+}
+val state = remember { ExampleState() }
+val count by state.counter.collectAsStateWithLifecycle(initialValue = 0)
+Text(text = "$count")
+Warning: Lifecycle.State.INITIALIZED is not allowed in this API. Passing it as a parameter will throw an IllegalArgumentException.
+              Parameters
+              initialValue: T
+The initial value given to the returned State.value.
+              lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current
+LifecycleOwner whose lifecycle is used to restart collecting this flow.
+              minActiveState: Lifecycle.State = Lifecycle.State.STARTED
+Lifecycle.State in which the upstream flow gets collected. The collection will stop if the lifecycle falls below that state, and will restart if it's in that state again.
+              context: CoroutineContext = EmptyCoroutineContext
+CoroutineContext to use for collecting.
+StateFlow.collectAsStateWithLifecycle
+Cmn
+Artifact: androidx.lifecycle:lifecycle-runtime-compose
+View Source
+Added in 2.10.0
+@Composable
+fun <T : Any?> StateFlow<T>.collectAsStateWithLifecycle(
+    lifecycle: Lifecycle,
+    minActiveState: Lifecycle.State = Lifecycle.State.STARTED,
+    context: CoroutineContext = EmptyCoroutineContext
+): State<T>
+Collects values from this StateFlow and represents its latest value via State in a lifecycle-aware manner.
+The StateFlow.value is used as an initial value. Every time there would be new value posted into the StateFlow the returned State will be updated causing recomposition of every State.value usage whenever the lifecycle is at least minActiveState.
+This StateFlow is collected every time lifecycle reaches the minActiveState Lifecycle state. The collection stops when lifecycle falls below minActiveState.
+import androidx.compose.material.Text
+import androidx.compose.runtime.remember
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+class ExampleState {
+    private val _uiState = MutableStateFlow("")
+    val uiState: StateFlow<String> = _uiState.asStateFlow()
+}
+val state = remember { ExampleState() }
+val uiState by state.uiState.collectAsStateWithLifecycle()
+Text(text = uiState)
+Warning: Lifecycle.State.INITIALIZED is not allowed in this API. Passing it as a parameter will throw an IllegalArgumentException.
+              Parameters
+              lifecycle: Lifecycle
+Lifecycle used to restart collecting this flow.
+              minActiveState: Lifecycle.State = Lifecycle.State.STARTED
+Lifecycle.State in which the upstream flow gets collected. The collection will stop if the lifecycle falls below that state, and will restart if it's in that state again.
+              context: CoroutineContext = EmptyCoroutineContext
+CoroutineContext to use for collecting.
+StateFlow.collectAsStateWithLifecycle
+Cmn
+Artifact: androidx.lifecycle:lifecycle-runtime-compose
+View Source
+Added in 2.10.0
+@Composable
+fun <T : Any?> StateFlow<T>.collectAsStateWithLifecycle(
+    lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current,
+    minActiveState: Lifecycle.State = Lifecycle.State.STARTED,
+    context: CoroutineContext = EmptyCoroutineContext
+): State<T>
+Collects values from this StateFlow and represents its latest value via State in a lifecycle-aware manner.
+The StateFlow.value is used as an initial value. Every time there would be new value posted into the StateFlow the returned State will be updated causing recomposition of every State.value usage whenever the lifecycleOwner's lifecycle is at least minActiveState.
+This StateFlow is collected every time the lifecycleOwner's lifecycle reaches the minActiveState Lifecycle state. The collection stops when the lifecycleOwner's lifecycle falls below minActiveState.
+import androidx.compose.material.Text
+import androidx.compose.runtime.remember
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+class ExampleState {
+    private val _uiState = MutableStateFlow("")
+    val uiState: StateFlow<String> = _uiState.asStateFlow()
+}
+val state = remember { ExampleState() }
+val uiState by state.uiState.collectAsStateWithLifecycle()
+Text(text = uiState)
+Warning: Lifecycle.State.INITIALIZED is not allowed in this API. Passing it as a parameter will throw an IllegalArgumentException.
+              Parameters
+              lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current
+LifecycleOwner whose lifecycle is used to restart collecting this flow.
+              minActiveState: Lifecycle.State = Lifecycle.State.STARTED
+Lifecycle.State in which the upstream flow gets collected. The collection will stop if the lifecycle falls below that state, and will restart if it's in that state again.
+              context: CoroutineContext = EmptyCoroutineContext
+CoroutineContext to use for collecting.

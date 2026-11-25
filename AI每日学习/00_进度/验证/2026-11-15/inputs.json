@@ -1,0 +1,86 @@
+{
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md": {
+    "sha256": "7125e119c943cf1db1f5e4b7b312c50865713aa6766b670290f87344def6a818",
+    "bytes": 15550
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/智能体规则.md": {
+    "sha256": "d1388a03685953aad78b236c949f92cbc2afed49881522e1e5d15d63461a1bb4",
+    "bytes": 5802
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-10-29-Token与上下文窗口.md": {
+    "sha256": "27652bd9d78d373fcac1c0e49045776eb049525126220dee4327392da93371ae",
+    "bytes": 15652
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-10-30-消息结构与多轮历史管理.md": {
+    "sha256": "ae810657c144d2610561ee7174462360702eea1dcca7109bf5325f158be3f105",
+    "bytes": 18679
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-10-31-采样参数与可控生成.md": {
+    "sha256": "1e9bdfaed7a1c375b8c889eb21e305d007d78006c607e38f5c18c6f19b82c9a4",
+    "bytes": 14030
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-01-流式输出.md": {
+    "sha256": "56479d36a612574b460391f899fc6a20aca0e24086dab3176736cbf209968424",
+    "bytes": 14658
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-02-少样本提示.md": {
+    "sha256": "3615826ffb3068ec8fb3618506682387b2979f086fccde743cce317e5e87bd1d",
+    "bytes": 15809
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-03-思维链与推理预算.md": {
+    "sha256": "ce012850556c7bb524bca9a2627350542d4a10f5e485d81d5255ecd1e6bfb2bc",
+    "bytes": 15392
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-04-结构化输出.md": {
+    "sha256": "1215d7f49ef5565fe3a4906a50dc46a26a671d5d7501c6f7db6b0bd657781d4b",
+    "bytes": 17528
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-05-FunctionCalling与工具调用.md": {
+    "sha256": "68559e3e00cf21a896b8e4748e350bd1089000458fb3b0dc6233ac1921048128",
+    "bytes": 20112
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-06-文本切片（Chunking）.md": {
+    "sha256": "29c37b475c64b301bc3358ae17510ae2ec07d54bfd018919dbc61c74cb946a32",
+    "bytes": 19780
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-07-向量化与向量检索（Embedding & 相似度）.md": {
+    "sha256": "0f683ecd092b02661e90bc2f0b51b54bdf92cd66a4153990610a912a7f350c2c",
+    "bytes": 15793
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-08-重排（Rerank）.md": {
+    "sha256": "1e512b493b9d5adad25a84865a78d7587742d68fa3dc8b5ab74fc405194e48df",
+    "bytes": 16703
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-09-引用与防幻觉（Citations与Grounding）.md": {
+    "sha256": "0e36a116416925cc8a637882778b20033f3602410657c1507a992d0a5afe8730",
+    "bytes": 17968
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-10-RAG评估（Evaluation）.md": {
+    "sha256": "2e47579bbabdd212faf2470695f0ad369fe9dd9997befeaef63ff7299e445762",
+    "bytes": 27169
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-11-Agent循环（ReAct）.md": {
+    "sha256": "3f8bee03f1aa681cbde669717c68024967eb9957ef42cdba8fe61fae1b597e34",
+    "bytes": 25521
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-12-多轮记忆（Memory）.md": {
+    "sha256": "7b2a5c2800908e2c577755ea0789c2f07a7c531f639077e39ca427d2722f24ee",
+    "bytes": 17545
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-13-规划与任务分解（Planning）.md": {
+    "sha256": "605f257daa01ceac3e281f677728dc3a2279ef17641d1cb027818ff32500d3f4",
+    "bytes": 18856
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-14-Agent工程化（可观测与护栏）.md": {
+    "sha256": "33b25ad6ac3d18bc59605a6953da195120ddb2c4c09e3b7c8240223d9b937498",
+    "bytes": 19924
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/04_周总结/2026-W44.md": {
+    "sha256": "a7d1acb0b61cf468178440a6d3ce32d6c61209e38f1872ef9bf6b29d2c62fee2",
+    "bytes": 5394
+  },
+  "/Users/alion/DemoProjects/ToDoList/AI每日学习/04_周总结/2026-W45.md": {
+    "sha256": "5a1365641f4319ecf61de7727537e40e12f6552d6f586ef0dd82dfb2501a9884",
+    "bytes": 7632
+  }
+}

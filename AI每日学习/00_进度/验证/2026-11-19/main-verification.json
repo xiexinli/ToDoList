@@ -1,0 +1,113 @@
+{
+  "observed_at": "2026-11-19T08:18:44.649548+08:00",
+  "checks": {
+    "今日唯一日材料": "PASS",
+    "日材料0至5章节": "PASS",
+    "复述留空": "PASS",
+    "计划120分钟": "PASS",
+    "主题新增1行累计22": "PASS",
+    "新增主题对应文件": "PASS",
+    "今日计划勾选": "PASS",
+    "旧台账非空行保留": "PASS",
+    "哈希 2026-11-19-端侧生成的性能测量：首字时延与完整耗时.md": "PASS",
+    "哈希 进度.md": "PASS",
+    "哈希 ledger.before.md": "PASS",
+    "哈希 ledger.diff": "PASS",
+    "哈希 sources.json": "PASS",
+    "哈希 latency_meter.py": "PASS",
+    "哈希 test_latency_meter.py": "PASS",
+    "哈希 NanoLatencyProbe.kt": "PASS",
+    "哈希 host.log": "PASS",
+    "哈希 tests.log": "PASS",
+    "哈希 summary-draft.md": "PASS",
+    "哈希 selfcheck.json": "PASS",
+    "输入未变 智能体规则.md": "PASS",
+    "输入未变 2026-11-18-端侧流式生成的Compose增量呈现.md": "PASS",
+    "主代码与文档一致": "PASS",
+    "Kotlin与文档一致": "PASS",
+    "独立复跑26测试方法": "PASS",
+    "全部引用登记": "PASS",
+    "12项引用证据对应": "PASS",
+    "动态限量1加1加1": "PASS",
+    "4条来源抽验200": "PASS"
+  },
+  "source_checks": [
+    {
+      "id": "S01",
+      "url": "https://developer.android.com/reference/android/os/SystemClock",
+      "exit": 0,
+      "http": "200",
+      "observed_at": "2026-11-19T08:17:55.281855+08:00",
+      "dates": [],
+      "excerpt": [
+        " the interval does not span device sleep. Most methods that accept a timestamp value currently expect the uptimeMillis() clock. elapsedRealtime() and elapsedRealtimeNanos() return the time since the system was booted, and include deep sleep. This clock is guaranteed to be monotonic, and continues to tick even when the CPU is in power saving modes, so is the recommend basis for general purpose interval timing. There are several mechanisms for controlling the timing of events: Standard functions like Thread.sleep(millis) and Object.wait(millis) are always available. These functions use the uptimeMillis() clock; if the device enters sleep, the remainder of the time will be postponed until the device wakes up. These synchronous functions may be interrupted with Thread.interrupt() , and you must handle InterruptedException . SystemClock.sleep(millis) is a utility function very similar to Thread.sleep(millis) , but it ignores InterruptedException . Use this function for delays if you do not use Thread.interrupt() , as it will preserve the i",
+        "sts to find out when the time changes. uptimeMillis() is counted in milliseconds since the system was booted. This clock stops when the system enters deep sleep (CPU off, display dark, device waiting for external input), but is not affected by clock scaling, idle, or other power saving mechanisms. This is the basis for most interval timing such as Thread.sleep(millis) , Object.wait(millis) , and System.nanoTime() . This clock is guaranteed to be monotonic, and is suitable for interval timing when the interval does not span device sleep. Most methods that accept a timestamp value currently expect the uptimeMillis() clock. elapsedRealtime() and elapsedRealtimeNanos() return the time since the system was booted, and include deep sleep. This clock is guaranteed to be monotonic, and continues to tick even when the CPU is in power saving modes, so is the recommend basis for general purpose interval timing. There are several mechanisms for controlling the timing of events: Standard functions like Thread.sleep(millis) and Object.wait(millis) "
+      ]
+    },
+    {
+      "id": "S02",
+      "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+      "exit": 0,
+      "http": "200",
+      "observed_at": "2026-11-19T08:17:54.099466+08:00",
+      "dates": [],
+      "excerpt": [
+        "ingCallback: StreamingCallback ) Performs streaming content generation inference on the provided input request. open Flow < GenerateContentResponse > generateContentStream (prompt: String ) Performs streaming content generation inference on the provided input prompt. Flow < GenerateContentResponse > generateContentStream (request: GenerateContentRequest ) Performs streaming content generation inference on the provided input request. suspend List < Int > getAvailableFeatures () Returns the list of features (capabilities) available for this model. suspend String getBaseModelName () Returns the name of the base model used by this generator instance. suspend Int getTokenLimit () Returns total token limit for the API including both input and output tokens. suspend Boolean isCachingFeatureAvailable () This function is deprecated. Use getAvailableFeatures() instead. suspend Boolean isStructuredOutputFeatureAvailable () This function is deprecated. Use getAvailableFeatures() instead. suspend Boolean isSystemPromptAvailable () This function is",
+        " GenerationConfig.Builder ImagePart ModelConfig ModelConfig.Builder Part PromptPrefix SystemInstruction TextPart TypedCandidate Annotations Candidate.FinishReason Content.Role Feature ModelPreference ModelReleaseStage TypedCandidate.TypedFinishReason Objects Generation com.google.mlkit.genai.prompt.java (Kotlin) Overview Classes CachesFutures GenerativeModelFutures com.google.mlkit.genai.prompt (Java) Overview Interfaces Caches GenerativeModel Classes CachedContext Candidate Content Content.Builder Content.Companion ContentKt CountTokensResponse CreateCachedContextRequest CreateCachedContextRequest.Builder CreateCachedContextRequestKt FunctionCallPart FunctionCallPart.Companion FunctionResponsePart FunctionResponsePart.Companion GenerateContentRequest GenerateContentRequest.Builder GenerateContentRequest.Companion GenerateContentRequestKt GenerateContentResponse GenerateTypedContentRequest GenerateTypedContentRequest.Builder GenerateTypedContentRequest.Companion GenerateTypedContentRequestKt GenerateTypedContentResponse Generation Gen"
+      ]
+    },
+    {
+      "id": "N01",
+      "url": "https://developers.googleblog.com/agents-are-sessions-not-requests-size-gke-node-pools-for-ai-agent-sessions/",
+      "exit": 0,
+      "http": "200",
+      "observed_at": "2026-11-19T08:17:53.762927+08:00",
+      "dates": [
+        "2026-11-16"
+      ],
+      "excerpt": [
+        " CPU and slow down when their neighbors are busy, during builds and tests. Compare like with like before you decide to park: Pods and actors with the same CPU guarantee. Get started today Back to the shared cluster. Agents are sessions, not requests: size the warm pool for the sessions that hold a worker, not the sessions that are open. We would park long lived sessions that wait most of the hour, and keep one Pod per session when developers prompt more than about 4 times an hour. Size the warm pool for working time plus a short idle timeout at your busiest hour, and compare with your current Pods at the same CPU guarantee before you park. Take a week of prompts an hour from your gateway logs, and compare your busiest hour with the roughly 4 prompts an hour where parking stops paying. Install Agent Substrate 1.0 on a GKE cluster with the Agent Substrate on GKE guide . Read the Agent Substrate documentation . Follow the AX repository . AX is in active development ahead of its first stable release, and the team welcomes your feedback an",
+        " Agents are sessions, not requests: size GKE node pools for AI agent sessions - Google Developers Blog Community/Events Learn Blog YouTube Search Community/Events Learn Blog YouTube Agents are sessions, not requests: size GKE node pools for AI agent sessions NOV. 16, 2026 Drake Williams Senior Product Manager Google Cloud Ivan Nardini AI Developer Relations Share Facebook Twitter LinkedIn Mail Sorry, your browser doesn't support playback for this video Your company wants to move its coding agents from developer laptops to a shared GKE cluster, for persistence, scale, and governance. Each of those agent sessions stays open all day but works only part of it, and how you run them decides how much of your node bill pays for waiting. By the end of this article, you will know why an agent session needs a different runtime than a web request, how Agent Substrate and AX run sessions on GKE, and how to ident",
+        " Agents are sessions, not requests: size GKE node pools for AI agent sessions - Google Developers Blog Community/Events Learn Blog YouTube Search Community/Events Learn Blog YouTube Agents are sessions, not requests: size GKE node pools for AI agent sessions NOV. 16, 2026 Drake Williams Senior Product Manager Google Cloud Ivan Nardini AI Developer Relations Share Facebook Twitter LinkedIn Mail Sorry, your browser doesn't support playback for this video Your company wants to move its coding agents from developer laptops to a shared GKE cluster, for persistence, scale, and governance. Each of those agent sessions stays open all day but works only part of it, and how you run them decides how much of your node bill pays for waiting. By the end of this article, you will know why an agent session needs a different runtime than a web request, how Agent Substrate and AX run sessions on GKE, and how to identify cost optim"
+      ]
+    },
+    {
+      "id": "J01",
+      "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2013848487359307776",
+      "exit": 0,
+      "http": "200",
+      "observed_at": "2026-11-19T08:17:52.108949+08:00",
+      "excerpt": {
+        "RecruitPostName": "CPU架构与性能优化架构师",
+        "LastUpdateTime": "2026年10月26日",
+        "Responsibility": "1.工作负载分析与性能建模；深入分析Agent编排、工具调用、代码执行、沙箱、RL环境及推理主机等场景的关键路径与资源需求；建立CPU、缓存、内存、网络和存储的资源画像，识别计算、访存、调度、虚拟化及I/O瓶颈；将业务SLO、任务吞吐和并发需求转化为可量化的硬件与系统设计要求；\n2.CPU及服务器平台架构设计；评估不同CPU架构、代际和平台的适用性，制定场景化选型及配置方案；分析单线程性能、多核扩展性、SMT、缓存、NUMA、内存容量与带宽、PCIe及网络拓扑对业务的影响；参与CPU执行资源池与加速器主机的配置规划，支持平台演进及容量建设决策；\n3.跨层性能定位与优化：利用性能计数器、系统跟踪和实验对照，定位CPU微架构、内核、虚拟化及应用运行时相关问题；推进绑核、内存放置、线程模型、调度、缺页处理、数据搬运及相关配置优化；与BIOS、内核、虚拟化和业务团队协作，将优化成果落地到实际环境并完成回归验证；\n4.Benchmark与自动化评测体系建设：建立覆盖微基准、组件测试及端到端任务的评测体系，形成可复现、可比较的性能基线；建设跨平台、跨版本的自动化测试及回归能力，分析性能波动与退化原因；同时评估吞吐、P95/P99延迟、任务成功率、资源占用和能效，避免以单一跑分替代业务效果；\n5.容量、能效与成本优化：建立满足质量、隔离和延迟要求的单机容量模型，评估并发密度与资源池配比；分析单位有效任务成本、CPU资源消耗、内存占用和功耗，支持扩容、采购及配置优化；通过试点或生产数据验证收益，明确适用边界、上线风险及回退方案；\n6.技术路线与跨团队协同；跟踪CPU、内存、互连及硬件加速技术，将实际瓶颈转化为下一代平台需求；与芯片厂商、服务器厂商及内部研发团队开展联合分析和方案验证；沉淀架构规范、性能方法和最佳实践，提升团队的问题定位与工程交付能力。",
+        "Requirement": "1.具备扎实的计算机体系结构基础，熟悉至少一种主流服务器CPU架构，理解流水线、分支预测、缓存层次、缓存一致性、内存访问及NUMA等机制，能够分析其对实际负载的影响；\n2.具备Linux系统性能分析能力，理解进程与线程调度、虚拟内存、缺页、同步机制及I/O路径；能够使用perf、eBPF、ftrace、Intel VTune、PCM或同类工具中的一种或多种开展分析；\n3.具备复杂性能问题的定位与落地经验，能够完成“指标异常—提出假设—设计实验—定位根因—优化验证—回归交付”的完整过程，而不止于采集指标或调整参数；\n4.具备基准测试与实验设计能力，能控制软件版本、数据集、并发、预热、频率及系统配置等变量，理解尾延迟、测试噪声、重复性和对照实验的重要性；\n5.具备必要的软件工程能力，熟练使用C/C++、Python、Go等至少一种语言，能够开发测试工具、分析脚本或系统组件，并阅读相关实现代码；\n6.具备系统架构判断与协作能力，能在性能、成本、可靠性、兼容性及工程复杂度之间进行权衡，并推动跨硬件、固件、系统软件和业务团队的方案落地。"
+      }
+    }
+  ],
+  "android_compile": "NOT_EXECUTED",
+  "nano_performance": "NOT_EXECUTED",
+  "screen_first_text": "NOT_EXECUTED",
+  "model_usage": "NOT_MEASURED",
+  "feishu": "not_sent",
+  "message": {
+    "id": "om_x100b60d04b8f48a4c1fef333fe3fc58",
+    "bot": "organization",
+    "chat": "me",
+    "submitted": true,
+    "queryable": true,
+    "create_time": "2026-11-19 08:18"
+  },
+  "status": "DONE",
+  "scope": "今日材料/台账/Host合成测试/来源核验/摘要提交，不包含Android真机性能或旧课全面验收",
+  "artifacts": [
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-19-端侧生成的性能测量：首字时延与完整耗时.md",
+      "sha256": "db8372f0d41360e2d82e2afb157af75045813102c81ad0f9046e2ed8db9aac9a"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md",
+      "sha256": "c16c58ae7dffe1b3c959f8d8dd18afebd9357f152a5a8d3f63fe0739b9cc5d83"
+    }
+  ]
+}

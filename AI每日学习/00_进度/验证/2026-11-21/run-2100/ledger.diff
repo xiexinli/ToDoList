@@ -1,0 +1,34 @@
+--- ledger.before
++++ ledger.after
+@@ -29,6 +29,8 @@
+ | 2026-11-19 | 02_AndroidAI · 第 4 讲 | 端侧生成的性能测量：首字时延与完整耗时 | 02_AndroidAI/2026-11-19-端侧生成的性能测量：首字时延与完整耗时.md | 待填 |
+ 
+ | 2026-11-20 | 02_AndroidAI · 第 5 讲 | 端侧生成失败后的重试预算：什么时候不该再试 | 02_AndroidAI/2026-11-20-端侧生成失败后的重试预算：什么时候不该再试.md | 待填 |
++
++| 2026-11-21 | 02_AndroidAI · 第 6 讲 | 端云降级的显式路由与隐私授权（续） | 02_AndroidAI/2026-11-21-端云降级的显式路由与隐私授权（续）.md | 待填 |
+ 
+ 
+ > 欠产与补写记录：2026-10-31 ~ 2026-11-04 因「本机终端审批超时」连续 6 天未落盘；2026-11-05 17:32 用户在 DHwork 权限设置中放行无人值守终端审批后，上述 5 天材料与 2026-W44 周总结已统一补全。
+@@ -66,6 +68,8 @@
+ - [x] Android × AI · 第 4 讲：端侧生成的性能测量：首字时延与完整耗时（2026-11-19 材料已产出；Host合成时序26项通过，不是Nano性能；Android编译/真机NOT_EXECUTED；复述待填）
+ 
+ - [x] Android × AI · 第 5 讲：端侧生成失败后的重试预算：什么时候不该再试（2026-11-20 材料已产出；EXECUTED_HOST纯策略fixture通过，SDK/设备/云模型NOT_EXECUTED；复述待填）
++
++- [x] Android × AI · 第 6 讲：端云降级的显式路由与隐私授权（续）（2026-11-21 材料已产出；EXECUTED_HOST纯策略fixture通过，SDK/设备/云模型NOT_EXECUTED；复述待填）
+ 
+ ## 动态链接去重表
+ | 首次出现日期 | 标题 | 链接 |
+@@ -203,6 +207,13 @@
+ 
+ > 2026-11-20 补写于2026-11-21；来源小摘录与本轮HTTP抽验：`验证/2026-11-20/run-2100/sources-small.json`；代码与Host日志同目录；本执行者摘要not_sent，由主智能体验收后提交。
+ 
++| 2026-11-21 | 动态｜Semantic governance执行前检查 | https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/ |
++| 2026-11-21 | 岗位｜搜狗输入法Android开发专家 | https://careers.tencent.com/jobdesc.html?postId=2092146384655532032 |
++| 2026-11-21 | 岗位证据｜Android开发专家详情API | https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2092146384655532032 |
++| 2026-11-21 | 工具｜Presidio社区现文档 | https://data-privacy-stack.github.io/presidio/ |
++
++> 2026-11-21 补写于2026-11-21；来源小摘录与本轮HTTP抽验：`验证/2026-11-21/run-2100/sources-small.json`；代码与Host日志同目录；本执行者摘要not_sent，由主智能体验收后提交。 教学参考续用（非新动态）：[教学参考｜端侧本地数据处理](https://developers.google.com/ml-kit/genai)。
++
+ ## 周总结
+ | 周次 | 覆盖日期 | 文件 |
+ |---|---|---|

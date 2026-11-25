@@ -1,0 +1,351 @@
+[
+  {
+    "id": "S01",
+    "type": "TOOL",
+    "title": "Kotlin errors",
+    "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/GenAiException.ErrorCode",
+    "canonical": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/GenAiException.ErrorCode",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T13:04:33.441875+08:00",
+    "raw_sha256": "6ae585703eca94bacafe4d8e6e79031052a1aa6676cafeb0eacf437b1756bcb4",
+    "dates": [
+      [
+        "",
+        "2026-07-15"
+      ],
+      [
+        "",
+        "2026-07-15"
+      ]
+    ],
+    "read_status": "BODY_READ",
+    "dedup": "FIRST_SEEN",
+    "locator": [
+      "BUSY const",
+      "CANCELLED const",
+      "RESPONSE_GENERATION_ERROR const",
+      "RESPONSE_PROCESSING_ERROR const"
+    ],
+    "excerpts": [
+      "{'AICORE_INCOMPATIBLE': '-101', 'AUDIO_BUFFER_OVERFLOW': '-107', 'BACKGROUND_USE_BLOCKED': '30', 'BUSY': '9', 'CACHE_PROCESSING_ERROR': '-103', 'CANCELLED': '7', 'INVALID_INPUT_IMAGE': '-102', 'NEEDS_SYSTEM_UPDATE': '604', 'NOT_AVAILABLE': '8', 'NOT_ENOUGH_DISK_SPACE': '501', 'NOT_SUPPORTED': '16', 'PER_APP_BATTERY_USE_QUOTA_EXCEEDED': '27', 'REQUEST_PROCESSING_ERROR': '4', 'REQUEST_TOO_LARGE': '12', 'REQUEST_TOO_SMALL': '-100', 'RESPONSE_GENERATION_ERROR': '15', 'RESPONSE_PROCESSING_ERROR': '11', 'STRUCTURED_OUTPUT_MAX_TOKENS_ERROR': '-106', 'STRUCTURED_OUTPUT_REQUEST_ERROR': '-104', 'STRUCTURED_OUTPUT_RESPONSE_ERROR': '-105'}",
+      "ase use the API when your app is in the foreground instead. BUSY const val BUSY = 9: Int The service is currently busy. This is either because your app is out of usage quota (please retry with exponential backoff) or the request is from disallowed background usage (please use the API when your app is in the foreground instead). CACHE_PROCESSING_ERROR const val CACHE_PROCESSING_ERROR = -103: Int Error during cache processing for prompt prefix. CANCELLED const val CANCELLED = 7: Int The request is cancelled. INVALID_INPUT_IMAGE const val INVALID_INPUT_IMAGE = -102: Int Invalid input image. It can be due to invalid image URL, failure to decode to bitmap, invalid mime type or other image processing failures. NEEDS_SYSTEM_UPDATE const val NEEDS_SYSTEM_UPD",
+      " -103: Int Error during cache processing for prompt prefix. CANCELLED const val CANCELLED = 7: Int The request is cancelled. INVALID_INPUT_IMAGE const val INVALID_INPUT_IMAGE = -102: Int Invalid input image. It can be due to invalid image URL, failure to decode to bitmap, invalid mime type or other image processing failures. NEEDS_SYSTEM_UPDATE const val NEEDS_SYSTEM_UPDATE = 604: Int Android version is too low. NOT_AVAILABLE const val NOT_AVAILABLE = 8: Int Feature is not available. NOT_ENOUGH_DISK_SPACE const val NOT_ENOUGH_DISK_SPACE = 501: Int Not enough storage. NOT_SUPPORTED const val NOT_SUPPORTED = 16: Int The functionality is not implemented nor supported by the inference engine. PER_APP_BATTERY_USE_QUOTA_EXCEEDED const val PER_APP_BATTERY_U",
+      "t Request is too small to be processed. Use a longer input. RESPONSE_GENERATION_ERROR const val RESPONSE_GENERATION_ERROR = 15: Int The model cannot generate a response due to request not passing certain policy check. When using streaming mode with a supported API, this error may interrupt output streaming, leading to an incomplete result. Consider removing the result entirely from your app's UI when this occurs. RESPONSE_PROCESSING_ERROR const val RESPONSE_PROCESSING_ERROR = 11: Int Generated response doesn't pass certain policy check. When using streaming mode with a supported API, this error may interrupt output streaming, leading to an incomplete result. Consider removing the result entirely from your app's UI when this occurs. STRUCTURED_OUTPUT_",
+      "ng the result entirely from your app's UI when this occurs. RESPONSE_PROCESSING_ERROR const val RESPONSE_PROCESSING_ERROR = 11: Int Generated response doesn't pass certain policy check. When using streaming mode with a supported API, this error may interrupt output streaming, leading to an incomplete result. Consider removing the result entirely from your app's UI when this occurs. STRUCTURED_OUTPUT_MAX_TOKENS_ERROR const val STRUCTURED_OUTPUT_MAX_TOKENS_ERROR = -106: Int Error during structured output response processing due to reaching max tokens limit. STRUCTURED_OUTPUT_REQUEST_ERROR const val STRUCTURED_OUTPUT_REQUEST_ERROR = -104: Int Error during structured output request generation. STRUCTURED_OUTPUT_RESPONSE_ERROR const val STRUCTURED_OUTPUT_"
+    ]
+  },
+  {
+    "id": "S02",
+    "type": "TOOL",
+    "title": "Java errors",
+    "url": "https://developers.google.com/android/reference/com/google/mlkit/genai/common/GenAiException.ErrorCode",
+    "canonical": "https://developers.google.com/android/reference/com/google/mlkit/genai/common/GenAiException.ErrorCode",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T13:04:33.206341+08:00",
+    "raw_sha256": "9bd7e2ec24b27145e26187bacdd844004527e13ad62bff9cd2cfcca155001c17",
+    "dates": [
+      [
+        "",
+        "2026-10-27"
+      ],
+      [
+        "",
+        "2026-10-27"
+      ]
+    ],
+    "read_status": "BODY_READ",
+    "dedup": "FIRST_SEEN",
+    "locator": [
+      "MAX_TURNS_EXCEEDED Agent",
+      "public static final int BUSY",
+      "Constant Value: -112"
+    ],
+    "excerpts": [
+      "{'AICORE_INCOMPATIBLE': '-101', 'AUDIO_BUFFER_OVERFLOW': '-107', 'BACKGROUND_USE_BLOCKED': '30', 'BUSY': '9', 'CACHE_PROCESSING_ERROR': '-103', 'CANCELLED': '7', 'INVALID_INPUT_IMAGE': '-102', 'MAX_TURNS_EXCEEDED': '-112', 'NEEDS_SYSTEM_UPDATE': '604', 'NOT_AVAILABLE': '8', 'NOT_ENOUGH_DISK_SPACE': '501', 'NOT_SUPPORTED': '16', 'PER_APP_BATTERY_USE_QUOTA_EXCEEDED': '27', 'REQUEST_PROCESSING_ERROR': '4', 'REQUEST_TOO_LARGE': '12', 'REQUEST_TOO_SMALL': '-100', 'RESPONSE_GENERATION_ERROR': '15', 'RESPONSE_PROCESSING_ERROR': '11', 'STRUCTURED_OUTPUT_MAX_TOKENS_ERROR': '-106', 'STRUCTURED_OUTPUT_REQUEST_ERROR': '-104', 'STRUCTURED_OUTPUT_RESPONSE_ERROR': '-105'}",
+      "cancelled. int INVALID_INPUT_IMAGE Invalid input image. int MAX_TURNS_EXCEEDED Agent reached max turns limit without reaching a final response. int NEEDS_SYSTEM_UPDATE Android version is too low. int NOT_AVAILABLE Feature is not available. int NOT_ENOUGH_DISK_SPACE Not enough storage. int NOT_SUPPORTED The functionality is not implemented nor supported by the inference engine. int PER_APP_BATTERY_USE_QUOTA_EXCEEDED A long-duration (for example per-day) quota for the calling app's uid has been exceeded. int REQUEST_PROCESSING_ERROR Request doesn't pass certain policy check. int REQUEST_TOO_LARGE Request is too large to be processed. int REQUEST_TOO_SMALL Request is too small to be processed. int RESPONSE_GENERATION_ERROR The model cannot generate a re",
+      "n your app is in the foreground instead. Constant Value: 30 public static final int BUSY The service is currently busy. This is either because your app is out of usage quota (please retry with exponential backoff) or the request is from disallowed background usage (please use the API when your app is in the foreground instead). Constant Value: 9 public static final int CACHE_PROCESSING_ERROR Error during cache processing for prompt prefix. Constant Value: -103 public static final int CANCELLED The request is cancelled. Constant Value: 7 public static final int INVALID_INPUT_IMAGE Invalid input image. It can be due to invalid image URL, failure to decode to bitmap, invalid mime type or other image processing failures. Constant Value: -102 public stati",
+      " reached max turns limit without reaching a final response. Constant Value: -112 public static final int NEEDS_SYSTEM_UPDATE Android version is too low. Constant Value: 604 public static final int NOT_AVAILABLE Feature is not available. Constant Value: 8 public static final int NOT_ENOUGH_DISK_SPACE Not enough storage. Constant Value: 501 public static final int NOT_SUPPORTED The functionality is not implemented nor supported by the inference engine. Constant Value: 16 public static final int PER_APP_BATTERY_USE_QUOTA_EXCEEDED A long-duration (for example per-day) quota for the calling app's uid has been exceeded. Use of AICore from this app has been restricted to preserve battery. Constant Value: 27 public static final int REQUEST_PROCESSING_ERROR R"
+    ]
+  },
+  {
+    "id": "S03",
+    "type": "TOOL",
+    "title": "Java retryDelay",
+    "url": "https://developers.google.com/android/reference/com/google/mlkit/genai/common/GenAiException",
+    "canonical": "https://developers.google.com/android/reference/com/google/mlkit/genai/common/GenAiException",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T13:04:33.238680+08:00",
+    "raw_sha256": "11042026822a611e8e0d075848a1f2dacb2ecef2956f97ecc7fb59abfdc0ba68",
+    "dates": [
+      [
+        "",
+        "2026-10-27"
+      ],
+      [
+        "",
+        "2026-10-27"
+      ]
+    ],
+    "read_status": "BODY_READ",
+    "dedup": "FIRST_SEEN",
+    "locator": [
+      "getRetryDelay",
+      "For requests to"
+    ],
+    "excerpts": [
+      "etErrorCode () Gets the GenAiException.ErrorCode . Duration getRetryDelay () Returns the Duration to wait before trying again, or Duration.ZERO if not known/not applicable. Inherited Method Summary From class java.lang.Throwable synchronized final void addSuppressed ( Throwable arg0) synchronized Throwable fillInStackTrace () synchronized Throwable getCause () String getLocalizedMessage () String getMessage () StackTraceElement[] getStackTrace () synchronized final Throwable[] getSuppressed () synchronized Throwable initCause ( Throwable arg0) void printStackTrace () void printStackTrace ( PrintWriter arg0) void printStackTrace ( PrintStream arg0) void setStackTrace ( StackTraceElement[] arg0) String toString () From class java.lang.Object Object clo",
+      "trying again, or Duration.ZERO if not known/not applicable. For requests to the ML Kit GenAI API that exceed quota, this is the amount of time to wait before trying the request again. For other requests, this value is Duration.ZERO . Send feedback Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License , and code samples are licensed under the Apache 2.0 License . For details, see the Google Developers Site Policies . Java is a registered trademark of Oracle and/or its affiliates. Last updated 2026-10-27 UTC. Need to tell us more? [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information",
+      "Duration href=['//developer.android.com/reference/java/time/Duration.html', '//developer.android.com/reference/java/time/Duration.html', '//developer.android.com/reference/java/time/Duration.html', '//developer.android.com/reference/java/time/Duration.html']"
+    ]
+  },
+  {
+    "id": "S04",
+    "type": "TOOL",
+    "title": "Kotlin exception",
+    "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/GenAiException",
+    "canonical": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/GenAiException",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T13:04:33.478980+08:00",
+    "raw_sha256": "6691df83bc2e80a16bb0567b9a170feb3233850cc18ac3d3f5cdc5dd07713836",
+    "dates": [
+      [
+        "",
+        "2026-07-15"
+      ],
+      [
+        "",
+        "2026-07-15"
+      ]
+    ],
+    "read_status": "BODY_READ",
+    "dedup": "CONTINUED_TEACHING",
+    "locator": [
+      "Public properties Int",
+      "errorCode : Int"
+    ],
+    "excerpts": [
+      "annotation GenAiException.ErrorCode The set of error codes. Public properties Int @ GenAiException.ErrorCode errorCode Duration retryDelay Inherited functions From java.lang.Throwable synchronized Unit addSuppressed (p: Throwable !) synchronized Throwable ! fillInStackTrace () synchronized Throwable ! getCause () String ! getLocalizedMessage () String ! getMessage () Array < StackTraceElement !>! getStackTrace () synchronized Array < Throwable !>! getSuppressed () synchronized Throwable ! initCause (p: Throwable !) Unit printStackTrace () Unit setStackTrace (p: Array < StackTraceElement !>!) String ! toString () Public properties errorCode @ GenAiException.ErrorCode val errorCode : Int retryDelay val retryDelay : Duration Send feedback Except as othe",
+      " Public properties errorCode @ GenAiException.ErrorCode val errorCode : Int retryDelay val retryDelay : Duration Send feedback Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License , and code samples are licensed under the Apache 2.0 License . For details, see the Google Developers Site Policies . Java is a registered trademark of Oracle and/or its affiliates. Last updated 2026-07-15 UTC. Need to tell us more? [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\"],[\"Other\",\"otherUp\",\"thumb-up\"]],[[\"Missing the information I need\",\"missingTheInformationINeed\",\"thumb-down\"],[\"Too complicated / too many steps\",\"tooComplicatedTooManySteps\",\"thu"
+    ]
+  },
+  {
+    "id": "S05",
+    "type": "TOOL",
+    "title": "Generation cancel close",
+    "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+    "canonical": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T13:04:33.218869+08:00",
+    "raw_sha256": "8ab27d2af96df921f222f61d0313b6893051fa69df3d0e24529a5a47ba890d5f",
+    "dates": [
+      [
+        "",
+        "2026-10-27"
+      ],
+      [
+        "",
+        "2026-10-27"
+      ]
+    ],
+    "read_status": "BODY_READ",
+    "dedup": "CONTINUED_TEACHING",
+    "locator": [
+      "The coroutine that runs generateContent is cancellable",
+      "collecting this flow is cancellable",
+      "close fun close",
+      "safe to call"
+    ],
+    "excerpts": [
+      "rned GenerateContentResponse or a potential GenAiException. The coroutine that runs generateContent is cancellable. If the inference is no longer needed (e.g., the user navigates away or input changes), the coroutine can be cancelled. Note that inference requests may fail under certain conditions such as: Invalid or malformed input in the GenerateContentRequest . Exceeded usage quota or failed safety checks. Parameters request: GenerateContentRequest a non-null GenerateContentRequest containing input content. Returns GenerateContentResponse a GenerateContentResponse containing the generated content. Throws GenAiException if the inference fails. generateContent suspend fun <T : Any > generateContent (request: GenerateTypedContentRequest <T>): Generate",
+      "he same prefix. This method clears all such created caches. close fun close (): Unit Releases resources associated with the content generation engine. This should be called when the GenerativeModel is no longer needed. Can be safely called multiple times. countTokens suspend fun countTokens (request: GenerateContentRequest ): CountTokensResponse Counts the number of tokens in the request. The number of tokens counted includes only input request tokens. The result can be compared with getTokenLimit to check if the request is within the token limit. Parameters request: GenerateContentRequest a non-null GenerateContentRequest containing input content. Returns CountTokensResponse a CountTokensResponse containing the number of tokens in the request. count"
+    ]
+  },
+  {
+    "id": "S06",
+    "type": "TOOL",
+    "title": "GenAI foreground quota",
+    "url": "https://developers.google.com/ml-kit/genai",
+    "canonical": "https://developers.google.com/ml-kit/genai",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T13:04:33.135174+08:00",
+    "raw_sha256": "4703d89f48bd1f18e11585c3e1d26086fec465a0d859842c83c55bf1c37699ce",
+    "dates": [
+      [
+        "",
+        "2026-11-10"
+      ],
+      [
+        "",
+        "2026-11-10"
+      ]
+    ],
+    "read_status": "BODY_READ",
+    "dedup": "CONTINUED_TEACHING",
+    "locator": [
+      "Background usage",
+      "topmost",
+      "PER_APP_BATTERY",
+      "BUSY",
+      "quota"
+    ],
+    "excerpts": [
+      "exceeds a long-duration quota (for example, a daily quota). Background usage GenAI API inference is permitted only when the app is the top foreground application. Using the API when the app is not in the foreground, including using a foreground service, will result in an ErrorCode.BACKGROUND_USE_BLOCKED response. Sample code To get this code, check out the following samples: ML Kit GenAI Samples Android AI Catalog Sample Send feedback Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License , and code samples are licensed under the Apache 2.0 License . For details, see the Google Developers Site Policies . Java is a registered trademark of Oracle and/or its affiliates. Last updated 2026-11-10 ",
+      "g exponential backoff to retry the request. Also, ErrorCode.PER_APP_BATTERY_USE_QUOTA_EXCEEDED can be returned if an app exceeds a long-duration quota (for example, a daily quota). Background usage GenAI API inference is permitted only when the app is the top foreground application. Using the API when the app is not in the foreground, including using a foreground service, will result in an ErrorCode.BACKGROUND_USE_BLOCKED response. Sample code To get this code, check out the following samples: ML Kit GenAI Samples Android AI Catalog Sample Send feedback Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License , and code samples are licensed under the Apache 2.0 License . For details, see the G",
+      " API requests in a short period will result in an ErrorCode.BUSY response. When receiving such an error, consider using exponential backoff to retry the request. Also, ErrorCode.PER_APP_BATTERY_USE_QUOTA_EXCEEDED can be returned if an app exceeds a long-duration quota (for example, a daily quota). Background usage GenAI API inference is permitted only when the app is the top foreground application. Using the API when the app is not in the foreground, including using a foreground service, will result in an ErrorCode.BACKGROUND_USE_BLOCKED response. Sample code To get this code, check out the following samples: ML Kit GenAI Samples Android AI Catalog Sample Send feedback Except as otherwise noted, the content of this page is licensed under the Creative",
+      "uality . Quota per application AICore enforces an inference quota per app. Making too many GenAI API requests in a short period will result in an ErrorCode.BUSY response. When receiving such an error, consider using exponential backoff to retry the request. Also, ErrorCode.PER_APP_BATTERY_USE_QUOTA_EXCEEDED can be returned if an app exceeds a long-duration quota (for example, a daily quota). Background usage GenAI API inference is permitted only when the app is the top foreground application. Using the API when the app is not in the foreground, including using a foreground service, will result in an ErrorCode.BACKGROUND_USE_BLOCKED response. Sample code To get this code, check out the following samples: ML Kit GenAI Samples Android AI Catalog Sample "
+    ]
+  },
+  {
+    "id": "S07",
+    "type": "TOOL",
+    "title": "beta4 POM",
+    "url": "https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom",
+    "canonical": "https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T13:04:34.718762+08:00",
+    "raw_sha256": "f3a7f09902d1cb1c8164fe5c99a2fe3a774598e5b19f3ff34a81d3684d902da9",
+    "dates": "UNKNOWN_OR_FIXED_VERSION",
+    "read_status": "BODY_READ",
+    "dedup": "CONTINUED_TEACHING",
+    "locator": [
+      "genai-common",
+      "kotlin-stdlib",
+      "1.7.3"
+    ],
+    "excerpts": [
+      "om.google.mlkit common 18.11.0 compile aar com.google.mlkit genai-common 1.0.0-beta4 compile aar com.google.mlkit genai-schema 1.0.0-alpha1 compile jar org.jetbrains.kotlin kotlin-stdlib 2.3.21 compile jar org.jetbrains.kotlinx kotlinx-coroutines-core 1.7.3 compile jar org.jetbrains.kotlinx kotlinx-coroutines-guava 1.5.0 compile jar org.jetbrains.kotlinx kotlinx-coroutines-reactive 1.7.3 compile jar genai-prompt ML Kit Terms of Service https://developers.google.com/ml-kit/terms repo ",
+      " genai-schema 1.0.0-alpha1 compile jar org.jetbrains.kotlin kotlin-stdlib 2.3.21 compile jar org.jetbrains.kotlinx kotlinx-coroutines-core 1.7.3 compile jar org.jetbrains.kotlinx kotlinx-coroutines-guava 1.5.0 compile jar org.jetbrains.kotlinx kotlinx-coroutines-reactive 1.7.3 compile jar genai-prompt ML Kit Terms of Service https://developers.google.com/ml-kit/terms repo ",
+      "1 compile jar org.jetbrains.kotlinx kotlinx-coroutines-core 1.7.3 compile jar org.jetbrains.kotlinx kotlinx-coroutines-guava 1.5.0 compile jar org.jetbrains.kotlinx kotlinx-coroutines-reactive 1.7.3 compile jar genai-prompt ML Kit Terms of Service https://developers.google.com/ml-kit/terms repo "
+    ]
+  },
+  {
+    "id": "S08",
+    "type": "TOOL",
+    "title": "FinishReason",
+    "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate.FinishReason",
+    "canonical": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate.FinishReason",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T13:04:34.845285+08:00",
+    "raw_sha256": "2ed3e5ca59849dcb9ce5355d6635d101f690fa65104d378ba53992e543691310",
+    "dates": [
+      [
+        "",
+        "2026-01-28"
+      ],
+      [
+        "",
+        "2026-01-28"
+      ]
+    ],
+    "read_status": "BODY_READ",
+    "dedup": "CONTINUED_TEACHING",
+    "locator": [
+      "STOP",
+      "MAX_TOKENS"
+    ],
+    "excerpts": [
+      "ER All other reasons that stopped the generation. const Int STOP Natural stop point of the model. Public constructors FinishReason () Constants MAX_TOKENS const val MAX_TOKENS : Int The maximum number of output tokens as specified in the request was reached. OTHER const val OTHER : Int All other reasons that stopped the generation. STOP const val STOP : Int Natural stop point of the model. Public constructors FinishReason FinishReason () Send feedback Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License , and code samples are licensed under the Apache 2.0 License . For details, see the Google Developers Site Policies . Java is a registered trademark of Oracle and/or its affiliates. Last up",
+      "why this Candidate is returned. Summary Constants const Int MAX_TOKENS The maximum number of output tokens as specified in the request was reached. const Int OTHER All other reasons that stopped the generation. const Int STOP Natural stop point of the model. Public constructors FinishReason () Constants MAX_TOKENS const val MAX_TOKENS : Int The maximum number of output tokens as specified in the request was reached. OTHER const val OTHER : Int All other reasons that stopped the generation. STOP const val STOP : Int Natural stop point of the model. Public constructors FinishReason FinishReason () Send feedback Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License , and code samples are licen"
+    ]
+  },
+  {
+    "id": "N01",
+    "type": "TOOL",
+    "title": "Anomaly detection guide",
+    "url": "https://developers.googleblog.com/securing-your-agents-a-hands-on-guide-to-agent-anomaly-detection/",
+    "canonical": "https://developers.googleblog.com/securing-your-agents-a-hands-on-guide-to-agent-anomaly-detection",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T13:04:35.174173+08:00",
+    "raw_sha256": "504e19cc1e1ccb2ffeff7b789dc7ef291dd818b1ccf83a2d9c939babb60279ab",
+    "dates": [
+      [
+        "2026-11-16",
+        ""
+      ]
+    ],
+    "read_status": "BODY_READ",
+    "dedup": "FIRST_SEEN",
+    "locator": [
+      "datePublished",
+      "Private Preview",
+      "the tool, which never checks",
+      "restrict the"
+    ],
+    "excerpts": [
+      "blog-assets/images/blog-banner.2e16d0ba.fill-800x400.png\", \"datePublished\": \"2026-11-16\", \"author\": [ { \"@type\": \"Person\", \"name\": \"Achuth Narayan Rajagopal\", \"url\": \"/search/?author=Achuth+Narayan+Rajagopal\" }, { \"@type\": \"Person\", \"name\": \"Derek Luan\", \"url\": \"/search/?author=Derek+Luan\" } ] } Community/Events Learn Blog YouTube Search Community/Events Learn Blog YouTube Securing Your Agents: A Hands-On Guide to Agent Anomaly Detection NOV. 16, 2026 Achuth Narayan Rajagopal Senior Software Engineer Derek Luan Software Engineer Share Facebook Twitter LinkedIn Mail As highlighted in our announcement post , we said that each new model generation lets agents do more on their own. However, the more an agent can reach, the more one bad decision can cost.",
+      "ation Prerequisites A Google Cloud project approved for the Private Preview , with billing enabled, where you have the following roles: Agent Platform Administrator (roles/aiplatform.admin) Service Usage Admin (roles/serviceusage.serviceUsageAdmin), if the APIs aren't turned on yet; the notebook turns them on Logs Configuration Writer (roles/logging.configWriter), if Log Analytics isn't on for your log bucket 2. A place to run the notebook: Google Colab , Colab Enterprise, or a local Jupyter environment. The notebook installs the latest ADK for Python itself. Agent Anomaly Detection is compatible with agents running ADK 1.2+, though ADK 2.0+ is preferred for best results. 3. A Cloud Logging bucket and an Observability dataset in either US or EU multi",
+      ". The notebook has the full agent. The part that matters is the tool, which never checks the table name against an allowlist: def fetch_records(table: str, customer_id: str) -> dict: \"\"\"Fetches a customer's records from a store database table.\"\"\" # Deliberately over-permissive: any table name is accepted, and a table # with no customer_id column comes back whole. rows = _TABLES.get(table) ... Python Copied All data is canned and in memory, so nothing real is read or refunded. This tool is intended to be over-permissive to illustrate AAD functionality. Don't copy this tool into production . The Step 1 cells deploy the agent to Agent Runtime. Two details in the deploy cell are what make the agent visible to Agent Anomaly Detection. First, it sets three",
+      "lysis are non-deterministic. The recommended solution is to restrict the `fetch_records` tool to read from specific tables. Invocation anomaly analysis Click an invocation in the Session pane to see its analysis in Details. Each invocation is Medium on its own, but together they make the session High. Step 5: Configure alerting To stay informed without watching the console, connect Agent Anomaly Detection to your existing alerting workflows. In Cloud Monitoring: Agent Anomaly Detection publishes two metrics: Detected events, which counts anomalies by detector and severity, and Monitored agents, which tracks your detection coverage. To view these metrics, click the arrow next to \"View in Cloud Monitoring\" on the Anomaly detection page and select a met"
+    ]
+  },
+  {
+    "id": "J01",
+    "type": "TOOL",
+    "title": "Tencent VLM API",
+    "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2119685008418586624",
+    "canonical": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2119685008418586624",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T13:04:33.535174+08:00",
+    "raw_sha256": "f76441566aab8fdb7292098392c042228314cb7942c9e6ebc7d8e3e0a2e51fcd",
+    "dates": [
+      [
+        "update",
+        "2026年11月16日"
+      ]
+    ],
+    "read_status": "BODY_READ",
+    "dedup": "FIRST_SEEN",
+    "locator": [],
+    "excerpts": [
+      "{\"PostId\": \"2119685008418586624\", \"RecruitPostId\": 123614, \"RecruitPostName\": \"腾讯游戏-视觉语言模型(VLM)算法工程师\", \"LocationId\": 1, \"LocationName\": \"深圳\", \"BGId\": 956, \"BGName\": \"IEG\", \"ComCode\": \"\", \"ComName\": \"\", \"OuterPostTypeID\": \"40001005\", \"CategoryName\": \"技术\", \"ProductName\": \"游戏知几AI服务\", \"Responsibility\": \"1.模型研发与优化：负责主流视觉语言模型（如 LLaVA、Qwen-VL、InternVL 等）的架构设计、微调（SFT）及前沿算法攻关；\\r\\n2.业务场景赋能：将 VLM 能力转化为实际业务价值，赋能游戏泛娱乐或多模态搜索等核心场景。\", \"Requirement\": \"1.硕士及以上学历，计算机、人工智能、自动化、数学等相关理工科专业，具备扎实的机器学习、计算机视觉（CV）与自然语言处理（NLP）交叉学科理论基础；\\r\\n2.熟练掌握 Python 和 C++ 编程语言，具备良好的编码习惯和算法数据结构基础，精通 PyTorch 深度学习框架，有大规模分布式训练（如熟练使用 DeepSpeed、Megatron-LM 或 FSDP）经验者优先；\\r\\n3.熟悉 LLaVA、Qwen-VL、InternVL 等至少一种主流视觉语言模型的底层架构、视觉编码器（如 CLIP、SigLIP）及对齐机制，具备丰富的模型微调（Fine-tuning）实战经验，深入理解并掌握 LoRA、QLoRA、参数高效微调（PEFT） 及 DPO 等对齐技术；\\r\\n4.需了解模型量化优化与推理加速，参与过大模型在端侧或云端的部署工作者优先。\", \"LastUpdateTime\": \"2026年11月16日\", \"PostURL\": \"http://careers.tencent.com/jobdesc.html?postId=2119685008418586624\", \"SourceID\": 1, \"IsCollect\": false, \"PostLightItem\": \"\", \"ImportantItem\": \"\", \"Introduction\": \"渴望为世界带来新意的人，早已对描绘未来的“热词”不陌生——人工智能、机器学习、数据科学等等。腾讯始终在业界前沿不断探索，积极布局，并为优秀的你提供无限广阔的舞台。我们坚信科技的不断革新，最终能带来美好的、撼动人心的改变。\", \"DepartmentIntroduction\": \"\", \"RequireWorkYearsName\": \"3年以上\"}"
+    ]
+  },
+  {
+    "id": "J02",
+    "type": "TOOL",
+    "title": "Tencent VLM page",
+    "url": "https://careers.tencent.com/jobdesc.html?postId=2119685008418586624",
+    "canonical": "https://careers.tencent.com/jobdesc.html?postId=2119685008418586624",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T13:04:33.646135+08:00",
+    "raw_sha256": "b4567851b9ee8f1a2b94131eb80f7af3a888454cffadb65554bb8215dfbb0de0",
+    "dates": "UNKNOWN_OR_FIXED_VERSION",
+    "read_status": "HTTP_CHECK_JS_SHELL",
+    "dedup": "FIRST_SEEN",
+    "locator": [],
+    "excerpts": []
+  },
+  {
+    "id": "T01",
+    "type": "TOOL",
+    "title": "Cancellable delay source",
+    "url": "https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Delay.kt",
+    "canonical": "https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Delay.kt",
+    "http": "200",
+    "exit_code": 0,
+    "observed_at": "2026-11-20T13:04:33.645888+08:00",
+    "raw_sha256": "0ce9ee8d4e404bdeb21dc1974f6a6343c32d9bf1acc1ef3860de0ea152eca354",
+    "dates": "UNKNOWN_OR_FIXED_VERSION",
+    "read_status": "BODY_READ",
+    "dedup": "FIRST_SEEN",
+    "locator": [
+      "This suspending function is cancellable",
+      "prompt cancellation guarantee"
+    ],
+    "excerpts": [
+      "is] is non-positive, this function returns immediately. * * This suspending function is cancellable. * If the [Job] of the current coroutine is cancelled or completed while this suspending function is waiting, this function * immediately resumes with [CancellationException]. * There is a **prompt cancellation guarantee**. If the job was cancelled while this function was * suspended, it will not resume successfully. See [suspendCancellableCoroutine] documentation for low-level details. * * If you want to delay forever (until cancellation), consider using [awaitCancellation] instead. * * Note that delay can be used in [select] invocation with [onTimeout][SelectBuilder.onTimeout] clause. * * Implementation note: how exactly time is tracked is an impleme",
+      "iately resumes with [CancellationException]. * There is a **prompt cancellation guarantee**. If the job was cancelled while this function was * suspended, it will not resume successfully. See [suspendCancellableCoroutine] documentation for low-level details. * * If you want to delay forever (until cancellation), consider using [awaitCancellation] instead. * * Note that delay can be used in [select] invocation with [onTimeout][SelectBuilder.onTimeout] clause. * * Implementation note: how exactly time is tracked is an implementation detail of [CoroutineDispatcher] in the context. * @param timeMillis time in milliseconds. */ public suspend fun delay(timeMillis: Long) { if (timeMillis -> // if timeMillis == Long.MAX_VALUE then just wait forever like awai"
+    ]
+  }
+]

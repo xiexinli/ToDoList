@@ -1,0 +1,81 @@
+[
+  {
+    "id": "privacy",
+    "url": "https://developers.google.com/ml-kit/genai",
+    "dates": [
+      [
+        "",
+        "2026-11-10"
+      ]
+    ],
+    "observed_at": "2026-11-21T14:10:25.883094+08:00",
+    "run2100_http": "200",
+    "curl_exit": 0,
+    "run2100_read_at": "2026-11-21T21:02:21.909769",
+    "excerpt": "r them with AndroidX AppSearch to find\ncontent by meaning. Benefits of GenAI APIs Similar to other existing ML Kit features, GenAI APIs run entirely on-device and\nthus provide the following benefits: Input, inference, and output data is processed locally Functionality remains the same without reliable internet connection No additional server cost incurred for each API call In addition, since GenAI APIs are built on top of AICore and powered by Gemini\nNano, apps and task-specific APIs share the same underlying Gemini Nano base\nmodel on the device. This avoids waiting for a separate model to be downloaded\nif Gemini Nano already exists on a device, and in turn conserves storage space.\nLearn more about how AICore isolates requests to protect privacy . Streaming versus non-streaming ML Kit GenAI APIs offer both streaming and non-streaming options for receiving\nresults. The streaming API delivers responses incrementally as they are\ngenerated, providing a continuous flow of data. In contrast, the non-streaming\nAPI waits until the entire response is complete before returning it as a single\nblock. Choose the streaming API for lengthy responses, as it allows for quicker initial\nfeedback. The",
+    "job": {}
+  },
+  {
+    "id": "job21",
+    "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2092146384655532032",
+    "dates": [],
+    "observed_at": "2026-11-21T14:10:25.816147+08:00",
+    "run2100_http": "200",
+    "curl_exit": 0,
+    "run2100_read_at": "2026-11-21T21:02:22.237489",
+    "excerpt": "",
+    "job": {
+      "RecruitPostName": "搜狗输入法-Android开发专家工程师",
+      "LocationName": "北京",
+      "LastUpdateTime": "2026年11月10日",
+      "Requirement": "1.本科及以上学历，计算机相关专业，5年以上Android客户端研发经验；\n2.扎实的Kotlin/Java基础，深入理解Android Framework与跨机型适配机制；\n3.有OEM厂商定制、多品牌架构复用或类似复杂多线并行项目经验优先；\n4.具备良好的架构设计能力和技术判断力，能在高密度多任务并行场景下保持交付质量；\n5.具备AI辅助研发工具使用经验，认同AI Native研发范式；\n6.强烈的 owner 意识，具备优秀的跨团队协同能力，主导过 5 人以上研发团队协作经验优先。",
+      "Responsibility": "1.负责Android客户端在OEM厂商定制/新机适配/性能极致调优等方向的技术方案设计与关键代码实现；跟进厂商定制需求的技术评审与质量把控，识别并解决跨品牌复用中的技术债务问题；\r\n2.统筹OEM多条品牌线的技术一致性与架构复用，能够承接技术决策职责；\r\n3.参与新机适配架构底座建设，推动适配周期持续优化；\r\n4.质量与性能治理：构建代码质量与线上质量监控体系，主导性能优化、稳定性治理与体验提升，持续优化推理效率与资源消耗，提高产品的内建质量与可运维性；\r\n5.业务赋能与工程 Harness 建设：支持公司内外部业务快速构建自己的 Agent 应用与工作流，沉淀 AI 编程范式（spec-driven / context engineering / harness）方法论与工具链；构建代码生成、测试、评测、发布的自动化 harness，把研发效能做成可复用的内部底座，让业务用 AI 高效驾驭大规模研发。"
+    }
+  },
+  {
+    "id": "job21page",
+    "url": "https://careers.tencent.com/jobdesc.html?postId=2092146384655532032",
+    "dates": [],
+    "observed_at": "2026-11-21T14:10:26.111801+08:00",
+    "run2100_http": "200",
+    "curl_exit": 0,
+    "run2100_read_at": "2026-11-21T21:02:22.448375"
+  },
+  {
+    "id": "news21",
+    "url": "https://developers.googleblog.com/check-what-your-ai-agents-do-before-they-do-it-with-semantic-governance-policies/",
+    "dates": [
+      [
+        "2026-11-20",
+        ""
+      ]
+    ],
+    "observed_at": "2026-11-21T14:10:52.970147+08:00",
+    "run2100_http": "200",
+    "curl_exit": 0,
+    "run2100_read_at": "2026-11-21T21:02:23.889959",
+    "excerpt": "Share Facebook Twitter LinkedIn Mail Two days before earnings, an employee asks their coworker agent to send the preliminary quarterly results to an investor who says they're under NDA, and to copy the employee's personal Gmail so they can review the numbers tonight. The agent can read the file and send email, so it fulfills the user request. Semantic governance policies, available in Preview in Gemini platform, enable enterprises to govern their agents and provide guardrails to stop that call before it runs. They check each tool call an agent proposes against what the user asked for and against rules you write in plain language. Permissions alone can't catch this. They say what an agent can do, not whether a particular call follows your rules. A model can also be talked out of the rules in its system instructions, by a user with a good reason, or by a document telling it to do something nobody asked for, a technique called indirect prompt injection. So the check has to sit outside the agent. Semantic governance policies are enforced through a policy enforcement point, such as Agent Gateway , alongside the agent governance controls we expanded in October , so policies stay separate from your agent's code. Two checks before an action runs Semantic governance policies check each tool call your agent's model proposes, before it runs, against two things: Your rules, in plain language. You write policies the way your legal or compliance team already writes rules, such as \"Before the earnings release, quarterly results may be shared only with @example.com addresses.\" What the user asked for. This check ensures the proposed tool call has not deviated from the original user intent. This is on by default to protect against hijacking. A call has to pass both checks to run. Today, the policy enforcement point that Semantic governance policies support is Agent Gateway. You need to configure your agent so all your agent egress traffic goes through Agent Gateway, facilitating traffic between your agent and its model. When the model responds with a tool call, Agent Gateway sends",
+    "job": {}
+  },
+  {
+    "id": "presidio",
+    "url": "https://microsoft.github.io/presidio/",
+    "dates": [],
+    "observed_at": "2026-11-21T14:11:05.931392+08:00",
+    "run2100_http": "200",
+    "curl_exit": 0,
+    "run2100_read_at": "2026-11-21T21:02:25.689523",
+    "excerpt": " This page has moved This page has moved. Redirecting you to https://data-privacy-stack.github.io/presidio/ &hellip; ",
+    "job": {},
+    "read_status": "BODY_READ_RUN2100"
+  },
+  {
+    "id": "presidio-new",
+    "url": "https://data-privacy-stack.github.io/presidio/",
+    "run2100_http": "200",
+    "curl_exit": "待curl抽验",
+    "excerpt": "y Data Privacy Stack Presidio (Origin from Latin praesidium ‘protection, garrison’) helps to ensure sensitive data is properly managed and governed. It provides fast identification and anonymization modules for private entities in text and images such as credit card numbers, names, locations, social security numbers, bitcoin wallets, US phone numbers, financial data and more. Project transition update Presidio has transitioned to a community-owned project. Read the full announcement here . Goals Allow organizations to preserve privacy in a simpler way by democratizing de-identification technologies and introducing transparency in decisions. Embrace extensibility and customizability to a specific business need. Facilitate both fully automated and semi-automated PII de-identification flows on multiple platforms. How it works Main features Predefined or custom PII recognizers leveraging Named Entity Recognition , regular expressions , rule based logic and checksum with relevant context in multiple languages. Options for connecting to external PII detection models. Multiple usage options, from Python or PySpark workloads through Docker to Kubernetes . Customizability in PII identification and anonymization. Module for redacting PII text in images . Warning Presidio can help identify sensitive/PII data in un/structured text. However, because it is using automated detection mechanisms, there is no guarantee that Presidio will find all sensitive information. Consequently, additional systems and protections should be employed. Demo Link to demo: https://huggingface.co/spaces/presidio/presidio_demo Presidio's modules Presidio analyzer : PII identification in text Presidio anonymizer : De-identify detected PII entities using different operators Presidio image redactor : Redact PI",
+    "read_status": "BODY_READ",
+    "observed_at": "2026-11-21晚间补写实读"
+  }
+]

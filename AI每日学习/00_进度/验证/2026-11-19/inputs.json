@@ -1,0 +1,23 @@
+[
+  {
+    "kind": "ARTIFACT",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md",
+    "sha256": "8bed6d17fc5ed1eb777180512f96c721909449df841066bdfe8b6236dedf1126",
+    "read": "FULL",
+    "note": ""
+  },
+  {
+    "kind": "ARTIFACT",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/智能体规则.md",
+    "sha256": "d1388a03685953aad78b236c949f92cbc2afed49881522e1e5d15d63461a1bb4",
+    "read": "FULL",
+    "note": ""
+  },
+  {
+    "kind": "ARTIFACT",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-18-端侧流式生成的Compose增量呈现.md",
+    "sha256": "cf3d21c82f8343dde3c9696219d531ac0b48ac3fe1ac983967d0aad2abd8c655",
+    "read": "FULL",
+    "note": "昨日材料不是READY依赖，Android与全面验收均不假定通过"
+  }
+]

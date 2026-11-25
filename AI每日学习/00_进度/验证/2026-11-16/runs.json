@@ -1,0 +1,41 @@
+[
+  {
+    "type": "TOOL",
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "-B",
+      "capability_gate.py"
+    ],
+    "cwd": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16",
+    "python_version": "3.9.6 (default, Aug 25 2026, 21:26:21) \n[Clang 21.0.0 (clang-2100.3.34.2)]",
+    "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "kotlinc": null,
+    "exit_code": 0,
+    "stdout": "PASS 可用且离线 READY NONE NONE True\nPASS 可用且在线 READY NONE NONE True\nPASS 需下载在线未确认 NEED_DOWNLOAD ASK_CONSENT BLOCKED False\nPASS 需下载在线已确认 NEED_DOWNLOAD OFFER_DOWNLOAD BLOCKED False\nPASS 需下载离线 NEED_DOWNLOAD WAIT_NETWORK WAIT_NETWORK False\nPASS 策略禁止下载 NEED_DOWNLOAD BLOCKED BLOCKED False\nPASS 正在下载 DOWNLOADING NONE BLOCKED False\nPASS 不可用允许云建议 UNSUPPORTED NONE OFFER_CLOUD False\nPASS 未知且禁止上云 UNKNOWN NONE BLOCKED False\nPASS 查询失败且禁止上云 QUERY_FAILED NONE BLOCKED False\nPASS 查询失败未同意上云 QUERY_FAILED NONE ASK_CONSENT False\nPASS 不可用离线已同意云 UNSUPPORTED NONE WAIT_NETWORK False\nPASS 设备环境明确不支持 UNSUPPORTED NONE BLOCKED False\nPASS 设备环境证据未知 UNKNOWN NONE BLOCKED False\nPASS 可用但快照过期 STALE NONE BLOCKED False\nPASS 可用但已离开前台 FOREGROUND_REQUIRED NONE BLOCKED False\nPASS 场景表：16/16；仅 Host fixture，无 Android 或真机推理\n",
+    "stderr": "",
+    "log": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/fixture-run.log",
+    "observed_at": "2026-11-16T08:04:57.673492+08:00"
+  },
+  {
+    "type": "TOOL",
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_capability_gate.py"
+    ],
+    "cwd": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16",
+    "python_version": "3.9.6 (default, Aug 25 2026, 21:26:21) \n[Clang 21.0.0 (clang-2100.3.34.2)]",
+    "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "kotlinc": null,
+    "exit_code": 0,
+    "stdout": "PASS 2304 组合：确定性、端侧门禁、下载授权、云授权不变量\n",
+    "stderr": "test_all_2304_combinations (test_capability_gate.CapabilityTests) ... ok\ntest_exact_fixtures (test_capability_gate.CapabilityTests) ... ok\ntest_future_or_bad_feature_is_unknown (test_capability_gate.CapabilityTests) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.020s\n\nOK\n",
+    "log": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/tests.log",
+    "observed_at": "2026-11-16T08:04:57.754727+08:00"
+  }
+]

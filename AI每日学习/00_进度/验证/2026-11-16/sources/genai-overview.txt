@@ -1,0 +1,414 @@
+
+ Overview of the ML Kit GenAI APIs  |  Google for Developers
+ Skip to main content
+ ML Kit
+ Guides
+ Reference
+ Samples
+ Case studies
+ Community
+ /
+ English
+ Deutsch
+ Español
+ Español – América Latina
+ Français
+ Indonesia
+ Italiano
+ Polski
+ Português – Brasil
+ Tiếng Việt
+ Türkçe
+ Русский
+ עברית
+ العربيّة
+ فارسی
+ हिंदी
+ বাংলা
+ ภาษาไทย
+ 中文 – 简体
+ 中文 – 繁體
+ 日本語
+ 한국어
+ Sign in
+ Guides
+ ML Kit
+ Guides
+ Reference
+ Samples
+ Case studies
+ Community
+Overview
+Release notes
+Known issues
+Early access program
+ Migrating from ML Kit for Firebase
+Overview
+Android
+iOS
+ Migrating from Mobile Vision
+Overview
+Android
+iOS
+ GenAI
+Overview
+ Direct model access (Beta)
+Overview
+Get started
+Prompt design
+Evaluate prompt quality
+Set system instructions (Beta)
+Prefix caching (Experimental)
+Generate structured output (Alpha)
+Use thinking mode (Beta)
+Use function calling (Preview)
+Select a model
+ Agentic workflows (Preview)
+Overview
+Get started
+Define tools
+Manage sessions and lifecycle
+Stream events and UI
+Speech recognition (Alpha)
+Speech translation (Alpha)
+Text to speech (Alpha)
+Image description (Beta)
+Summarization (Beta)
+Proofreading (Beta)
+Rewriting (Beta)
+Embeddings (Preview)
+AICore Developer Preview program
+ Vision
+ Text recognition v2
+Overview
+Supported languages
+Android
+iOS
+ Face detection
+Overview
+Face detection concepts
+Android
+iOS
+ Face mesh detection (Beta)
+Overview
+Face mesh detection concepts
+Android
+ Pose detection (Beta)
+Overview
+Android
+iOS
+Pose Classification Options
+ Selfie segmentation (Beta)
+Overview
+Android
+iOS
+ Subject segmentation (Beta)
+Overview
+Android
+ Document scanner
+Overview
+Android
+ Barcode scanning
+Overview
+Android
+iOS
+Google code scanner (Android only)
+ Image labeling
+Overview
+ Base model
+Label map
+Android
+iOS
+ Custom models
+Android
+iOS
+ AutoML Vision Edge
+Migrate to custom models
+Android
+iOS
+ Object detection and tracking
+Overview
+ Base models
+Android
+iOS
+ Custom models
+Android
+iOS
+ Digital ink recognition
+Overview
+Base models
+Android
+iOS
+Custom models
+ Natural language
+ Language identification
+Overview
+Supported languages
+Android
+iOS
+ Translation
+Overview
+Guidelines
+Supported languages
+Android
+iOS
+ Smart reply
+Overview
+Android
+iOS
+ Entity extraction (Beta)
+Overview
+Android
+iOS
+ Tips
+Model installation paths on Android
+Reduce Android app package size
+ Colophon
+ Terms & Privacy
+Overview
+GenAI API Terms
+Android Data Disclosure
+iOS Data Disclosure
+ Home
+ Products
+ ML Kit
+ Guides
+ Send feedback
+ Overview of the ML Kit GenAI APIs
+ Stay organized with collections
+ Save and categorize content based on your preferences.
+ML Kit's GenAI APIs harness the power of Gemini Nano to help your apps
+perform on-device generative AI tasks. These APIs are built on top of
+AICore, an Android system service that manages on-device foundation models
+and accelerates inference while keeping user data private.
+The ML Kit GenAI API Additional Terms of Service apply to the use of the
+GenAI APIs. Developers are solely responsible for the safety of their API client
+and their app's user experience.
+Key capabilities
+ML Kit organizes its GenAI capabilities into the following categories:
+Custom generation and agents
+Work directly with the Gemini Nano foundation model for custom prompting and
+autonomous agentic workflows:
+Direct model access (using the GenerativeModel class): Generate text or typed
+structured output from custom text-only or multimodal prompts, or manage your
+own multi-turn chat history directly by using a List<Content> object with USER and MODEL roles
+and a sessionId value, and manage tool declarations directly.
+Agentic workflows (using the AgentRunner class): Built on top of
+the GenerativeModel class, automating multi-turn session management (including
+in-memory conversation history) and multi-step tool-calling loops.
+Speech and audio
+Transcribe, translate, and synthesize speech audio on-device:
+Speech recognition: Transcribe spoken audio content into text in
+the same language.
+Speech translation: Translate spoken audio into text in another
+language in real time.
+Text to speech: Synthesize natural-sounding speech audio from
+text.
+Text and image tasks
+Use task-specific APIs optimized for common vision, writing, and search tasks
+without prompt engineering:
+Image description: Generate a short description of a given image.
+Summarization: Summarize articles or chat conversations as a
+bulleted list.
+Proofreading: Polish short content by refining grammar and fixing
+spelling errors.
+Rewriting: Rewrite short messages in different tones or styles.
+Embeddings: Generate vector embeddings for text and images
+using the Embeddings API and pair them with AndroidX AppSearch to find
+content by meaning.
+Benefits of GenAI APIs
+Similar to other existing ML Kit features, GenAI APIs run entirely on-device and
+thus provide the following benefits:
+Input, inference, and output data is processed locally
+Functionality remains the same without reliable internet connection
+No additional server cost incurred for each API call
+In addition, since GenAI APIs are built on top of AICore and powered by Gemini
+Nano, apps and task-specific APIs share the same underlying Gemini Nano base
+model on the device. This avoids waiting for a separate model to be downloaded
+if Gemini Nano already exists on a device, and in turn conserves storage space.
+Learn more about how AICore isolates requests to protect privacy.
+Streaming versus non-streaming
+ML Kit GenAI APIs offer both streaming and non-streaming options for receiving
+results. The streaming API delivers responses incrementally as they are
+generated, providing a continuous flow of data. In contrast, the non-streaming
+API waits until the entire response is complete before returning it as a single
+block.
+Choose the streaming API for lengthy responses, as it allows for quicker initial
+feedback. The non-streaming API is more suitable for short responses or when
+processing results in batches.
+Device support
+Device support for custom generation and agents and text and image task APIs
+is described in the following sections. For any features that aren't listed in
+this section, see the individual feature pages for device support information.
+Custom generation and agent device support
+Direct model access and agentic workflows are supported on the
+following devices:
+Gemini Nano 2
+POCO: POCO F7 Ultra, POCO F8 Pro, POCO F8 Ultra, POCO X7 Pro, POCO X8 Pro
+realme: realme GT 7
+Redmi: Redmi Turbo 5
+vivo: vivo T4 Ultra, vivo X200 FE
+Xiaomi: Leitzphone powered by Xiaomi, Xiaomi 15,
+ Xiaomi 15T, Xiaomi 15 Ultra, Xiaomi 17, Xiaomi 17T, Xiaomi 17 Ultra
+Gemini Nano 3
+Acer: Acer Googlebook 14
+ASUS: ASUS Googlebook 14
+Dell: XPS Googlebook
+Google: Pixel 9, Pixel 9 Pro, Pixel 9 Pro XL, Pixel 9 Pro Fold
+HP: HP Googlebook 14
+Lenovo: Lenovo Googlebook 15
+OPPO: Reno 14 Pro 5G, Reno 15 Pro 5G, Reno 15 Pro Mini 5G,
+ Reno 15 Pro Max 5G, Reno 16 Pro 5G
+realme: realme GT 7T
+Gemini Nano 4
+Google: Pixel 11, Pixel 11 Pro, Pixel 11 Pro XL, Pixel 11 Pro Fold,
+ Pixel 10, Pixel 10 Pro, Pixel 10 Pro XL, Pixel 10 Pro Fold
+Honor: Honor 600 Pro, Magic 7, Magic 7 Pro,
+ Porsche Design Magic 7 RSR, Magic 8 Pro, Magic V5, Magic V6,
+ MagicPad 4
+iQOO: iQOO 13, iQOO 15
+Lenovo: Lenovo Idea Tab Pro Gen 2, Lenovo Legion Tab Gen 5(8.8"),
+ Lenovo Yoga Tab Plus Gen 2
+Motorola: Edge 70 Pro, Edge 70 Pro+, Razr 60 Ultra, Razr Ultra 2025,
+ Razr Fold, Signature
+OnePlus: OnePlus 13, OnePlus 13s, OnePlus 15, OnePlus 15R,
+ OnePlus Pad 3
+OPPO: Find N5, Find N6, Find X8, Find X8 Pro, Find X9, Find X9 Pro,
+ Find X9s, Find X9 Ultra, Find X10, Find X10 Pro Max
+POCO: POCO F9 Pro, POCO X8 Pro Max
+realme: realme GT 7 Pro, realme GT 8 Pro
+Samsung: Galaxy S25, Galaxy S25+, Galaxy S25 Edge, Galaxy S25 Ultra,
+ Galaxy S26, Galaxy S26+, Galaxy S26 FE, Galaxy S26 Ultra,
+ Galaxy Tab S12+, Galaxy Tab S12 Ultra,
+ Galaxy Z Flip7, Galaxy Z Flip8, Galaxy Z Fold7, Galaxy Z Fold8,
+ Galaxy Z Fold8 Ultra, Galaxy Z TriFold
+Sharp: AQUOS R11
+Sony: Xperia 1 VIII
+vivo: vivo X200, vivo X200 Pro, vivo X200T, vivo X300, vivo X300 FE,
+ vivo X300 Pro, vivo X300 Ultra, vivo X500 Pro, vivo X500 Pro Max,
+ vivo X Fold3 Pro, vivo X Fold5, vivo X Fold6
+Xiaomi: Xiaomi 15T Pro, Xiaomi 17T Pro, Xiaomi Pad Mini
+Model availability and version may vary depending on the device's RAM
+configuration, OS version, and AICore update status. To check the active model
+version on a device, see Retrieve Gemini Nano version.
+Text and image task device support
+The Image Description, Summarization, Proofreading, and
+Rewriting APIs are available on the following devices, with plans to expand
+support to additional devices:
+Acer: Acer Googlebook 14
+ASUS: ASUS Googlebook 14
+Dell: XPS Googlebook
+Google: Pixel 11, Pixel 11 Pro, Pixel 11 Pro XL, Pixel 11 Pro Fold, Pixel 10,
+Pixel 10 Pro, Pixel 10 Pro XL, Pixel 10 Pro Fold, Pixel 9, Pixel 9 Pro,
+Pixel 9 Pro XL, Pixel 9 Pro Fold
+Honor: Honor 400 Pro, Honor 600 Pro, Magic 7, Magic 7 Pro,
+Porsche Design Magic 7 RSR, Magic 8 Pro, Magic V5, Magic V6, MagicPad 4
+HP: HP Googlebook 14
+iQOO: iQOO 13, iQOO 15
+Lenovo: Lenovo Googlebook 15, Lenovo Idea Tab Pro Gen 2,
+Lenovo Legion Tab Gen 5(8.8"), Lenovo Yoga Tab Plus Gen 2
+Motorola: Edge 70 Pro, Edge 70 Pro+, Razr 60 Ultra, Razr Ultra 2025,
+Razr Fold, Signature
+OnePlus: OnePlus 13, OnePlus 13s, OnePlus 15, OnePlus 15R, OnePlus Pad 3
+OPPO: Find N5, Find N6, Find X8, Find X8 Pro, Find X9, Find X9 Pro, Find X9s,
+Find X9 Ultra, Find X10, Find X10 Pro Max, Reno 14 Pro 5G, Reno 15 Pro 5G,
+Reno 15 Pro Mini 5G, Reno 15 Pro Max 5G, Reno 16 Pro 5G
+POCO: POCO F7 Ultra, POCO F8 Pro, POCO F8 Ultra, POCO F9 Pro, POCO X7 Pro,
+POCO X8 Pro, POCO X8 Pro Max
+realme: realme GT 7, realme GT 7 Pro, realme GT 7T, realme GT 8 Pro
+Redmi: Redmi Turbo 5
+Samsung: Galaxy S25, Galaxy S25+, Galaxy S25 Edge, Galaxy S25 Ultra,
+Galaxy S26, Galaxy S26+, Galaxy S26 FE, Galaxy S26 Ultra,
+Galaxy Tab S12+, Galaxy Tab S12 Ultra, Galaxy Z Flip7,
+Galaxy Z Flip8, Galaxy Z Fold7, Galaxy Z Fold8, Galaxy Z Fold8 Ultra,
+Galaxy Z TriFold
+Sharp: AQUOS R11
+Sony: Xperia 1 VIII
+vivo: vivo T4 Ultra, vivo X200, vivo X200 FE, vivo X200 Pro, vivo X200T,
+vivo X300, vivo X300 FE, vivo X300 Pro, vivo X300 Ultra, vivo X500 Pro,
+vivo X500 Pro Max, vivo X Fold3 Pro, vivo X Fold5, vivo X Fold6
+Xiaomi: Leitzphone powered by Xiaomi, Xiaomi 15, Xiaomi 15T,
+Xiaomi 15T Pro, Xiaomi 15 Ultra, Xiaomi 17, Xiaomi 17T, Xiaomi 17T Pro,
+Xiaomi 17 Ultra, Xiaomi Pad Mini
+Availability of specific language support may vary depending on the particular
+device's configuration and the models that have been downloaded to the device.
+Retrieve Gemini Nano version
+Different versions of Gemini Nano run on different devices. To return the
+version of Gemini Nano on a device, use the getBaseModelName() method.
+Note: Different versions of Gemini Nano may return different output from the
+same prompt. To ensure your app's use case is compatible with different versions
+of Gemini Nano, see Evaluate prompt quality.
+Quota per application
+AICore enforces an inference quota per app. Making too many
+GenAI API requests in a short period will result in an ErrorCode.BUSY
+response. When receiving such an error, consider using exponential backoff to
+retry the request. Also, ErrorCode.PER_APP_BATTERY_USE_QUOTA_EXCEEDED can be
+returned if an app exceeds a long-duration quota (for example, a daily quota).
+Background usage
+GenAI API inference is permitted only when the app is the top foreground
+application. Using the API when the app is not in the foreground, including
+using a foreground service, will result in an ErrorCode.BACKGROUND_USE_BLOCKED
+response.
+Sample code
+To get this code, check out the following samples:
+ML Kit GenAI Samples
+Android AI Catalog Sample
+ Send feedback
+Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License. For details, see the Google Developers Site Policies. Java is a registered trademark of Oracle and/or its affiliates.
+Last updated 2026-11-10 UTC.
+ Need to tell us more?
+ [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-11-10 UTC."],[],[]]
+Engage
+ Google AI Forum
+ Google Developer Program
+ Google Developer Groups
+ Google Developer Experts
+ Accelerators
+ Google Cloud & NVIDIA
+Connect
+ Blog
+ Bluesky
+ Instagram
+ LinkedIn
+ X (Twitter)
+ YouTube
+Build
+ Android
+ Chrome
+ Firebase
+ Google AI Studio
+ Google Antigravity
+ Google Cloud
+ Google Play
+ View all
+ Android
+ Chrome
+ Firebase
+ Google Cloud Platform
+ Google AI
+ All products
+ Terms
+ Privacy
+ Manage cookies
+ English
+ Deutsch
+ Español
+ Español – América Latina
+ Français
+ Indonesia
+ Italiano
+ Polski
+ Português – Brasil
+ Tiếng Việt
+ Türkçe
+ Русский
+ עברית
+ العربيّة
+ فارسی
+ हिंदी
+ বাংলা
+ ภาษาไทย
+ 中文 – 简体
+ 中文 – 繁體
+ 日本語
+ 한국어

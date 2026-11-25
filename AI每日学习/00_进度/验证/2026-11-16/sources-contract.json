@@ -1,0 +1,50 @@
+[
+  {
+    "id": "feature-status",
+    "type": "TOOL",
+    "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/FeatureStatus",
+    "http": "200",
+    "effective_url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/FeatureStatus",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:03:07.412756+08:00",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/feature-status.raw",
+    "bytes": 283821
+  },
+  {
+    "id": "generative-model",
+    "type": "TOOL",
+    "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+    "http": "200",
+    "effective_url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:03:07.208873+08:00",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/generative-model.raw",
+    "bytes": 364923
+  },
+  {
+    "id": "generation",
+    "type": "TOOL",
+    "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Generation",
+    "http": "200",
+    "effective_url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Generation",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:03:07.014915+08:00",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/generation.raw",
+    "bytes": 282857
+  },
+  {
+    "id": "sdk-pom",
+    "type": "TOOL",
+    "url": "https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom",
+    "http": "200",
+    "effective_url": "https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:03:06.348156+08:00",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/sdk-pom.raw",
+    "bytes": 3941
+  }
+]

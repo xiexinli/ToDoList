@@ -1,0 +1,34 @@
+--- 进度.md（11-25前）
++++ 进度.md（11-25后）
+@@ -32,6 +32,7 @@
+ | 2026-11-22 | 02_AndroidAI · 第 7 讲 | 端云请求的取消与结束确认：怎样处理UNKNOWN（续） | 02_AndroidAI/2026-11-22-端云请求的取消与结束确认：怎样处理UNKNOWN（续）.md | 待填 |
+ | 2026-11-23 | 02_AndroidAI · 第 8 讲 | 端云请求的持久操作账本：重启后怎样处理未确认请求 | 02_AndroidAI/2026-11-23-端云请求的持久操作账本：重启后怎样处理未确认请求.md | 待填 |
+ | 2026-11-24 | 02_AndroidAI · 第 9 讲 | 端云请求的只读对账：查询状态而不是重发（续） | 02_AndroidAI/2026-11-24-端云请求的只读对账：查询状态而不是重发（续）.md | 待填 |
++| 2026-11-25 | 02_AndroidAI · 第 10 讲 | 端云对账的查询预算持久化：重启不自动续查（续） | 02_AndroidAI/2026-11-25-端云对账的查询预算持久化：重启不自动续查（续）.md | 待填 |
+ 
+ 
+ > 欠产与补写记录：2026-10-31 ~ 2026-11-04 因「本机终端审批超时」连续 6 天未落盘；2026-11-05 17:32 用户在 DHwork 权限设置中放行无人值守终端审批后，上述 5 天材料与 2026-W44 周总结已统一补全。
+@@ -74,7 +75,8 @@
+ - [x] Android × AI · 第 7 讲：端云请求的取消与结束确认（2026-11-22 材料已产出；Host12项单测通过，真实取消/释放未测；复述待填）
+ - [x] Android × AI · 第 8 讲：端云请求的持久操作账本：重启后怎样处理未确认请求（2026-11-23 材料已产出；EXECUTED_HOST 12项通过；真实SDK/Android/远端结束验证NOT_EXECUTED；复述待填）
+ - [x] Android × AI · 第 9 讲：端云请求的只读对账：查询状态而不是重发（续）（2026-11-24材料已产出；EXECUTED_HOST 12项OK；只读查询stub；真实查询/认证/释放/Android NOT_EXECUTED；复述待填）
+-- [ ] Android × AI · 下一讲（建议2026-11-25）：端云对账的查询预算持久化：重启不自动续查（续）
++- [x] Android × AI · 第 10 讲：端云对账的查询预算持久化：重启不自动续查（续）（2026-11-25材料已产出；Host12项OK，含子进程退出/顺序两连接；真实查询/并发/Android NOT_EXECUTED；复述待填）
++- [ ] Android × AI · 下一讲（建议2026-11-26）：端云对账的待确认状态UI：有界查询如何向用户解释（续）
+ 
+ ## 动态链接去重表
+ | 首次出现日期 | 标题 | 链接 |
+@@ -241,6 +243,13 @@
+ 
+ > 2026-11-24 当天5个引用原日期/实读状态/HTTP200/正文小摘录见 `验证/2026-11-24/sources.json`；12项Host查询stub实跑OK；昨日账本仅原样复制作输入，昨日材料与证据SHA256未变。无业务状态查询/模型请求，usage=NOT_EXECUTED；真实只读行为、契约/scope、认证/签名/终结/释放/Android均NOT_EXECUTED。旧11-20/21缺口未改未验；本执行者not_sent，摘要待主唯一发送。
+ 
++| 2026-11-25 | S01 SQLite显式事务 | https://www.sqlite.org/lang_transaction.html |
++| 2026-11-25 | S03 Google Agent Retrieval托管摄取与SearchDocuments | https://developers.googleblog.com/from-files-to-cited-answers-in-one-api-call-managed-ingestion-and-searchdocuments-in-agent-retrieval/ |
++| 2026-11-25 | S04 腾讯Agent安全专家正文 | https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2094685239933841408 |
++| 2026-11-25 | S05 腾讯Agent安全专家网页 | https://careers.tencent.com/jobdesc.html?postId=2094685239933841408 |
++
++> 2026-11-25 教学参考续用（首次11-23，非新动态）：[Python3.9 sqlite3](https://docs.python.org/3.9/library/sqlite3.html)。当天全部5个引用与HTTP/正文状态见 `验证/2026-11-25/sources.json`；Host12项OK，先持久扣减再query，旧账本/查询源码仅原样复制；无模型/业务查询，usage=NOT_EXECUTED；真实并发、掉电、认证/终结/释放/Android未测。学习教练调用超时后主agent接管，摘要待收尾唯一提交。
++
+ ## 周总结
+ | 周次 | 覆盖日期 | 文件 |
+ |---|---|---|

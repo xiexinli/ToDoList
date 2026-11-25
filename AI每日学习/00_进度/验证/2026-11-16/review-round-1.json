@@ -1,0 +1,9 @@
+{
+  "round": 1,
+  "reason": "新增fixture练习会使固定分母16失真；改为动态计数",
+  "scope": [
+    "capability_gate.py",
+    "今日主文件中的同一代码行"
+  ],
+  "ledger_unchanged": true
+}

@@ -1,0 +1,22 @@
+test_cleanup_failure_does_not_mask_original (test_stream_contract.StreamTest) ... ok
+test_empty_and_null (test_stream_contract.StreamTest) ... ok
+test_explicit_cumulative_not_append (test_stream_contract.StreamTest) ... ok
+test_failure_keeps_unacceptable_draft (test_stream_contract.StreamTest) ... ok
+test_finish_table (test_stream_contract.StreamTest) ... ok
+test_foreground_lost_during_stream (test_stream_contract.StreamTest) ... ok
+test_page_pause_foreground_and_dispose (test_stream_contract.StreamTest) ... ok
+test_parent_cancel_propagates (test_stream_contract.StreamTest) ... ok
+test_partitions_and_repeated_words (test_stream_contract.StreamTest) ... ok
+test_preflight_no_client (test_stream_contract.StreamTest) ... ok
+test_replacement_blocks_stale_and_serializes_release (test_stream_contract.StreamTest) ... ok
+test_stop_marker_then_failure_not_success (test_stream_contract.StreamTest) ... ok
+test_terminal_then_extra_is_invalid (test_stream_contract.StreamTest) ... ok
+test_timeout_after_draft (test_stream_contract.StreamTest) ... ok
+test_unavailable_closes_without_stream (test_stream_contract.StreamTest) ... ok
+test_user_cancel_propagates (test_stream_contract.StreamTest) ... ok
+test_whitespace_preserved (test_stream_contract.StreamTest) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.070s
+
+OK

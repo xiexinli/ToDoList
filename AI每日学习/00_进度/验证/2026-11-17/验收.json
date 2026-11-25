@@ -1,0 +1,230 @@
+{
+  "status": "DONE",
+  "scope": "本次日材料/台账与Host契约交付；不包括Android设备推理或飞书发送",
+  "checked_at": "2026-11-17T09:12:04.329746+08:00",
+  "artifacts": [
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-17-Prompt API最小调用：能力门禁后的一次短文本生成.md",
+      "size_bytes": 37978,
+      "sha256": "7ba31278d1b2c3e97cd6f1e33a4b04a25ceacf6b630f2bcd57ff0ddc101864f0",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md",
+      "size_bytes": 22090,
+      "sha256": "dd071f0f4adf8be363fb10d770aadcb8f71d2398f48fc0878a06f65b08b2256b",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17/NanoShortGeneration.kt",
+      "size_bytes": 4389,
+      "sha256": "c6c7ce1005674eb69f31ce32a8bb25eb55fde55dd86066a5801a617e600a7c03",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17/fixture-run.log",
+      "size_bytes": 237,
+      "sha256": "af5e9c818375887e7cec096d10cdd0a1db63b9d4e3ad8a7a985dff86f3ef9868",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17/inputs.json",
+      "size_bytes": 5322,
+      "sha256": "21265527fae1b9ca60f28f32de8261952792aeb53e4fc5dd45b7713f916d054b",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17/ledger.diff",
+      "size_bytes": 6130,
+      "sha256": "7d192fb463d792ae1c3fcd8c54f9e91bf8983f806787f7db77d9cfdd3df0caf7",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17/prompt_contract.py",
+      "size_bytes": 5801,
+      "sha256": "58f7a14d52a7c8eaa961f1380939203983ed96ed996e264c2eafc85f05695874",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17/runs.json",
+      "size_bytes": 1045,
+      "sha256": "e6e471df835a3944a8f49b22f5d4250f8cc9cc25ce83f673fc4f17db001f45b6",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17/sources.json",
+      "size_bytes": 21073,
+      "sha256": "af740456c3d3a0604cf28547a068fdf4aa38e4ba7ef23696e2fbce7c41b6514e",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17/test_prompt_contract.py",
+      "size_bytes": 6588,
+      "sha256": "9a2cdfc9eb5ee424acc91ca13c6e7824b107fb4dc2af82a1c5cbfc559bfdf6e9",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17/tests.log",
+      "size_bytes": 1882,
+      "sha256": "501c47d3bc37e42ae33f77d87289cd371f14d56a6d7d01f68f2e26151f6e31c6",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17/进度.写前备份.md",
+      "size_bytes": 18495,
+      "sha256": "e7890698e764f160a236bb9535ed15596f569753cdf9a1cb4c05dd41a63ab62e",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17/飞书摘要草稿.md",
+      "size_bytes": 698,
+      "sha256": "53ccd2308b4cd28463aff0dcb1eb57fec4e064836ef5a08314638e9bc319d8b2",
+      "version": "v1",
+      "owner": "AI学习教练（日材料/台账唯一写入者）"
+    }
+  ],
+  "checks": [
+    {
+      "check": "历史19篇SHA256逐篇未变",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "规则文件未改",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "台账写前备份与输入SHA256一致",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "所有旧主题动态和周总结行完整保留",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "今日唯一主文件且地基无重复",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "主题19到20，今日仅一行",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "阶段正确并勾选本讲",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "0到5结构顺序且总时长120",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "用户复述仍为空",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "教材3个代码块与3份源码逐字一致",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "动态限量1+1+1",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "飞书摘要草稿不超过15行",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "清理了本任务无引用临时源文件",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "全部21个实际引用均可追溯并进台账",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "新动态岗位工具canonical未重复",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "当前官方SDK请求响应与版本契约已实读",
+      "result": "PASS",
+      "kind": "SPEC_CHECK"
+    },
+    {
+      "check": "两个Host命令退出0且10测试23场景",
+      "result": "PASS",
+      "kind": "EXECUTED"
+    },
+    {
+      "check": "Kotlin编译",
+      "result": "NOT_EXECUTED",
+      "kind": "EXECUTED",
+      "reason": "按授权仅执行Host fixture；未安装工具链/解析SDK/连接手机/下载模型。"
+    },
+    {
+      "check": "Android构建",
+      "result": "NOT_EXECUTED",
+      "kind": "EXECUTED",
+      "reason": "按授权仅执行Host fixture；未安装工具链/解析SDK/连接手机/下载模型。"
+    },
+    {
+      "check": "真机端侧推理",
+      "result": "NOT_EXECUTED",
+      "kind": "EXECUTED",
+      "reason": "按授权仅执行Host fixture；未安装工具链/解析SDK/连接手机/下载模型。"
+    },
+    {
+      "check": "设备性能与模型质量",
+      "result": "NOT_EXECUTED",
+      "kind": "EXECUTED",
+      "reason": "按授权仅执行Host fixture；未安装工具链/解析SDK/连接手机/下载模型。"
+    },
+    {
+      "check": "真实生命周期取消响应",
+      "result": "NOT_EXECUTED",
+      "kind": "EXECUTED",
+      "reason": "按授权仅执行Host fixture；未安装工具链/解析SDK/连接手机/下载模型。"
+    },
+    {
+      "check": "飞书发送/编辑",
+      "result": "NOT_EXECUTED",
+      "reason": "按委派约定由主智能体验收后执行；仅准备草稿。"
+    }
+  ],
+  "ledger_diff": {
+    "completed_topic_added": 1,
+    "plan_checked": 1,
+    "next_plan_added": 1,
+    "new_reference_rows": 16,
+    "continued_reference_links": 5,
+    "old_materials_unchanged": 19
+  },
+  "assumptions": [],
+  "next": "主智能体核验主文件/台账diff/验收.json后发送摘要；真机验证须另行授权和具备环境。"
+}

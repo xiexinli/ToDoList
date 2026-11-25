@@ -1,0 +1,1225 @@
+
+ GenerativeModel  |  ML Kit  |  Google for Developers
+ Skip to main content
+ ML Kit
+ Guides
+ Reference
+ Samples
+ Case studies
+ Community
+ /
+ English
+ Deutsch
+ Español
+ Français
+ Indonesia
+ Português – Brasil
+ Русский
+ 中文 – 简体
+ 日本語
+ 한국어
+ Sign in
+ Reference
+ Android
+ iOS Swift
+ iOS Objective-C
+ ML Kit
+ Guides
+ Reference
+ Android
+ iOS Swift
+ iOS Objective-C
+ Samples
+ Case studies
+ Community
+Overview
+ com.google.android.odml.image
+Overview
+BitmapExtractor
+BitmapMlImageBuilder
+ByteBufferExtractor
+ByteBufferMlImageBuilder
+ImageProperties
+MediaImageExtractor
+MediaMlImageBuilder
+ MlImage
+Overview
+ImageFormat
+Internal
+StorageType
+ com.google.mlkit.common
+Overview
+MlKit
+ MlKitException
+Overview
+ErrorCode
+ com.google.mlkit.common.model
+Overview
+ CustomRemoteModel
+Overview
+Builder
+ DownloadConditions
+Overview
+Builder
+ LocalModel
+Overview
+Builder
+RemoteModel
+RemoteModelManager
+RemoteModelSource
+ com.google.mlkit.genai.agent (Kotlin)
+Overview
+ Interfaces
+AgentEvent
+AgentSession
+ Classes
+Agent
+Agent.Builder
+AgentEvent.FunctionCall
+AgentEvent.FunctionResponse
+AgentEvent.TextMessage
+AgentRunner
+AgentTool
+ Objects
+AppFunctionAgentTools
+ com.google.mlkit.genai.agent (Java)
+Overview
+ Interfaces
+AgentEvent
+AgentSession
+ Classes
+Agent
+Agent.Builder
+AgentEvent.FunctionCall
+AgentEvent.FunctionResponse
+AgentEvent.TextMessage
+AgentEventKt
+AgentRunner
+AgentTool
+AppFunctionAgentTools
+ com.google.mlkit.genai.common (Kotlin)
+Overview
+ Interfaces
+DownloadCallback
+StreamingCallback
+ Classes
+DownloadStatus
+DownloadStatus.DownloadFailed
+DownloadStatus.DownloadProgress
+DownloadStatus.DownloadStarted
+ Exceptions
+GenAiException
+ Annotations
+FeatureStatus
+GenAiException.ErrorCode
+ Objects
+DownloadStatus.DownloadCompleted
+ com.google.mlkit.genai.common.audio (Kotlin)
+Overview
+ Classes
+AudioSource
+ com.google.mlkit.genai.common (Java)
+Overview
+DownloadCallback
+FeatureStatus
+ GenAiException
+Overview
+ErrorCode
+StreamingCallback
+ com.google.mlkit.genai.common.audio (Java)
+Overview
+ AudioSource
+Overview
+Mode
+ com.google.mlkit.genai.embedding (Kotlin)
+Overview
+ Interfaces
+EmbeddingModel
+ Classes
+Content
+EmbeddingMetadata
+EmbeddingOptions
+EmbeddingRequest
+EmbeddingResult
+EmbeddingVector
+ImagePart
+Part
+TaskConfig
+TaskConfig.Classification
+TaskConfig.Clustering
+TaskConfig.CodeRetrieval
+TaskConfig.FactVerification
+TaskConfig.QuestionAnswering
+TaskConfig.RetrievalDocument
+TaskConfig.RetrievalQuery
+TaskConfig.SemanticSimilarity
+TextPart
+ Annotations
+Modality
+ Objects
+EmbeddingGeneration
+ com.google.mlkit.genai.embedding (Java)
+Overview
+ Interfaces
+EmbeddingModel
+ Classes
+Content
+EmbeddingGeneration
+EmbeddingMetadata
+EmbeddingOptions
+EmbeddingRequest
+EmbeddingResult
+EmbeddingVector
+ImagePart
+Part
+TaskConfig
+TaskConfig.Classification
+TaskConfig.Clustering
+TaskConfig.CodeRetrieval
+TaskConfig.FactVerification
+TaskConfig.QuestionAnswering
+TaskConfig.RetrievalDocument
+TaskConfig.RetrievalQuery
+TaskConfig.SemanticSimilarity
+TextPart
+ Annotations
+Modality
+ com.google.mlkit.genai.imagedescription
+Overview
+ImageDescriber
+ ImageDescriberOptions
+Overview
+Builder
+ImageDescription
+ ImageDescriptionRequest
+Overview
+Builder
+ImageDescriptionResult
+ com.google.mlkit.genai.prompt (Kotlin)
+Overview
+ Interfaces
+Caches
+GenerativeModel
+ Classes
+CachedContext
+Candidate
+Content
+Content.Builder
+CountTokensResponse
+CreateCachedContextRequest
+CreateCachedContextRequest.Builder
+FunctionCallPart
+FunctionResponsePart
+GenerateContentRequest
+GenerateContentRequest.Builder
+GenerateContentResponse
+GenerateTypedContentRequest
+GenerateTypedContentRequest.Builder
+GenerateTypedContentResponse
+GenerationConfig
+GenerationConfig.Builder
+ImagePart
+ModelConfig
+ModelConfig.Builder
+Part
+PromptPrefix
+SystemInstruction
+TextPart
+TypedCandidate
+ Annotations
+Candidate.FinishReason
+Content.Role
+Feature
+ModelPreference
+ModelReleaseStage
+TypedCandidate.TypedFinishReason
+ Objects
+Generation
+ com.google.mlkit.genai.prompt.java (Kotlin)
+Overview
+ Classes
+CachesFutures
+GenerativeModelFutures
+ com.google.mlkit.genai.prompt (Java)
+Overview
+ Interfaces
+Caches
+GenerativeModel
+ Classes
+CachedContext
+Candidate
+Content
+Content.Builder
+Content.Companion
+ContentKt
+CountTokensResponse
+CreateCachedContextRequest
+CreateCachedContextRequest.Builder
+CreateCachedContextRequestKt
+FunctionCallPart
+FunctionCallPart.Companion
+FunctionResponsePart
+FunctionResponsePart.Companion
+GenerateContentRequest
+GenerateContentRequest.Builder
+GenerateContentRequest.Companion
+GenerateContentRequestKt
+GenerateContentResponse
+GenerateTypedContentRequest
+GenerateTypedContentRequest.Builder
+GenerateTypedContentRequest.Companion
+GenerateTypedContentRequestKt
+GenerateTypedContentResponse
+Generation
+GenerationConfig
+GenerationConfig.Builder
+GenerationConfig.Companion
+GenerationConfigKt
+ImagePart
+ModelConfig
+ModelConfig.Builder
+ModelConfig.Companion
+ModelConfigKt
+Part
+PromptPrefix
+SystemInstruction
+TextPart
+TypedCandidate
+ Annotations
+Candidate.FinishReason
+Content.Role
+Feature
+ModelPreference
+ModelReleaseStage
+TypedCandidate.TypedFinishReason
+ com.google.mlkit.genai.prompt.java (Java)
+Overview
+ Classes
+CachesFutures
+GenerativeModelFutures
+ com.google.mlkit.genai.schema.annotations (Kotlin)
+Overview
+ Annotations
+Generable
+Guide
+ com.google.mlkit.genai.schema.guided (Kotlin)
+Overview
+ Interfaces
+GenerableProvider
+ Classes
+GenerableDetail
+GenerableDetail.GuideDetail
+ com.google.mlkit.genai.schema.tools (Kotlin)
+Overview
+ Classes
+FunctionDeclaration
+FunctionSchema
+ Annotations
+FunctionType
+ com.google.mlkit.genai.schema.annotations (Java)
+Overview
+ Annotations
+Generable
+Guide
+ com.google.mlkit.genai.schema.guided (Java)
+Overview
+ Interfaces
+GenerableProvider
+ Classes
+GenerableDetail
+GenerableDetail.GuideDetail
+ com.google.mlkit.genai.schema.tools (Java)
+Overview
+ Classes
+FunctionDeclaration
+FunctionSchema
+ Annotations
+FunctionType
+ com.google.mlkit.genai.proofreading
+Overview
+Proofreader
+ ProofreaderOptions
+Overview
+Builder
+InputType
+Language
+Proofreading
+ ProofreadingRequest
+Overview
+Builder
+ProofreadingResult
+ProofreadingSuggestion
+ com.google.mlkit.genai.rewriting
+Overview
+Rewriter
+ RewriterOptions
+Overview
+Builder
+Language
+OutputType
+Rewriting
+ RewritingRequest
+Overview
+Builder
+RewritingResult
+RewritingSuggestion
+ com.google.mlkit.genai.speechrecognition (Kotlin)
+Overview
+ Classes
+RecognitionOptions
+RecognitionOptions.Builder
+SpeechRecognizer
+SpeechRecognizerOptions
+SpeechRecognizerOptions.Builder
+SpeechRecognizerRequest
+SpeechRecognizerRequest.Builder
+SpeechRecognizerResponse
+SpeechRecognizerResponse.AudioLevelResponse
+SpeechRecognizerResponse.ErrorResponse
+SpeechRecognizerResponse.FinalTextResponse
+SpeechRecognizerResponse.PartialTextResponse
+SpeechRecognizerResponse.WordTiming
+ Annotations
+SpeechRecognizerOptions.Mode
+ Objects
+SpeechRecognition
+SpeechRecognizerResponse.CompletedResponse
+ com.google.mlkit.genai.speechrecognition (Java)
+Overview
+ Classes
+RecognitionOptions
+RecognitionOptions.Builder
+RecognitionOptions.Companion
+RecognitionOptionsKt
+SpeechRecognition
+SpeechRecognizer
+SpeechRecognizerOptions
+SpeechRecognizerOptions.Builder
+SpeechRecognizerOptions.Companion
+SpeechRecognizerOptionsKt
+SpeechRecognizerRequest
+SpeechRecognizerRequest.Builder
+SpeechRecognizerRequest.Companion
+SpeechRecognizerRequestKt
+SpeechRecognizerResponse
+SpeechRecognizerResponse.AudioLevelResponse
+SpeechRecognizerResponse.CompletedResponse
+SpeechRecognizerResponse.ErrorResponse
+SpeechRecognizerResponse.FinalTextResponse
+SpeechRecognizerResponse.PartialTextResponse
+SpeechRecognizerResponse.WordTiming
+ Annotations
+SpeechRecognizerOptions.Mode
+ com.google.mlkit.genai.speechtranslation (Kotlin)
+Overview
+ Interfaces
+SpeechTranslatorResponse
+ Classes
+SpeechTranslator
+SpeechTranslatorOptions
+SpeechTranslatorOptions.Builder
+SpeechTranslatorRequest
+SpeechTranslatorRequest.Builder
+SpeechTranslatorResponse.Audio
+SpeechTranslatorResponse.ErrorResponse
+SpeechTranslatorResponse.Text
+TranslationAudio
+ Objects
+SpeechTranslation
+SpeechTranslatorResponse.CompletedResponse
+ com.google.mlkit.genai.speechtranslation (Java)
+Overview
+ Interfaces
+SpeechTranslatorResponse
+ Classes
+SpeechTranslation
+SpeechTranslator
+SpeechTranslatorOptions
+SpeechTranslatorOptions.Builder
+SpeechTranslatorOptionsKt
+SpeechTranslatorRequest
+SpeechTranslatorRequest.Builder
+SpeechTranslatorRequestKt
+SpeechTranslatorResponse.Audio
+SpeechTranslatorResponse.CompletedResponse
+SpeechTranslatorResponse.ErrorResponse
+SpeechTranslatorResponse.Text
+TranslationAudio
+ com.google.mlkit.genai.summarization
+Overview
+Summarization
+ SummarizationRequest
+Overview
+Builder
+SummarizationResult
+Summarizer
+ SummarizerOptions
+Overview
+Builder
+InputType
+Language
+OutputType
+ com.google.mlkit.genai.texttospeech (Kotlin)
+Overview
+ Classes
+SpeechSynthesizer
+SpeechSynthesizerOptions
+SpeechSynthesizerOptions.Builder
+SpeechSynthesizerRequest
+SpeechSynthesizerRequest.Input
+SpeechSynthesizerRequest.Input.Earcon
+SpeechSynthesizerRequest.Input.PreRecordedSpeech
+SpeechSynthesizerRequest.Input.Text
+SpeechSynthesizerResponse
+SpeechSynthesizerResponse.AudioAvailable
+SpeechSynthesizerResponse.Error
+SpeechSynthesizerResponse.StatusUpdate
+VoiceInfo
+ Enums
+SpeechSynthesizerResponse.Status
+VoiceInfo.Gender
+ Annotations
+SpeechSynthesizerRequest.QueueMode
+ Objects
+SpeechSynthesis
+ com.google.mlkit.genai.texttospeech (Java)
+Overview
+ Classes
+SpeechSynthesis
+SpeechSynthesizer
+SpeechSynthesizerOptions
+SpeechSynthesizerOptions.Builder
+SpeechSynthesizerOptionsKt
+SpeechSynthesizerRequest
+SpeechSynthesizerRequest.Input
+SpeechSynthesizerRequest.Input.Earcon
+SpeechSynthesizerRequest.Input.PreRecordedSpeech
+SpeechSynthesizerRequest.Input.Text
+SpeechSynthesizerResponse
+SpeechSynthesizerResponse.AudioAvailable
+SpeechSynthesizerResponse.Error
+SpeechSynthesizerResponse.StatusUpdate
+VoiceInfo
+ Enums
+SpeechSynthesizerResponse.Status
+VoiceInfo.Gender
+ Annotations
+SpeechSynthesizerRequest.QueueMode
+ com.google.mlkit.nl.entityextraction
+Overview
+ DateTimeEntity
+Overview
+DateTimeGranularity
+ Entity
+Overview
+Type
+EntityAnnotation
+EntityExtraction
+ EntityExtractionParams
+Overview
+Builder
+ EntityExtractionRemoteModel
+Overview
+Builder
+EntityExtractor
+ EntityExtractorOptions
+Overview
+Builder
+ModelIdentifier
+FlightNumberEntity
+IbanEntity
+IsbnEntity
+MoneyEntity
+ PaymentCardEntity
+Overview
+PaymentCardNetwork
+ TrackingNumberEntity
+Overview
+ParcelTrackingCarrier
+ com.google.mlkit.nl.languageid
+Overview
+IdentifiedLanguage
+LanguageIdentification
+ LanguageIdentificationOptions
+Overview
+Builder
+LanguageIdentifier
+ com.google.mlkit.linkfirebase
+Overview
+ FirebaseModelSource
+Overview
+Builder
+ com.google.mlkit.nl.smartreply
+Overview
+SmartReply
+SmartReplyGenerator
+ SmartReplyGeneratorOptions
+Overview
+Builder
+SmartReplySuggestion
+ SmartReplySuggestionResult
+Overview
+Status
+TextMessage
+ com.google.mlkit.nl.translate
+Overview
+ TranslateLanguage
+Overview
+Language
+ TranslateRemoteModel
+Overview
+Builder
+Translation
+Translator
+ TranslatorOptions
+Overview
+Builder
+ com.google.mlkit.vision.barcode
+Overview
+BarcodeScanner
+ BarcodeScannerOptions
+Overview
+Builder
+BarcodeScanning
+ ZoomSuggestionOptions
+Overview
+Builder
+ZoomCallback
+ com.google.mlkit.vision.barcode.common
+Overview
+ Barcode
+Overview
+ Barcode.Address
+Overview
+AddressType
+BarcodeFormat
+BarcodeValueType
+CalendarDateTime
+CalendarEvent
+ContactInfo
+DriverLicense
+ Barcode.Email
+Overview
+FormatType
+GeoPoint
+PersonName
+ Barcode.Phone
+Overview
+FormatType
+Sms
+UrlBookmark
+ Barcode.WiFi
+Overview
+EncryptionType
+ com.google.mlkit.vision.camera
+Overview
+ CameraSourceConfig
+Overview
+Builder
+CameraFacing
+CameraXSource
+DetectionTaskCallback
+ com.google.mlkit.vision.codescanner
+Overview
+GmsBarcodeScanner
+ GmsBarcodeScannerOptions
+Overview
+Builder
+GmsBarcodeScanning
+ com.google.mlkit.vision.common
+Overview
+ InputImage
+Overview
+ImageFormat
+PointF3D
+Triangle
+ com.google.mlkit.vision.digitalink.common
+Overview
+Point
+RecognitionCandidate
+RecognitionResult
+ Stroke
+Overview
+Properties
+ com.google.mlkit.vision.digitalink.recognition
+Overview
+DigitalInkRecognition
+ DigitalInkRecognitionModel
+Overview
+Builder
+DigitalInkRecognitionModelIdentifier
+DigitalInkRecognizer
+ DigitalInkRecognizerOptions
+Overview
+Builder
+ Ink
+Overview
+Builder
+Point
+ Ink.Stroke
+Overview
+Builder
+ RecognitionContext
+Overview
+Builder
+WritingArea
+ com.google.mlkit.vision.digitalink.common
+Overview
+Point
+RecognitionCandidate
+RecognitionResult
+ Stroke
+Overview
+Properties
+ com.google.mlkit.vision.documentscanner
+Overview
+GmsDocumentScanner
+ GmsDocumentScannerOptions
+Overview
+Builder
+CaptureMode
+ResultFormat
+ScannerMode
+GmsDocumentScanning
+ GmsDocumentScanningResult
+Overview
+Page
+Pdf
+ com.google.mlkit.vision.face
+Overview
+Face
+ FaceContour
+Overview
+ContourType
+FaceDetection
+FaceDetector
+ FaceDetectorOptions
+Overview
+Builder
+ClassificationMode
+ContourMode
+LandmarkMode
+PerformanceMode
+ FaceLandmark
+Overview
+LandmarkType
+ com.google.mlkit.vision.facemesh
+Overview
+ FaceMesh
+Overview
+ContourType
+FaceMeshDetection
+FaceMeshDetector
+ FaceMeshDetectorOptions
+Overview
+Builder
+UseCase
+FaceMeshPoint
+ com.google.mlkit.vision.interfaces
+Overview
+Detector
+ com.google.mlkit.vision.label
+Overview
+ImageLabel
+ImageLabeler
+ImageLabelerOptionsBase
+ImageLabeling
+ com.google.mlkit.vision.label.custom
+Overview
+ CustomImageLabelerOptions
+Overview
+Builder
+ com.google.mlkit.vision.label.defaults
+Overview
+ ImageLabelerOptions
+Overview
+Builder
+ com.google.mlkit.vision.objects
+Overview
+ DetectedObject
+Overview
+Label
+ObjectDetection
+ObjectDetector
+ ObjectDetectorOptionsBase
+Overview
+DetectorMode
+ com.google.mlkit.vision.objects.custom
+Overview
+ CustomObjectDetectorOptions
+Overview
+Builder
+ com.google.mlkit.vision.objects.defaults
+Overview
+ ObjectDetectorOptions
+Overview
+Builder
+PredefinedCategory
+ com.google.mlkit.vision.pose
+Overview
+Pose
+PoseDetection
+PoseDetector
+ PoseDetectorOptionsBase
+Overview
+DetectorMode
+HardwareConfig
+ PoseLandmark
+Overview
+LandmarkType
+ com.google.mlkit.vision.pose.defaults
+Overview
+ PoseDetectorOptions
+Overview
+Builder
+ com.google.mlkit.vision.pose.accurate
+Overview
+ AccuratePoseDetectorOptions
+Overview
+Builder
+ com.google.mlkit.vision.segmentation
+Overview
+Segmentation
+SegmentationMask
+Segmenter
+ com.google.mlkit.vision.segmentation.selfie
+Overview
+ SelfieSegmenterOptions
+Overview
+Builder
+DetectorMode
+ com.google.mlkit.vision.segmentation.subject
+Overview
+Subject
+SubjectSegmentation
+SubjectSegmentationResult
+SubjectSegmenter
+ SubjectSegmenterOptions
+Overview
+Builder
+ SubjectSegmenterOptions.SubjectResultOptions
+Overview
+Builder
+ com.google.mlkit.vision.text
+Overview
+ Text
+Overview
+Element
+Line
+Symbol
+TextBlock
+TextRecognition
+TextRecognizer
+ TextRecognizerOptionsInterface
+Overview
+LanguageOption
+ com.google.mlkit.vision.text.chinese
+Overview
+ ChineseTextRecognizerOptions
+Overview
+Builder
+ com.google.mlkit.vision.text.devanagari
+Overview
+ DevanagariTextRecognizerOptions
+Overview
+Builder
+ com.google.mlkit.vision.text.japanese
+Overview
+ JapaneseTextRecognizerOptions
+Overview
+Builder
+ com.google.mlkit.vision.text.korean
+Overview
+ KoreanTextRecognizerOptions
+Overview
+Builder
+ com.google.mlkit.vision.text.latin
+Overview
+ TextRecognizerOptions
+Overview
+Builder
+ Home
+ Products
+ ML Kit
+ Reference
+ Send feedback
+ Stay organized with collections
+ Save and categorize content based on your preferences.
+GenerativeModel
+Kotlin
+|Java
+interface GenerativeModel
+Provides an interface for performing content generation.
+It supports both standard and streaming inferences, as well as methods for preparing and cleaning up model resources.
+Typical usage:
+val request = generateContentRequest { text("Your input text here.") }
+try {
+ val result = generativeModel.generateContent(request)
+ println(result.text)
+} catch (e: GenAiException) {
+ // Handle exception
+}
+Summary
+Public functions
+ suspend @FeatureStatus Int
+checkStatus()
+Checks the current availability status of the content generation feature.
+ suspend Unit
+clearImplicitCaches()
+Clears all caches created by implicit prefix caching.
+ Unit
+close()
+Releases resources associated with the content generation engine.
+ suspend CountTokensResponse
+countTokens(request: GenerateContentRequest)
+Counts the number of tokens in the request.
+ suspend CountTokensResponse
+<T : Any> countTokens(request: GenerateTypedContentRequest<T>)
+Counts the number of tokens in the request for generating a typed response.
+ Flow<DownloadStatus>
+download()
+Downloads the required model assets for the content generation feature if they are not already available.
+ open suspend GenerateContentResponse
+generateContent(prompt: String)
+Performs asynchronous content generation on the provided input prompt.
+ suspend GenerateContentResponse
+generateContent(request: GenerateContentRequest)
+Performs asynchronous content generation on the provided input request.
+ suspend GenerateTypedContentResponse<T>
+<T : Any> generateContent(request: GenerateTypedContentRequest<T>)
+Performs asynchronous content generation on the provided input request, returning a strongly typed response.
+ open suspend GenerateContentResponse
+generateContent(prompt: String, streamingCallback: StreamingCallback)
+Performs streaming content generation inference on the provided input prompt.
+ suspend GenerateContentResponse
+generateContent(
+    request: GenerateContentRequest,
+    streamingCallback: StreamingCallback
+)
+Performs streaming content generation inference on the provided input request.
+ open Flow<GenerateContentResponse>
+generateContentStream(prompt: String)
+Performs streaming content generation inference on the provided input prompt.
+ Flow<GenerateContentResponse>
+generateContentStream(request: GenerateContentRequest)
+Performs streaming content generation inference on the provided input request.
+ suspend List<Int>
+getAvailableFeatures()
+Returns the list of features (capabilities) available for this model.
+ suspend String
+getBaseModelName()
+Returns the name of the base model used by this generator instance.
+ suspend Int
+getTokenLimit()
+Returns total token limit for the API including both input and output tokens.
+ suspend Boolean
+isCachingFeatureAvailable()
+This function is deprecated. Use getAvailableFeatures() instead.
+ suspend Boolean
+isStructuredOutputFeatureAvailable()
+This function is deprecated. Use getAvailableFeatures() instead.
+ suspend Boolean
+isSystemPromptAvailable()
+This function is deprecated. Use getAvailableFeatures() instead.
+ suspend Boolean
+isThinkingModeAvailable()
+This function is deprecated. Use getAvailableFeatures() instead.
+ suspend Unit
+warmup()
+Warms up the inference engine for use by loading necessary models and initializing runtime components.
+Public properties
+ Caches
+caches
+Provides explicit management of cached contexts.
+Public functions
+checkStatus
+suspend fun checkStatus(): @FeatureStatus Int
+Checks the current availability status of the content generation feature.
+ Returns
+ @FeatureStatus Int
+a feature status indicating the feature's readiness.
+clearImplicitCaches
+suspend fun clearImplicitCaches(): Unit
+Clears all caches created by implicit prefix caching.
+This experimental method clears all caches created by implicit prefix caching. When promptPrefix is provided in generateContent or generateContentStream, the system caches its processing implicitly to reduce inference time for subsequent requests sharing the same prefix. This method clears all such created caches.
+close
+fun close(): Unit
+Releases resources associated with the content generation engine.
+This should be called when the GenerativeModel is no longer needed. Can be safely called multiple times.
+countTokens
+suspend fun countTokens(request: GenerateContentRequest): CountTokensResponse
+Counts the number of tokens in the request.
+The number of tokens counted includes only input request tokens. The result can be compared with getTokenLimit to check if the request is within the token limit.
+ Parameters
+ request: GenerateContentRequest
+a non-null GenerateContentRequest containing input content.
+ Returns
+ CountTokensResponse
+a CountTokensResponse containing the number of tokens in the request.
+countTokens
+suspend fun <T : Any> countTokens(request: GenerateTypedContentRequest<T>): CountTokensResponse
+Counts the number of tokens in the request for generating a typed response.
+This is an experimental feature.
+The number of tokens counted includes only input request tokens. The result can be compared with getTokenLimit to check if the request is within the token limit.
+If GenerateTypedContentRequest.includeSchemaInPrompt is true, the token count will also include tokens related to the response schema definition.
+ Parameters
+ request: GenerateTypedContentRequest<T>
+A non-null GenerateTypedContentRequest containing input content and output type information.
+ Returns
+ CountTokensResponse
+A CountTokensResponse containing the number of tokens in the request.
+download
+fun download(): Flow<DownloadStatus>
+Downloads the required model assets for the content generation feature if they are not already available.
+Use this method to proactively download models before inference. The returned Flow emits DownloadStatus to report progress and completion status.
+ Returns
+ Flow<DownloadStatus>
+a Flow which will emit DownloadStatuss for download progress updates.
+generateContent
+open suspend fun generateContent(prompt: String): GenerateContentResponse
+Performs asynchronous content generation on the provided input prompt.
+This is a convenience method that wraps the input prompt in a GenerateContentRequest with default generation parameters.
+ Parameters
+ prompt: String
+the input prompt text.
+ Returns
+ GenerateContentResponse
+a GenerateContentResponse containing the generated content.
+ Throws
+ GenAiException
+if the inference fails.
+ See also
+ generateContent
+(request: GenerateContentRequest)
+generateContent
+suspend fun generateContent(request: GenerateContentRequest): GenerateContentResponse
+Performs asynchronous content generation on the provided input request.
+This is the standard, non-streaming version of inference. The full generation suggestions are returned once the model completes processing.
+This method is non-blocking. To handle the result, callers should use try/catch to handle the returned GenerateContentResponse or a potential GenAiException.
+The coroutine that runs generateContent is cancellable. If the inference is no longer needed (e.g., the user navigates away or input changes), the coroutine can be cancelled.
+Note that inference requests may fail under certain conditions such as:
+Invalid or malformed input in the GenerateContentRequest.
+Exceeded usage quota or failed safety checks.
+ Parameters
+ request: GenerateContentRequest
+a non-null GenerateContentRequest containing input content.
+ Returns
+ GenerateContentResponse
+a GenerateContentResponse containing the generated content.
+ Throws
+ GenAiException
+if the inference fails.
+generateContent
+suspend fun <T : Any> generateContent(request: GenerateTypedContentRequest<T>): GenerateTypedContentResponse<T>
+Performs asynchronous content generation on the provided input request, returning a strongly typed response.
+This is an experimental feature.
+This is the standard, non-streaming version of inference. The full generation suggestions are returned once the model completes processing. The model's response is parsed into an instance of the class specified by outputClass.
+This method is non-blocking. To handle the result, callers should use try/catch to handle the returned GenerateTypedContentResponse or a potential GenAiException.
+The coroutine that runs generateContent is cancellable. If the inference is no longer needed (e.g., the user navigates away or input changes), the coroutine can be cancelled.
+Note that inference requests may fail under certain conditions such as:
+Invalid or malformed input in the GenerateContentRequest in the GenerateTypedContentRequest.
+Exceeded usage quota or failed safety checks.
+The output class is missing the @Generable annotation, throwing a GenAiException with GenAiException.ErrorCode.STRUCTURED_OUTPUT_REQUEST_ERROR.
+Failure to parse the model output into type T, throwing a GenAiException with GenAiException.ErrorCode.STRUCTURED_OUTPUT_RESPONSE_ERROR. This can occur if:
+The response reaches the token limit, resulting in incomplete output.
+The model's response is malformed or incompatible with the type T.
+ Parameters
+ request: GenerateTypedContentRequest<T>
+a non-null GenerateTypedContentRequest containing input content.
+ Returns
+ GenerateTypedContentResponse<T>
+a GenerateTypedContentResponse containing the generated content as a parsed object of type T.
+ Throws
+ GenAiException
+if the inference fails or the output cannot be parsed into the type T.
+generateContent
+open suspend fun generateContent(prompt: String, streamingCallback: StreamingCallback): GenerateContentResponse
+Performs streaming content generation inference on the provided input prompt.
+This is a convenience method that wraps the input prompt in a GenerateContentRequest with default generation parameters.
+ Parameters
+ prompt: String
+the input prompt text.
+ streamingCallback: StreamingCallback
+a non-null StreamingCallback for receiving streamed results.
+ Returns
+ GenerateContentResponse
+a GenerateContentResponse containing the final generated content.
+ Throws
+ GenAiException
+if the inference fails.
+ See also
+ generateContent
+(request: GenerateContentRequest, streamingCallback: StreamingCallback)
+generateContent
+suspend fun generateContent(
+    request: GenerateContentRequest,
+    streamingCallback: StreamingCallback
+): GenerateContentResponse
+Performs streaming content generation inference on the provided input request.
+Partial results are delivered incrementally through the provided StreamingCallback. The function suspends until all results are received and returns the complete, final GenerateContentResponse. If streaming is interrupted by a GenAiException, consider removing any already streamed partial output from the UI.
+The coroutine that runs generateContent is cancellable. If the inference is no longer needed (e.g., the user navigates away or input changes), the coroutine can be cancelled.
+Note that inference requests may fail under certain conditions such as:
+Invalid or malformed input in the GenerateContentRequest.
+Exceeded usage quota or failed safety checks.
+ Parameters
+ request: GenerateContentRequest
+a non-null GenerateContentRequest containing input content.
+ streamingCallback: StreamingCallback
+a non-null StreamingCallback for receiving streamed results.
+ Returns
+ GenerateContentResponse
+a GenerateContentResponse containing the final generated content.
+ Throws
+ GenAiException
+if the inference fails.
+generateContentStream
+open fun generateContentStream(prompt: String): Flow<GenerateContentResponse>
+Performs streaming content generation inference on the provided input prompt.
+This is a convenience method that wraps the input prompt in a GenerateContentRequest with default generation parameters.
+ Parameters
+ prompt: String
+the input prompt text.
+ Returns
+ Flow<GenerateContentResponse>
+a Flow which will emit GenerateContentResponses as they are returned from the model.
+ Throws
+ IllegalArgumentException
+if request.candidateCount is greater than 1. If you need to receive multiple candidates in the final result, please use the generateContent(prompt: String, streamingCallback: StreamingCallback) method instead.
+ See also
+ generateContentStream
+(request: GenerateContentRequest)
+generateContentStream
+fun generateContentStream(request: GenerateContentRequest): Flow<GenerateContentResponse>
+Performs streaming content generation inference on the provided input request.
+Partial results are delivered incrementally through the returned Flow. Each GenerateContentResponse contains a single Candidate. The last emitted value contains a Candidate with a FinishReason that is a non-null FinishReason (e.g., FinishReason.STOP or FinishReason.MAX_TOKENS)
+This streaming mode is useful to build a more responsive UI. Streaming can be interrupted by a GenAiException. In that case, consider removing any already streamed partial output from the UI.
+The coroutine collecting the Flow is cancellable. If the inference is no longer needed (e.g., the user navigates away or input changes), the coroutine can be cancelled
+Note that inference requests may fail under certain conditions such as:
+Invalid or malformed input in the GenerateContentRequest.
+Exceeded usage quota or failed safety checks.
+Important: This function currently only supports a candidateCount of 1 in the GenerateContentRequest. Providing a candidateCount greater than 1 will result in an IllegalArgumentException. If you need to receive multiple candidates in the final result, please use the generateContent(request: GenerateContentRequest, streamingCallback: StreamingCallback) method instead.
+ Parameters
+ request: GenerateContentRequest
+a non-null GenerateContentRequest containing the input content.
+ Returns
+ Flow<GenerateContentResponse>
+a Flow which will emit GenerateContentResponses as they are returned from the model.
+ Throws
+ IllegalArgumentException
+if request.candidateCount is greater than 1.
+getAvailableFeatures
+suspend fun getAvailableFeatures(): List<Int>
+Returns the list of features (capabilities) available for this model.
+ Returns
+ List<Int>
+the list of available features.
+getBaseModelName
+suspend fun getBaseModelName(): String
+Returns the name of the base model used by this generator instance.
+The model name may be used for logging, debugging, or feature gating purposes.
+ Returns
+ String
+a String representing the base model name.
+getTokenLimit
+suspend fun getTokenLimit(): Int
+Returns total token limit for the API including both input and output tokens.
+This limit can be used with countTokens to check if a request is within limits before running inference. The input size returned by countTokens plusing the output size specified by GenerateContentRequest.maxOutputTokens should be no larger than the limit returned by this method.
+ Returns
+ Int
+token limit.
+isCachingFeatureAvailable
+suspend fun isCachingFeatureAvailable(): Boolean
+ This function is deprecated.
+Use getAvailableFeatures() instead.
+Checks if the caching feature is available.
+ Returns
+ Boolean
+true if the caching feature is available, false otherwise.
+isStructuredOutputFeatureAvailable
+suspend fun isStructuredOutputFeatureAvailable(): Boolean
+ This function is deprecated.
+Use getAvailableFeatures() instead.
+Checks if the structured output feature is available.
+This is an experimental feature.
+ Returns
+ Boolean
+true if the structured output feature is available, false otherwise.
+isSystemPromptAvailable
+suspend fun isSystemPromptAvailable(): Boolean
+ This function is deprecated.
+Use getAvailableFeatures() instead.
+Checks if the system prompt feature is supported on the device.
+ Returns
+ Boolean
+true if the system prompt feature is available, false otherwise.
+isThinkingModeAvailable
+suspend fun isThinkingModeAvailable(): Boolean
+ This function is deprecated.
+Use getAvailableFeatures() instead.
+Checks if the thinking mode feature is supported on the device.
+ Returns
+ Boolean
+true if the thinking mode feature is available, false otherwise.
+warmup
+suspend fun warmup(): Unit
+Warms up the inference engine for use by loading necessary models and initializing runtime components.
+While calling this method is optional, we recommend invoking it well before the first inference call to reduce the latency of the initial inference.
+ Throws
+ GenAiException
+if the preparation fails.
+Public properties
+caches
+val caches: Caches
+Provides explicit management of cached contexts.
+This experimental property offers direct control over cached contexts to accelerate inference.
+The GenerativeModel supports two types of caching:
+Implicit Caching: Automatically created when a promptPrefix is provided in generateContent or generateContentStream. The system manages their lifecycle. These caches cannot be accessed directly but can be cleared using clearImplicitCaches.
+Explicit Caching: Managed via this caches property. Users can explicitly create, retrieve, and manage the lifecycle of cache entries.
+Use isCachingFeatureAvailable to check if the caching feature is available. Attempting to use the caches property when the feature is not available will result in an exception.
+ Send feedback
+Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License. For details, see the Google Developers Site Policies. Java is a registered trademark of Oracle and/or its affiliates.
+Last updated 2026-10-27 UTC.
+ Need to tell us more?
+ [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-27 UTC."],[],[]]
+Engage
+ Google AI Forum
+ Google Developer Program
+ Google Developer Groups
+ Google Developer Experts
+ Accelerators
+ Google Cloud & NVIDIA
+Connect
+ Blog
+ Bluesky
+ Instagram
+ LinkedIn
+ X (Twitter)
+ YouTube
+Build
+ Android
+ Chrome
+ Firebase
+ Google AI Studio
+ Google Antigravity
+ Google Cloud
+ Google Play
+ View all
+ Android
+ Chrome
+ Firebase
+ Google Cloud Platform
+ Google AI
+ All products
+ Terms
+ Privacy
+ Manage cookies
+ English
+ Deutsch
+ Español
+ Français
+ Indonesia
+ Português – Brasil
+ Русский
+ 中文 – 简体
+ 日本語
+ 한국어

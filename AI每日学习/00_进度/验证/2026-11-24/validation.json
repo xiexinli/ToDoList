@@ -1,0 +1,70 @@
+{
+  "status": "DONE",
+  "scope": "今日材料/台账/Host最小证据；不含主agent独立验收或消息发送",
+  "observed_at": "2026-11-24T08:05:51.824775+08:00",
+  "material": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-24-端云请求的只读对账：查询状态而不是重发（续）.md",
+  "evidence_dir": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-24",
+  "ledger": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md",
+  "python": "3.9.6",
+  "sqlite": "3.54.0",
+  "test_command": "cd '/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-24' && python3 test_query.py",
+  "test_count": 12,
+  "test_exit": 0,
+  "checks": {
+    "test_query.py": "PASS EXECUTED_HOST",
+    "query_host.py": "PASS EXECUTED_HOST",
+    "唯一日材料": "PASS",
+    "标题0~5": "PASS",
+    "复述空位": "PASS",
+    "台账已完成主题": "PASS 新增1行（总27讲）",
+    "台账本周计划": "PASS 第9讲勾选",
+    "台账链接登记": "PASS 新增5行/覆盖全部引用",
+    "外链抽验": "PASS 4/4 HTTP200",
+    "动态配额": "PASS 新动向1/岗位1/其他1",
+    "内嵌代码一致": "PASS",
+    "昨日12个文件SHA256": "PASS 未变",
+    "飞书": "NOT_SENT 摘要9行待主提交"
+  },
+  "http_samples": [
+    {
+      "id": "S01",
+      "url": "https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/",
+      "http": "200",
+      "curl_exit": 0
+    },
+    {
+      "id": "S02",
+      "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2118617283625664512",
+      "http": "200",
+      "curl_exit": 0
+    },
+    {
+      "id": "S04",
+      "url": "https://raw.githubusercontent.com/googleapis/googleapis/master/google/longrunning/operations.proto",
+      "http": "200",
+      "curl_exit": 0
+    },
+    {
+      "id": "S05",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "http": "200",
+      "curl_exit": 0
+    }
+  ],
+  "source_http_initial": "5/5 HTTP200，正文目标段落4条实读；S03仅页面壳",
+  "not_executed": [
+    "真实操作状态查询",
+    "真实对端只读行为",
+    "真实查询契约与scope批准",
+    "真实签名与身份认证",
+    "远端终结与资源释放",
+    "模型调用与usage",
+    "Android编译/SDK/真机",
+    "跨进程查询预算",
+    "11-20/21历史缺口复核"
+  ],
+  "usage": "NOT_EXECUTED（无模型调用）",
+  "feishu": "NOT_SENT（由主agent唯一提交）",
+  "material_sha256": "9d43a9dc5311249269e99fa2b69eb2e9efdb549e2987e96f7cf771db6fd29633",
+  "ledger_sha256": "e224c3d816304f8c1842b5e681cf7512e1d240e38f14bfbe0178bf1122d3d6df"
+}

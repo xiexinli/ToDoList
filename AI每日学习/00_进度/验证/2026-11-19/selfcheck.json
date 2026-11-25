@@ -1,0 +1,59 @@
+{
+  "checks": {
+    "今日主文件唯一": true,
+    "模板0至5齐全": true,
+    "复述空位": true,
+    "Python片段源码一致": true,
+    "Kotlin片段源码一致": true,
+    "Python语法": true,
+    "台账完成表追加1行": true,
+    "本周计划打勾": true,
+    "台账链接5新7继续": true,
+    "台账最终hash": true,
+    "旧复述与内容保留": true,
+    "未改规则或昨日主课": true,
+    "Host26方法通过": true,
+    "动态限量": true,
+    "摘要8行未发": true,
+    "全部12来源已读核验": true,
+    "今日周四无周总结": true,
+    "最终4条外链HTTP200": true
+  },
+  "http_spot_checks": [
+    {
+      "id": "S01",
+      "url": "https://developer.android.com/reference/android/os/SystemClock",
+      "command": "curl -sL --max-time 35 -o /dev/null -w %{http_code}",
+      "exit": 0,
+      "http": "200"
+    },
+    {
+      "id": "S02",
+      "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+      "command": "curl -sL --max-time 35 -o /dev/null -w %{http_code}",
+      "exit": 0,
+      "http": "200"
+    },
+    {
+      "id": "N01",
+      "url": "https://developers.googleblog.com/agents-are-sessions-not-requests-size-gke-node-pools-for-ai-agent-sessions/",
+      "command": "curl -sL --max-time 35 -o /dev/null -w %{http_code}",
+      "exit": 0,
+      "http": "200"
+    },
+    {
+      "id": "J01",
+      "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2013848487359307776",
+      "command": "curl -sL --max-time 35 -o /dev/null -w %{http_code}",
+      "exit": 0,
+      "http": "200"
+    }
+  ],
+  "overall": "PASS",
+  "android": "SPEC_CHECK_NOT_EXECUTED",
+  "nano": "NOT_EXECUTED",
+  "feishu": "not_sent",
+  "feishu_reason": "USER本次委派要求主智能体统一推送；没有send_feishu_text调用或回执",
+  "independent_review": "主智能体待执行，当前仅产出者自检",
+  "post_refinement": "生成前中断边界修正后/tmp重新执行，26方法PASS；Python片段/源码再次比对"
+}

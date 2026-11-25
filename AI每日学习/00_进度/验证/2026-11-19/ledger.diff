@@ -1,0 +1,37 @@
+--- ledger.before.md
++++ 进度.md
+@@ -26,6 +26,7 @@
+ | 2026-11-16 | 02_AndroidAI · 第 1 讲 | 端侧推理的设备能力检查与可用性边界 | 02_AndroidAI/2026-11-16-端侧推理的设备能力检查与可用性边界.md | 待填 |
+ | 2026-11-17 | 02_AndroidAI · 第 2 讲 | Prompt API 最小调用：能力门禁后的一次短文本生成 | 02_AndroidAI/2026-11-17-Prompt API最小调用：能力门禁后的一次短文本生成.md | 待填 |
+ | 2026-11-18 | 02_AndroidAI · 第 3 讲 | 端侧流式生成的 Compose 增量呈现（续地基 Streaming，Android 接入） | 02_AndroidAI/2026-11-18-端侧流式生成的Compose增量呈现.md | 待填 |
++| 2026-11-19 | 02_AndroidAI · 第 4 讲 | 端侧生成的性能测量：首字时延与完整耗时 | 02_AndroidAI/2026-11-19-端侧生成的性能测量：首字时延与完整耗时.md | 待填 |
+ 
+ 
+ > 欠产与补写记录：2026-10-31 ~ 2026-11-04 因「本机终端审批超时」连续 6 天未落盘；2026-11-05 17:32 用户在 DHwork 权限设置中放行无人值守终端审批后，上述 5 天材料与 2026-W44 周总结已统一补全。
+@@ -59,6 +60,8 @@
+ - [x] Android × AI · 第 1 讲：端侧推理的设备能力检查与可用性边界（2026-11-16 材料已产出；学习复述待填）
+ - [x] Android × AI · 第 2 讲：Prompt API 最小调用：能力门禁后的一次短文本生成（2026-11-17 材料已产出；Host 契约通过，Android 编译/真机 NOT_EXECUTED；复述待填）
+ - [x] Android × AI · 第 3 讲：端侧流式生成的 Compose 增量呈现（2026-11-18 材料已产出；续地基 Streaming；官方增量/终帧契约已复核，Host 17 项通过，Android/Compose 编译与真机 NOT_EXECUTED；复述待填）
++
++- [x] Android × AI · 第 4 讲：端侧生成的性能测量：首字时延与完整耗时（2026-11-19 材料已产出；Host合成时序26项通过，不是Nano性能；Android编译/真机NOT_EXECUTED；复述待填）
+ 
+ ## 动态链接去重表
+ | 首次出现日期 | 标题 | 链接 |
+@@ -175,10 +178,17 @@
+ | 2026-11-18 | 教学参考｜协程1.7.3 Mutex源码 | https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/sync/Mutex.kt |
+ | 2026-11-18 | 教学参考｜当前在线生命周期收集函数签名 | https://developer.android.com/reference/kotlin/androidx/lifecycle/compose/collectAsStateWithLifecycle.composable |
+ | 2026-11-18 | 教学参考｜lifecycle-runtime-compose-android 2.8.7版本源码 | https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-compose-android/2.8.7/lifecycle-runtime-compose-android-2.8.7-sources.jar |
++| 2026-11-19 | Android单调时钟 | https://developer.android.com/reference/android/os/SystemClock |
++| 2026-11-19 | GKE智能体会话容量 | https://developers.googleblog.com/agents-are-sessions-not-requests-size-gke-node-pools-for-ai-agent-sessions/ |
++| 2026-11-19 | 腾讯CPU性能架构师详情API | https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2013848487359307776 |
++| 2026-11-19 | 腾讯CPU性能架构师网页 | https://careers.tencent.com/jobdesc.html?postId=2013848487359307776 |
++| 2026-11-19 | Android Microbenchmark概览 | https://developer.android.com/topic/performance/benchmarking/microbenchmark-overview |
+ 
+ > 2026-11-17 教学参考继续使用（首次 2026-11-16，非新动态）：[Direct model access接入指南](https://developers.google.com/ml-kit/genai/prompt/android/get-started)；[ML Kit GenAI概览](https://developers.google.com/ml-kit/genai)；[Generation.getClient](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Generation)；[GenerativeModel生成与释放](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel)；[Google Maven genai-prompt beta4 POM](https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom)。当天全部引用、原来源日期与读取状态见 `验证/2026-11-17/sources.json`。
+ 
+ > 2026-11-18 教学参考继续使用（非新动态）：[S01 GenerativeModel流式签名、单候选、取消与close](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel)；[S03 响应候选与公开字段](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerateContentResponse)；[S04 候选文本与结束原因语义](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate)；[S05 Prompt接入指南：明确 += 追加流值](https://developers.google.com/ml-kit/genai/prompt/android/get-started)；[S06 GenAI最上层前台要求](https://developers.google.com/ml-kit/genai)；[S07 genai-prompt beta4 POM](https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom)；[S13 FinishReason整数常量](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate.FinishReason)；[S14 Builder请求构造与属性](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerateContentRequest.Builder)；[S15 TextPart构造器](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/TextPart)；[S16 Generation.getClient](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Generation)；[S17 协程1.7.3 Timeout源码](https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Timeout.kt)。全部引用的原来源日期、实读状态、canonical 去重与HTTP证据见 `验证/2026-11-18/sources.json`。本讲只续Android流式接入，不重讲SSE；摘要由主智能体验收后提交，本执行者 not_sent。
++
++> 2026-11-19 教学参考继续使用（非新动态）：[S02 GenerativeModel流式契约](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel)；[S03 Candidate正文与终帧](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate)；[S04 Prompt接入指南](https://developers.google.com/ml-kit/genai/prompt/android/get-started)；[S05 GenAI前台与资源限制](https://developers.google.com/ml-kit/genai)；[S06 结束原因常量](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate.FinishReason)；[S07 genai-prompt版本POM](https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom)；[S08 协程1.7.3超时源码](https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Timeout.kt)。当天全部12条引用的日期/正文定位/canonical去重/HTTP证据见 `验证/2026-11-19/sources.json`。本课仅测量边界；26项Host测试为合成时序断言，非Nano性能。Android编译/真机NOT_EXECUTED；本执行者摘要not_sent，由主智能体独立验收后处理。
+ 
+ ## 周总结
+ | 周次 | 覆盖日期 | 文件 |

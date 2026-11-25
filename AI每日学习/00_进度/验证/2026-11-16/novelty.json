@@ -1,0 +1,84 @@
+{
+  "type": "TOOL",
+  "old_canonical_count": 71,
+  "policy": "http/https、末斜杠、查询排序、实际HTTP重定向别名",
+  "aliases": {
+    "https://developers.google.com/ml-kit/genai": "https://developers.google.com/ml-kit/genai",
+    "https://developers.google.com/ml-kit/genai/prompt/android": "https://developers.google.com/ml-kit/genai/prompt/android",
+    "https://developers.googleblog.com/feeds/posts/default": "https://developers.googleblog.com/feeds/posts/default/",
+    "https://careers.tencent.com/tencentcareer/api/post/Query?keyword=Android&pageIndex=1&pageSize=10": "https://careers.tencent.com/tencentcareer/api/post/Query?keyword=Android&pageIndex=1&pageSize=10",
+    "https://api.github.com/repos/google-ai-edge/gallery": "https://api.github.com/repos/google-ai-edge/gallery",
+    "https://raw.githubusercontent.com/google-ai-edge/gallery/main/README.md": "https://raw.githubusercontent.com/google-ai-edge/gallery/main/README.md",
+    "https://developers.google.com/ml-kit/genai/prompt/android/get-started": "https://developers.google.com/ml-kit/genai/prompt/android/get-started",
+    "https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/": "https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/",
+    "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2053738190963126272": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2053738190963126272",
+    "https://careers.tencent.com/jobdesc.html?postId=2053738190963126272": "https://careers.tencent.com/jobdesc.html?postId=2053738190963126272",
+    "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/FeatureStatus": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/FeatureStatus",
+    "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+    "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Generation": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Generation",
+    "https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom": "https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom"
+  },
+  "registered": [
+    {
+      "title": "教学参考｜ML Kit GenAI 概览与设备支持",
+      "url": "https://developers.google.com/ml-kit/genai",
+      "canonical": "https://developers.google.com/ml-kit/genai",
+      "old_duplicate": false
+    },
+    {
+      "title": "教学参考｜Direct model access 概览",
+      "url": "https://developers.google.com/ml-kit/genai/prompt/android",
+      "canonical": "https://developers.google.com/ml-kit/genai/prompt/android",
+      "old_duplicate": false
+    },
+    {
+      "title": "教学参考｜Direct model access 接入指南（beta4）",
+      "url": "https://developers.google.com/ml-kit/genai/prompt/android/get-started",
+      "canonical": "https://developers.google.com/ml-kit/genai/prompt/android/get-started",
+      "old_duplicate": false
+    },
+    {
+      "title": "教学参考｜FeatureStatus 四项状态常量",
+      "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/FeatureStatus",
+      "canonical": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/FeatureStatus",
+      "old_duplicate": false
+    },
+    {
+      "title": "教学参考｜Generation.getClient",
+      "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Generation",
+      "canonical": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Generation",
+      "old_duplicate": false
+    },
+    {
+      "title": "教学参考｜GenerativeModel.checkStatus 与 close",
+      "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+      "canonical": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+      "old_duplicate": false
+    },
+    {
+      "title": "教学参考｜Google Maven genai-prompt 1.0.0-beta4 POM",
+      "url": "https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom",
+      "canonical": "https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom",
+      "old_duplicate": false
+    },
+    {
+      "title": "动态｜Google：用 Gemini 与约束求解器发现 Go 模糊测试遗漏的缺陷（11-12 发布）",
+      "url": "https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/",
+      "canonical": "https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver",
+      "old_duplicate": false
+    },
+    {
+      "title": "岗位｜腾讯混元-大模型应用开发工程师（北京/深圳；11-09 更新）",
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2053738190963126272",
+      "canonical": "https://careers.tencent.com/jobdesc.html?postId=2053738190963126272",
+      "old_duplicate": false
+    },
+    {
+      "title": "工具｜GitHub google-ai-edge/gallery：模型管理与 Benchmark 示例",
+      "url": "https://github.com/google-ai-edge/gallery",
+      "canonical": "https://github.com/google-ai-edge/gallery",
+      "old_duplicate": false
+    }
+  ],
+  "yesterday_voice_excluded": true
+}

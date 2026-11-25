@@ -1,0 +1,4 @@
+来源：SYNTHETIC_FIXTURE；合成时间仅校验公式，不是Nano性能
+{"complete_generation_ms": 610.0, "complete_request_ms": 710.0, "conditions": "固定条件示例", "first_ns": 350000000, "issue": "", "marker_ns": 700000000, "observed_generation_ms": 610.0, "observed_request_ms": 710.0, "origin": "SYNTHETIC_FIXTURE", "status": "SUCCESS", "ttft_generation_ms": 250.0, "ttft_request_ms": 350.0, "valid": true}
+{"attempts": 1, "group": ["SYNTHETIC_FIXTURE", "固定条件示例"], "metrics": {"complete_generation_ms": {"n": 1, "p50": 610.0, "p95": 610.0}, "complete_request_ms": {"n": 1, "p50": 710.0, "p95": 710.0}, "ttft_generation_ms": {"n": 1, "p50": 250.0, "p95": 250.0}, "ttft_request_ms": {"n": 1, "p50": 350.0, "p95": 350.0}}, "statuses": {"SUCCESS": 1}, "success_rate": 1.0, "successful_n": 1, "warning": "成功样本少于20，p95仅描述本组，尾延迟证据不足"}
+模型调用=0；真实输出tokens/usage=NOT_MEASURED；tokens/s不计算

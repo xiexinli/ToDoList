@@ -1,0 +1,18 @@
+test_query.py: PASS EXECUTED_HOST
+query_host.py: PASS EXECUTED_HOST
+唯一日材料: PASS
+标题0~5: PASS
+复述空位: PASS
+台账已完成主题: PASS 新增1行（总27讲）
+台账本周计划: PASS 第9讲勾选
+台账链接登记: PASS 新增5行/覆盖全部引用
+外链抽验: PASS 4/4 HTTP200
+动态配额: PASS 新动向1/岗位1/其他1
+内嵌代码一致: PASS
+昨日12个文件SHA256: PASS 未变
+飞书: NOT_SENT 摘要9行待主提交
+
+S01: HTTP200 curl_exit=0
+S02: HTTP200 curl_exit=0
+S04: HTTP200 curl_exit=0
+S05: HTTP200 curl_exit=0

@@ -1,0 +1,25 @@
+[
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "-B",
+      "latency_meter.py"
+    ],
+    "exit": 0,
+    "stdout": "来源：SYNTHETIC_FIXTURE；合成时间仅校验公式，不是Nano性能\n{\"complete_generation_ms\": 610.0, \"complete_request_ms\": 710.0, \"conditions\": \"固定条件示例\", \"first_ns\": 350000000, \"issue\": \"\", \"marker_ns\": 700000000, \"observed_generation_ms\": 610.0, \"observed_request_ms\": 710.0, \"origin\": \"SYNTHETIC_FIXTURE\", \"status\": \"SUCCESS\", \"ttft_generation_ms\": 250.0, \"ttft_request_ms\": 350.0, \"valid\": true}\n{\"attempts\": 1, \"group\": [\"SYNTHETIC_FIXTURE\", \"固定条件示例\"], \"metrics\": {\"complete_generation_ms\": {\"n\": 1, \"p50\": 610.0, \"p95\": 610.0}, \"complete_request_ms\": {\"n\": 1, \"p50\": 710.0, \"p95\": 710.0}, \"ttft_generation_ms\": {\"n\": 1, \"p50\": 250.0, \"p95\": 250.0}, \"ttft_request_ms\": {\"n\": 1, \"p50\": 350.0, \"p95\": 350.0}}, \"statuses\": {\"SUCCESS\": 1}, \"success_rate\": 1.0, \"successful_n\": 1, \"warning\": \"成功样本少于20，p95仅描述本组，尾延迟证据不足\"}\n模型调用=0；真实输出tokens/usage=NOT_MEASURED；tokens/s不计算\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/Library/Developer/CommandLineTools/usr/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_latency_meter.py"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "test_bad_ns (test_latency_meter.MeterTests) ... ok\ntest_bad_outcome_and_types (test_latency_meter.MeterTests) ... ok\ntest_cancel_timeout_no_first (test_latency_meter.MeterTests) ... ok\ntest_empty_and_whitespace_do_not_count (test_latency_meter.MeterTests) ... ok\ntest_empty_stream (test_latency_meter.MeterTests) ... ok\ntest_equal_timestamps_allowed (test_latency_meter.MeterTests) ... ok\ntest_error_after_first (test_latency_meter.MeterTests) ... ok\ntest_final_frame_body_counts (test_latency_meter.MeterTests) ... ok\ntest_formula_boundaries (test_latency_meter.MeterTests) ... ok\ntest_frame_after_marker (test_latency_meter.MeterTests) ... ok\ntest_frame_before_generation (test_latency_meter.MeterTests) ... ok\ntest_invalid_percentile (test_latency_meter.MeterTests) ... ok\ntest_metadata_only_no_first (test_latency_meter.MeterTests) ... ok\ntest_missing_or_duplicate_boundaries (test_latency_meter.MeterTests) ... ok\ntest_missing_unknown_and_other_reason (test_latency_meter.MeterTests) ... ok\ntest_non_success_stats_isolated (test_latency_meter.MeterTests) ... ok\ntest_percentile_zero_one_and_small (test_latency_meter.MeterTests) ... ok\ntest_rejection_before_generation (test_latency_meter.MeterTests) ... ok\ntest_repeated_delta_legal (test_latency_meter.MeterTests) ... ok\ntest_sources_and_conditions_not_mixed (test_latency_meter.MeterTests) ... ok\ntest_stop_not_complete_until_eof (test_latency_meter.MeterTests) ... ok\ntest_stop_then_abnormal (test_latency_meter.MeterTests) ... ok\ntest_subtract_before_float (test_latency_meter.MeterTests) ... ok\ntest_time_backwards_quarantined (test_latency_meter.MeterTests) ... ok\ntest_truncated_with_or_without_body (test_latency_meter.MeterTests) ... ok\ntest_zero_or_no_success_summary (test_latency_meter.MeterTests) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 0.001s\n\nOK\n"
+  }
+]

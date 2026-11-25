@@ -1,0 +1,60 @@
+
+          Android Developers
+          Develop
+          API reference
+      Stay organized with collections
+      Save and categorize content based on your preferences.
+androidx.lifecycle.compose
+    Common/All
+Interfaces
+              LifecyclePauseOrDisposeEffectResult
+Interface used for LifecycleResumeEffect to run the effect within the onPauseOrDispose clause when an (ON_PAUSE)Lifecycle.Event.ON_PAUSE event is received or when cleanup is
+Cmn
+              LifecycleStopOrDisposeEffectResult
+Interface used for LifecycleStartEffect to run the effect within the onStopOrDispose clause when an (ON_STOP)Lifecycle.Event.ON_STOP event is received or when cleanup is needed for the work that was kicked off in the ON_START effect.
+Cmn
+Classes
+              LifecycleResumePauseEffectScope
+Receiver scope for LifecycleResumeEffect that offers the onPauseOrDispose clause to couple the ON_RESUME effect.
+Cmn
+              LifecycleStartStopEffectScope
+Receiver scope for LifecycleStartEffect that offers the onStopOrDispose clause to couple the ON_START effect.
+Cmn
+Composables
+              LifecycleEventEffect
+Schedule an effect to run when the Lifecycle receives a specific Lifecycle.Event.
+Cmn
+              LifecycleResumeEffect
+It is an error to call LifecycleStartEffect without at least one key parameter.
+Cmn
+              LifecycleStartEffect
+It is an error to call LifecycleStartEffect without at least one key parameter.
+Cmn
+              collectAsStateWithLifecycle
+Collects values from this Flow and represents its latest value via State in a lifecycle-aware manner.
+Cmn
+              currentStateAsState
+Collects values from the Lifecycle.currentStateFlow and represents its latest value via State.
+Cmn
+              dropUnlessResumed
+Returns a new decorated function that will invoke the given block if the lifecycleOwner's lifecycle state is at least State.RESUMED.
+Cmn
+              dropUnlessStarted
+Returns a new decorated function that will invoke the given block if the lifecycleOwner's lifecycle state is at least State.STARTED.
+Cmn
+              rememberLifecycleOwner
+Remembers a new LifecycleOwner with a lifecycle that is a child of the parent composition's lifecycle.
+Cmn
+Top-level properties summary
+              ProvidableCompositionLocal<LifecycleOwner>
+LocalLifecycleOwner
+The CompositionLocal containing the current LifecycleOwner.
+Cmn
+Top-level properties
+LocalLifecycleOwner
+Cmn
+Artifact: androidx.lifecycle:lifecycle-runtime-compose
+View Source
+Added in 2.8.0
+val LocalLifecycleOwner: ProvidableCompositionLocal<LifecycleOwner>
+The CompositionLocal containing the current LifecycleOwner.

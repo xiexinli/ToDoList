@@ -1,0 +1,174 @@
+{
+  "observed_at": "2026-11-22T14:09:16.204966+08:00",
+  "status": "DONE",
+  "checks": {
+    "日文件唯一": "PASS",
+    "0至5章节完整": "PASS",
+    "120分钟计划": "PASS",
+    "复述空位": "PASS",
+    "内嵌代码一致": "PASS",
+    "台账25行且今日唯一": "PASS",
+    "对应计划已勾选": "PASS",
+    "周总结登记": "PASS",
+    "周总结7个本地引用有效": "PASS",
+    "全部6项引用已登记": "PASS",
+    "动态限量1加1加1": "PASS",
+    "旧资料哈希保留": "PASS",
+    "旧问题明确未放行": "PASS",
+    "文档提取代码12单测复跑": "PASS",
+    "外链6项抽验200": "PASS"
+  },
+  "artifacts": [
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-22-端云请求的取消与结束确认：怎样处理UNKNOWN（续）.md",
+      "bytes": 15457,
+      "sha256": "99d22e92dc1208485e13a1b919464dd468e5b22bdcafb951f25ff5e159630ddf"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/04_周总结/2026-W47.md",
+      "bytes": 6660,
+      "sha256": "9a0f20a92dc468a63111a3a5d210bc8d284d9d8be6bb420a761344e9c3a91400"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md",
+      "bytes": 33264,
+      "sha256": "d9486826908082e1e4341a91f589d4bc18e87bee93389ad446739cd852ec980c"
+    }
+  ],
+  "http_checks": [
+    {
+      "url": "https://careers.tencent.com/jobdesc.html?postId=1998671162179215360",
+      "http": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=1998671162179215360",
+      "http": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+      "http": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/",
+      "http": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/cancel-and-join.html",
+      "http": "200",
+      "exit_code": 0
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Job.kt",
+      "http": "200",
+      "exit_code": 0
+    }
+  ],
+  "android": "NOT_EXECUTED",
+  "remote_end_confirmation": "NOT_EXECUTED",
+  "real_model_calls": 0,
+  "sources": [
+    {
+      "id": "S2",
+      "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel",
+      "http": "200",
+      "exit_code": 0,
+      "observed_at": "2026-11-22T14:04:31.507441+08:00",
+      "sha256": "d422fb6c4a17fda64d751520aa8ea5ed9dcfedbe61eb1a9f62434df9b9577179",
+      "excerpts": [
+        "rned\nGenerateContentResponse\nor a potential GenAiException.\nThe coroutine that runs\ngenerateContent\nis cancellable. If the inference is no longer needed (e.g., the user navigates away or input changes), the coroutine can be cancelled.\nNote that inference requests may fail under certain conditions such as:\nInvalid or malformed input in the\nGenerateContentRequest\n.\nExceeded usage quota or failed safety checks.\nParameters\nrequest:\nGenerateContentRequest\na non-null\nGenerateContentRequest\ncontaining input content.\nReturns\nGenerateContentResponse\na\nGenerateContentResponse\ncontaining the generated content.\nThrows\nGenAiException\nif the inference fails.\ngenerateContent\nsuspend fun <T :\nAny\n>\ngenerateContent\n(request:\nGenerateTypedContentRequest\n<T>):\nGenerateTypedContentResponse\n<T>\nPerforms asynchronous content generation on the provided input request, returning a strongly typed response.\nThis is an experimental feature.\nThis is the standard, non-streaming v",
+        "ure.\nsuspend\nUnit\nclearImplicitCaches\n()\nClears all caches created by implicit prefix caching.\nUnit\nclose\n()\nReleases resources associated with the content generation engine.\nsuspend\nCountTokensResponse\ncountTokens\n(request:\nGenerateContentRequest\n)\nCounts the number of tokens in the request.\nsuspend\nCountTokensResponse\n<T :\nAny\n>\ncountTokens\n(request:\nGenerateTypedContentRequest\n<T>)\nCounts the number of tokens in the request for generating a typed response.\nFlow\n<\nDownloadStatus\n>\ndownload\n()\nDownloads the required model assets for the content generation feature if they are not already available.\nopen suspend\nGenerateContentResponse\ngenerateContent\n(prompt:\nString\n)\nPerforms asynchronous content generation on the provided input prompt.\nsuspend\nGenerateContentResponse\ngenerateContent\n(request:\nGenerateContentRequest\n)\nPerforms asynchronous content generation on the provided input request.\nsuspend\nGenerateTypedContentResponse\n<T>\n<T :\nAny\n>\n"
+      ],
+      "dates": [
+        [
+          "",
+          "2026-10-27"
+        ]
+      ],
+      "read_state": "BODY_READ"
+    },
+    {
+      "id": "N1",
+      "url": "https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/",
+      "http": "200",
+      "exit_code": 0,
+      "observed_at": "2026-11-22T14:04:31.875878+08:00",
+      "sha256": "ec6e6e5a39dc9fe6a9f44a50d52ac75c93d4c5b88c0cd9245e32800c7288d768",
+      "excerpts": [
+        "vind Chaudhary\nSoftware Engineer\nShare\nFacebook\nTwitter\nLinkedIn\nMail\nAgent Anomaly Detection is in Private Preview, including monitoring for agents that run outside Google Cloud. To request access, see the\nAgent Anomaly Detection overview\n.\nOur\nlaunch post\nintroduced Agent Anomaly Detection, which helps you understand and act on agent behavior that drifts outside its intended boundaries. It covered agents on Google Cloud, such as Agent Runtime, Cloud Run, and Google Kubernetes Engine (GKE). Many teams also run agents on other clouds: on AWS Lambda next to an inventory database, as a hosted agent in Microsoft Foundry, or on-premises next to a system that can't move. Those agents carry the same behavioral risks, and until now Agent Anomaly Detection couldn't review them.\nAgent Anomaly Detection works from an agent's traces and logs, so it doesn't need access to the agent's runtime. If those traces and logs reach your Google Cloud project, it can detect",
+        "ion starts analyzing its sessions.\nThe agent's model and tool calls still run where the agent runs. Only telemetry, including the prompts and responses that Agent Anomaly Detection reads, goes to your Google Cloud project. The analysis runs separately, so it doesn't slow the agent down.\nWhat we tested\nTo evaluate Agent Anomaly Detection outside Google Cloud, we deployed ADK agents across two platforms: an inventory agent on AWS Lambda and a customer-service agent on Microsoft Foundry. The examples below show how Agent Anomaly Detection reads whole conversations, not isolated calls, to catch behavioral drift.\nExample 1: An inventory agent on AWS Lambda\nOur example inventory agent runs in AWS Lambda with one tool,\nlist_inventory\n, which pages through a product catalog. We sent two sessions: a shopper who checked stock for a few items and stopped, and a scraper that requested 100 catalog items at a time at increasing offsets to copy the full catalog and",
+        "he conversation.\nA resource attribute names the agent.\nAgents built with the Agent Development Kit (ADK) for Python, version 2.12.0 or later, can produce this telemetry with ADK's Google Cloud exporters and a few environment variables, which the next section shows.\nAgents on other clouds send traces and logs to a Google Cloud project, where Agent Anomaly Detection analyzes them.\nConnect an agent from another cloud\nAn agent outside Google Cloud needs two things to send its telemetry:\nA Google identity without a service account key.\nWith Workload Identity Federation, the agent trades its own identity, such as an AWS role or a Microsoft Entra identity, for short-lived Google credentials. The configuration file that sets this up contains no secret.\nAn exporter.\nADK's Google Cloud exporters send traces and logs to the Telemetry API. A few environment variables configure them:\nGOOGLE_CLOUD_PROJECT=<PROJECT_ID>\nGOOGLE_APPLICATION_CREDENTIALS=/pat",
+        "s the resource attributes that identify the agent.\nIt follows OpenTelemetry conventions and records prompts and responses as log events, which is where Agent Anomaly Detection reads the conversation.\nA resource attribute names the agent.\nAgents built with the Agent Development Kit (ADK) for Python, version 2.12.0 or later, can produce this telemetry with ADK's Google Cloud exporters and a few environment variables, which the next section shows.\nAgents on other clouds send traces and logs to a Google Cloud project, where Agent Anomaly Detection analyzes them.\nConnect an agent from another cloud\nAn agent outside Google Cloud needs two things to send its telemetry:\nA Google identity without a service account key.\nWith Workload Identity Federation, the agent trades its own identity, such as an AWS role or a Microsoft Entra identity, for short-lived Google credentials. The configuration file that sets this up contains no secret.\nAn exporter.\nADK's Google Cloud e"
+      ],
+      "dates": [
+        [
+          "2026-11-20",
+          ""
+        ]
+      ],
+      "read_state": "BODY_READ"
+    },
+    {
+      "id": "J1",
+      "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=1998671162179215360",
+      "http": "200",
+      "exit_code": 0,
+      "observed_at": "2026-11-22T14:04:30.515828+08:00",
+      "sha256": "3221227a95084a59c5cface3f1887eff9a1105d77c409088a04dc5f0e1ac6523",
+      "job": {
+        "PostId": "1998671162179215360",
+        "RecruitPostId": 116519,
+        "RecruitPostName": "掌上无畏契约-Android客户端开发工程师",
+        "LocationId": 1,
+        "LocationName": "深圳",
+        "BGId": 956,
+        "BGName": "IEG",
+        "ComCode": "",
+        "ComName": "",
+        "OuterPostTypeID": "40001001",
+        "CategoryName": "技术",
+        "ProductName": "AGAME-端游",
+        "Responsibility": "1.负责游戏助手类产品客户端与RN跨端功能开发，提升用户体验及稳定性；\n2.与产品经理、设计师及后端开发人员紧密合作，确保项目按时交付；\n3.参与移动端与H5的技术方案设计，推动模块化开发与工程效能提升。",
+        "Requirement": "1.本科及以上学历，计算机相关专业；\n2.具备客户端开发经验，熟悉android开发，熟悉跨平台框架ReactNative；\n3.具备复杂ReactNative组件库相关开发经验，精通JavaScript，掌握 ES6+、TypeScript，掌握 HTML5、CSS3等前端基础技术；\n4.具备良好的沟通能力和优秀的团队协作能力；\n5.玩过并喜欢英雄联盟/无畏契约。",
+        "LastUpdateTime": "2026年10月29日",
+        "PostURL": "http://careers.tencent.com/jobdesc.html?postId=1998671162179215360",
+        "SourceID": 1,
+        "IsCollect": false,
+        "PostLightItem": "1.参与高用户量级游戏助手产品的核心功能开发，技术挑战与成长空间并存；\n2.扁平化的团队氛围，与产品、设计、后端等多角色紧密协作，快速推动项目落地；\n3.多技术栈互相学习和分享。",
+        "ImportantItem": "1.善于使用AI工具来提升编码体验，AI代码占比较高者优先；\n2.有开源项目，或者个人上架过App优先。",
+        "Introduction": "在腾讯客户端开发的字典里，“敏捷高效”与“精益求精”并不互斥，追求技术的深度是我们共同的信仰。希望你也能在足够广阔的平台上尽情的施展拳脚。",
+        "DepartmentIntroduction": "",
+        "RequireWorkYearsName": "1年以上"
+      },
+      "read_state": "BODY_READ"
+    },
+    {
+      "id": "T2",
+      "url": "https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/cancel-and-join.html",
+      "http": "200",
+      "exit_code": 0,
+      "observed_at": "2026-11-22T14:05:01.249667+08:00",
+      "excerpt": " cancelAndJoin | kotlinx.coroutines – Kotlin Programming Language Kotlin --> --> --> --> Solutions Multiplatform Backend Android Case studies Docs Language guide Multiplatform development API APIs overview Standard library Test library Coroutines Serialization Kotlin I/O library Date and time Collections Immutable JVM Metadata Kotlin Gradle plugins Ktor Compose Multiplatform Material3 Community Teach Play Playground Koans Get started kotlinx.coroutines Toggle table of contents 1.11.0 common Target filter common Switch theme Search in API Skip to content kotlinx.coroutines kotlinx-coroutines-core / kotlinx.coroutines / cancelAndJoin cancel And Join suspend fun Job . cancelAndJoin ( ) ( source ) Cancels the job and suspends the invoking coroutine until the cancelled job is complete. This suspending function is cancellable and always checks for a cancellation of the invoking coroutine's Job. If the Job of the invoking coroutine is cancelled or completed when this suspending function is invoked or while it is suspended, this function throws CancellationException . In particular, it means that a parent coroutine invoking cancelAndJoin on a child coroutine throws CancellationException if the child had failed, since a failure of a child coroutine cancels parent by default, unless the child was launched from within supervisorScope . This is a shortcut for the invocation of cancel followed by join . Thanks for your feedback! Was this page helpful? Yes No Stay in touch: Contributing to Kotlin Releases Press Kit Security Blog Issue Tracker Brand assets Careers Kotlin Merch Opt-Out Kotlin™ is&nbsp;protected under the Kotlin&nbsp;Foundation and licensed under the Apache 2&nbsp;license . Supported and developed by&nbsp; JetBrains How can we improve? Enter your name and email address if you would like to receive a&nbsp;follow-up message or&nbsp; contact our support . By submitting this form, I agree that JetBrains s.r.o. (\"JetBrains\") may use my name, email address, phone number, and country of residence to provide support. I agree that JetBrains may process said data using third-party services for this purpose in accordance with the JetBrains Privacy Policy . Send feedback ",
+      "read_state": "BODY_READ"
+    },
+    {
+      "id": "S1",
+      "url": "https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Job.kt",
+      "read_state": "EXCERPTS_READ",
+      "source_evidence": "sources-small.json",
+      "date": "固定源码1.7.3，原发布日期未知"
+    }
+  ],
+  "message": {
+    "message_id": "om_x100b7f1c3f6ef8a0b07f5ece89af5c4",
+    "bot": "organization",
+    "chat": "me",
+    "submitted": true,
+    "queryable": true,
+    "create_time": "2026-11-22 14:09"
+  },
+  "final_observed_at": "2026-11-22T14:09:57.443058+08:00"
+}

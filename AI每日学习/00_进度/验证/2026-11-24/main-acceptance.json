@@ -1,0 +1,77 @@
+{
+  "material": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-24-端云请求的只读对账：查询状态而不是重发（续）.md",
+  "bytes": 16220,
+  "lines": 176,
+  "material_sha256": "9d43a9dc5311249269e99fa2b69eb2e9efdb549e2987e96f7cf771db6fd29633",
+  "template": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+  },
+  "recap_blank": true,
+  "ledger": {
+    "已完成主题": true,
+    "本周计划": true,
+    "动态链接去重表": true
+  },
+  "all_urls_registered": true,
+  "inline_code_matches": true,
+  "yesterday_dependency_unchanged": true,
+  "test_query.py": {
+    "exit": 0,
+    "executed": "HOST"
+  },
+  "query_host.py": {
+    "exit": 0,
+    "executed": "HOST"
+  },
+  "http_samples": [
+    {
+      "id": "S01",
+      "url": "https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/",
+      "curl_exit": 0,
+      "http": "200"
+    },
+    {
+      "id": "S02",
+      "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2118617283625664512",
+      "curl_exit": 0,
+      "http": "200"
+    },
+    {
+      "id": "S04",
+      "url": "https://raw.githubusercontent.com/googleapis/googleapis/master/google/longrunning/operations.proto",
+      "curl_exit": 0,
+      "http": "200"
+    },
+    {
+      "id": "S05",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+      "curl_exit": 0,
+      "http": "200"
+    }
+  ],
+  "observed_at": "2026-11-24T08:07:20.169196+08:00",
+  "status": "DONE",
+  "feishu": {
+    "submission": "ok",
+    "message_id": "om_x100b7f791c7aeca4cfc7093d393fc71",
+    "bot": "organization",
+    "chat": "me",
+    "readback_exit": 0,
+    "message_found": true,
+    "not_a_read_receipt": true
+  },
+  "not_executed": [
+    "真实业务查询与副作用验证",
+    "真实批准契约/scope与签名认证",
+    "远端终结与释放",
+    "Android/SDK/真机",
+    "跨进程查询预算",
+    "模型调用/usage",
+    "11-20/21旧缺口修复"
+  ]
+}

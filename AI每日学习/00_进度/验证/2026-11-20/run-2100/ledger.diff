@@ -1,0 +1,36 @@
+--- ledger.before
++++ ledger.after
+@@ -27,6 +27,8 @@
+ | 2026-11-17 | 02_AndroidAI · 第 2 讲 | Prompt API 最小调用：能力门禁后的一次短文本生成 | 02_AndroidAI/2026-11-17-Prompt API最小调用：能力门禁后的一次短文本生成.md | 待填 |
+ | 2026-11-18 | 02_AndroidAI · 第 3 讲 | 端侧流式生成的 Compose 增量呈现（续地基 Streaming，Android 接入） | 02_AndroidAI/2026-11-18-端侧流式生成的Compose增量呈现.md | 待填 |
+ | 2026-11-19 | 02_AndroidAI · 第 4 讲 | 端侧生成的性能测量：首字时延与完整耗时 | 02_AndroidAI/2026-11-19-端侧生成的性能测量：首字时延与完整耗时.md | 待填 |
++
++| 2026-11-20 | 02_AndroidAI · 第 5 讲 | 端侧生成失败后的重试预算：什么时候不该再试 | 02_AndroidAI/2026-11-20-端侧生成失败后的重试预算：什么时候不该再试.md | 待填 |
+ 
+ 
+ > 欠产与补写记录：2026-10-31 ~ 2026-11-04 因「本机终端审批超时」连续 6 天未落盘；2026-11-05 17:32 用户在 DHwork 权限设置中放行无人值守终端审批后，上述 5 天材料与 2026-W44 周总结已统一补全。
+@@ -62,6 +64,8 @@
+ - [x] Android × AI · 第 3 讲：端侧流式生成的 Compose 增量呈现（2026-11-18 材料已产出；续地基 Streaming；官方增量/终帧契约已复核，Host 17 项通过，Android/Compose 编译与真机 NOT_EXECUTED；复述待填）
+ 
+ - [x] Android × AI · 第 4 讲：端侧生成的性能测量：首字时延与完整耗时（2026-11-19 材料已产出；Host合成时序26项通过，不是Nano性能；Android编译/真机NOT_EXECUTED；复述待填）
++
++- [x] Android × AI · 第 5 讲：端侧生成失败后的重试预算：什么时候不该再试（2026-11-20 材料已产出；EXECUTED_HOST纯策略fixture通过，SDK/设备/云模型NOT_EXECUTED；复述待填）
+ 
+ ## 动态链接去重表
+ | 首次出现日期 | 标题 | 链接 |
+@@ -190,6 +194,15 @@
+ 
+ > 2026-11-19 教学参考继续使用（非新动态）：[S02 GenerativeModel流式契约](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel)；[S03 Candidate正文与终帧](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate)；[S04 Prompt接入指南](https://developers.google.com/ml-kit/genai/prompt/android/get-started)；[S05 GenAI前台与资源限制](https://developers.google.com/ml-kit/genai)；[S06 结束原因常量](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate.FinishReason)；[S07 genai-prompt版本POM](https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom)；[S08 协程1.7.3超时源码](https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Timeout.kt)。当天全部12条引用的日期/正文定位/canonical去重/HTTP证据见 `验证/2026-11-19/sources.json`。本课仅测量边界；26项Host测试为合成时序断言，非Nano性能。Android编译/真机NOT_EXECUTED；本执行者摘要not_sent，由主智能体独立验收后处理。
+ 
++| 2026-11-20 | 错误代码 | https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/GenAiException.ErrorCode |
++| 2026-11-20 | Java异常与retryDelay | https://developers.google.com/android/reference/com/google/mlkit/genai/common/GenAiException |
++| 2026-11-20 | 动态｜Agent异常检测实践 | https://developers.googleblog.com/securing-your-agents-a-hands-on-guide-to-agent-anomaly-detection/ |
++| 2026-11-20 | 岗位｜腾讯VLM算法工程师 | https://careers.tencent.com/jobdesc.html?postId=2119685008418586624 |
++| 2026-11-20 | 岗位证据｜VLM详情API | https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2119685008418586624 |
++| 2026-11-20 | 源码｜可取消Delay 1.7.3 | https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Delay.kt |
++
++> 2026-11-20 补写于2026-11-21；来源小摘录与本轮HTTP抽验：`验证/2026-11-20/run-2100/sources-small.json`；代码与Host日志同目录；本执行者摘要not_sent，由主智能体验收后提交。
++
+ ## 周总结
+ | 周次 | 覆盖日期 | 文件 |
+ |---|---|---|

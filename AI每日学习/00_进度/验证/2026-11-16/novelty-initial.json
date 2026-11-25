@@ -1,0 +1,21 @@
+{
+  "policy": "http/https 等价；末斜杠；查询排序；使用已实际读取的重定向终点，禁止只靠标题去重",
+  "old_count": 71,
+  "candidates": [
+    {
+      "url": "https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/",
+      "canonical": "https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver",
+      "duplicate": false
+    },
+    {
+      "url": "https://careers.tencent.com/jobdesc.html?postId=2053738190963126272",
+      "canonical": "https://careers.tencent.com/jobdesc.html?postId=2053738190963126272",
+      "duplicate": false
+    },
+    {
+      "url": "https://github.com/google-ai-edge/gallery",
+      "canonical": "https://github.com/google-ai-edge/gallery",
+      "duplicate": false
+    }
+  ]
+}

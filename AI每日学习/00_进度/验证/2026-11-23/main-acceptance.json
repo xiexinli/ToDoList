@@ -1,0 +1,35 @@
+{
+  "status": "DONE",
+  "observed_at": "2026-11-23T13:32:08.494854+08:00",
+  "material": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-23-端云请求的持久操作账本：重启后怎样处理未确认请求.md",
+  "material_sha256": "a985c4094cf7170abf867fcc5457ff0d25d1438802117d42d2ad05a6cda1d483",
+  "template_0_to_5": {
+    "0": true,
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": true
+  },
+  "recap_blank": true,
+  "ledger_three_sections": "PASS",
+  "all_5_urls_registered": "PASS",
+  "host_independent_rerun": "EXECUTED_HOST CPython3.9.6 SQLite3.54.0 12 tests OK; demo matched",
+  "http_independent_sample": "4/4 HTTP200 curl_exit0; news date/body and job API fields read",
+  "feishu": {
+    "submission": "ok",
+    "message_id": "om_x100b7f08b28e70a0c04a42c36d8d8d8",
+    "bot": "organization",
+    "chat": "me",
+    "readback_exit": 0,
+    "message_found": true,
+    "not_a_read_receipt": true
+  },
+  "not_executed": [
+    "Android/Kotlin/Compose编译与真机",
+    "真实后端、结束、资源释放、回执认证",
+    "模型调用与usage",
+    "真实掉电、并发竞争",
+    "旧11-20/21缺口修复"
+  ]
+}

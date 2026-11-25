@@ -1,0 +1,2 @@
+EXECUTED_HOST: 13 assertions passed; backend_calls=1; route=CLOUD
+同进程fixture；无云请求，无设备测试，无跨进程exactly-once证据

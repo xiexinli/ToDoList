@@ -1,0 +1,31 @@
+test_bad_ns (test_latency_meter.MeterTests) ... ok
+test_bad_outcome_and_types (test_latency_meter.MeterTests) ... ok
+test_cancel_timeout_no_first (test_latency_meter.MeterTests) ... ok
+test_empty_and_whitespace_do_not_count (test_latency_meter.MeterTests) ... ok
+test_empty_stream (test_latency_meter.MeterTests) ... ok
+test_equal_timestamps_allowed (test_latency_meter.MeterTests) ... ok
+test_error_after_first (test_latency_meter.MeterTests) ... ok
+test_final_frame_body_counts (test_latency_meter.MeterTests) ... ok
+test_formula_boundaries (test_latency_meter.MeterTests) ... ok
+test_frame_after_marker (test_latency_meter.MeterTests) ... ok
+test_frame_before_generation (test_latency_meter.MeterTests) ... ok
+test_invalid_percentile (test_latency_meter.MeterTests) ... ok
+test_metadata_only_no_first (test_latency_meter.MeterTests) ... ok
+test_missing_or_duplicate_boundaries (test_latency_meter.MeterTests) ... ok
+test_missing_unknown_and_other_reason (test_latency_meter.MeterTests) ... ok
+test_non_success_stats_isolated (test_latency_meter.MeterTests) ... ok
+test_percentile_zero_one_and_small (test_latency_meter.MeterTests) ... ok
+test_rejection_before_generation (test_latency_meter.MeterTests) ... ok
+test_repeated_delta_legal (test_latency_meter.MeterTests) ... ok
+test_sources_and_conditions_not_mixed (test_latency_meter.MeterTests) ... ok
+test_stop_not_complete_until_eof (test_latency_meter.MeterTests) ... ok
+test_stop_then_abnormal (test_latency_meter.MeterTests) ... ok
+test_subtract_before_float (test_latency_meter.MeterTests) ... ok
+test_time_backwards_quarantined (test_latency_meter.MeterTests) ... ok
+test_truncated_with_or_without_body (test_latency_meter.MeterTests) ... ok
+test_zero_or_no_success_summary (test_latency_meter.MeterTests) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.001s
+
+OK

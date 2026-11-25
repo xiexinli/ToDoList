@@ -1,0 +1,52 @@
+{
+  "observed_at": "2026-11-18T13:06:02.875068+08:00",
+  "ledger_expected_sha256": "dd071f0f4adf8be363fb10d770aadcb8f71d2398f48fc0878a06f65b08b2256b",
+  "read_inputs": [
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md",
+      "sha256": "dd071f0f4adf8be363fb10d770aadcb8f71d2398f48fc0878a06f65b08b2256b",
+      "read_state": "READ_FULL"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/智能体规则.md",
+      "sha256": "d1388a03685953aad78b236c949f92cbc2afed49881522e1e5d15d63461a1bb4",
+      "read_state": "READ_FULL"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-17-Prompt API最小调用：能力门禁后的一次短文本生成.md",
+      "sha256": "7ba31278d1b2c3e97cd6f1e33a4b04a25ceacf6b630f2bcd57ff0ddc101864f0",
+      "read_state": "READ_FULL"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-01-流式输出.md",
+      "sha256": "56479d36a612574b460391f899fc6a20aca0e24086dab3176736cbf209968424",
+      "read_state": "READ_FULL"
+    }
+  ],
+  "history_hashes": {
+    "01_地基/2026-11-01-流式输出.md": "56479d36a612574b460391f899fc6a20aca0e24086dab3176736cbf209968424",
+    "01_地基/2026-11-14-Agent工程化（可观测与护栏）.md": "33b25ad6ac3d18bc59605a6953da195120ddb2c4c09e3b7c8240223d9b937498",
+    "01_地基/2026-11-15-可恢复工作流（Checkpoint与断点续跑）.md": "d681462a2ca7e78f9781ca5226ab3eeb1e26e367161a17db72d7a209058b442e",
+    "01_地基/2026-11-11-Agent循环（ReAct）.md": "3f8bee03f1aa681cbde669717c68024967eb9957ef42cdba8fe61fae1b597e34",
+    "01_地基/2026-11-04-结构化输出.md": "1215d7f49ef5565fe3a4906a50dc46a26a671d5d7501c6f7db6b0bd657781d4b",
+    "01_地基/2026-11-10-RAG评估（Evaluation）.md": "2e47579bbabdd212faf2470695f0ad369fe9dd9997befeaef63ff7299e445762",
+    "01_地基/2026-11-08-重排（Rerank）.md": "1e512b493b9d5adad25a84865a78d7587742d68fa3dc8b5ab74fc405194e48df",
+    "01_地基/2026-11-05-FunctionCalling与工具调用.md": "68559e3e00cf21a896b8e4748e350bd1089000458fb3b0dc6233ac1921048128",
+    "01_地基/2026-11-09-引用与防幻觉（Citations与Grounding）.md": "0e36a116416925cc8a637882778b20033f3602410657c1507a992d0a5afe8730",
+    "01_地基/2026-11-07-向量化与向量检索（Embedding & 相似度）.md": "0f683ecd092b02661e90bc2f0b51b54bdf92cd66a4153990610a912a7f350c2c",
+    "01_地基/2026-11-02-少样本提示.md": "3615826ffb3068ec8fb3618506682387b2979f086fccde743cce317e5e87bd1d",
+    "01_地基/2026-10-30-消息结构与多轮历史管理.md": "ae810657c144d2610561ee7174462360702eea1dcca7109bf5325f158be3f105",
+    "01_地基/2026-11-06-文本切片（Chunking）.md": "29c37b475c64b301bc3358ae17510ae2ec07d54bfd018919dbc61c74cb946a32",
+    "01_地基/2026-11-13-规划与任务分解（Planning）.md": "605f257daa01ceac3e281f677728dc3a2279ef17641d1cb027818ff32500d3f4",
+    "01_地基/2026-11-12-多轮记忆（Memory）.md": "7b2a5c2800908e2c577755ea0789c2f07a7c531f639077e39ca427d2722f24ee",
+    "01_地基/2026-11-03-思维链与推理预算.md": "ce012850556c7bb524bca9a2627350542d4a10f5e485d81d5255ecd1e6bfb2bc",
+    "01_地基/2026-10-29-Token与上下文窗口.md": "27652bd9d78d373fcac1c0e49045776eb049525126220dee4327392da93371ae",
+    "01_地基/2026-10-31-采样参数与可控生成.md": "1e9bdfaed7a1c375b8c889eb21e305d007d78006c607e38f5c18c6f19b82c9a4",
+    "02_AndroidAI/2026-11-17-Prompt API最小调用：能力门禁后的一次短文本生成.md": "7ba31278d1b2c3e97cd6f1e33a4b04a25ceacf6b630f2bcd57ff0ddc101864f0",
+    "02_AndroidAI/2026-11-16-端侧推理的设备能力检查与可用性边界.md": "4463fa2fbf0158a2a236e61e9fc9f7081943fad13bea5f5974c30a3d6e2f3534"
+  },
+  "history_count": 20,
+  "phase": "02_AndroidAI · 第3讲",
+  "delivery": "not_sent;主智能体验收后发送",
+  "sunday": false
+}

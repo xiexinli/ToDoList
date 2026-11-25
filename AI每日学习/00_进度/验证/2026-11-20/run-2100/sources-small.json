@@ -1,0 +1,110 @@
+[
+  {
+    "id": "S01",
+    "title": "Kotlin errors",
+    "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/common/GenAiException.ErrorCode",
+    "dates": [
+      [
+        "",
+        "2026-07-15"
+      ],
+      [
+        "",
+        "2026-07-15"
+      ]
+    ],
+    "observed_at": "2026-11-20T13:04:33.441875+08:00",
+    "excerpts": [
+      "{'AICORE_INCOMPATIBLE': '-101', 'AUDIO_BUFFER_OVERFLOW': '-107', 'BACKGROUND_USE_BLOCKED': '30', 'BUSY': '9', 'CACHE_PROCESSING_ERROR': '-103', 'CANCELLED': '7', 'INVALID_INPUT_IMAGE': '-102', 'NEEDS_SYSTEM_UPDATE': '604', 'NOT_AVAILABLE': '8', 'NOT_ENOUGH_DISK_SPACE': '501', 'NOT_SUPPORTED': '16', 'PER_APP_BATTERY_USE_QUOTA_EXCEEDED': '27', 'REQUEST_PROCESSING_ERROR': '4', 'REQUEST_TOO_LARGE': '12', 'REQUEST_TOO_SMALL': '-100', 'RESPONSE_GENERATION_ERROR': '15', 'RESPONSE_PROCESSING_ERROR': '11', 'STRUCTURED_OUTPUT_MAX_TOKENS_ERROR': '-106', 'STRUCTURED_OUTPUT_REQUEST_ERROR': '-104', 'STRUCTURED_OUTPUT_RESPONSE_ERROR': '-105'}",
+      "ase use the API when your app is in the foreground instead. BUSY const val BUSY = 9: Int The service is currently busy. This is either because your app is out of usage quota (please retry with exponential backoff) or the request is from disallowed background usage (please use the API when your app is in the foreground instead). CACHE_PROCESSING_ERROR const val CACHE_PROCESSING_ERROR = -103: Int Error during cache processing for prompt prefix. CANCELLED const val CANCELLED = 7: Int The request is cancelled. INVALID_INPUT_IMAGE const val INVALID_INPUT_IMAGE = -102: Int Invalid input image. It can be due to invalid image URL, failure to decode to bitmap, invalid mime type or other image process"
+    ],
+    "run2100_http": "200",
+    "curl_exit": 0,
+    "run2100_read_at": "2026-11-21T21:02:15.326332"
+  },
+  {
+    "id": "S03",
+    "title": "Java retryDelay",
+    "url": "https://developers.google.com/android/reference/com/google/mlkit/genai/common/GenAiException",
+    "dates": [
+      [
+        "",
+        "2026-10-27"
+      ],
+      [
+        "",
+        "2026-10-27"
+      ]
+    ],
+    "observed_at": "2026-11-20T13:04:33.238680+08:00",
+    "excerpts": [
+      "etErrorCode () Gets the GenAiException.ErrorCode . Duration getRetryDelay () Returns the Duration to wait before trying again, or Duration.ZERO if not known/not applicable. Inherited Method Summary From class java.lang.Throwable synchronized final void addSuppressed ( Throwable arg0) synchronized Throwable fillInStackTrace () synchronized Throwable getCause () String getLocalizedMessage () String getMessage () StackTraceElement[] getStackTrace () synchronized final Throwable[] getSuppressed () synchronized Throwable initCause ( Throwable arg0) void printStackTrace () void printStackTrace ( PrintWriter arg0) void printStackTrace ( PrintStream arg0) void setStackTrace ( StackTraceElement[] arg",
+      "trying again, or Duration.ZERO if not known/not applicable. For requests to the ML Kit GenAI API that exceed quota, this is the amount of time to wait before trying the request again. For other requests, this value is Duration.ZERO . Send feedback Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License , and code samples are licensed under the Apache 2.0 License . For details, see the Google Developers Site Policies . Java is a registered trademark of Oracle and/or its affiliates. Last updated 2026-10-27 UTC. Need to tell us more? [[[\"Easy to understand\",\"easyToUnderstand\",\"thumb-up\"],[\"Solved my problem\",\"solvedMyProblem\",\"thumb-up\""
+    ],
+    "run2100_http": "200",
+    "curl_exit": 0,
+    "run2100_read_at": "2026-11-21T21:02:16.935898"
+  },
+  {
+    "id": "N01",
+    "title": "Anomaly detection guide",
+    "url": "https://developers.googleblog.com/securing-your-agents-a-hands-on-guide-to-agent-anomaly-detection/",
+    "dates": [
+      [
+        "2026-11-16",
+        ""
+      ]
+    ],
+    "observed_at": "2026-11-20T13:04:35.174173+08:00",
+    "excerpts": [
+      "blog-assets/images/blog-banner.2e16d0ba.fill-800x400.png\", \"datePublished\": \"2026-11-16\", \"author\": [ { \"@type\": \"Person\", \"name\": \"Achuth Narayan Rajagopal\", \"url\": \"/search/?author=Achuth+Narayan+Rajagopal\" }, { \"@type\": \"Person\", \"name\": \"Derek Luan\", \"url\": \"/search/?author=Derek+Luan\" } ] } Community/Events Learn Blog YouTube Search Community/Events Learn Blog YouTube Securing Your Agents: A Hands-On Guide to Agent Anomaly Detection NOV. 16, 2026 Achuth Narayan Rajagopal Senior Software Engineer Derek Luan Software Engineer Share Facebook Twitter LinkedIn Mail As highlighted in our announcement post , we said that each new model generation lets agents do more on their own. However, the ",
+      "ation Prerequisites A Google Cloud project approved for the Private Preview , with billing enabled, where you have the following roles: Agent Platform Administrator (roles/aiplatform.admin) Service Usage Admin (roles/serviceusage.serviceUsageAdmin), if the APIs aren't turned on yet; the notebook turns them on Logs Configuration Writer (roles/logging.configWriter), if Log Analytics isn't on for your log bucket 2. A place to run the notebook: Google Colab , Colab Enterprise, or a local Jupyter environment. The notebook installs the latest ADK for Python itself. Agent Anomaly Detection is compatible with agents running ADK 1.2+, though ADK 2.0+ is preferred for best results. 3. A Cloud Logging "
+    ],
+    "run2100_http": "200",
+    "curl_exit": 0,
+    "run2100_read_at": "2026-11-21T21:02:19.777219"
+  },
+  {
+    "id": "J01",
+    "title": "Tencent VLM API",
+    "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2119685008418586624",
+    "dates": [
+      [
+        "update",
+        "2026年11月16日"
+      ]
+    ],
+    "observed_at": "2026-11-20T13:04:33.535174+08:00",
+    "excerpts": [
+      "{\"PostId\": \"2119685008418586624\", \"RecruitPostId\": 123614, \"RecruitPostName\": \"腾讯游戏-视觉语言模型(VLM)算法工程师\", \"LocationId\": 1, \"LocationName\": \"深圳\", \"BGId\": 956, \"BGName\": \"IEG\", \"ComCode\": \"\", \"ComName\": \"\", \"OuterPostTypeID\": \"40001005\", \"CategoryName\": \"技术\", \"ProductName\": \"游戏知几AI服务\", \"Responsibility\": \"1.模型研发与优化：负责主流视觉语言模型（如 LLaVA、Qwen-VL、InternVL 等）的架构设计、微调（SFT）及前沿算法攻关；\\r\\n2.业务场景赋能：将 VLM 能力转化为实际业务价值，赋能游戏泛娱乐或多模态搜索等核心场景。\", \"Requirement\": \"1.硕士及以上学历，计算机、人工智能、自动化、数学等相关理工科专业，具备扎实的机器学习、计算机视觉（CV）与自然语言处理（NLP）交叉学科理论基础；\\r\\n2.熟练掌握 Python 和 C++ 编程语言，具备良好的编码习惯和算法数据结构基础，精通 PyTorch 深度学习框架，有大规模分布式训练（如熟练使用 DeepSpeed、Megatron-LM 或 FSDP）经验者优先；\\r\\n3.熟悉 LLaVA、Qwen-VL、InternVL 等至少一种主流视觉语言模型的底层架构、视觉编码器（如 CLIP、SigLIP"
+    ],
+    "run2100_http": "200",
+    "curl_exit": 0,
+    "run2100_read_at": "2026-11-21T21:02:20.095522"
+  },
+  {
+    "id": "J02",
+    "title": "Tencent VLM page",
+    "url": "https://careers.tencent.com/jobdesc.html?postId=2119685008418586624",
+    "dates": "UNKNOWN_OR_FIXED_VERSION",
+    "observed_at": "2026-11-20T13:04:33.646135+08:00",
+    "excerpts": [],
+    "run2100_http": "200",
+    "curl_exit": 0,
+    "run2100_read_at": "2026-11-21T21:02:20.306601"
+  },
+  {
+    "id": "T01",
+    "title": "Cancellable delay source",
+    "url": "https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Delay.kt",
+    "dates": "UNKNOWN_OR_FIXED_VERSION",
+    "observed_at": "2026-11-20T13:04:33.645888+08:00",
+    "excerpts": [
+      "is] is non-positive, this function returns immediately. * * This suspending function is cancellable. * If the [Job] of the current coroutine is cancelled or completed while this suspending function is waiting, this function * immediately resumes with [CancellationException]. * There is a **prompt cancellation guarantee**. If the job was cancelled while this function was * suspended, it will not resume successfully. See [suspendCancellableCoroutine] documentation for low-level details. * * If you want to delay forever (until cancellation), consider using [awaitCancellation] instead. * * Note that delay can be used in [select] invocation with [onTimeout][SelectBuilder.onTimeout] clause. * * Im",
+      "iately resumes with [CancellationException]. * There is a **prompt cancellation guarantee**. If the job was cancelled while this function was * suspended, it will not resume successfully. See [suspendCancellableCoroutine] documentation for low-level details. * * If you want to delay forever (until cancellation), consider using [awaitCancellation] instead. * * Note that delay can be used in [select] invocation with [onTimeout][SelectBuilder.onTimeout] clause. * * Implementation note: how exactly time is tracked is an implementation detail of [CoroutineDispatcher] in the context. * @param timeMillis time in milliseconds. */ public suspend fun delay(timeMillis: Long) { if (timeMillis -> // if t"
+    ],
+    "run2100_http": "200",
+    "curl_exit": 0,
+    "run2100_read_at": "2026-11-21T21:02:20.753678"
+  }
+]

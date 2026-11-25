@@ -1,0 +1,90 @@
+{
+  "observed_at": "2026-11-17T09:14:34.721099+08:00",
+  "test_runs": [
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "prompt_contract.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Host 模拟结果： Result(state='SUCCESS', text='今天先完成一件小事。', note='')\n状态： CHECKING -> GENERATING -> SUCCESS\n生命周期： create -> check_status -> generate -> close\n调用次数： 1 ；没有端侧推理\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_prompt_contract.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 清理错误不掩盖 error\nPASS 清理错误不掩盖 cancel\nPASS 创建失败：明确阶段\nPASS 前台变化：生成次数 0 不发布成功\nPASS 前台变化：生成次数 1 不发布成功\nPASS 生成超时：取消在途调用，关闭，无成功文本\nPASS 生成协程取消：不吞控制信号\nPASS 生命周期取消：向上传播，关闭，无自动重试\nPASS 空输入 EMPTY_INPUT\nPASS 输入过长 INPUT_TOO_LONG\nPASS 门禁未通过 BLOCKED\nPASS 初始非前台 FOREGROUND_REQUIRED\nPASS normal SUCCESS 一次生成+关闭\nPASS blank EMPTY_RESULT 一次生成+关闭\nPASS no_candidates EMPTY_RESULT 一次生成+关闭\nPASS null_text EMPTY_RESULT 一次生成+关闭\nPASS truncated TRUNCATED 一次生成+关闭\nPASS other INCOMPLETE 一次生成+关闭\nPASS unknown_finish INCOMPLETE 一次生成+关闭\nPASS error FAILED 一次生成+关闭\nPASS status_timeout CHECK_TIMEOUT 零次生成+关闭\nPASS status_error FAILED 零次生成+关闭\nPASS 不可用：零次生成，客户端关闭\n",
+      "stderr": "test_cleanup_does_not_mask_failure_or_cancel (test_prompt_contract.LifecycleTest) ... ok\ntest_creation_error (test_prompt_contract.LifecycleTest) ... ok\ntest_foreground_changes (test_prompt_contract.LifecycleTest) ... ok\ntest_generation_timeout_cancels_and_closes (test_prompt_contract.LifecycleTest) ... ok\ntest_generator_cancel_propagates (test_prompt_contract.LifecycleTest) ... ok\ntest_lifecycle_cancel_propagates (test_prompt_contract.LifecycleTest) ... ok\ntest_preflight_rejects_without_client (test_prompt_contract.LifecycleTest) ... ok\ntest_result_table (test_prompt_contract.LifecycleTest) ... ok\ntest_status_timeout_and_error (test_prompt_contract.LifecycleTest) ... ok\ntest_unavailable_closes_without_generation (test_prompt_contract.LifecycleTest) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.066s\n\nOK\n"
+    }
+  ],
+  "source_checks": [
+    {
+      "source": "S05",
+      "url": "https://dl.google.com/dl/android/maven2/com/google/mlkit/genai-prompt/1.0.0-beta4/genai-prompt-1.0.0-beta4.pom",
+      "http": "200",
+      "curl_exit": 0,
+      "body_sha256": "f3a7f09902d1cb1c8164fe5c99a2fe3a774598e5b19f3ff34a81d3684d902da9"
+    },
+    {
+      "source": "S07",
+      "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerateContentRequest.Builder",
+      "http": "200",
+      "curl_exit": 0,
+      "body_sha256": "01cf884688f688ef9a15126f0a93759816965bba08d337addc58c5511b74e321"
+    },
+    {
+      "source": "S10",
+      "url": "https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/Candidate",
+      "http": "200",
+      "curl_exit": 0,
+      "body_sha256": "55f20259500074338ceca084232263a33b9cf89f9d6b0df99a819ca42625d6dd"
+    },
+    {
+      "source": "S16",
+      "url": "https://developers.googleblog.com/a2ui-10-build-delightful-fast-reliable-agentic-experiences/",
+      "http": "200",
+      "curl_exit": 0,
+      "body_sha256": "fc0d9612d20253638f15664b1dc4cc3c316327c3fe23ff7a766e595b4412e59f"
+    },
+    {
+      "source": "S17",
+      "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2110191895966826496",
+      "http": "200",
+      "curl_exit": 0,
+      "body_sha256": "487249c2216f19fea529ec35119172e2680b80fc133114532f0834d1621c42e9"
+    }
+  ],
+  "structure": "PASS",
+  "code_identity": "PASS",
+  "android_compile": "NOT_EXECUTED",
+  "real_device_inference": "NOT_EXECUTED",
+  "message": {
+    "message_id": "om_x100b608ee8c9150ccf27c49404bc2b5",
+    "bot": "organization",
+    "chat": "me",
+    "submitted": true,
+    "queryable": true,
+    "create_time": "2026-11-17 09:14"
+  },
+  "historical_files_hashes": "PASS",
+  "artifacts": [
+    {
+      "path": "02_AndroidAI/2026-11-17-Prompt API最小调用：能力门禁后的一次短文本生成.md",
+      "bytes": 37978,
+      "sha256": "7ba31278d1b2c3e97cd6f1e33a4b04a25ceacf6b630f2bcd57ff0ddc101864f0"
+    },
+    {
+      "path": "00_进度/进度.md",
+      "bytes": 22090,
+      "sha256": "dd071f0f4adf8be363fb10d770aadcb8f71d2398f48fc0878a06f65b08b2256b"
+    }
+  ]
+}

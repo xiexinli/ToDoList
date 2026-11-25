@@ -1,0 +1,39 @@
+{
+  "observed_at": "2026-11-17T09:07:40.030199+08:00",
+  "python": "3.9.6 (default, Aug 25 2026, 21:26:21) \n[Clang 21.0.0 (clang-2100.3.34.2)]",
+  "tools": {
+    "python3": "/usr/bin/python3",
+    "kotlinc": null,
+    "java": "/usr/bin/java",
+    "gradle": null,
+    "adb": "/Users/alion/Library/Android/sdk/platform-tools/adb"
+  },
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "prompt_contract.py"
+      ],
+      "cwd": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17",
+      "exit_code": 0,
+      "log": "fixture-run.log"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_prompt_contract.py"
+      ],
+      "cwd": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-17",
+      "exit_code": 0,
+      "log": "tests.log"
+    }
+  ],
+  "android": "NOT_EXECUTED",
+  "boundary": "只执行专用Host fixture；不调用SDK/手机/模型/云聊天/令牌",
+  "openai_sdk_present": false
+}

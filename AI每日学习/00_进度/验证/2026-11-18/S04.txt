@@ -1,0 +1,39 @@
+
+          Home
+          Products
+          ML Kit
+          Reference
+    Send feedback
+      Stay organized with collections
+      Save and categorize content based on your preferences.
+Candidate
+Kotlin
+|Java
+class Candidate
+A piece of a response from the model. Contains the FinishReason, the response text, and any predicted function calls.
+Summary
+Nested types
+@IntDef(value = [0, 1, -100])
+annotation Candidate.FinishReason
+The reason why this Candidate is returned.
+Public properties
+            Int?
+finishReason
+The reason why this Candidate is finished generating.
+            List<FunctionCall>
+functionCalls
+The list of function calls predicted by the model.
+            String
+text
+The text string of the Candidate.
+Public properties
+finishReason
+val finishReason: Int?
+The reason why this Candidate is finished generating. This will be null for intermediate responses during streaming, and non-null for the final response in streaming or non-streaming mode.
+functionCalls
+val functionCalls: List<FunctionCall>
+The list of function calls predicted by the model.
+text
+val text: String
+The text string of the Candidate. May be null if the model only returned function calls.
+    Send feedback

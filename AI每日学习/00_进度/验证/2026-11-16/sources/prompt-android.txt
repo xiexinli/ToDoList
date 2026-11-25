@@ -1,0 +1,298 @@
+
+ Send custom requests with Gemini Nano direct model access  |  ML Kit  |  Google for Developers
+ Skip to main content
+ ML Kit
+ Guides
+ Reference
+ Samples
+ Case studies
+ Community
+ /
+ English
+ Deutsch
+ Español
+ Español – América Latina
+ Français
+ Indonesia
+ Italiano
+ Polski
+ Português – Brasil
+ Tiếng Việt
+ Türkçe
+ Русский
+ עברית
+ العربيّة
+ فارسی
+ हिंदी
+ বাংলা
+ ภาษาไทย
+ 中文 – 简体
+ 中文 – 繁體
+ 日本語
+ 한국어
+ Sign in
+ Guides
+ ML Kit
+ Guides
+ Reference
+ Samples
+ Case studies
+ Community
+Overview
+Release notes
+Known issues
+Early access program
+ Migrating from ML Kit for Firebase
+Overview
+Android
+iOS
+ Migrating from Mobile Vision
+Overview
+Android
+iOS
+ GenAI
+Overview
+ Direct model access (Beta)
+Overview
+Get started
+Prompt design
+Evaluate prompt quality
+Set system instructions (Beta)
+Prefix caching (Experimental)
+Generate structured output (Alpha)
+Use thinking mode (Beta)
+Use function calling (Preview)
+Select a model
+ Agentic workflows (Preview)
+Overview
+Get started
+Define tools
+Manage sessions and lifecycle
+Stream events and UI
+Speech recognition (Alpha)
+Speech translation (Alpha)
+Text to speech (Alpha)
+Image description (Beta)
+Summarization (Beta)
+Proofreading (Beta)
+Rewriting (Beta)
+Embeddings (Preview)
+AICore Developer Preview program
+ Vision
+ Text recognition v2
+Overview
+Supported languages
+Android
+iOS
+ Face detection
+Overview
+Face detection concepts
+Android
+iOS
+ Face mesh detection (Beta)
+Overview
+Face mesh detection concepts
+Android
+ Pose detection (Beta)
+Overview
+Android
+iOS
+Pose Classification Options
+ Selfie segmentation (Beta)
+Overview
+Android
+iOS
+ Subject segmentation (Beta)
+Overview
+Android
+ Document scanner
+Overview
+Android
+ Barcode scanning
+Overview
+Android
+iOS
+Google code scanner (Android only)
+ Image labeling
+Overview
+ Base model
+Label map
+Android
+iOS
+ Custom models
+Android
+iOS
+ AutoML Vision Edge
+Migrate to custom models
+Android
+iOS
+ Object detection and tracking
+Overview
+ Base models
+Android
+iOS
+ Custom models
+Android
+iOS
+ Digital ink recognition
+Overview
+Base models
+Android
+iOS
+Custom models
+ Natural language
+ Language identification
+Overview
+Supported languages
+Android
+iOS
+ Translation
+Overview
+Guidelines
+Supported languages
+Android
+iOS
+ Smart reply
+Overview
+Android
+iOS
+ Entity extraction (Beta)
+Overview
+Android
+iOS
+ Tips
+Model installation paths on Android
+Reduce Android app package size
+ Colophon
+ Terms & Privacy
+Overview
+GenAI API Terms
+Android Data Disclosure
+iOS Data Disclosure
+ Home
+ Products
+ ML Kit
+ Guides
+ Send feedback
+ Send custom requests with Gemini Nano direct model access
+ Stay organized with collections
+ Save and categorize content based on your preferences.
+ This API is offered in beta, and is not subject to any SLA or deprecation policy. Changes may be
+ made to this API that break backward compatibility.
+With ML Kit's direct model access (com.google.mlkit:genai-prompt), you can
+send custom natural language requests on-device to the Gemini Nano
+foundation model through the GenerativeModel class. Direct model access
+accepts text or multimodal (image and text) inputs, supports client-managed
+multi-turn conversations (List<Content> with USER and MODEL roles and
+sessionId), and emits text output or typed structured output.
+You can use direct model access for a variety of use cases, including the
+following:
+Use case
+Example
+Image understanding
+Analyzing photos for classification, such as "pets", "food", or "travel".
+Short translations
+Translating short messages between a delivery driver and customer.
+Guided summarization
+Summarizing reviews of a restaurant based on a user's specific interest.
+Entity extraction
+Extracting important details about an upcoming event from an email thread.
+Content generation inspiration
+Suggesting prompts for a journal entry.
+Intelligent document scanning
+Extracting and categorizing items from a receipt image.Note: For best results, consider using the ML Kit Text Recognition API to first extract text from an image. Then, use direct model access to further process the text with the context from the original image.
+Text classification
+Classifying customer reviews into a positive, neutral, or negative category.
+Managed sessions and automated tool loops:
+The GenerateContentRequest class already supports client-managed
+multi-turn conversations using a List<Content> object
+(USER and MODEL roles) and a sessionId value.
+If you want ML Kit to automate in-memory multi-turn session history and
+multi-step tool execution on top of the GenerativeModel class, see
+Agentic workflows (using the
+AgentRunner class).
+Direct model access versus task-specific APIs
+Alongside direct access to the Gemini Nano foundation model for custom prompts,
+ML Kit provides pre-configured APIs for dedicated speech, image, and text tasks:
+Speech Recognition, Image Description, Summarization,
+Proofreading, Rewriting, and more. The text and image task APIs use
+task-specific feature types and fine-tuned LoRA adapters on top of the shared
+base model. The following table outlines the benefits of each approach:
+Consideration
+Direct model access (GenerativeModel)
+Text and image task APIs
+Integration effort
+High.
+Requires more effort to implement, due to prompt engineering and quality assurance.
+Low.
+Requires less effort, as these APIs use task-specific feature types and fine-tuned LoRA adapters on top of the base model. No need to work directly with the LLM.
+Flexibility
+More flexibility, as you can custom engineer prompts, manage multi-turn context, enforce typed structured schemas, or build higher-level agentic workflows (AgentRunner) on top of GenerativeModel.
+Less flexibility. Each task-specific API has fixed LoRA fine-tuning and a built-in prompt that has the following characteristics:
+Image description is generic and short.
+Summarizations can only be in 1-3 bullet points.
+Rewriting supports only predefined styles.
+As a general rule, use direct model access when you need more customization and
+flexibility, and use the task-specific APIs for standard tasks that don't
+require custom logic.
+Sample code
+ML Kit GenAI Samples
+ Send feedback
+Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License. For details, see the Google Developers Site Policies. Java is a registered trademark of Oracle and/or its affiliates.
+Last updated 2026-10-27 UTC.
+ Need to tell us more?
+ [[["Easy to understand","easyToUnderstand","thumb-up"],["Solved my problem","solvedMyProblem","thumb-up"],["Other","otherUp","thumb-up"]],[["Missing the information I need","missingTheInformationINeed","thumb-down"],["Too complicated / too many steps","tooComplicatedTooManySteps","thumb-down"],["Out of date","outOfDate","thumb-down"],["Samples / code issue","samplesCodeIssue","thumb-down"],["Other","otherDown","thumb-down"]],["Last updated 2026-10-27 UTC."],[],[]]
+Engage
+ Google AI Forum
+ Google Developer Program
+ Google Developer Groups
+ Google Developer Experts
+ Accelerators
+ Google Cloud & NVIDIA
+Connect
+ Blog
+ Bluesky
+ Instagram
+ LinkedIn
+ X (Twitter)
+ YouTube
+Build
+ Android
+ Chrome
+ Firebase
+ Google AI Studio
+ Google Antigravity
+ Google Cloud
+ Google Play
+ View all
+ Android
+ Chrome
+ Firebase
+ Google Cloud Platform
+ Google AI
+ All products
+ Terms
+ Privacy
+ Manage cookies
+ English
+ Deutsch
+ Español
+ Español – América Latina
+ Français
+ Indonesia
+ Italiano
+ Polski
+ Português – Brasil
+ Tiếng Việt
+ Türkçe
+ Русский
+ עברית
+ العربيّة
+ فارسی
+ हिंदी
+ বাংলা
+ ภาษาไทย
+ 中文 – 简体
+ 中文 – 繁體
+ 日本語
+ 한국어

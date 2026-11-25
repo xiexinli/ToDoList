@@ -1,0 +1,49 @@
+[
+  {
+    "id": "J03",
+    "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2086789748948643840",
+    "http": "200",
+    "curl_exit": 0,
+    "observed_at": "2026-11-18T13:03:47.549783+08:00",
+    "sha256": "d2472224e5d07d1a4145bd8b9d6cecf904ade66fd3d7239fbda8b3f7ad1f9598",
+    "datePublished": [],
+    "last_updated": [],
+    "read_state": "DOWNLOADED_PENDING_READ"
+  },
+  {
+    "id": "J04",
+    "url": "https://careers.tencent.com/jobdesc.html?postId=2086789748948643840",
+    "http": "200",
+    "curl_exit": 0,
+    "observed_at": "2026-11-18T13:03:47.827337+08:00",
+    "sha256": "b4567851b9ee8f1a2b94131eb80f7af3a888454cffadb65554bb8215dfbb0de0",
+    "datePublished": [],
+    "last_updated": [],
+    "read_state": "DOWNLOADED_PENDING_READ"
+  },
+  {
+    "id": "S18",
+    "url": "https://developer.android.com/reference/kotlin/androidx/lifecycle/compose/package-summary",
+    "http": "200",
+    "curl_exit": 0,
+    "observed_at": "2026-11-18T13:03:55.027007+08:00",
+    "sha256": "d3a15859bbf26680c36e72232bbdbb31ee99c6ed2f7da82ade39382779061a12",
+    "datePublished": [],
+    "last_updated": [
+      "Last updated 2026-08-06 UTC.",
+      "Last updated 2026-08-06 UTC.\"],[],[]]"
+    ],
+    "read_state": "DOWNLOADED_PENDING_READ"
+  },
+  {
+    "id": "S19",
+    "url": "https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/sync/Mutex.kt",
+    "http": "200",
+    "curl_exit": 0,
+    "observed_at": "2026-11-18T13:03:55.705173+08:00",
+    "sha256": "10037e7065d1473182cd3c9bd9198c4841e8a42fc6c28e7cf15a86d7cc49f797",
+    "datePublished": [],
+    "last_updated": [],
+    "read_state": "DOWNLOADED_PENDING_READ"
+  }
+]

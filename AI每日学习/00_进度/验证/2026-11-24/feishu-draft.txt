@@ -1,0 +1,9 @@
+今日第9讲：端云请求的只读对账（续）
+① 查询旧操作≠重发；契约与完整身份scope未批准就NOT_EXECUTED。
+② 失败/404/未知/身份错/缺证据不清UNKNOWN，预算耗尽继续待确认。
+③ 同身份终结+释放经adapter验证才finish；trusted仅fixture，不是真认证。
+最值得看：Google意图劫持防护评测（11-23，正文已核）
+https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/
+动手：改released=False，再查到预算耗尽，验证占位不变、无新生成。
+Host 12项OK；真实查询/模型/认证/Android均NOT_EXECUTED。
+材料：02_AndroidAI/2026-11-24-端云请求的只读对账：查询状态而不是重发（续）.md

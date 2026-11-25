@@ -1,0 +1,28 @@
+{
+  "status": "WRITTEN",
+  "type": "TOOL",
+  "observed_at": "2026-11-16T08:08:11.976403+08:00",
+  "main": {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-16-端侧推理的设备能力检查与可用性边界.md",
+    "bytes": 27836,
+    "sha256": "4463fa2fbf0158a2a236e61e9fc9f7081943fad13bea5f5974c30a3d6e2f3534"
+  },
+  "ledger": {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md",
+    "before_sha256": "b3da1d4ef3867fa7e079f4226e32be97ef435db330cd0e8a8cb4c6d66d293613",
+    "after_sha256": "e7890698e764f160a236bb9535ed15596f569753cdf9a1cb4c05dd41a63ab62e",
+    "before_bytes": 16435,
+    "after_bytes": 18495
+  },
+  "backup": {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/备份/2026-11-16-080811-进度.before.md",
+    "bytes": 16435
+  },
+  "protected_files": 23,
+  "new_topic_rows": 1,
+  "new_link_rows": 10,
+  "new_dynamic_count": 3,
+  "summary_lines": 10,
+  "not_sent": true,
+  "review_rounds": 1
+}

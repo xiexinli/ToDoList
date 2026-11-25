@@ -1,0 +1,32 @@
+--- /Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/备份/2026-11-15-080708-进度.before.md
++++ /Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md
+@@ -22,6 +22,7 @@
+ | 2026-11-12 | 01_地基 · W4 | 多轮记忆（Memory） | 01_地基/2026-11-12-多轮记忆（Memory）.md | 待填 |
+ | 2026-11-13 | 01_地基 · W4 | 规划与任务分解（Planning） | 01_地基/2026-11-13-规划与任务分解（Planning）.md | 待填 |
+ | 2026-11-14 | 01_地基 · W4 | Agent 工程化（可观测与护栏）（W4 收官） | 01_地基/2026-11-14-Agent工程化（可观测与护栏）.md | 待填 |
++| 2026-11-15 | 01_地基 · 工程化补充 | 可恢复工作流：检查点（Checkpoint）与断点续跑 | 01_地基/2026-11-15-可恢复工作流（Checkpoint与断点续跑）.md | 待填 |
+ 
+ > 欠产与补写记录：2026-10-31 ~ 2026-11-04 因「本机终端审批超时」连续 6 天未落盘；2026-11-05 17:32 用户在 DHwork 权限设置中放行无人值守终端审批后，上述 5 天材料与 2026-W44 周总结已统一补全。
+ > 欠产与补写记录（二）：2026-11-07 ~ 2026-11-09 因「本机终端审批超时」连续 3 天未落盘；2026-11-09 下午用户在场、终端恢复后统一补全（含 2026-W45 周总结）。
+@@ -49,6 +50,7 @@
+ - [x] W4 · 第 3 讲：规划与任务分解（Planning）（2026-11-13 完成）
+ - [x] W4 · 第 4 讲：Agent 工程化（可观测与护栏）（2026-11-14 完成）
+ - [x] **W4「Agent 与工程化」全部完成（2026-11-14 收官）**
++- [x] 地基工程化补充：可恢复工作流（Checkpoint 与断点续跑）（2026-11-15 完成；日材料与 W46 周总结同时产出）
+ - [ ] **下一阶段：轨道 2 · Android × AI（端侧推理 / ML Kit / 端云协同）· 计划 2026-11-16 起；2026-11-15（周日）先产出 2026-W46 周总结**
+ 
+ ## 动态链接去重表
+@@ -122,9 +124,13 @@
+ | 2026-11-14 | arXiv：EvoX — Rethinking the Agent Harness as a Runtime Policy | https://arxiv.org/abs/2611.15006 |
+ | 2026-11-14 | 腾讯 Agent Infra SRE工程师(Agent治理方向)(深圳/北京)岗位 | https://careers.tencent.com/jobdesc.html?postId=2113089269949186048 |
+ | 2026-11-14 | GitHub：langfuse/langfuse（OpenTelemetry 系 Agent 可观测平台） | https://github.com/langfuse/langfuse |
++| 2026-11-15 | Google AI Edge Gallery 新增端侧语音识别与语音合成 | https://developers.googleblog.com/on-device-speech-recognition-and-text-to-speech-in-google-ai-edge-gallery/ |
++| 2026-11-15 | 腾讯 微信WeLM-大模型研发基础设施工程师-研发效能方向 | https://careers.tencent.com/jobdesc.html?postId=2084637516971032576 |
++| 2026-11-15 | GitHub langchain-ai/langgraph：有状态工作流与持久执行 | https://github.com/langchain-ai/langgraph |
+ 
+ ## 周总结
+ | 周次 | 覆盖日期 | 文件 |
+ |---|---|---|
+ | 2026-W44 | 2026-10-26 ~ 2026-11-01 | 04_周总结/2026-W44.md |
+ | 2026-W45 | 2026-11-02 ~ 2026-11-08 | 04_周总结/2026-W45.md |
++| 2026-W46 | 2026-11-09 ~ 2026-11-15 | 04_周总结/2026-W46.md |

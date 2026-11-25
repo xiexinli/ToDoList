@@ -1,0 +1,117 @@
+
+    tag:developer.android.com,2026-02:Android-Developers-Blog
+    Android Developers' Blog
+    2026-11-17T19:35:05.002Z
+    https://github.com/jpmonette/feed
+    The official Android Developers blog covering the latest news on app development tools, platform updates, training, and documentation for developers across every Android device.
+    https://developer.android.com/favicon.ico
+        tag:developer.android.com,2026-11-17:/blog/posts/ship-smarter-keep-rules-unblock-dex-optimization
+        2026-11-17T19:25:02.091Z
+            Breana Tate
+            https://developer.android.com/blog/authors/breana-tate
+        2026-11-17T00:00:00.000Z
+        tag:developer.android.com,2026-11-16:/blog/posts/beyond-the-app-google-play-buyer-reach
+        2026-11-17T18:15:15.371Z
+            Phalene Gowling
+            https://developer.android.com/blog/authors/phalene-gowling
+            Rejane França
+            https://developer.android.com/blog/authors/rejane-franca
+        2026-11-16T00:00:00.000Z
+        tag:developer.android.com,2026-11-11:/blog/posts/smileid-camerax-android-identity-verification
+        2026-11-10T20:18:20.575Z
+            Donovan McMurray
+            https://developer.android.com/blog/authors/donovan-mcmurray
+        2026-11-11T00:00:00.000Z
+        tag:developer.android.com,2026-11-10:/blog/posts/open-source-google-sign-in-unity
+        2026-11-10T17:35:22.231Z
+            Michelle Martin
+            https://developer.android.com/blog/authors/michelle-martin
+        2026-11-10T00:00:00.000Z
+        tag:developer.android.com,2026-11-06:/blog/posts/build-android-xr-devices-tools
+        2026-11-06T18:16:12.047Z
+            Amy Zeppenfeld
+            https://developer.android.com/blog/authors/amy-zeppenfeld
+            Vinny DaSilva
+            https://developer.android.com/blog/authors/vinny-da-silva
+        2026-11-06T00:00:00.000Z
+        tag:developer.android.com,2026-11-05:/blog/posts/android-intelligence-system-in-app-agents-ads
+        2026-11-06T19:50:49.838Z
+            Jingyu Shi
+            https://developer.android.com/blog/authors/jingyu-shi
+        2026-11-05T00:00:00.000Z
+        tag:developer.android.com,2026-11-04:/blog/posts/build-for-every-screen-jetpack-compose-updates
+        2026-11-04T16:02:17.288Z
+            Rebecca Gutteridge
+            https://developer.android.com/blog/authors/rebecca-gutteridge
+        2026-11-04T00:00:00.000Z
+        tag:developer.android.com,2026-11-02:/blog/posts/building-apps-developer-sessions
+        2026-11-02T20:14:06.106Z
+            Florina Muntenescu
+            https://developer.android.com/blog/authors/florina-muntenescu
+        2026-11-02T00:00:00.000Z
+        tag:developer.android.com,2026-10-28:/blog/posts/build-it-your-way-a-next-era-of-android-development
+        2026-10-28T17:54:21.696Z
+            Matthew McCullough
+            https://developer.android.com/blog/authors/matthew-mccullough
+        2026-10-28T00:00:00.000Z
+        tag:developer.android.com,2026-10-28:/blog/posts/android-dev-summit-26-developer-tools-performance
+        2026-10-28T16:20:49.813Z
+            Adarsh Fernando
+            https://developer.android.com/blog/authors/adarsh-fernando
+        2026-10-28T00:00:00.000Z
+        tag:developer.android.com,2026-10-28:/blog/posts/ai-agents-android-studio-integration
+        2026-10-28T12:53:18.882Z
+            Matthew Warner
+            https://developer.android.com/blog/authors/matthew-warner
+        2026-10-28T00:00:00.000Z
+        tag:developer.android.com,2026-10-21:/blog/posts/reliable-way-to-add-and-edit-contacts-android
+        2026-10-29T13:32:33.490Z
+            Roxanna Aliabadi Walker
+            https://developer.android.com/blog/authors/roxanna-walker
+        2026-10-21T00:00:00.000Z
+        tag:developer.android.com,2026-10-19:/blog/posts/grab-r8-profile-guided-optimization-anr-startup-time
+        2026-10-19T15:41:30.077Z
+            Ajesh Pai
+            https://developer.android.com/blog/authors/ajesh-pai
+            Nguyen Van Minh
+            https://developer.android.com/blog/authors/nguyen-van-minh
+            Tracy Agyemang
+            https://developer.android.com/blog/authors/tracy-agyemang
+        2026-10-19T00:00:00.000Z
+        tag:developer.android.com,2026-10-13:/blog/posts/bringing-gemini-4-argon-to-android-agentic-engineering-antigravity-cli
+        2026-10-16T16:17:27.504Z
+            Jason Buchel
+            https://developer.android.com/blog/authors/jason-buchel
+        2026-10-13T00:00:00.000Z
+        tag:developer.android.com,2026-10-13:/blog/posts/google-play-discovery-engagement-growth
+        2026-10-15T00:46:40.417Z
+            Paul Feng
+            https://developer.android.com/blog/authors/paul-feng
+        2026-10-13T00:00:00.000Z
+        tag:developer.android.com,2026-10-12:/blog/posts/googlebook-linux-terminal-preview-vm
+        2026-10-13T19:13:34.597Z
+            Cyrus Stoller
+            https://developer.android.com/blog/authors/cyrus-stoller
+        2026-10-12T00:00:00.000Z
+        tag:developer.android.com,2026-10-02:/blog/posts/android-cli-device-streaming-and-skills
+        2026-10-07T17:14:00.981Z
+            Simona Milanovic
+            https://developer.android.com/blog/authors/simona-milanovic
+        2026-10-02T00:00:00.000Z
+        tag:developer.android.com,2026-09-30:/blog/posts/jetpack-compose-ai-native-ui-instagram-direct
+        2026-10-01T16:11:45.457Z
+            Pavlo Stavytskyi
+            https://developer.android.com/blog/authors/pavlo-stavytskyi
+            Rebecca Franks
+            https://developer.android.com/blog/authors/rebecca-franks
+        2026-09-30T00:00:00.000Z
+        tag:developer.android.com,2026-09-29:/blog/posts/driving-growth-on-google-play-the-next-era-of-subscriptions
+        2026-09-30T16:40:11.923Z
+            Sheenam Mittal
+            https://developer.android.com/blog/authors/sheenam-mittal
+        2026-09-29T00:00:00.000Z
+        tag:developer.android.com,2026-09-28:/blog/posts/build-intelligent-android-apps-in-app-agentic-workflows
+        2026-11-12T18:15:49.224Z
+            Jolanda Verhoef
+            https://developer.android.com/blog/authors/jolanda-verhoef
+        2026-09-28T00:00:00.000Z

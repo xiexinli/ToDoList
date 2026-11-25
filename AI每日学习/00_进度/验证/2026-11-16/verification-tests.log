@@ -1,0 +1,9 @@
+PASS 2304 组合：确定性、端侧门禁、下载授权、云授权不变量
+test_all_2304_combinations (test_capability_gate.CapabilityTests) ... ok
+test_exact_fixtures (test_capability_gate.CapabilityTests) ... ok
+test_future_or_bad_feature_is_unknown (test_capability_gate.CapabilityTests) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.019s
+
+OK

@@ -1,0 +1,35 @@
+
+          Home
+          Products
+          ML Kit
+          Reference
+    Send feedback
+      Stay organized with collections
+      Save and categorize content based on your preferences.
+Generation
+Kotlin
+|Java
+object Generation
+Entry class to get a GenerativeModel client.
+Summary
+Public functions
+            GenerativeModel
+getClient()
+Creates a new instance of GenerativeModel with default GenerationConfig.
+            GenerativeModel
+getClient(options: GenerationConfig)
+Creates a new instance of GenerativeModel.
+Public functions
+getClient
+fun getClient(): GenerativeModel
+Creates a new instance of GenerativeModel with default GenerationConfig.
+                Returns
+                GenerativeModel
+The GenerativeModel client.
+getClient
+fun getClient(options: GenerationConfig): GenerativeModel
+Creates a new instance of GenerativeModel.
+                Parameters
+                options: GenerationConfig
+the configuration for generation.
+    Send feedback

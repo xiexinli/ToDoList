@@ -1,0 +1,31 @@
+
+          Home
+          Products
+          ML Kit
+          Reference
+    Send feedback
+      Stay organized with collections
+      Save and categorize content based on your preferences.
+TextPart
+Kotlin
+|Java
+data class TextPart : Part
+            kotlin.Any
+               ↳
+            com.google.mlkit.genai.prompt.Part
+               ↳
+            com.google.mlkit.genai.prompt.TextPart
+A data class representing a text part of a prompt.
+Summary
+Public constructors
+TextPart(textString: String)
+Public properties
+            String
+textString
+Public constructors
+TextPart
+TextPart(textString: String)
+Public properties
+textString
+val textString: String
+    Send feedback

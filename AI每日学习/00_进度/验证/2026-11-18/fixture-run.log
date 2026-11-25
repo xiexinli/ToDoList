@@ -1,0 +1,4 @@
+Host固定输出： Ui(request_id=1, state='SUCCESS', draft='哈哈！', reason='STOP', notice='')
+状态： CHECKING -> STREAMING -> STREAMING -> STREAMING -> SUCCESS
+生命周期： create -> check -> stream -> close
+可采纳： True ；端侧推理/usage/性能：未测

@@ -1,0 +1,115 @@
+
+          Home
+          Products
+          ML Kit
+          Reference
+    Send feedback
+      Stay organized with collections
+      Save and categorize content based on your preferences.
+GenerateContentRequest.Builder
+Kotlin
+|Java
+class GenerateContentRequest.Builder
+Builder for GenerateContentRequest.
+Summary
+Public constructors
+Builder(content: Content)
+Builder(contents: List<Content>)
+Builder(text: TextPart)
+Builder(image: ImagePart, text: TextPart)
+Builder(systemInstruction: SystemInstruction, text: TextPart)
+Builder(
+    systemInstruction: SystemInstruction,
+    image: ImagePart,
+    text: TextPart
+)
+Public functions
+            GenerateContentRequest
+build()
+            GenerateContentRequest.Builder
+@CanIgnoreReturnValue
+setTools(tools: List<FunctionDeclaration>)
+Sets the list of tools, i.e. dynamicTools.
+Public properties
+            String?
+cachedContextName
+            Int?
+candidateCount
+            List<FunctionDeclaration>?
+dynamicTools
+Tool declarations built at runtime (both app-defined dynamic tools and AppFunction tools).
+            Boolean
+enableThinking
+            Int?
+maxOutputTokens
+            PromptPrefix?
+promptPrefix
+            Int?
+seed
+            String?
+sessionId
+An optional identifier for tracking multi-turn conversational sessions across generation requests in telemetry and caching.
+            SystemInstruction?
+systemInstruction
+            Float?
+temperature
+            Int?
+topK
+Public constructors
+Builder
+Builder(content: Content)
+Builder
+Builder(contents: List<Content>)
+Builder
+Builder(text: TextPart)
+Builder
+Builder(image: ImagePart, text: TextPart)
+Builder
+Builder(systemInstruction: SystemInstruction, text: TextPart)
+Builder
+Builder(
+    systemInstruction: SystemInstruction,
+    image: ImagePart,
+    text: TextPart
+)
+Public functions
+build
+fun build(): GenerateContentRequest
+setTools
+@CanIgnoreReturnValue
+fun setTools(tools: List<FunctionDeclaration>): GenerateContentRequest.Builder
+Sets the list of tools, i.e. dynamicTools.
+This list can include both functions implemented directly by this app and AppFunction tools discovered via AppFunctionTools.getAppFunctions.
+                Parameters
+                tools: List<FunctionDeclaration>
+declarations of runtime tools in the form of FunctionDeclarations.
+Public properties
+cachedContextName
+var cachedContextName: String?
+candidateCount
+var candidateCount: Int?
+dynamicTools
+var dynamicTools: List<FunctionDeclaration>?
+Tool declarations built at runtime (both app-defined dynamic tools and AppFunction tools). See setTools.
+enableThinking
+var enableThinking: Boolean
+maxOutputTokens
+var maxOutputTokens: Int?
+promptPrefix
+var promptPrefix: PromptPrefix?
+seed
+var seed: Int?
+sessionId
+var sessionId: String?
+An optional identifier for tracking multi-turn conversational sessions across generation requests in telemetry and caching.
+When provided, the session ID must be non-blank, at most 128 characters, and contain only alphanumeric characters, underscores (_), hyphens (-), or dots (.), and cannot be . or ...
+                Throws
+                IllegalArgumentException
+if the provided session ID does not meet these criteria.
+systemInstruction
+var systemInstruction: SystemInstruction?
+temperature
+var temperature: Float?
+topK
+var topK: Int?
+    Send feedback

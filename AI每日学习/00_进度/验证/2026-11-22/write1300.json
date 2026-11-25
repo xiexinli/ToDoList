@@ -1,0 +1,24 @@
+{
+  "observed_at": "2026-11-22T14:08:25.001373+08:00",
+  "artifacts": [
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-22-端云请求的取消与结束确认：怎样处理UNKNOWN（续）.md",
+      "bytes": 15457,
+      "sha256": "99d22e92dc1208485e13a1b919464dd468e5b22bdcafb951f25ff5e159630ddf"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/04_周总结/2026-W47.md",
+      "bytes": 6660,
+      "sha256": "9a0f20a92dc468a63111a3a5d210bc8d284d9d8be6bb420a761344e9c3a91400"
+    },
+    {
+      "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md",
+      "bytes": 33264,
+      "sha256": "d9486826908082e1e4341a91f589d4bc18e87bee93389ad446739cd852ec980c"
+    }
+  ],
+  "source_new": 4,
+  "source_reused": 2,
+  "old_files_unchanged": true,
+  "old_issues_not_fixed": true
+}

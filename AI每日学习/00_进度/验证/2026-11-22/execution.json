@@ -1,0 +1,33 @@
+{
+  "observed_at": "2026-11-22T14:05:48.594766+08:00",
+  "python": "3.9.6 (default, Oct 19 2026, 19:18:13) \n[Clang 21.0.0 (clang-2100.4.1.1)]",
+  "commands": [
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "end_guard.py"
+      ],
+      "cwd": "/tmp/ai-end-20261122-ol2m6k_r",
+      "exit_code": 0,
+      "log": "host.log"
+    },
+    {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_end_guard.py"
+      ],
+      "cwd": "/tmp/ai-end-20261122-ol2m6k_r",
+      "exit_code": 0,
+      "log": "tests.log"
+    }
+  ],
+  "tmp_cleaned": true,
+  "mode": "EXECUTED_HOST_FIXTURE",
+  "android": "NOT_EXECUTED",
+  "real_backend_calls": 0
+}

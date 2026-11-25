@@ -1,0 +1,50 @@
+[
+  {
+    "id": "prompt-get-started",
+    "type": "TOOL",
+    "url": "https://developers.google.com/ml-kit/genai/prompt/android/get-started",
+    "http": "200",
+    "effective_url": "https://developers.google.com/ml-kit/genai/prompt/android/get-started",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:02:41.203424+08:00",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/prompt-get-started.raw",
+    "bytes": 145202
+  },
+  {
+    "id": "go-article",
+    "type": "TOOL",
+    "url": "https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/",
+    "http": "200",
+    "effective_url": "https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:02:41.916306+08:00",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/go-article.raw",
+    "bytes": 61926
+  },
+  {
+    "id": "jd-detail",
+    "type": "TOOL",
+    "url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2053738190963126272",
+    "http": "200",
+    "effective_url": "https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2053738190963126272",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:02:40.678197+08:00",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/jd-detail.raw",
+    "bytes": 4005
+  },
+  {
+    "id": "jd-page",
+    "type": "TOOL",
+    "url": "https://careers.tencent.com/jobdesc.html?postId=2053738190963126272",
+    "http": "200",
+    "effective_url": "https://careers.tencent.com/jobdesc.html?postId=2053738190963126272",
+    "exit_code": 0,
+    "stderr": "",
+    "observed_at": "2026-11-16T08:02:40.675297+08:00",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-16/sources/jd-page.raw",
+    "bytes": 2145
+  }
+]

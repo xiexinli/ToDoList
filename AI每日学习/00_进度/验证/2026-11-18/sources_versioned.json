@@ -1,0 +1,12 @@
+[
+  {
+    "id": "S21",
+    "url": "https://dl.google.com/dl/android/maven2/androidx/lifecycle/lifecycle-runtime-compose-android/2.8.7/lifecycle-runtime-compose-android-2.8.7-sources.jar",
+    "http": "200",
+    "curl_exit": 0,
+    "sha256": "4484938d49ee89102cea6458f3ff39d912497ae90b292d71e273d496b875e23f",
+    "observed_at": "2026-11-18T13:07:26.433006+08:00",
+    "source_date": "版本2.8.7；原发布日期未提供",
+    "read_state": "READ_VERSIONED_SOURCE"
+  }
+]

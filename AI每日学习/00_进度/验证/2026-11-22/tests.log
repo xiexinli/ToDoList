@@ -1,0 +1,17 @@
+test_bad_receipts_do_not_release (test_end_guard.EndTests) ... ok
+test_cancel_retains_slot (test_end_guard.EndTests) ... ok
+test_cancelled_late_success_hidden (test_end_guard.EndTests) ... ok
+test_failed_and_cancelled_clear_draft (test_end_guard.EndTests) ... ok
+test_late_old_receipt_cannot_clear_new_slot (test_end_guard.EndTests) ... ok
+test_new_intent_needs_fresh_approval (test_end_guard.EndTests) ... ok
+test_no_automatic_restart (test_end_guard.EndTests) ... ok
+test_old_fragments_ignored (test_end_guard.EndTests) ... ok
+test_parallel_start_one_winner (test_end_guard.EndTests) ... ok
+test_running_blocks_new_id (test_end_guard.EndTests) ... ok
+test_unknown_confirmation_then_new_intent (test_end_guard.EndTests) ... ok
+test_unknown_retains_slot (test_end_guard.EndTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.001s
+
+OK

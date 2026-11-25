@@ -1,0 +1,41 @@
+--- 进度.before.md
++++ 进度.md
+@@ -27,10 +27,9 @@
+ | 2026-11-17 | 02_AndroidAI · 第 2 讲 | Prompt API 最小调用：能力门禁后的一次短文本生成 | 02_AndroidAI/2026-11-17-Prompt API最小调用：能力门禁后的一次短文本生成.md | 待填 |
+ | 2026-11-18 | 02_AndroidAI · 第 3 讲 | 端侧流式生成的 Compose 增量呈现（续地基 Streaming，Android 接入） | 02_AndroidAI/2026-11-18-端侧流式生成的Compose增量呈现.md | 待填 |
+ | 2026-11-19 | 02_AndroidAI · 第 4 讲 | 端侧生成的性能测量：首字时延与完整耗时 | 02_AndroidAI/2026-11-19-端侧生成的性能测量：首字时延与完整耗时.md | 待填 |
+-
+ | 2026-11-20 | 02_AndroidAI · 第 5 讲 | 端侧生成失败后的重试预算：什么时候不该再试 | 02_AndroidAI/2026-11-20-端侧生成失败后的重试预算：什么时候不该再试.md | 待填 |
+-
+ | 2026-11-21 | 02_AndroidAI · 第 6 讲 | 端云降级的显式路由与隐私授权（续） | 02_AndroidAI/2026-11-21-端云降级的显式路由与隐私授权（续）.md | 待填 |
++| 2026-11-22 | 02_AndroidAI · 第 7 讲 | 端云请求的取消与结束确认：怎样处理UNKNOWN（续） | 02_AndroidAI/2026-11-22-端云请求的取消与结束确认：怎样处理UNKNOWN（续）.md | 待填 |
+ 
+ 
+ > 欠产与补写记录：2026-10-31 ~ 2026-11-04 因「本机终端审批超时」连续 6 天未落盘；2026-11-05 17:32 用户在 DHwork 权限设置中放行无人值守终端审批后，上述 5 天材料与 2026-W44 周总结已统一补全。
+@@ -70,6 +69,8 @@
+ - [x] Android × AI · 第 5 讲：端侧生成失败后的重试预算：什么时候不该再试（2026-11-20 材料已产出；EXECUTED_HOST纯策略fixture通过，SDK/设备/云模型NOT_EXECUTED；复述待填）
+ 
+ - [x] Android × AI · 第 6 讲：端云降级的显式路由与隐私授权（续）（2026-11-21 材料已产出；EXECUTED_HOST纯策略fixture通过，SDK/设备/云模型NOT_EXECUTED；复述待填）
++- [x] Android × AI · 第 7 讲：端云请求的取消与结束确认（2026-11-22 材料已产出；Host12项单测通过，真实取消/释放未测；复述待填）
++- [ ] Android × AI · 下一讲（建议2026-11-23）：持久操作账本与重启后的未确认请求
+ 
+ ## 动态链接去重表
+ | 首次出现日期 | 标题 | 链接 |
+@@ -213,6 +214,12 @@
+ | 2026-11-21 | 工具｜Presidio社区现文档 | https://data-privacy-stack.github.io/presidio/ |
+ 
+ > 2026-11-21 补写于2026-11-21；来源小摘录与本轮HTTP抽验：`验证/2026-11-21/run-2100/sources-small.json`；代码与Host日志同目录；本执行者摘要not_sent，由主智能体验收后提交。 教学参考续用（非新动态）：[教学参考｜端侧本地数据处理](https://developers.google.com/ml-kit/genai)。
++| 2026-11-22 | 动态｜跨云Agent异常检测（11-20发布） | https://developers.googleblog.com/agent-anomaly-detection-safeguarding-agents-across-other-clouds/ |
++| 2026-11-22 | 岗位｜掌上无畏契约Android开发（10-29更新） | https://careers.tencent.com/jobdesc.html?postId=1998671162179215360 |
++| 2026-11-22 | 岗位证据｜掌上无畏契约详情API | https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=1998671162179215360 |
++| 2026-11-22 | 工具｜cancelAndJoin当前官方API参考 | https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/cancel-and-join.html |
++
++> 2026-11-22 教学参考继续使用（非新增动态）：[教学参考｜Job.kt 1.7.3取消中与完成态](https://raw.githubusercontent.com/Kotlin/kotlinx.coroutines/1.7.3/kotlinx-coroutines-core/common/src/Job.kt)；[教学参考｜GenerativeModel取消与close](https://developers.google.com/android/reference/kotlin/com/google/mlkit/genai/prompt/GenerativeModel)。
+ 
+ ## 周总结
+ | 周次 | 覆盖日期 | 文件 |
+@@ -220,3 +227,4 @@
+ | 2026-W44 | 2026-10-26 ~ 2026-11-01 | 04_周总结/2026-W44.md |
+ | 2026-W45 | 2026-11-02 ~ 2026-11-08 | 04_周总结/2026-W45.md |
+ | 2026-W46 | 2026-11-09 ~ 2026-11-15 | 04_周总结/2026-W46.md |
++| 2026-W47 | 2026-11-16 ~ 2026-11-22 | 04_周总结/2026-W47.md |

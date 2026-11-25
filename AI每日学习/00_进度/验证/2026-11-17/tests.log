@@ -1,0 +1,38 @@
+PASS 清理错误不掩盖 error
+PASS 清理错误不掩盖 cancel
+PASS 创建失败：明确阶段
+PASS 前台变化：生成次数 0 不发布成功
+PASS 前台变化：生成次数 1 不发布成功
+PASS 生成超时：取消在途调用，关闭，无成功文本
+PASS 生成协程取消：不吞控制信号
+PASS 生命周期取消：向上传播，关闭，无自动重试
+PASS 空输入 EMPTY_INPUT
+PASS 输入过长 INPUT_TOO_LONG
+PASS 门禁未通过 BLOCKED
+PASS 初始非前台 FOREGROUND_REQUIRED
+PASS normal SUCCESS 一次生成+关闭
+PASS blank EMPTY_RESULT 一次生成+关闭
+PASS no_candidates EMPTY_RESULT 一次生成+关闭
+PASS null_text EMPTY_RESULT 一次生成+关闭
+PASS truncated TRUNCATED 一次生成+关闭
+PASS other INCOMPLETE 一次生成+关闭
+PASS unknown_finish INCOMPLETE 一次生成+关闭
+PASS error FAILED 一次生成+关闭
+PASS status_timeout CHECK_TIMEOUT 零次生成+关闭
+PASS status_error FAILED 零次生成+关闭
+PASS 不可用：零次生成，客户端关闭
+test_cleanup_does_not_mask_failure_or_cancel (test_prompt_contract.LifecycleTest) ... ok
+test_creation_error (test_prompt_contract.LifecycleTest) ... ok
+test_foreground_changes (test_prompt_contract.LifecycleTest) ... ok
+test_generation_timeout_cancels_and_closes (test_prompt_contract.LifecycleTest) ... ok
+test_generator_cancel_propagates (test_prompt_contract.LifecycleTest) ... ok
+test_lifecycle_cancel_propagates (test_prompt_contract.LifecycleTest) ... ok
+test_preflight_rejects_without_client (test_prompt_contract.LifecycleTest) ... ok
+test_result_table (test_prompt_contract.LifecycleTest) ... ok
+test_status_timeout_and_error (test_prompt_contract.LifecycleTest) ... ok
+test_unavailable_closes_without_generation (test_prompt_contract.LifecycleTest) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.066s
+
+OK

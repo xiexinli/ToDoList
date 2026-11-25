@@ -1,0 +1,62 @@
+[
+  {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-19-端侧生成的性能测量：首字时延与完整耗时.md",
+    "sha256": "db8372f0d41360e2d82e2afb157af75045813102c81ad0f9046e2ed8db9aac9a",
+    "bytes": 35626
+  },
+  {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md",
+    "sha256": "c16c58ae7dffe1b3c959f8d8dd18afebd9357f152a5a8d3f63fe0739b9cc5d83",
+    "bytes": 28898
+  },
+  {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-19/ledger.before.md",
+    "sha256": "8bed6d17fc5ed1eb777180512f96c721909449df841066bdfe8b6236dedf1126",
+    "bytes": 26607
+  },
+  {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-19/ledger.diff",
+    "sha256": "9e4f35bc27961f99e96c83387838921ad52bc508273f6809db3476d96287363f",
+    "bytes": 7120
+  },
+  {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-19/sources.json",
+    "sha256": "604e58dd12c57dec4941f6a979ba9357e437f10474ec75fae4f9205209820f63",
+    "bytes": 48129
+  },
+  {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-19/latency_meter.py",
+    "sha256": "c2534117b6428e6ddf011a5dc5b69ba45a0e5775ab3fa2eb789c634c89c0d012",
+    "bytes": 6630
+  },
+  {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-19/test_latency_meter.py",
+    "sha256": "ed7d6d40ba6ac9b422e8bad4cf29f91139bef912b1d1ddea022484f97c8d3969",
+    "bytes": 6672
+  },
+  {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-19/NanoLatencyProbe.kt",
+    "sha256": "e20dc2ade353d6b0dd8bc0066c1381f3e3efe7b5b9f8650fda7f66a4b504f7c9",
+    "bytes": 4418
+  },
+  {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-19/host.log",
+    "sha256": "631bad5837003016a750a56e9a602a00ba1dd6a2b90ad5fcabca8f7700da534d",
+    "bytes": 969
+  },
+  {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-19/tests.log",
+    "sha256": "2d323bd7fa0796f7a1743eeb28d4d205c80584b9b2892a69611193be3474c74f",
+    "bytes": 1872
+  },
+  {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-19/summary-draft.md",
+    "sha256": "edb3bbeac2e8ab0c323f9f13e2464cb07b465cad85ea24cfa3267f2d4dd35d91",
+    "bytes": 829
+  },
+  {
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/验证/2026-11-19/selfcheck.json",
+    "sha256": "6bb6a56da046280b61ca4f47acc0d0befe90eb2ba28adf542c447ef7493c8333",
+    "bytes": 2068
+  }
+]

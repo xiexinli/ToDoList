@@ -1,0 +1,27 @@
+COMMAND python3 test_budget.py EXIT=0
+EXECUTED_HOST Python=3.9.6 SQLite=3.54.0
+test_01_restore_is_not_query (__main__.Tests) ... ok
+test_02_reopen_does_not_refill (__main__.Tests) ... ok
+test_03_failure_charges_no_refund (__main__.Tests) ... ok
+test_04_exhaustion_no_more_queries (__main__.Tests) ... ok
+test_05_exit_after_commit_before_query (__main__.Tests) ... ok
+test_06_exit_after_fixture_query (__main__.Tests) ... ok
+test_07_identity_all_fields_bound (__main__.Tests) ... ok
+test_08_no_budget_row_or_table_no_query (__main__.Tests) ... ok
+test_09_missing_corrupt_incompatible_db (__main__.Tests) ... ok
+test_10_sql_commit_failure_no_query (__main__.Tests) ... ok
+test_11_two_connections_share_budget_sequential (__main__.Tests) ... ok
+test_12_no_reseed_and_no_terminal_query (__main__.Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.139s
+
+OK
+
+COMMAND python3 budget_host.py EXIT=0
+首次查询: 待确认：状态或证据不充分
+重启仅恢复，未查询；剩余: 1
+用户显式查询: 待确认：查询或验证失败
+再次请求: 待确认：查询预算耗尽
+fixture查询次数: 2 账本: ('UNKNOWN', 1)
+usage=NOT_EXECUTED（无模型调用）

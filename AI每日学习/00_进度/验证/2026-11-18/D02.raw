@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>tag:developer.android.com,2026-02:Android-Developers-Blog</id>
+    <title>Android Developers' Blog</title>
+    <updated>2026-11-17T19:35:05.002Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://developer.android.com/blog/"/>
+    <link rel="self" href="https://developer.android.com/blog/atom.xml"/>
+    <subtitle>The official Android Developers blog covering the latest news on app development tools, platform updates, training, and documentation for developers across every Android device.</subtitle>
+    <icon>https://developer.android.com/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Ship smarter keep rules: How library providers can unblock app-level DEX code optimization]]></title>
+        <id>tag:developer.android.com,2026-11-17:/blog/posts/ship-smarter-keep-rules-unblock-dex-optimization</id>
+        <link href="https://developer.android.com/blog/posts/ship-smarter-keep-rules-unblock-dex-optimization"/>
+        <updated>2026-11-17T19:25:02.091Z</updated>
+        <summary type="html"><![CDATA[As Android app and library developers, we all strive for the same goal: performant apps that provide a smooth user experience. A major part of that involves R8, Android’s app optimizer. R8 improves app performance by removing unused code, and optimizing and obfuscating the rest.
+]]></summary>
+        <author>
+            <name>Breana Tate</name>
+            <uri>https://developer.android.com/blog/authors/breana-tate</uri>
+        </author>
+        <published>2026-11-17T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Beyond the app: Expanding buyer reach across new surfaces with Google Play]]></title>
+        <id>tag:developer.android.com,2026-11-16:/blog/posts/beyond-the-app-google-play-buyer-reach</id>
+        <link href="https://developer.android.com/blog/posts/beyond-the-app-google-play-buyer-reach"/>
+        <updated>2026-11-17T18:15:15.371Z</updated>
+        <summary type="html"><![CDATA[Discover how Google Play’s channel expansion tools in Play Console expand buyer reach across store, web, and external surfaces while protecting margins.]]></summary>
+        <author>
+            <name>Phalene Gowling</name>
+            <uri>https://developer.android.com/blog/authors/phalene-gowling</uri>
+        </author>
+        <author>
+            <name>Rejane França</name>
+            <uri>https://developer.android.com/blog/authors/rejane-franca</uri>
+        </author>
+        <published>2026-11-16T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How SmileID Scaled Identity Verification to 18,000+ Android Device Types with CameraX]]></title>
+        <id>tag:developer.android.com,2026-11-11:/blog/posts/smileid-camerax-android-identity-verification</id>
+        <link href="https://developer.android.com/blog/posts/smileid-camerax-android-identity-verification"/>
+        <updated>2026-11-10T20:18:20.575Z</updated>
+        <summary type="html"><![CDATA[Identity verification apps for banking and SIM registration require clear, high-resolution face captures to detect spoofing and deepfakes. Capturing frames sharp enough for liveness and anti-spoofing checks, without crashing low-memory devices, is a common challenge for Android camera develope]]></summary>
+        <author>
+            <name>Donovan McMurray</name>
+            <uri>https://developer.android.com/blog/authors/donovan-mcmurray</uri>
+        </author>
+        <published>2026-11-11T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Powering Seamless Player Sign-In: Introducing the Open-Source Sign in with Google Plugin for Unity]]></title>
+        <id>tag:developer.android.com,2026-11-10:/blog/posts/open-source-google-sign-in-unity</id>
+        <link href="https://developer.android.com/blog/posts/open-source-google-sign-in-unity"/>
+        <updated>2026-11-10T17:35:22.231Z</updated>
+        <summary type="html"><![CDATA[With Unity powering over half of all mobile titles worldwide, first impressions matter. For game developers, a smooth, reliable player onboarding experience is essential to driving day-one retention and long-term engagement. ]]></summary>
+        <author>
+            <name>Michelle Martin</name>
+            <uri>https://developer.android.com/blog/authors/michelle-martin</uri>
+        </author>
+        <published>2026-11-10T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Build for an expanding lineup of Android XR devices with production-ready tools from Android Developer Summit]]></title>
+        <id>tag:developer.android.com,2026-11-06:/blog/posts/build-android-xr-devices-tools</id>
+        <link href="https://developer.android.com/blog/posts/build-android-xr-devices-tools"/>
+        <updated>2026-11-06T18:16:12.047Z</updated>
+        <summary type="html"><![CDATA[From full immersion at home to glanceable experiences on the go, building on Android XR lets you meet users at any moment across the entire spectrum of spatial applications. At Android Developer Summit, we marked an exciting milestone with the launch of XREAL AURA.]]></summary>
+        <author>
+            <name>Amy Zeppenfeld</name>
+            <uri>https://developer.android.com/blog/authors/amy-zeppenfeld</uri>
+        </author>
+        <author>
+            <name>Vinny DaSilva</name>
+            <uri>https://developer.android.com/blog/authors/vinny-da-silva</uri>
+        </author>
+        <published>2026-11-06T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What’s new in intelligent apps at the Android Developer Summit]]></title>
+        <id>tag:developer.android.com,2026-11-05:/blog/posts/android-intelligence-system-in-app-agents-ads</id>
+        <link href="https://developer.android.com/blog/posts/android-intelligence-system-in-app-agents-ads"/>
+        <updated>2026-11-06T19:50:49.838Z</updated>
+        <summary type="html"><![CDATA[In the intelligence era, users are no longer just tapping through apps, they express high-level goals and expect AI agents like Gemini to complete multi-step workflows, sometimes across multiple apps on their devices. ]]></summary>
+        <author>
+            <name>Jingyu Shi</name>
+            <uri>https://developer.android.com/blog/authors/jingyu-shi</uri>
+        </author>
+        <published>2026-11-05T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Build for every screen with the latest Jetpack Compose updates from Android Developer Summit ]]></title>
+        <id>tag:developer.android.com,2026-11-04:/blog/posts/build-for-every-screen-jetpack-compose-updates</id>
+        <link href="https://developer.android.com/blog/posts/build-for-every-screen-jetpack-compose-updates"/>
+        <updated>2026-11-04T16:02:17.288Z</updated>
+        <summary type="html"><![CDATA[The Android ecosystem is a multi-device reality that spans phones, foldables, tablets, wearables, in-car displays, XR, and Googlebook. In this landscape, adaptive development is foundational to reaching users wherever they are.]]></summary>
+        <author>
+            <name>Rebecca Gutteridge</name>
+            <uri>https://developer.android.com/blog/authors/rebecca-gutteridge</uri>
+        </author>
+        <published>2026-11-04T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Developing for Today: 50+ New Developer Sessions on Building Apps Today]]></title>
+        <id>tag:developer.android.com,2026-11-02:/blog/posts/building-apps-developer-sessions</id>
+        <link href="https://developer.android.com/blog/posts/building-apps-developer-sessions"/>
+        <updated>2026-11-02T20:14:06.106Z</updated>
+        <summary type="html"><![CDATA[Over 900 attendees joined our event spaces for a keynote about our outlook on the future, demo sessions, dozens of workshops, a hackathon, and for community discussions focused on ideas and feedback on Android platform. ]]></summary>
+        <author>
+            <name>Florina Muntenescu</name>
+            <uri>https://developer.android.com/blog/authors/florina-muntenescu</uri>
+        </author>
+        <published>2026-11-02T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Agentic and Flexible: A next era of Android development]]></title>
+        <id>tag:developer.android.com,2026-10-28:/blog/posts/build-it-your-way-a-next-era-of-android-development</id>
+        <link href="https://developer.android.com/blog/posts/build-it-your-way-a-next-era-of-android-development"/>
+        <updated>2026-10-28T17:54:21.696Z</updated>
+        <summary type="html"><![CDATA[Today, at the Android Dev Summit, we are announcing the broad availability of many tools and APIs designed to remove everyday friction and give you more flexibility to build great Android apps.]]></summary>
+        <author>
+            <name>Matthew McCullough</name>
+            <uri>https://developer.android.com/blog/authors/matthew-mccullough</uri>
+        </author>
+        <published>2026-10-28T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[What's new in Android developer tools and performance at Android Dev Summit]]></title>
+        <id>tag:developer.android.com,2026-10-28:/blog/posts/android-dev-summit-26-developer-tools-performance</id>
+        <link href="https://developer.android.com/blog/posts/android-dev-summit-26-developer-tools-performance"/>
+        <updated>2026-10-28T16:20:49.813Z</updated>
+        <summary type="html"><![CDATA[This year at Android Dev Summit we shared how Android's developer tools are evolving to help you be more productive alongside your agents.]]></summary>
+        <author>
+            <name>Adarsh Fernando</name>
+            <uri>https://developer.android.com/blog/authors/adarsh-fernando</uri>
+        </author>
+        <published>2026-10-28T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Your favorite agents are now integrated in Android Studio]]></title>
+        <id>tag:developer.android.com,2026-10-28:/blog/posts/ai-agents-android-studio-integration</id>
+        <link href="https://developer.android.com/blog/posts/ai-agents-android-studio-integration"/>
+        <updated>2026-10-28T12:53:18.882Z</updated>
+        <summary type="html"><![CDATA[Android Studio Rabbit 2 is now stable and ready for you to use in production. This release includes key features to improve your development such as Bring Your Own Agent, new XR Emulator features, a LeakCanary update, a new agent skills manager tool, AI code review, and more. ]]></summary>
+        <author>
+            <name>Matthew Warner</name>
+            <uri>https://developer.android.com/blog/authors/matthew-warner</uri>
+        </author>
+        <published>2026-10-28T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[A more reliable way to add and edit contacts on Android ]]></title>
+        <id>tag:developer.android.com,2026-10-21:/blog/posts/reliable-way-to-add-and-edit-contacts-android</id>
+        <link href="https://developer.android.com/blog/posts/reliable-way-to-add-and-edit-contacts-android"/>
+        <updated>2026-10-29T13:32:33.490Z</updated>
+        <summary type="html"><![CDATA[Apps that target the upcoming Android release will no longer be able to directly write to contacts with the WRITE_CONTACTS permission.]]></summary>
+        <author>
+            <name>Roxanna Aliabadi Walker</name>
+            <uri>https://developer.android.com/blog/authors/roxanna-walker</uri>
+        </author>
+        <published>2026-10-21T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Grab Reduces ANRs by 32% and improves startup time by 35% with R8 and Profile guided optimization]]></title>
+        <id>tag:developer.android.com,2026-10-19:/blog/posts/grab-r8-profile-guided-optimization-anr-startup-time</id>
+        <link href="https://developer.android.com/blog/posts/grab-r8-profile-guided-optimization-anr-startup-time"/>
+        <updated>2026-10-19T15:41:30.077Z</updated>
+        <summary type="html"><![CDATA[Grab is Southeast Asia's leading superapp, offering deliveries, mobility, and financial services to millions of users across eight countries through a single app. ]]></summary>
+        <author>
+            <name>Ajesh Pai</name>
+            <uri>https://developer.android.com/blog/authors/ajesh-pai</uri>
+        </author>
+        <author>
+            <name>Nguyen Van Minh</name>
+            <uri>https://developer.android.com/blog/authors/nguyen-van-minh</uri>
+        </author>
+        <author>
+            <name>Tracy Agyemang</name>
+            <uri>https://developer.android.com/blog/authors/tracy-agyemang</uri>
+        </author>
+        <published>2026-10-19T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Bringing our latest frontier model to Android Developers ]]></title>
+        <id>tag:developer.android.com,2026-10-13:/blog/posts/bringing-gemini-4-argon-to-android-agentic-engineering-antigravity-cli</id>
+        <link href="https://developer.android.com/blog/posts/bringing-gemini-4-argon-to-android-agentic-engineering-antigravity-cli"/>
+        <updated>2026-10-16T16:17:27.504Z</updated>
+        <summary type="html"><![CDATA[As agentic development accelerates, Android engineering is reaching an exciting new frontier: moving from assistive code completion to agents executing end-to-end under your direction. You have total choice and flexibility in the models and agents you use. ]]></summary>
+        <author>
+            <name>Jason Buchel</name>
+            <uri>https://developer.android.com/blog/authors/jason-buchel</uri>
+        </author>
+        <published>2026-10-13T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[New ways to drive smarter discovery, deeper engagement, and business growth on Google Play]]></title>
+        <id>tag:developer.android.com,2026-10-13:/blog/posts/google-play-discovery-engagement-growth</id>
+        <link href="https://developer.android.com/blog/posts/google-play-discovery-engagement-growth"/>
+        <updated>2026-10-15T00:46:40.417Z</updated>
+        <summary type="html"><![CDATA[Today, we shared how we’re taking our “more than a store” vision into its next chapter. From You tab, now the personal home base for over 250M monthly active users, to our unified gaming platform connecting over 700M gamer profiles, Google Play is meeting users wherever they are. 
+]]></summary>
+        <author>
+            <name>Paul Feng</name>
+            <uri>https://developer.android.com/blog/authors/paul-feng</uri>
+        </author>
+        <published>2026-10-13T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Introducing the Googlebook Linux Terminal Preview: A VM-Backed Environment for AI and Development]]></title>
+        <id>tag:developer.android.com,2026-10-12:/blog/posts/googlebook-linux-terminal-preview-vm</id>
+        <link href="https://developer.android.com/blog/posts/googlebook-linux-terminal-preview-vm"/>
+        <updated>2026-10-13T19:13:34.597Z</updated>
+        <summary type="html"><![CDATA[With Googlebook, we’re excited to help users express themselves and gain access to these tools.]]></summary>
+        <author>
+            <name>Cyrus Stoller</name>
+            <uri>https://developer.android.com/blog/authors/cyrus-stoller</uri>
+        </author>
+        <published>2026-10-12T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Device Streaming and Android skills - available in Android CLI]]></title>
+        <id>tag:developer.android.com,2026-10-02:/blog/posts/android-cli-device-streaming-and-skills</id>
+        <link href="https://developer.android.com/blog/posts/android-cli-device-streaming-and-skills"/>
+        <updated>2026-10-07T17:14:00.981Z</updated>
+        <summary type="html"><![CDATA[As Android developers, you have many choices when it comes to the agents, LLMs, tools, and command-line interfaces (CLI) you use for app development. Our goal is to help you build beautiful, high-quality Android apps, no matter how you choose to build.]]></summary>
+        <author>
+            <name>Simona Milanovic</name>
+            <uri>https://developer.android.com/blog/authors/simona-milanovic</uri>
+        </author>
+        <published>2026-10-02T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How Instagram Direct engineers built AI-native UI architecture with Jetpack Compose and reduced token cost per agent session by 33%]]></title>
+        <id>tag:developer.android.com,2026-09-30:/blog/posts/jetpack-compose-ai-native-ui-instagram-direct</id>
+        <link href="https://developer.android.com/blog/posts/jetpack-compose-ai-native-ui-instagram-direct"/>
+        <updated>2026-10-01T16:11:45.457Z</updated>
+        <summary type="html"><![CDATA[The team built an AI-native UI codebase that is 50% smaller than the original implementation, while achieving a 35% reduction in AI agent execution time, 32% fewer engineer-agent exchanges, and a 33% reduction in token cost. ]]></summary>
+        <author>
+            <name>Pavlo Stavytskyi</name>
+            <uri>https://developer.android.com/blog/authors/pavlo-stavytskyi</uri>
+        </author>
+        <author>
+            <name>Rebecca Franks</name>
+            <uri>https://developer.android.com/blog/authors/rebecca-franks</uri>
+        </author>
+        <published>2026-09-30T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Driving growth on Google Play: The next era of subscriptions]]></title>
+        <id>tag:developer.android.com,2026-09-29:/blog/posts/driving-growth-on-google-play-the-next-era-of-subscriptions</id>
+        <link href="https://developer.android.com/blog/posts/driving-growth-on-google-play-the-next-era-of-subscriptions"/>
+        <updated>2026-09-30T16:40:11.923Z</updated>
+        <summary type="html"><![CDATA[On Google Play, we are continuously expanding our subscription platform to help you drive growth, adapt to new business models, and meet your users exactly where they are.]]></summary>
+        <author>
+            <name>Sheenam Mittal</name>
+            <uri>https://developer.android.com/blog/authors/sheenam-mittal</uri>
+        </author>
+        <published>2026-09-29T00:00:00.000Z</published>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Build intelligent Android apps: In-app agentic workflows]]></title>
+        <id>tag:developer.android.com,2026-09-28:/blog/posts/build-intelligent-android-apps-in-app-agentic-workflows</id>
+        <link href="https://developer.android.com/blog/posts/build-intelligent-android-apps-in-app-agentic-workflows"/>
+        <updated>2026-11-12T18:15:49.224Z</updated>
+        <summary type="html"><![CDATA[Welcome back to the blog post series "Build intelligent Android apps" where you take a basic Android app and transform it into a personalized, intelligent, and agentic experience. In our previous post you learned how to connect to the intelligence system using AppFunctions.]]></summary>
+        <author>
+            <name>Jolanda Verhoef</name>
+            <uri>https://developer.android.com/blog/authors/jolanda-verhoef</uri>
+        </author>
+        <published>2026-09-28T00:00:00.000Z</published>
+    </entry>
+</feed>

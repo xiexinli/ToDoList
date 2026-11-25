@@ -1,0 +1,23 @@
+[
+  {
+    "type": "ARTIFACT",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/进度.md",
+    "size": 16435,
+    "sha256": "b3da1d4ef3867fa7e079f4226e32be97ef435db330cd0e8a8cb4c6d66d293613",
+    "observed_at": "2026-11-16T08:02:10.474570+08:00"
+  },
+  {
+    "type": "ARTIFACT",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/00_进度/智能体规则.md",
+    "size": 5802,
+    "sha256": "d1388a03685953aad78b236c949f92cbc2afed49881522e1e5d15d63461a1bb4",
+    "observed_at": "2026-11-16T08:02:10.474848+08:00"
+  },
+  {
+    "type": "ARTIFACT",
+    "path": "/Users/alion/DemoProjects/ToDoList/AI每日学习/01_地基/2026-11-15-可恢复工作流（Checkpoint与断点续跑）.md",
+    "size": 20669,
+    "sha256": "d681462a2ca7e78f9781ca5226ab3eeb1e26e367161a17db72d7a209058b442e",
+    "observed_at": "2026-11-16T08:02:10.475148+08:00"
+  }
+]

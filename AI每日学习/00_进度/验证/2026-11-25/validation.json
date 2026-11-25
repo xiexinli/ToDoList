@@ -1,0 +1,22 @@
+{
+  "status": "DONE_FOR_DAILY_HOST_MATERIAL",
+  "writer": "主agent接管；子agent调用超时，实际检查无产物",
+  "material": "/Users/alion/DemoProjects/ToDoList/AI每日学习/02_AndroidAI/2026-11-25-端云对账的查询预算持久化：重启不自动续查（续）.md",
+  "material_sha256": "55bfb79ec5dbd9a3e9c61fd3b3b8f205b3f43a512e798f6a4a5efdafa7cde570",
+  "test_count": 12,
+  "test_exit": 0,
+  "test_level": "EXECUTED_HOST CPython3.9.6 SQLite3.54.0",
+  "http_initial": "5/5 HTTP200；4正文，1岗位壳",
+  "not_executed": [
+    "模型调用/usage",
+    "真实业务查询/认证/终结/释放",
+    "并发竞争与真实掉电",
+    "Android/SDK/设备",
+    "旧11-20/21缺口复核"
+  ],
+  "feishu": {
+    "submission": "ok",
+    "message_id": "om_x100b7f571a84f8a0cef0abcb5549d5f",
+    "message_found": true
+  }
+}

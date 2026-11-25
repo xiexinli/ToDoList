@@ -1,0 +1,35 @@
+--- 进度.md（11-24前）
++++ 进度.md（11-24后）
+@@ -31,6 +31,7 @@
+ | 2026-11-21 | 02_AndroidAI · 第 6 讲 | 端云降级的显式路由与隐私授权（续） | 02_AndroidAI/2026-11-21-端云降级的显式路由与隐私授权（续）.md | 待填 |
+ | 2026-11-22 | 02_AndroidAI · 第 7 讲 | 端云请求的取消与结束确认：怎样处理UNKNOWN（续） | 02_AndroidAI/2026-11-22-端云请求的取消与结束确认：怎样处理UNKNOWN（续）.md | 待填 |
+ | 2026-11-23 | 02_AndroidAI · 第 8 讲 | 端云请求的持久操作账本：重启后怎样处理未确认请求 | 02_AndroidAI/2026-11-23-端云请求的持久操作账本：重启后怎样处理未确认请求.md | 待填 |
++| 2026-11-24 | 02_AndroidAI · 第 9 讲 | 端云请求的只读对账：查询状态而不是重发（续） | 02_AndroidAI/2026-11-24-端云请求的只读对账：查询状态而不是重发（续）.md | 待填 |
+ 
+ 
+ > 欠产与补写记录：2026-10-31 ~ 2026-11-04 因「本机终端审批超时」连续 6 天未落盘；2026-11-05 17:32 用户在 DHwork 权限设置中放行无人值守终端审批后，上述 5 天材料与 2026-W44 周总结已统一补全。
+@@ -72,7 +73,8 @@
+ - [x] Android × AI · 第 6 讲：端云降级的显式路由与隐私授权（续）（2026-11-21 材料已产出；EXECUTED_HOST纯策略fixture通过，SDK/设备/云模型NOT_EXECUTED；复述待填）
+ - [x] Android × AI · 第 7 讲：端云请求的取消与结束确认（2026-11-22 材料已产出；Host12项单测通过，真实取消/释放未测；复述待填）
+ - [x] Android × AI · 第 8 讲：端云请求的持久操作账本：重启后怎样处理未确认请求（2026-11-23 材料已产出；EXECUTED_HOST 12项通过；真实SDK/Android/远端结束验证NOT_EXECUTED；复述待填）
+-- [ ] Android × AI · 下一讲（建议2026-11-24）：端云请求的只读对账：查询状态而不是重发（续）
++- [x] Android × AI · 第 9 讲：端云请求的只读对账：查询状态而不是重发（续）（2026-11-24材料已产出；EXECUTED_HOST 12项OK；只读查询stub；真实查询/认证/释放/Android NOT_EXECUTED；复述待填）
++- [ ] Android × AI · 下一讲（建议2026-11-25）：端云对账的查询预算持久化：重启不自动续查（续）
+ 
+ ## 动态链接去重表
+ | 首次出现日期 | 标题 | 链接 |
+@@ -231,6 +233,14 @@
+ 
+ > 2026-11-23 当天5个引用的源日期/正文读取状态/HTTP200与小摘录：`验证/2026-11-23/sources.json`；Host代码与12项实跑日志同目录。首轮2项授权钩子夹具错误经局部修复后重跑OK；无模型调用，usage=NOT_EXECUTED；真实SDK/Android/远端结束验证NOT_EXECUTED。旧11-20/21缺口未改、未验；本执行者飞书not_sent，摘要由主智能体验收后唯一发送。
+ 
++| 2026-11-24 | S01 Google：语义治理策略对用户意图劫持的防护评测 | https://developers.googleblog.com/did-the-user-ask-for-this-securing-ai-agents-against-intent-hijacking-with-semantic-governance-policies/ |
++| 2026-11-24 | S02 WorkBuddy-企业智能体高级全栈研发工程师 | https://careers.tencent.com/tencentcareer/api/post/ByPostId?postId=2118617283625664512 |
++| 2026-11-24 | S03 腾讯WorkBuddy企业智能体高级全栈研发岗位页面 | https://careers.tencent.com/jobdesc.html?postId=2118617283625664512 |
++| 2026-11-24 | S04 Google long-running operations官方协议源码 | https://raw.githubusercontent.com/googleapis/googleapis/master/google/longrunning/operations.proto |
++| 2026-11-24 | S05 RFC 9110 HTTP安全方法语义 | https://www.rfc-editor.org/rfc/rfc9110.html |
++
++> 2026-11-24 当天5个引用原日期/实读状态/HTTP200/正文小摘录见 `验证/2026-11-24/sources.json`；12项Host查询stub实跑OK；昨日账本仅原样复制作输入，昨日材料与证据SHA256未变。无业务状态查询/模型请求，usage=NOT_EXECUTED；真实只读行为、契约/scope、认证/签名/终结/释放/Android均NOT_EXECUTED。旧11-20/21缺口未改未验；本执行者not_sent，摘要待主唯一发送。
++
+ ## 周总结
+ | 周次 | 覆盖日期 | 文件 |
+ |---|---|---|

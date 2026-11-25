@@ -1,0 +1,10 @@
+11-16｜Android × AI 首讲：端侧推理的设备能力检查与可用性边界
+1. 分开看设备支持、SDK 功能状态、模型下载与应用策略。
+2. AVAILABLE 只代表当前可尝试；已就绪可离线，需下载离线先等待。
+3. 网络≠授权；未知/失败安全降级，禁止静默上云或自动下载。
+动手：加“同意下载但未同意上云”fixture，映射 Compose/ViewModel 状态卡。
+验证：Host 16 场景 + 2304 组合通过；Android 编译/真机推理未执行。
+值得看：Google 用约束求解和真实测试验证模型发现的缺陷（11-12 发布）。
+https://developers.googleblog.com/catch-go-bugs-that-fuzzing-misses-with-gemini-and-a-constraint-solver/
+材料：02_AndroidAI/2026-11-16-端侧推理的设备能力检查与可用性边界.md
+明日：通过能力门禁后，Prompt API 最小调用。

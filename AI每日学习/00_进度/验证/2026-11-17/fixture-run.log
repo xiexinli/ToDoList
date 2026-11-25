@@ -1,0 +1,4 @@
+Host 模拟结果： Result(state='SUCCESS', text='今天先完成一件小事。', note='')
+状态： CHECKING -> GENERATING -> SUCCESS
+生命周期： create -> check_status -> generate -> close
+调用次数： 1 ；没有端侧推理

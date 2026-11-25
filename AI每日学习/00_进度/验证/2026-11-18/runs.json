@@ -1,0 +1,36 @@
+{
+  "python": "3.9.6 (default, Aug 25 2026, 21:26:21) \n[Clang 21.0.0 (clang-2100.3.34.2)]",
+  "runs": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "stream_contract.py"
+      ],
+      "cwd": "/tmp/ai-study-20261118-f8xlkrwu",
+      "exit": 0,
+      "log": "fixture-run.log"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "test_stream_contract.py"
+      ],
+      "cwd": "/tmp/ai-study-20261118-f8xlkrwu",
+      "exit": 0,
+      "log": "tests.log"
+    }
+  ],
+  "not_executed": [
+    "Android编译",
+    "Compose运行",
+    "真机推理",
+    "设备取消时延",
+    "模型质量/Token usage/性能"
+  ],
+  "initial_source_script_error": "NameError:__file__;修正后exit0"
+}
